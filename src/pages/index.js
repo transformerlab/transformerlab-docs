@@ -1,0 +1,48 @@
+import React from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import Flask from "@site/static/img/Flask.png";
+import Screenshot02 from "/img/screenshot01.png";
+
+import styles from "./index.module.css";
+
+function HomepageHeader() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <header className={clsx("hero", styles.heroBanner)}>
+      <div className={clsx("container", styles.container)}>
+        <img src={Flask} width="64" />
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
+        <img
+          src={Screenshot02}
+          width="600"
+          // style={{ mixBlendMode: "multiply" }}
+        />
+        <div className={styles.buttons}>
+          <Link className="button button--primary button--lg" to="/docs/intro">
+            Download Now ↓
+          </Link>
+        </div>
+        or <a href="docs/overview/intro">Learn More</a>
+      </div>
+    </header>
+  );
+}
+
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title={`Hello from ${siteConfig.title}`}
+      description="Documentation for LLM Toolkit, Transformer Lab"
+    >
+      <HomepageHeader />
+      <main>
+        <div className="container"></div>
+      </main>
+    </Layout>
+  );
+}
