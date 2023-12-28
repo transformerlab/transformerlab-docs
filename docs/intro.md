@@ -9,7 +9,7 @@ sidebar_position: 1
 
 <img src={require('/img/flask.png').default} alt="Login Modal" width="80" />
 
-Transformer Lab is a free, open-source LLM workspace. It is designed to get you running and productive with public LLMs as quickly as possible. LLM Lab is useful for people who want to go beyond just chatting with public LLMs -- with Transformer Lab you can also train and evaluate them.
+Transformer Lab is a free, open-source LLM workspace. With Transformer Lab, you can easily finetune, evaluate, and interact with opensource LLMs.
 
 <img src={require('/img/screenshot01.png').default} alt="Login Modal" width="500" />
 
@@ -17,7 +17,7 @@ Transformer Lab works best for users with access to a GPU (local or in the cloud
 
 Researchers and engineers can use Transformer Lab to execute on experiments and track their results.
 
-People in the LLM ecosystem can build plugins for Transformer Lab to extend it's functionality in new ways.
+Folks in the LLM ecosystem can build plugins for Transformer Lab to extend it's functionality in new ways.
 
 ### What can I do with Transformer Lab?
 
