@@ -80,7 +80,7 @@ const config = {
         title: "Transformer Lab",
         logo: {
           alt: "Transfomer Lab Logo",
-          src: "img/flask-bw.svg",
+          src: "img/flask.svg",
         },
         items: [
           {

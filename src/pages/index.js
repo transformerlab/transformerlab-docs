@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Flask from "@site/static/img/flask-bw.png";
+import Flask from "@site/static/img/flask.png";
 import Screenshot02 from "/img/screenshot01.png";
 
 import styles from "./index.module.css";
