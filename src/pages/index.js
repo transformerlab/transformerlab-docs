@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Flask from "@site/static/img/flask.png";
+import Flask from "@site/static/img/flask-bw.png";
 import Screenshot02 from "/img/screenshot01.png";
 
 import styles from "./index.module.css";
@@ -13,8 +13,16 @@ function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className={clsx("container", styles.container)}>
-        <img src={Flask} width="84" />
-        <h1 className="hero__title">{siteConfig.title}</h1>
+        <h1
+          className="hero__title"
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}
+        >
+          <img src={Flask} width="62px" />
+          {siteConfig.title}
+        </h1>
         <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
         <img
           src={Screenshot02}

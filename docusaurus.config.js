@@ -80,7 +80,7 @@ const config = {
         title: "Transformer Lab",
         logo: {
           alt: "Transfomer Lab Logo",
-          src: "img/flask.svg",
+          src: "img/flask-bw.svg",
         },
         items: [
           {
@@ -116,11 +116,11 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/tranformerlab",
+                href: "https://discordapp.com/invite/transformerlab",
               },
               {
                 label: "Twitter",
-                href: "https://twitter.com/tranformerlab",
+                href: "https://twitter.com/transformerlab",
               },
             ],
           },
