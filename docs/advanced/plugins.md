@@ -54,7 +54,7 @@ https://github.com/transformerlab/galleries
 
 ### Installing a Script
 
-When a plugin is installed, it's contained `setup.sh` is run and this setup script may install dependencies.
+When a plugin is installed, its contained `setup.sh` is run and this setup script may install dependencies.
 
 ### Plugin Types
 
@@ -76,7 +76,32 @@ Once it is time for the application to run a plugin, its `main.py` is called as 
 
 A script needs information in order to run. For example a script that loads a model for inference will need to know the model name and any implementation-specific inference parameters.
 
-Parameters are passed to scripts using an input file which contains JSON. When the script is called, a commandline parameter called `--input-file` is sent to the script. The ccommandline parameter called `--input-file` specifies the path and filename of a file that the script can open and read in as JSON in order to get parameters.
+#### Specifying Parameters
+
+Your script's `info.json` will specify the parameters it needs.
+
+You can see an example here:
+
+https://github.com/transformerlab/transformerlab-api/blob/main/transformerlab/plugins/llama_trainer/index.json
+
+The format of the parameter specification is using the [react-jsonschema-form](https://github.com/rjsf-team/react-jsonschema-form) format which is shown here:
+
+https://rjsf-team.github.io/react-jsonschema-form/docs/quickstart
+
+We use this format because then we can dynamically render a form to handle these parameters in a GUI.
+
+Note that there are some custom parameters that will automatically be sent to a script depending on the type of script. For example, all training scripts receive:
+
+- model_name
+- dataset_name
+- template_name
+- formatting_template
+
+So these do not have to be specified in the parameters array, they will be sent regardless.
+
+#### Getting Parameters
+
+Parameters are passed to scripts using an **input file** which contains JSON. When the script is called, a commandline parameter called `--input-file` is sent to the script. The ccommandline parameter called `--input-file` specifies the path and filename of a file that the script can open and read in as JSON in order to get parameters.
 
 An example of how to find and read the input file is included in the sample-plugin and looks like the following:
 
