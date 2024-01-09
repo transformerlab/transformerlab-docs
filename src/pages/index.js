@@ -20,7 +20,7 @@ function HomepageHeader() {
             alignItems: "center",
           }}
         >
-          <img src={Flask} width="62px" />
+          <img src={Flask} style={{ height: "1em" }} />
           {siteConfig.title}
         </h1>
         <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
@@ -34,7 +34,7 @@ function HomepageHeader() {
             Download Now ↓
           </Link>
         </div>
-        or <a href="docs/overview/intro">Learn More</a>
+        or <a href="docs/intro">Learn More</a>
       </div>
     </header>
   );
