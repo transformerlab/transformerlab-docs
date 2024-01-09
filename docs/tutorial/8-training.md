@@ -1,5 +1,5 @@
 ---
-sidebar_position: 15
+sidebar_position: 10
 ---
 
 # 8. Train and Finetune

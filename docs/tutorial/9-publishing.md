@@ -1,5 +1,5 @@
 ---
-sidebar_position: 16
+sidebar_position: 10
 ---
 
 # 9: Publish a Model
