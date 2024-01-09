@@ -16,7 +16,7 @@ A full plugin contains at least three files:
 
 1. `index.json` -- which defines the contents of the plugin
 2. `main.py` -- which defines the script
-3. `setup.ph` -- which is run once when the plugin is installed. It can install depedencies (often by calling python `pip`)
+3. `setup.sh` -- which is run once when the plugin is installed. It can install depedencies (often by calling python `pip`)
 
 You can view an example plugin to use as a template at:
 
