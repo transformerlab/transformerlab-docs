@@ -42,7 +42,15 @@ The easiest way to learn to use Transformer Lab is to watch the [5 Minute Gettin
 
 ### Install and Run
 
-**Step 1:** Install and Run the Transformer Lab Server API on your server.
+:::info The API Should Run on a Machine with a GPU (not a Mac)
+Right now, Transformer Lab's API (the part that does the Machine Learning) should run on a Linux or Windows machine with access to a GPU. The App can run on a Mac.
+
+If you run Transformer Lab on a Mac, you will not have fun.
+
+However, in the coming weeks, we plan on implementing Apple's new MLX support. Please watch out Twitter for updates
+:::
+
+**Step 1:** Install and Run the Transformer Lab API Server on your machine learning computer or cloud instance.
 
 Download:
 
@@ -60,12 +68,12 @@ Install Dependencies
 Now Run Transformer Lab:
 
 ```bash
-python3 api.py --host 0.0.0.0
+uvicorn api:app --reload --port 8000 --host 0.0.0.0 --log-level warning
 ```
 
 **Step 2:** Download the [Transformer Lab App](http://transformerlab.ai) on your local computer
 
-**Step 3:** At startup, enter the IP address and port of your Transformer Lab Server, then click Submit.
+**Step 3:** At startup, enter the IP address and port of your Transformer Lab API Server, then click Submit.
 
 <img
 src={require('./about/img/loginModal.png').default}
