@@ -91,7 +91,7 @@ const config = {
           },
 
           { to: "/blog", label: "Updates", position: "left" },
-          { to: "/docs/intro", label: "Download ↓", position: "right" },
+          { to: "/docs/download", label: "Download ↓", position: "right" },
           {
             href: "https://github.com/transformerlab",
             label: "GitHub",
