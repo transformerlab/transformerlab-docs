@@ -30,7 +30,10 @@ function HomepageHeader() {
           // style={{ mixBlendMode: "multiply" }}
         />
         <div className={styles.buttons}>
-          <Link className="button button--primary button--lg" to="/docs/intro">
+          <Link
+            className="button button--primary button--lg"
+            to="/docs/download"
+          >
             Download Now ↓
           </Link>
         </div>
