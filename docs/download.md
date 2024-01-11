@@ -8,10 +8,10 @@ Download the version appropriate for your computer:
 
 ## Mac
 
-- <a href="https://github.com/transformerlab/transformerlab-app/releases/latest/download/Transformer-Lab-0.1.2-arm64.dmg">
+- <a href="https://github.com/transformerlab/transformerlab-app/releases/latest/download/Transformer-Lab-0.1.3-arm64.dmg">
   Mac (Silicon)
   </a>
-- <a href="https://github.com/transformerlab/transformerlab-app/releases/latest/download/Transformer-Lab-0.1.2.dmg">
+- <a href="https://github.com/transformerlab/transformerlab-app/releases/latest/download/Transformer-Lab-0.1.3.dmg">
   Mac (Intel)
   </a>
 
