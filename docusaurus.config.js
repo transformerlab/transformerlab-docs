@@ -116,7 +116,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discordapp.com/invite/transformerlab",
+                href: "https://discord.gg/transformerlab",
               },
               {
                 label: "Twitter",

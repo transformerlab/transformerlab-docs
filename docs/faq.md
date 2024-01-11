@@ -10,7 +10,7 @@ The App can run on a mac. But the part of Transformer Lab that does all the work
 
 #### How can I write my own Plugin?
 
-Plugin information is defined here: [Plugins](./advanced/plugins.md) . Feel free to chat with us on Discord to discuss your idea and we can offer feedback.
+Plugin information is defined here: [Plugins](./advanced/plugins.md) . Feel free to chat with us on [Discord](https://discord.gg/transformerlab) to discuss your idea and we can offer feedback.
 
 #### How Do I add More Models to the Gallery?
 
