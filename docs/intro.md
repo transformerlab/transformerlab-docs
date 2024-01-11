@@ -36,7 +36,11 @@ And more. The best way to learn about how you can use Transfomer Lab is to watch
 
 ### Video Tutorial
 
-The easiest way to learn to use Transformer Lab is to watch the [5 Minute Getting Started Video](https://youtu.be/S-Ea5XAztPA).
+The easiest way to learn how to install Transformer Lab is by watching this short video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qbU2ruCDOeI?si=QMezOBCOGP-Zwcp1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+The easiest way to learn about Transformer Lab is to watch the [5 Minute Getting Started Video](https://youtu.be/S-Ea5XAztPA) to get a quick tour.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/S-Ea5XAztPA?si=5OrDiZSQF74UN-za" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
