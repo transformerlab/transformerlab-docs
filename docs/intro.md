@@ -55,7 +55,7 @@ However, in the coming weeks, we plan on implementing Apple's new MLX support. P
 Download:
 
 ```bash
-git clone transfomerlab/transformerlab-api
+git clone git@github.com:transformerlab/transformerlab-api.git
 cd transformerlab-api
 ```
 
