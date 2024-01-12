@@ -4,7 +4,11 @@ sidebar_position: 200
 
 # Download ↓
 
-Download the version appropriate for your computer:
+Note that Transformer Lab has two components. The desktop app, which you can download below, and the server API which needs to be loaded onto a server with a GPU.
+
+For the server API, instructions to install it are in the [Getting Started - Install](intro.md#install-and-run) section.
+
+For the desktop app, download the version appropriate for your computer:
 
 ## Mac
 

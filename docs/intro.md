@@ -49,7 +49,7 @@ The easiest way to learn about Transformer Lab is to watch the [5 Minute Getting
 :::info The API Should Run on a Machine with a GPU (not a Mac)
 Right now, Transformer Lab's API (the part that does the Machine Learning) should run on a Linux or Windows machine with access to a GPU. The App can run on a Mac.
 
-If you run Transformer Lab on a Mac, you will not have fun.
+That is, the desktop app works well on a Mac, but if you run Transformer Lab's API on a Mac, you will not have fun.
 
 However, in the coming weeks, we plan on implementing Apple's new MLX support. Please watch out Twitter for updates
 :::
