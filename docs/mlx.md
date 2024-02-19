@@ -15,7 +15,7 @@ This is a quick guide to getting Transformer Lab up and running with MLX.
 
 MLX is a machine learning framework for Apple Silicon. [More documentation provided here](https://github.com/ml-explore/mlx).
 
-With MLX, you can use a MacOS computer with Apple Silicon (M1, M2, M3) to do complex machine learning.
+With MLX, you can use a macOS computer with Apple Silicon (M1, M2, M3) to do complex machine learning with high performance by leveraging the onboard GPU / Neural engine.
 
 Transformer Lab works natively with MLX, using plugins.
 
@@ -23,48 +23,28 @@ Transformer Lab works natively with MLX, using plugins.
 
 MLX is relatively new. We encourage you to try different models and tasks to test performance. LLMs perform better on MLX with the M2 and M3 series of Apple chips. Having more memory on your computer helps a lot as well.
 
-If you have a lower end M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it will be slow.
+If you have a lower end M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it will be slow. The M2 and M3 can handle much larger models at high performance.
 
-## Installing Transformer Lab
+## Step 1: Install Transformer Lab
 
-** Step 1: ** Download and Install the [Transformer Lab App](/docs/download)
+Download and Install [Transformer Lab](/docs/download) for Apple Silicon.
 
-** Step 2: ** Install conda on your computer [https://docs.conda.io/projects/miniconda/en/latest/index.html#quick-command-line-install](https://docs.conda.io/projects/miniconda/en/latest/index.html#quick-command-line-install)
+## Step 2: Install Server API to the Local Machine
 
-You may need to restart Terminal to get conda ready on your computer.
+<img src={require('./img/install-steps.png').default} alt="Login Modal" width="400" />
 
-** Step 2: ** Install the Server API by running the following in the Terminal application your Mac:
+Once Transformer Lab is installed, start it up and click on the button to install the server API. This will take some time as conda and Python dependencies are installed.
 
-```bash
-conda create -y -n "transformerlab" python=3.11
-git clone git@github.com:transformerlab/transformerlab-api.git
-cd transformerlab-api
-pip install -r requirements-no-gpu.txt
-```
+## Step3: Install MLX Plugins
 
-Now you can start the Transformer Lab API by running:
+In Plugins, make sure that MLX Inference, MLX Exporter and MLX Training plugins are installed.
 
-```bash
-conda activate transformerlab
-./run.sh
-```
+## Step 4: Download and Run a Model
 
-## Start the App
+When you go to Model Store you can download MLX compatible models. Models that are marked with MLX or huggingface models should work. Try **Phi2** or **TinyLlama** as small models that work well to start.
 
-To start the app, open the Transformer Lab App in your Applications folder and set the server to:
+Go to the Foundation tab and associate a downloaded model to your experiment.
 
-`localhost`
+Then press run.
 
-and the port to:
-
-`8000`
-
-Now select and experiment and download a model from the Zoo that works with MLX. You could try `Phi-2` or `Tiny Llama 1.1B Chat` for example.
-
-## Install MLX Plugins
-
-To your experiment, install the MLX Inference, MLX Exporter and MLX Training plugins.
-
-## Now Run a Model
-
-Go to the Foundation tab and associate a downloaded model to your experiment. Now click on the gear icon in the Foundation Tab and select Apple MLX as your inference engine. Then click on Run.
+You are now running a model using MLX!
