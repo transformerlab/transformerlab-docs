@@ -24,11 +24,7 @@ function HomepageHeader() {
           {siteConfig.title}
         </h1>
         <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
-        <img
-          src={Screenshot02}
-          width="600"
-          // style={{ mixBlendMode: "multiply" }}
-        />
+        <img src={Screenshot02} width="80%" />
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
