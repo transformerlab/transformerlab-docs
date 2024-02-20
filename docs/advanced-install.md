@@ -9,7 +9,7 @@ sidebar_position: 3
 
 You can download the Transformer Lab app and follow the on-screen instructions to do a local installation. This will automatically fetch the Transformer Lab API and install and run it for you.
 
-There may be situation where you would like to install the API yourself, either on a cloud server that you connect to, or even locally. In this case, follow the instructions below:
+There may be situations where you would like to install the API yourself, either on a cloud server that you connect to, or even locally. In this case, follow the instructions below:
 
 ## Manual Install Instructions:
 
