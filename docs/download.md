@@ -11,13 +11,13 @@ import { FaWindows } from "react-icons/fa";
 
 ## <FaApple /> macOS
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.1.5/Transformer-Lab-0.1.5-arm64.dmg">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.2.0/Transformer-Lab-0.2.0-arm64.dmg">
   <Button>Download for <FaApple /> Mac (Silicon)</Button>
   </a>
 
 <br/><br/>
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.1.5/Transformer-Lab-0.1.5.dmg">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.2.0/Transformer-Lab-0.2.0.dmg">
   <Button>Download for <FaApple /> Mac (Intel)</Button>
   </a>
 
