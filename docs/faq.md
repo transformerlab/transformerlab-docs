@@ -6,7 +6,7 @@ sidebar_position: 100
 
 #### Can I Run this on a Mac?
 
-The App can run on a mac. But the part of Transformer Lab that does all the work is the API server and that must run on a machine with a GPU (Linux or Windows). We plan on adding Mac support (via MLX) in the upcoming weeks. Please stay tuned on Twitter for more Mac Updates.
+Yes, using [MLX](./mlx.md).
 
 #### How can I write my own Plugin?
 

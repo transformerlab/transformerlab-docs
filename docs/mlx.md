@@ -35,7 +35,7 @@ Download and Install [Transformer Lab](/docs/download) for Apple Silicon.
 
 Once Transformer Lab is installed, start it up and click on the button to install the server API. This will take some time as conda and Python dependencies are installed.
 
-## Step3: Install MLX Plugins
+## Step 3: Install MLX Plugins
 
 In Plugins, make sure that MLX Inference, MLX Exporter and MLX Training plugins are installed.
 

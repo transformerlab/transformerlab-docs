@@ -21,7 +21,7 @@ There are a number of great tools out there that allow you to work with Local LL
 
 ## General Advice
 
-If you are looking to chat with LLMs locally, and possibly want to integrate with them, the easiest and best tool is Ollama. It is super easy to install, well supported, and has a great community. LMStudio is beautiful as well, though not open source; it's worth downloading.
+If you are looking to chat with LLMs locally, and possibly want to integrate with them, the easiest and best tool is [Ollama](https://ollama.com/). It is super easy to install, well supported, and has a great community. LMStudio is beautiful as well, though not open source; it's worth downloading.
 
 If you are looking to go one level deeper, with the plan of training or finetuning LLMs, then oobabooga and Transformer Lab may be what you are looking for.
 
@@ -33,7 +33,7 @@ llama-cpp is a growing platform. Every month it can do thing that were not possi
 
 However, the big disadvantage to llama-cpp as a core platform is that it is not as flexible as the tools that most researchers use to build LLMs from scratch or train them at scale. llama-cpp is focused on making LLMs accessible to end-machines but it is limited in what it can do. For example, though training and finetuning examples have been offered for llama-cpp, we wouldn't recommend it as a core platform for those tasks.
 
-While Transformer Lab can work with llama-cpp through a python bridge, it is not built on top of llama-cpp. This gives Transformer Lab more flexibility but it comes at a large cost: Transformer Lab depends on huggingface libraries and python which is are as easy to package and distribute as llama-cpp.
+While Transformer Lab supports llama-cpp, it is not a requirement.
 
 Our advice is that if you are just getting started, working with a tool built on llama-cpp will be much easier to get up and running on your local machine.
 
