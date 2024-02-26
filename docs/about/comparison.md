@@ -17,7 +17,7 @@ There are a number of great tools out there that allow you to work with Local LL
 | **Ollama**          | ✅          | ✅        | ❌      | ❌        | ✅             | ❌       | ❌       | ✅              | Developers  |
 | **LMStudio**        | ❌          | ✅        | ❌      | ❌        | ✅             | ❌       | ❌       | ✅              | Developers  |
 | **oobabooga**       | ✅          | ❌        | ✅      | ❌        | ✅             | ✅       | ❌       | ✅              | Hackers     |
-| **Transformer Lab** | ✅          | ✅ (soon) | ✅      | ✅        | ✅             | ✅       | ✅       | ❌              | Researchers |
+| **Transformer Lab** | ✅          | ✅        | ✅      | ✅        | ✅             | ✅       | ✅       | ❌              | Researchers |
 
 ## General Advice
 
