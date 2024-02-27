@@ -3,3 +3,9 @@ ali:
   title: Person
   url: https://github.com/aliasaria
   image_url: https://github.com/aliasaria.png
+
+tony:
+  name: Tony
+  title: Person
+  url: http://www.dadmobile.com/
+  image_url: http://www.dadmobile.com/images/covers/medium/dad005.jpg

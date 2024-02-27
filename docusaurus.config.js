@@ -19,7 +19,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "aliasaria", // Usually your GitHub org/user name.
+  organizationName: "transformerlab", // Usually your GitHub org/user name.
   projectName: "transfomerlab-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
