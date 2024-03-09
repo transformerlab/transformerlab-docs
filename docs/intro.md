@@ -11,7 +11,7 @@ import { FaDiscord } from "react-icons/fa";
 
 <!-- <img src={require('/img/flask.png').default} alt="Login Modal" width="80" /> -->
 
-Transformer Lab is a free, open-source LLM workspace. It is designed to go beyond what most modern open LLM applications allow. Beyond interacting with LLMs, users can easily finetune, evaluate them as well.
+Transformer Lab is a free, open-source LLM workspace that you can run on your own computer. It is designed to go beyond what most modern open LLM applications allow. Using Transformer Lab you can easily finetune, evaluate, export and test LLMs across different inference engines and platforms.
 
 <img src={require('/img/screenshot01.png').default} alt="Login Modal" width="500" />
 
