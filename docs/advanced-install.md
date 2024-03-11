@@ -23,7 +23,7 @@ Even if you are running the API locally, you may want to install the server your
 
 ### install.sh Remote Script
 
-The first option to installing the Server API is to run install.sh which automatically fetches the server code and attempts to follow the install steps one by one.
+The recommended way to install the server is to run install.sh which is in the root directory of the Transformer Lab API project.
 
 You can run the following command on your computer which will fetch and run the script directly from Github:
 
@@ -31,25 +31,15 @@ You can run the following command on your computer which will fetch and run the 
 curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
 ```
 
-This automated installer will attempt to install Miniconda at `~/miniconda3` before creating a conda environment for Transformer Lab and installing dependencies.
+This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
 
 ### Manual step-by-step Install
 
-The second option is to install Transformer Lab's API step by step, replicating what the install script would do but giving you more control over where things are located.
+You can also install all of the Transformer Lab dependencies yourself by following the following steps. We do not recommend this path unless you are having issues with `install.sh` or need more control.
 
-**Step 1:** Install Miniconda
+**Step 1:** Install Miniconda and Create Environment
 
 Install Miniconda [full instructions here](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
-
-```bash
-mkdir -p ~/miniconda3
-curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
-bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
-rm -rf ~/miniconda3/miniconda.sh
-# Now add conda to your shell, you must restart your shell after the following two commands
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
-```
 
 Create a Conda Environment for Transformer Lab (after restarting the shell):
 
@@ -82,26 +72,22 @@ conda activate transformerlab
 pip install -r requirements-no-gpu.txt
 ```
 
-**Step 4:** Run Transformer Lab's API Server
-
-Now Run Transformer Lab:
+**Step 4:** Run the Transformer Lab Server
 
 ```bash
 conda activate transformerlab
 uvicorn api:app --port 8000 --host 0.0.0.0
 ```
 
-**Step 5:** Download the [Transformer Lab App](http://transformerlab.ai) on your local computer
+**To Connect:**
 
-**Step 6:** At startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
+Now when you run the app at startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
 
 <img
 src={require('./about/img/loginModal.png').default}
 alt="Login Modal"
 width="400"
 />
-
-**Step 7**: 🎉 You now have the app talking to a remote (or local host) connected by HTTP.
 
 ## System Requirements
 
