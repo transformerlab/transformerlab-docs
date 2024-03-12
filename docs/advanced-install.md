@@ -99,7 +99,7 @@ The computer used to run the Transformer Lab App should be a Mac, PC, or Linux m
 
 If you are only looking to do inference (e.g. talking to models), many different types of computers that can run Python will work.
 
-If you are looking to train models and get higher performance, you need a server that has an NVIDIA card, or Supports Apple Silicon (M Series.)
+If you are looking to train models and get higher performance, you need a server that has an NVIDIA card, or supports Apple Silicon (M Series.)
 
 | Machine                   | Inference | Training        |
 | ------------------------- | --------- | --------------- |

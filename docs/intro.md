@@ -43,7 +43,9 @@ The easiest way to learn about Transformer Lab is to watch the [5 Minute Getting
 
 ### Simple Install Instructions:
 
-**Step 1:** Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and follow the on-screen instructions!
+Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and follow the on-screen instructions. Video below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SEYpvEOQ-Vw?si=eUYIzKR7rTZFLGVQ&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Advanced Install Instructions:
 
