@@ -19,19 +19,4 @@ rm -rf ~/.cache/huggingface/hub/
 rm -rf ~/Library/Logs/transformerlab/
 ```
 
-- Transformer Lab also installs conda for you. If you would like to keep conda, but remove the Transformer Lab specific conda environment, run:
-
-```bash
-conda deactivate
-conda remove -n transformerlab --all
-```
-
 This will remove all the packages installed for Transformer Lab, freeing up space.
-
-You can also remove conda itself by running:
-
-```bash
-conda activate
-conda init --reverse --all
-rm -rf ~/miniconda3
-```

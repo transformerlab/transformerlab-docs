@@ -31,7 +31,7 @@ You can run the following command on your computer which will fetch and run the 
 curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
 ```
 
-This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
+This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/.transformerlab/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
 
 ### Manual step-by-step Install
 

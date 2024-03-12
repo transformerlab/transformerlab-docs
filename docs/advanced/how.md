@@ -21,7 +21,7 @@ graph LR;
 
 Transformer Lab wraps several popular ML frameworks that do the heavy lifting under the scenes.
 
-Huggingface's [open libraries](https://huggingface.co/docs) are used to fetch, store, and train models using the Huggingface Tranformers, Hub, Accelerate, PEFT, and Datasets libraries.
+Huggingface's [open libraries](https://huggingface.co/docs) are used to fetch, store, and train models using the Huggingface Transformers, Hub, Accelerate, PEFT, and Datasets libraries.
 
 For Inference, Transformer Lab uses [FastChat](https://github.com/lm-sys/FastChat)
 
