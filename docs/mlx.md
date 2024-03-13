@@ -21,25 +21,17 @@ Transformer Lab works natively with MLX, using plugins.
 
 ## Performance
 
-MLX is relatively new. We encourage you to try different models and tasks to test performance. LLMs perform better on MLX with the M2 and M3 series of Apple chips. Having more memory on your computer helps a lot as well.
+MLX is relatively new. We encourage you to try different models and tasks to test performance. LLMs perform better on MLX with the M2 and M3 series of Apple chips. Larger models require more memory.
 
-If you have a lower end M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it's more performant on more powerful Mac computers. The M2 and M3 can handle much larger models at high performance.
+If you have a lower tier M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it's more performant on more powerful Mac computers. The M2 and M3 can handle much larger models at high performance.
 
-## Step 1: Install Transformer Lab
+## Simple Install Instructions:
 
-Download and Install [Transformer Lab](/docs/download) for Apple Silicon.
+Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and follow the on-screen instructions. Video below:
 
-## Step 2: Install Server API to the Local Machine
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SEYpvEOQ-Vw?si=eUYIzKR7rTZFLGVQ&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<img src={require('./img/install-steps.png').default} alt="Login Modal" height="400" />
-
-Once Transformer Lab is installed, start it up and click on the button to install the server API. This will take some time as Conda and Python dependencies are installed.
-
-## Step 3: Install MLX Plugins
-
-In Plugins, make sure that MLX Inference, MLX Exporter and MLX Training plugins are installed.
-
-## Step 4: Download and Run a Model
+## Now Download and Run a Model
 
 When you go to Model Store you can download MLX compatible models. Models that are marked with MLX or huggingface models should work. Try **TinyLlama** as a starting point as a small, useful model.
 
@@ -50,3 +42,5 @@ Then press run.
 <img src={require('./img/tinyllamastart.png').default} alt="Login Modal" width="400" />
 
 You are now running a model using MLX!
+
+Play around Transformer Lab to see how to do more advanced things like inference or model conversion.
