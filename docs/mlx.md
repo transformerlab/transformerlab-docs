@@ -43,4 +43,4 @@ Then press run.
 
 You are now running a model using MLX!
 
-Play around Transformer Lab to see how to do more advanced things like inference or model conversion.
+Play around Transformer Lab to see how to do more advanced things like training or model conversion.
