@@ -7,7 +7,7 @@ sidebar_position: 3
 
 ## Cloud or Local
 
-When you download the Transformer Lab App, it contains an auto-installer that will download the server API and attempt to install it on your computer. It downloads the code, installs a [Python Conda](https://docs.anaconda.com/free/miniconda/index.html) environment, and then installs the Python dependencies necessary for for the API before.
+When you download the Transformer Lab App, it contains an auto-installer that will download the server API and attempt to install it on your (local) computer. It downloads the code, installs a [Python Conda](https://docs.anaconda.com/free/miniconda/index.html) environment, and then installs the Python dependencies necessary for the API.
 
 <img
 src={require('./img/autoinstaller.png').default}
