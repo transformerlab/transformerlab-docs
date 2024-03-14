@@ -13,7 +13,7 @@ import { FaDiscord } from "react-icons/fa";
 
 Transformer Lab is a free, open-source LLM workspace that you can run on your own computer. It is designed to go beyond what most modern open LLM applications allow. Using Transformer Lab you can easily finetune, evaluate, export and test LLMs across different inference engines and platforms.
 
-<img src={require('/img/screenshot01.png').default} alt="Login Modal" width="500" />
+<img src={require('/img/screenshot.png').default} alt="Login Modal" width="500" />
 
 Transformer Lab works well for users with access to a GPU or TPU (local or in the cloud). It also works well on M-series (M1, M2, M3) Apple Mac computers using <a href="https://github.com/ml-explore/mlx">MLX</a>.
 

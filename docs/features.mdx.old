@@ -5,7 +5,7 @@ hide_table_of_contents: true
 
 # Key Features
 
-import screenshot01 from "./img/screenshot01.png";
+import screenshot from "./img/screenshot.png";
 import modelsImage from "./img/models.gif";
 import promptImage from "./img/prompt.gif";
 import experimentImage from "./img/experiments.gif";
@@ -39,7 +39,7 @@ export const Card = ({ title, imageURL }) => (
   <div class="row">
     <Card
       title="Cross Platform Electron User Interface"
-      imageURL={screenshot01}
+      imageURL={screenshot}
     />
     <Card title="Access Hundreds of Models" imageURL={modelsImage} />
     <Card title="Edit Prompts" imageURL={promptImage} />

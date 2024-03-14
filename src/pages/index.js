@@ -4,7 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Flask from "@site/static/img/flask.png";
-import Screenshot02 from "/img/screenshot01.png";
+import Screenshot from "/img/screenshot.png";
 
 import styles from "./index.module.css";
 
@@ -24,7 +24,7 @@ function HomepageHeader() {
           {siteConfig.title}
         </h1>
         <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
-        <img src={Screenshot02} width="80%" />
+        <img src={Screenshot} width="80%" />
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
