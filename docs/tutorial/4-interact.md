@@ -22,7 +22,7 @@ Internally, a chat is just a pre-formated completion sent to the model in a per-
 
 Transformer Lab provides a user interface that allows you to send messages to the LLM in this format, and it uses the FastChat library to format the chat in the right format appropriate for each type of model.
 
-<img src={require('../img/chat.png').default} alt="Model Zoo" width="700" />
+<img src={require('/img/screenshot.png').default} alt="Model Zoo" width="500" />
 
 From this screen you can send new messages, as well as edit the temperature and other settings of the model.
 

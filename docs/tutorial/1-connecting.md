@@ -6,7 +6,7 @@ import { LuLink2 } from "react-icons/lu";
 
 # 1. Connect to a Server
 
-The Transformer Lab GUI needs to connect to a Transformer Lab Server in order to get stated.
+The Transformer Lab GUI needs to connect to a Transformer Lab Server in order to get stated. If you are using a Local Connection, you can follow the steps on the Local Connection tab and skip this step.
 
 <img src={require('./img/connect.png').default} alt="Connect Gif" width="350" />
 
@@ -30,5 +30,9 @@ A definition of the other sections is below:
 4. **GPU**: GPU load
 
 :::warning Watch your VRAM
-Keep a careful eye on the VRAM usage. VRAM is usually the most common limiting factor for working with large models -- especially training. If your VRAM runs out during a task (this is usually reported as a "CUDA OOM" error), the entire task will likely fail.
+For NVIDIA based training, keep a careful eye on the VRAM usage. VRAM is usually the most common limiting factor for working with large models -- especially training. If your VRAM runs out during a task (this is usually reported as a "CUDA OOM" error), the entire task will likely fail.
+:::
+
+:::info Mac
+You won't be able to see detailed GPU stats for MacOS
 :::

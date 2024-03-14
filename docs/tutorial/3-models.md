@@ -10,7 +10,7 @@ An experiment needs a foundation model (LLM).
 
 Open-source LLM's are typicaly very large files (e.g. 3GB or more) that are composed of some configuration files that define the architecture of the LLM they encapsulate as well as a large blog of binary data that captures the values of each neuron in the trained neural net.
 
-Transfomer Lab works with the [Huggingface Model Format](https://huggingface.co/docs/transformers/main_classes/model) and provides a gallery of common models that serve as a starting point for your experiment.
+Transfomer Lab works with different Model formats depending on the platform and engine and it provides a gallery of common models that serve as a starting point for your experiment.
 
 Once you have downloaded some local models, you can run it for inference. Behind the scenes, Transformer Lab uses the FastChat library to run models, allowing you to chat or perform completions with them.
 
@@ -31,7 +31,7 @@ Downloading a model can take several minutes.
 
 ## Assigning a Model to an Experiment
 
-import { LuX } from "react-icons/lu";
+import { FaEject } from "react-icons/fa6";
 
 Once you have downloaded one or more models from the **Model Store** they appear in the **"Local Models"** tab. You can now use these as foundation models for experiments.
 
@@ -43,7 +43,7 @@ Once a model is selected, the screen will show the details of the current founda
 
 <img src={require('./img/mistral-model-selected.png').default} alt="Mistral Selected" width="700" />
 
-To select a different model, click on <LuX/> **Select a Different Model**
+To select a different model, click on <FaEject/> **Eject Model**
 
 ## Running a Model for Inference
 
@@ -54,11 +54,6 @@ import Button from '@site/src/components/Button';
 When you are ready to run your model, click on the <Button><LuPlay/>Run</Button> button.
 
 <img src={require('./img/click-run.png').default} alt="Run Button" width="400" />
-
-The <LuCog/> button gives some advanced options you can select for how the model is run:
-
-- **8-bit mode** reduces the precision of values in the model. This can speed up inference greatly, but it may also reduce the quality of the responses.
-- **CPU-Offload** offloads part of the model to the CPU
 
 ### Alternate Inference Engines
 
