@@ -24,8 +24,12 @@ import { FaWindows } from "react-icons/fa";
 ## <FaWindows/> Windows
 
 <a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.3.0/Transformer-Lab-Setup-0.3.0.exe">
-  <Button>Download for <FaWindows /> Windows 10/11</Button>
+  <Button>Download for <FaWindows /> Windows</Button>
   </a>
+
+<br/>
+
+Local Connection on Windows requires least Windows 10+ with WSL installed.
 
 ## <FaLinux/> Linux
 
