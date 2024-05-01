@@ -23,7 +23,7 @@ import { FaWindows } from "react-icons/fa";
 
 ## <FaWindows/> Windows
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.3.3/Transformer-Lab-Setup-0.3.3.exe">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.3.2/Transformer-Lab-Setup-0.3.2.exe">
   <Button>Download for <FaWindows /> Windows</Button>
   </a>
 
