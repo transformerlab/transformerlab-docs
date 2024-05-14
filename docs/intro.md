@@ -4,6 +4,7 @@ sidebar_position: 1
 ---
 
 import { FaDiscord } from "react-icons/fa";
+import MuxPlayer from '@mux/mux-player-react';
 
 # Introduction
 
@@ -35,7 +36,7 @@ With Transformer Lab, you can:
 
 And more. The best way to learn about how you can use Transformer Lab is to watch an end-to-end tutorial video.
 
-## Getting Started
+## Intro Videos
 
 The easiest way to learn about Transformer Lab is to watch the [5 Minute Getting Started Video](https://youtu.be/S-Ea5XAztPA) to get a quick tour.
 
@@ -47,6 +48,19 @@ Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and fol
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SEYpvEOQ-Vw?si=eUYIzKR7rTZFLGVQ&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### Advanced Install Instructions:
+### Trying out different Inference Engines
+
+This video demonstrates how Tranformer Lab can be used to run several different inference engines.
+
+<MuxPlayer
+streamType="on-demand"
+playbackId="zZNHD2VVJMuruI3hkAv9eFnKy9LYZuRm4mH2SaqDPDg"
+metadataVideoTitle="Running Several Inference Engines on Transformer Lab"
+primaryColor="#FFFFFF"
+secondaryColor="#000000"
+style={{maxWidth: '650px'}}
+/>
+
+## Advanced Install Instructions:
 
 If the simple install doesn't work for you, or you'd like more control over the components, read our section on [Advanced Install Instructions](./advanced-install.md).
