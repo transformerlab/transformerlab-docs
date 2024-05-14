@@ -50,7 +50,7 @@ Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and fol
 
 ### Trying out different Inference Engines
 
-This video demonstrates how Tranformer Lab can be used to run several different inference engines.
+This video demonstrates how Transformer Lab can be used to run several different inference engines.
 
 <MuxPlayer
 streamType="on-demand"
