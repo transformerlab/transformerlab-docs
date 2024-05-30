@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 19
 ---
 
 # Contributing to Transformer Lab
