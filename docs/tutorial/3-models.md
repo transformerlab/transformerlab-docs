@@ -10,7 +10,7 @@ An experiment needs a foundation model (LLM).
 
 Open-source LLM's are typicaly very large files (e.g. 3GB or more) that are composed of some configuration files that define the architecture of the LLM they encapsulate as well as a large blog of binary data that captures the values of each neuron in the trained neural net.
 
-Transfomer Lab works with many model formats that support a variety of platforms and engines, and it provides a gallery of common models that serve as a starting point for your experiment. You can also import models from the thousands hosted on [Hugging Face](https://huggingface.co/models), or from your server's file system. For more information, see the section on Importing Models.
+Transfomer Lab works with many model formats that support a variety of platforms and engines, and it provides a gallery of common models that serve as a starting point for your experiment. You can also import models from the thousands hosted on [Hugging Face](https://huggingface.co/models), or from your server's file system. For more information, see the section on [Importing Models](../advanced/import.md).
 
 Once you have downloaded some local models, you can run them for inference. Behind the scenes, Transformer Lab uses the FastChat library to run models, allowing you to chat or perform completions with them.
 
