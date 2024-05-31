@@ -13,7 +13,7 @@ however TransformerLab also supports a number of ways to import models that are 
 At the bottom of the Model Zoo there is a field where you can enter the id for any of the thousands
 of open source models hosted on HuggingFace.
 
-<img src={require('./img/tlab_import_bar.jpg').default} alt="Import Bar" />
+<img src={require('./img/tlab_import_bar.png').default} alt="Import Bar" />
 
 ## Importing Local Models
 
