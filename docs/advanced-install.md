@@ -63,6 +63,10 @@ cd transformerlab-api
 conda activate transformerlab
 conda install -y cuda -c nvidia/label/cuda-12.1.1 # only if you have an NVIDIA GPU
 pip install -r requirements.txt
+# Now install flash attention
+pip install packaging
+pip install ninja
+pip install -U flash-attn==2.6.1 --no-build-isolation
 ```
 
 #### Or For machines without a GPU (e.g. a Mac):
