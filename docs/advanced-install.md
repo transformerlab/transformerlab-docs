@@ -25,13 +25,29 @@ Even if you are running the API locally, you may want to install the server your
 
 The recommended way to install the server is to run install.sh which is in the root directory of the Transformer Lab API project.
 
-You can run the following command on your computer which will fetch and run the script directly from Github:
-
 ```bash
 curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
 ```
 
 This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/.transformerlab/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
+
+**Run the Transformer Lab Server**
+
+Now you can run the server:
+
+```bash
+cd cd ~/.transformerlab/src
+./run.sh
+```
+
+And connect by entering your server's IP address:
+
+<img
+src={require('./about/img/loginModal.png').default}
+alt="Login Modal"
+width="400"
+/>
+
 
 ### Manual step-by-step Install
 
