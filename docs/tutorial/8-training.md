@@ -24,7 +24,7 @@ To create a new Training Template click on the <Button>New</Button> Button and t
 1. Template Name is the friendly name you will use to remember this template
 2. Selects the specific training Plugin Script you'd like to use (first ensure you have some installed to your project)
 3. Sets the dataset used to train your model
-4. Sets the template format in which to format the data. We use the Python String Templating format https://docs.python.org/3/library/string.html#template-strings
+4. Sets the template format in which to format the data. Transformer Lab uses the <a target="_blank" href="https://jinja.palletsprojects.com/en/3.1.x/templates/">Jinja2 string templating format</a>. Most of the time this means you will use the field names in the "Available Fields" section of this screen, enclosed in two curly braces like: `{{ field_name }}`
 5. Sets additional parameters specified by any specific plugin. For example for a LoRA trainer, LoRA parameters will be set here.
 
 ## Running a Training Job
