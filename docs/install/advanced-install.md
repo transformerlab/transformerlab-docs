@@ -10,7 +10,7 @@ sidebar_position: 3
 When you download the Transformer Lab App, it contains an auto-installer that will download the server API and attempt to install it on your (local) computer. It downloads the code, installs a [Python Conda](https://docs.anaconda.com/free/miniconda/index.html) environment, and then installs the Python dependencies necessary for the API.
 
 <img
-src={require('./img/autoinstaller.png').default}
+src={require('../img/autoinstaller.png').default}
 alt="Auto Installer"
 width="280"
 />
@@ -43,7 +43,7 @@ cd cd ~/.transformerlab/src
 And connect by entering your server's IP address:
 
 <img
-src={require('./about/img/loginModal.png').default}
+src={require('../about/img/loginModal.png').default}
 alt="Login Modal"
 width="400"
 />
@@ -104,7 +104,7 @@ uvicorn api:app --port 8000 --host 0.0.0.0
 Now when you run the app at startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
 
 <img
-src={require('./about/img/loginModal.png').default}
+src={require('../about/img/loginModal.png').default}
 alt="Login Modal"
 width="400"
 />

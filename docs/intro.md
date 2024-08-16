@@ -18,11 +18,7 @@ Transformer Lab is a free, open-source LLM workspace that you can run on your ow
 
 Transformer Lab works well for users with access to a GPU or TPU (local or in the cloud). It also works well on M-series (M1, M2, M3) Apple Mac computers using <a href="https://github.com/ml-explore/mlx">MLX</a>.
 
-Researchers and engineers can use Transformer Lab to execute experiments and track their results.
-
-Users in the LLM ecosystem can build plugins for Transformer Lab to extend it's functionality in new ways.
-
-Our plan is to continue to expand Transformer Lab to support numerous advanced applications of LLMs. We'd love your help! Start by joining our <a href="https://discord.com/invite/transformerlab"><FaDiscord/> Discord</a>.
+You can contribute plugins or to the core application -- we'd love your help! Start by joining our <a href="https://discord.com/invite/transformerlab"><FaDiscord/> Discord</a>.
 
 ### What can I do with Transformer Lab?
 
@@ -33,33 +29,22 @@ With Transformer Lab, you can:
 3. Calculate **embeddings**
 4. **Create and download datasets** for training LLMs
 5. **Finetune and Train** LLMs
+6. **Training using RLHF or Preference Tuning**
+7. **Use RAG** to talk to your documents
 
-And more. The best way to learn about how you can use Transformer Lab is to watch an end-to-end tutorial video.
+And **more**. The best way to learn about how you can use Transformer Lab is to watch an end-to-end tutorial video.
 
-## Intro Videos
+## Intro Video
 
 The easiest way to learn about Transformer Lab is to watch the [5 Minute Getting Started Video](https://youtu.be/tY5TAvKviLo) to get a quick tour.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tY5TAvKviLo?si=slR1NNtkOC6oWAF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Simple Install Instructions:
+## Simple Install Instructions:
 
 Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and follow the on-screen instructions. Video below:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SEYpvEOQ-Vw?si=eUYIzKR7rTZFLGVQ&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-### Trying out different Inference Engines
-
-This video demonstrates how Transformer Lab can be used to run several different inference engines.
-
-<MuxPlayer
-streamType="on-demand"
-playbackId="zZNHD2VVJMuruI3hkAv9eFnKy9LYZuRm4mH2SaqDPDg"
-metadataVideoTitle="Running Several Inference Engines on Transformer Lab"
-primaryColor="#FFFFFF"
-secondaryColor="#000000"
-style={{maxWidth: '650px'}}
-/>
 
 ## Advanced Install Instructions:
 

@@ -6,7 +6,7 @@ sidebar_position: 100
 
 #### Can I Run this on a Mac?
 
-Yes, using [MLX](./mlx.md).
+Yes, using [MLX](/docs/install/mlx).
 
 #### How can I write my own Plugin?
 
