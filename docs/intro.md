@@ -48,4 +48,4 @@ Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and fol
 
 ## Advanced Install Instructions:
 
-If the simple install doesn't work for you, or you'd like more control over the components, read our section on [Advanced Install Instructions](./advanced-install.md).
+If the simple install doesn't work for you, or you'd like more control over the components, read our section on [Advanced Install Instructions](./install/advanced-install.md).
