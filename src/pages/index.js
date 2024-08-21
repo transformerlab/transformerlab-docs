@@ -23,8 +23,9 @@ function HomepageHeader() {
           <img src={Flask} style={{ height: "1em" }} />
           {siteConfig.title}
         </h1>
-        <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
-        <img src={Screenshot} width="80%" />
+        <h2 className={clsx("hero__subtitle ", styles.hero__subtitle)}>
+          {siteConfig.tagline}
+        </h2>
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg"
@@ -32,8 +33,12 @@ function HomepageHeader() {
           >
             Download Now ↓
           </Link>
+          &nbsp;&nbsp;
+          <div>
+            or <a href="docs/intro">Learn More</a>
+          </div>
         </div>
-        or <a href="docs/intro">Learn More</a>
+        <img src={Screenshot} width="80%" />
       </div>
     </header>
   );
