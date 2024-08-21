@@ -8,7 +8,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Transformer Lab",
-  tagline: "Experiment with Large Language Models",
+  tagline: "Train, Tune, Eval, RAG: The Ultimate Toolkit for Working with Local LLMs",
   favicon: "img/flask.svg",
 
   // Set the production url of your site here
