@@ -1,0 +1,17 @@
+ul ul {
+    list-style-type: circle;
+    font-size: 0.9em;
+}
+
+article li + li { 
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    line-height: 1.5;
+}
+
+article li > ul {
+    margin: 0;
+}

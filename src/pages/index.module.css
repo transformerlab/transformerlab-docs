@@ -33,3 +33,49 @@ h2.hero__subtitle {
   align-items: center;
   justify-content: center;
 }
+
+.embedded_markdown {
+  max-width: 800px;
+  text-align: left;
+}
+
+.embedded_markdown h1,
+.embedded_markdown h2,
+.embedded_markdown h3,
+.embedded_markdown h4,
+.embedded_markdown h5,
+.embedded_markdown h6 {
+  position: relative;
+  font-weight: 600;
+  outline: none;
+}
+
+.embedded_markdown h1 {
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-size: 28px;
+}
+
+.embedded_markdown h2 {
+  margin: 48px 0 16px;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
+  letter-spacing: -0.02em;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.embedded_markdown h3 {
+  margin: 32px 0 0;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  font-size: 20px;
+}
+
+.embedded_markdown p {
+  margin: 16px 0;
+  line-height: 24px;
+}
+
+
+
