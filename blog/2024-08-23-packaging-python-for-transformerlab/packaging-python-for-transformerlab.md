@@ -127,6 +127,7 @@ After months of different paths, we think we have the most reliable way to insta
 - We then create a separate Transformer Lab environment and install a specific pinned version of Python to it
 - We then use Conda to install CUDA (if possible)
 - Then finally we the conda environment’s pip to install requirements using a plain requirements.txt file — we pin ALL package libraries using `piptools` to generate the requirements files.
+- Now after everything is installed, we **manually** install the flash_attention2 package because... fun... Flash Attention doesn't work with regular pip install alongside your other dependencies :)
 
 [The contents of our `install.sh` can be seen by clicking here](https://github.com/transformerlab/transformerlab-api/blob/main/install.sh)
 
