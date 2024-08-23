@@ -8,7 +8,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Transformer Lab",
-  tagline: "Train, Tune, Eval, RAG: The Ultimate Toolkit for Working with Local LLMs",
+  tagline:
+    "Train, Tune, Eval, RAG: The Ultimate Toolkit for Working with Local LLMs",
   favicon: "img/flask.svg",
 
   // Set the production url of your site here
@@ -90,7 +91,11 @@ const config = {
             label: "Documentation",
           },
 
-          { to: "https://github.com/transformerlab/transformerlab-app/releases", label: "Updates", position: "left" },
+          {
+            to: "/blog",
+            label: "Blog",
+            position: "left",
+          },
           { to: "/docs/download", label: "Download ↓", position: "right" },
           {
             href: "https://github.com/transformerlab/transformerlab-app",
@@ -128,7 +133,7 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Updates",
+                label: "Blog",
                 to: "/blog",
               },
               {

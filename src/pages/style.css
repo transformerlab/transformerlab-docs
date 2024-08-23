@@ -15,3 +15,11 @@ ul {
 article li > ul {
     margin: 0;
 }
+
+article ul > li {
+    margin: 8px 0 0px 0;
+}
+
+article li>ol, article li>ul {
+    margin: 4px 0 8px 8px;
+}

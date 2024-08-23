@@ -162,6 +162,7 @@ article h3 {
 article h2:first-of-type {
   border-top: none;
   padding-top: 8px;
+  line-height: 1em;
 }
 
 /**
