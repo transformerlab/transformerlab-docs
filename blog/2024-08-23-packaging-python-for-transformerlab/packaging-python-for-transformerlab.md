@@ -74,7 +74,9 @@ We found it encouraging to read his blog and hear that he was having many of the
 
 Docker is well suited for the problem of ensuring a consistent environment for a Python project like ours. With Docker, one could standardize on a specific operating system image that is containerized and can then run on any operating system without needing to worry about the underlying system's architecture.
 
-This would have been a great solution for Transformer Lab except that it would add one additional layer for a user to install before being able to use our application. However, this would add an extra step for users to install before using our application.
+This would have been a great solution for Transformer Lab except that it would add one additional layer for a user to install before being able to use our application.
+
+Another problem with Docker is that [it doesn't support GPU passthrough for Apple Silicon](https://chariotsolutions.com/blog/post/apple-silicon-gpus-docker-and-ollama-pick-two/) -- we use Apple's Python MLX libraries extensively when running on MacOS, so that limitation wouldn't work for us.
 
 In the long run, we plan on offering tools to allow users to run Transformer Lab using Docker, but we don't want to make it a mandatory step.
 
@@ -112,7 +114,7 @@ But things went bad. 😖
 
 - A user might have multiple versions of conda already installed, and there is no way to know where an existing version of conda is stored if it is not “activated”
 - They may have installed conda using an admin account, making it impossible for us to create new environments without `sudo`
-- Conda is activated in away I’ve never seen before: it installs itself into the bash / zsh shell, but the script that activates it [can’t be called directly before a separate script](https://github.com/conda/conda/issues/7980#issuecomment-484167955) because of the way bash works with subshells.
+- Conda is activated in a way I’ve never seen before: it installs itself into the bash / zsh shell, but the script that activates it [can’t be called directly before a separate script](https://github.com/conda/conda/issues/7980#issuecomment-484167955) because of the way bash works with subshells.
 
 For months we kept trying different paths to install Conda and then install Transformer Lab afterwards but users would find issues over and over.
 
