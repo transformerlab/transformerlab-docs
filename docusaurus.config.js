@@ -90,7 +90,7 @@ const config = {
             position: "left",
             label: "Documentation",
           },
-
+          { to: "/about", label: "About", position: "left" },
           {
             to: "/blog",
             label: "Blog",
@@ -139,6 +139,10 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/transformerlab",
+              },
+              {
+                label: "About",
+                to: "/about",
               },
             ],
           },

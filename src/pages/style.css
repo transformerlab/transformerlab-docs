@@ -23,3 +23,7 @@ article ul > li {
 article li>ol, article li>ul {
     margin: 4px 0 8px 8px;
 }
+
+article h1 {
+    margin-top: 2rem;
+}
