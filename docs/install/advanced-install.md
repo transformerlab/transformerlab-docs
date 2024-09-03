@@ -48,7 +48,6 @@ alt="Login Modal"
 width="400"
 />
 
-
 ### Manual step-by-step Install
 
 You can also install all of the Transformer Lab dependencies yourself by following the following steps. We do not recommend this path unless you are having issues with `install.sh` or need more control.
@@ -82,7 +81,7 @@ pip install -r requirements.txt
 # Now install flash attention
 pip install packaging
 pip install ninja
-pip install -U flash-attn==2.6.1 --no-build-isolation
+pip install -U flash-attn==2.6.3 --no-build-isolation
 ```
 
 #### Or For machines without a GPU (e.g. a Mac):
