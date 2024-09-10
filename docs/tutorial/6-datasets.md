@@ -24,10 +24,10 @@ Go to Training Data -> Local Datasets -> <Button>New +</Button> in order to uplo
 
 After giving your dataset a unique name, upload your data files using drag and drop.
 
-Uploading training data to Transformer Lab is very simple. Simply create two files in either JSONL or CSV format.
+Uploading training data to Transformer Lab is very simple. Simply create two files in either JSONL or JSON format.
 
-- The training data must end with "\_eval.jsonl"
-- The evaluation data must end with "\_train.jsonl"
+- The training data must end with "\_train.jsonl"
+- The evaluation data must end with "\_eval.jsonl"
 
 For example, you could create two files called `summarization-task_eval.jsonl` and `summarization-task_train.jsonl`
 
