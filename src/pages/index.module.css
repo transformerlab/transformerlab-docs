@@ -10,13 +10,14 @@
   gap: 0.7rem;
 }
 
-.heroBanner {
+/* Commenting this out because it doesn't work with dark mode */
+/* .heroBanner.dark {
   padding: 4rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-image: linear-gradient(to right top, #e9e9e9, #ffffff);
-}
+  background-image: linear-gradient(to right top, var(--vp-c-bg-alt), var(--vp-c-black));
+} */
 
 h2.hero__subtitle {
   margin-bottom: 2rem;
