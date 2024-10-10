@@ -8,6 +8,9 @@ import Screenshot from "/img/screenshot.png";
 
 import styles from "./index.module.css";
 
+import Content from "./homepage-content.mdx";
+
+import "./style.css";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -23,17 +26,44 @@ function HomepageHeader() {
           <img src={Flask} style={{ height: "1em" }} />
           {siteConfig.title}
         </h1>
-        <h2 className="hero__subtitle">{siteConfig.tagline}</h2>
-        <img src={Screenshot} width="80%" />
+        <h2 className={clsx("hero__subtitle ", styles.hero__subtitle)}>
+          {siteConfig.tagline}
+        </h2>
         <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/download"
-          >
-            Download Now ↓
-          </Link>
+          <div className="block">
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/download"
+            >
+              Download Now ↓
+            </Link>
+          </div>
+          &nbsp;&nbsp;
+          <div>
+            or <a href="docs/intro">Learn More</a>
+          </div>
         </div>
-        or <a href="docs/intro">Learn More</a>
+        <img src={Screenshot} width="80%" />
+        <div className={styles.embedded_markdown}>
+          <article>
+            <Content />
+          </article>
+        </div>
+        <br />
+        <div className={styles.buttons}>
+          <div className="block">
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/download"
+            >
+              Download Now ↓
+            </Link>
+          </div>
+          &nbsp;&nbsp;
+          <div>
+            or <a href="docs/intro">Learn More</a>
+          </div>
+        </div>
       </div>
     </header>
   );
