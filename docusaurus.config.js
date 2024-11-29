@@ -102,6 +102,11 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            to: "https://discord.gg/transformerlab",
+            label: "Discord 💬",
+            position: "right",
+          },
         ],
       },
       footer: {
