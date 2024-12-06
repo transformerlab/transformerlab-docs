@@ -19,7 +19,7 @@ Once you have downloaded some local models, you can run them for inference. Behi
 import { LuDownload, LuStore } from "react-icons/lu";
 
 To start, go to the Model Gallery by clicking on the <LuDownload /> **Model Zoo** icon then click on the <LuStore />
-**Model Store** tab. Here you can select from many common public models. Once you have selected one, click on <Button>Download<DownloadSvg/></Button> and wait for the model to fully download onto your server.
+**Model Store** tab. Here you can select from many common public models. Once you have selected one, click on <Button>Download</Button> and wait for the model to fully download onto your server.
 
 <img src={require('./img/model-zoo.png').default} alt="Model Zoo" width="700" />
 
