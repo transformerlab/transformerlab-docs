@@ -15,15 +15,15 @@ This is a quick guide to getting Transformer Lab up and running with MLX.
 
 MLX is a machine learning framework for Apple Silicon. [More documentation provided here](https://github.com/ml-explore/mlx).
 
-With MLX, you can use a macOS computer with Apple Silicon (M1, M2, M3) to do complex machine learning with high performance by leveraging the onboard GPU / Neural engine.
+With MLX, you can use a macOS computer with Apple Silicon (M1, M2, M3, M4) to do complex machine learning with high performance by leveraging the onboard GPU / Neural engine.
 
 Transformer Lab works natively with MLX, using plugins.
 
 ## Performance
 
-MLX is relatively new. We encourage you to try different models and tasks to test performance. LLMs perform better on MLX with the M2 and M3 series of Apple chips. Larger models require more memory.
+MLX is relatively new. We encourage you to try different models and tasks to test performance. LLMs perform better on MLX with the M2, M3 and M4 series of Apple chips. Larger models require more memory.
 
-If you have a lower tier M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it's more performant on more powerful Mac computers. The M2 and M3 can handle much larger models at high performance.
+If you have a lower tier M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it's more performant on more powerful Mac computers. The M2, M3 and M4 can handle much larger models at high performance.
 
 ## Simple Install Instructions:
 

@@ -126,9 +126,9 @@ If you are looking to train models and get higher performance, you need a server
 | PC or Linux - without GPU | ✅ Yes    | No              |
 | Mac (Intel)               | ✅ Yes    | No              |
 | Mac (M1)                  | ✅ Yes    | ✅ Yes (slower) |
-| Mac (M2 or M3)            | ✅ Yes    | ✅ Yes          |
+| Mac (M2+)                 | ✅ Yes    | ✅ Yes          |
 
-You will see the best performance on high VRAM GPUs (such as the RTX3090 or RTX4090) or Mac M2/M3 with 24GB or more of RAM.
+You will see the best performance on high VRAM GPUs (such as the RTX3090 or RTX4090) or Mac M2/M3/M4 with 24GB or more of RAM.
 
 ## Security Notes
 
