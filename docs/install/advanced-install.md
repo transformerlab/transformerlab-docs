@@ -36,7 +36,7 @@ This script will attempt to download the project to `~/.transformerlab`, install
 Now you can run the server:
 
 ```bash
-cd cd ~/.transformerlab/src
+cd ~/.transformerlab/src
 ./run.sh
 ```
 
