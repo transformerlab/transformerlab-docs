@@ -10,7 +10,7 @@ const config = {
   title: "Transformer Lab",
   tagline:
     "Train, Tune, Eval, RAG: The Ultimate Toolkit for Working with Local LLMs",
-  favicon: "img/flask.svg",
+  favicon: "img/logo2.svg",
 
   // Set the production url of your site here
   url: "https://transformerlab.ai",
@@ -81,7 +81,7 @@ const config = {
         title: "Transformer Lab",
         logo: {
           alt: "Transfomer Lab Logo",
-          src: "img/flask.svg",
+          src: "img/logo2.svg",
         },
         items: [
           {
