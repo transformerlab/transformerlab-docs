@@ -185,7 +185,7 @@ article blockquote {
   transition: border-color 0.5s;
 }
 
-article blockquote > p {
+article blockquote>p {
   margin: 0;
   font-size: 16px;
   /* color: var(--vp-c-text-2); */
@@ -225,12 +225,12 @@ article ol {
   list-style: decimal;
 }
 
-article li + li {
+article li+li {
   margin-top: 8px;
 }
 
-article li > ol,
-article li > ul {
+article li>ol,
+article li>ul {
   margin: 8px 0 0;
 }
 
@@ -288,12 +288,11 @@ article hr {
 .hero__title {
   letter-spacing: -0.02em;
   line-height: 1;
-  font-size: clamp(
-    1.8020324707rem,
-    1.8020324707rem + 3.3995479121 * ((100vw - 20rem)/58),
-    5.2015803828rem
-  );
+  font-size: clamp(1.8020324707rem,
+      1.8020324707rem + 3.3995479121 * ((100vw - 20rem)/58),
+      5.2015803828rem);
   /* color: #151416; */
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 10px;
+  color: black;
 }

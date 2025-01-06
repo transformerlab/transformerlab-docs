@@ -25,7 +25,7 @@ function HomepageHeader() {
         >
           <img
             src="/img/logo2.svg"
-            style={{ height: "1.2em", marginRight: "10px" }}
+            style={{ height: "1.1em", marginRight: "10px" }}
           />
           {siteConfig.title}
         </h1>
