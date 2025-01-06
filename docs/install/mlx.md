@@ -1,13 +1,13 @@
 ---
-title: Running on a Mac Using MLX
+title: Install on a Mac
 sidebar_position: 2
 ---
 
-# Running on a Mac Using MLX
+## Running on a Mac with Apple Silicon
 
-## A Quick Guide
+### A Quick Guide
 
-This is a quick guide to getting Transformer Lab up and running with MLX.
+This is a quick guide to getting Transformer Lab up and running on a Mac with Apple Silicon
 
 ## What is MLX
 
@@ -44,3 +44,9 @@ Then press run.
 You are now running a model using MLX!
 
 Play around Transformer Lab to see how to do more advanced things like training or model conversion.
+
+## Running on an Intel Mac
+
+Apple Macs without Apple Silicon are not ideal for doing advanced machine learning.
+
+If this is your situation, you can install Transformer Lab and do basic inference (i.e. talk to LLMs) using your Intel CPU. But if you want to do things like train or tune LLMs, you will need to get access to a computer with a GPU or a Mac with Silicon (e.g. in the cloud or locally).

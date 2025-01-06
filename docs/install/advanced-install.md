@@ -1,6 +1,6 @@
 ---
 title: Advanced Install
-sidebar_position: 3
+sidebar_position: 10
 ---
 
 # Advanced Installation Instructions
