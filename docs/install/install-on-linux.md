@@ -21,7 +21,7 @@ nvidia-smi
 
 ![nvidia-smi output](./img/nvidia-smi-output.png)
 
-If this worked, congratulations, NVIDIA support for your Linux install is working and you can proceed with downloading and installing Tranformer Lab.
+If this worked, congratulations, NVIDIA support for your Linux install is working and you can proceed with downloading and installing Transformer Lab.
 
 If you need to install the nvidia drivers from scratch, there are instructions below for different versions of Linux:
 
