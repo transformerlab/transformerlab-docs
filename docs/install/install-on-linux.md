@@ -5,6 +5,8 @@ sidebar_position: 1
 
 import Button from '@site/src/components/Button';
 
+For most situations, you can just download Transformer Lab and it should work as is. But if you are setting up from scratch and haven't installed CUDA drivers (drivers for your GPU) the following instructions can help.
+
 ## What Distro
 
 Transformer Lab should work on most distros of Linux. If you are getting started from scratch, we recommend installing [PopOS](https://pop.system76.com/) because it has great support for automatically installing NVIDIA drivers.

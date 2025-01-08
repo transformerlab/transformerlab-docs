@@ -7,11 +7,13 @@ import Button from '@site/src/components/Button';
 
 # Install on Windows
 
+For Windows users, you should be able to download our application from our downloads page and have it work out of the box. But if you haven't installed WSL2 or CUDA drivers before, the following instructions will help you set up your computer to ensure everything works.
+
 ## Step 1 - Install WSL2 and CUDA
 
 CUDA is the toolkit that allows you to connect to NVIDIA GPUs. If you do not have a GPU, Transformer Lab can do basic tasks, but a GPU is needed to unlock advanced LLM work.
 
-To run Transformer Lab, you also need to install WSL2. WSL2 is a full Linux kernel integration in Windows that enables running Linux distributions natively.
+To run Transformer Lab, you also need to install WSL2. WSL2 is a full Linux kernel integration in Windows that enables running Linux distributions natively -- this is where our Transformer Lab's Python Machine Learning workspace will run.
 
 Instructions for installing both WSL2 and CUDA are in the following document:
 
@@ -46,4 +48,3 @@ If you see that, click on "More Info" and then "Run Anyway" to allow Windows to 
 ## Step 4 - Install Dependencies
 
 If you select Local Install, Transformer Lab will go through the steps to install itself locally along with all of the dependencies. This step takes a long time. The app may get to the very last step that reads "Check for Important Plugins" and then stall -- if you see this, close the app and restart it and everything should work from then on.
-

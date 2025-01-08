@@ -7,7 +7,7 @@ sidebar_position: 5
 
 Transformer Lab supports running the engine in the cloud (or on a machine that can be accessed on your network).
 
-To do this, install Transfomrer Lab normally on a client machine in order to access the GUI. But instead of selecting "Local Connection" you should click on the "Remote Connection" tab and provide connection details.
+To do this, install Transformer Lab normally on a client machine in order to access the GUI. But instead of selecting "Local Connection" you should click on the "Remote Connection" tab and provide connection details.
 
 <img
 src={require('../about/img/loginModal.png').default}
