@@ -11,19 +11,19 @@ import { FaWindows } from "react-icons/fa";
 
 ## <FaApple /> macOS
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.2/Transformer-Lab-0.7.2-arm64.dmg">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.5/Transformer-Lab-0.7.5-arm64.dmg">
   <Button>Download for <FaApple /> Mac (Silicon)</Button>
   </a>
 
 <br/><br/>
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.2/Transformer-Lab-0.7.2.dmg">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.5/Transformer-Lab-0.7.5.dmg">
   <Button>Download for <FaApple /> Mac (Intel)</Button>
   </a>
 
 ## <FaWindows/> Windows
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.2/Transformer-Lab-Setup-0.7.2.exe">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.5/Transformer-Lab-Setup-0.7.5.exe">
   <Button>Download for <FaWindows /> Windows</Button>
   </a>
 
@@ -33,12 +33,12 @@ Local Connection on Windows requires Windows 10+ with WSL installed.
 
 ## <FaLinux/> Linux
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.2/Transformer-Lab-0.7.2.AppImage">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.5/Transformer-Lab-0.7.5.AppImage">
   <Button>Download AppImage</Button>
   </a>
 
 <br/><br/>
 
-<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.2/Transformer-Lab-0.7.2-arm64.AppImage">
+<a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.7.5/Transformer-Lab-0.7.5-arm64.AppImage">
   <Button>Download AppImage (ARM64)</Button>
   </a>
