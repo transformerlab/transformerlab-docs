@@ -31,6 +31,16 @@ wsl --install
 
 (Detailed instructions for installing WSL2 are [here](https://learn.microsoft.com/en-us/windows/wsl/install).)
 
+:::note
+
+For Transformer Lab to work, make sure that your default WSL instance is **Ubuntu**. WSL lets you install multiple distros but you can set the default using the following command:
+
+```
+wsl --set-default <Distribution Name>
+```
+
+:::
+
 ## Step 2 - Download Transformer Lab for Windows
 
 <a href="https://transformerlab.ai/docs/download">
