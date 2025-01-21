@@ -9,7 +9,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Transformer Lab",
   tagline:
-    "Train, Tune, Eval, RAG: The Ultimate Toolkit for Working with Local LLMs",
+    "Open Source Toolkit for Large Language Models: Train, Tune, Chat on your own Machine",
   favicon: "img/logo2.svg",
 
   // Set the production url of your site here

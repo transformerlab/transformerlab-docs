@@ -12,11 +12,13 @@ import Content from "./homepage-content.mdx";
 import Logo from "/img/logo2_nocolor.svg";
 
 import "./style.css";
+import GithubStar from "../components/GithubStar";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className={clsx("container", styles.container)}>
+        <GithubStar />
         <h1
           className="hero__title"
           style={{

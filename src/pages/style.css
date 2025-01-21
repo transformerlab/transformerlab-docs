@@ -3,7 +3,7 @@ ul ul {
     font-size: 0.9em;
 }
 
-article li + li { 
+article li+li {
     margin: 0;
     padding: 0;
 }
@@ -12,18 +12,23 @@ ul {
     line-height: 1.5;
 }
 
-article li > ul {
+article li>ul {
     margin: 0;
 }
 
-article ul > li {
+article ul>li {
     margin: 8px 0 0px 0;
 }
 
-article li>ol, article li>ul {
+article li>ol,
+article li>ul {
     margin: 4px 0 8px 8px;
 }
 
 article h1 {
     margin-top: 2rem;
+}
+
+.hero {
+    padding: 2rem 2rem;
 }
