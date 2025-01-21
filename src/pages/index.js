@@ -9,6 +9,8 @@ import styles from "./index.module.css";
 
 import Content from "./homepage-content.mdx";
 
+import Logo from "/img/logo2_nocolor.svg";
+
 import "./style.css";
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -23,9 +25,11 @@ function HomepageHeader() {
             fontWeight: "400",
           }}
         >
-          <img
-            src="/img/logo2.svg"
-            style={{ height: "1.1em", marginRight: "10px" }}
+          <Logo
+            style={{
+              height: "1.1em",
+              marginRight: "0px",
+            }}
           />
           {siteConfig.title}
         </h1>

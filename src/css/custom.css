@@ -13,6 +13,7 @@
   --ifm-color-primary-light: #b7bcc7;
   --ifm-color-primary-lighter: #c0c5cf;
   --ifm-color-primary-lightest: #dee0e5;
+  --ifm-heading-color: 'black';
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -291,8 +292,16 @@ article hr {
   font-size: clamp(1.8020324707rem,
       1.8020324707rem + 3.3995479121 * ((100vw - 20rem)/58),
       5.2015803828rem);
-  /* color: #151416; */
   font-weight: 700;
   margin-bottom: 10px;
-  color: black;
+  stroke: black;
+}
+
+
+[data-theme="dark"] .hero__title {
+  stroke: white;
+}
+
+[data-theme="dark"] .navbar__logo {
+  filter: invert(1) brightness(2);
 }
