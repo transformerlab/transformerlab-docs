@@ -55,4 +55,4 @@ Right-click on the app then click on Properties -> Permissions -> then check "Al
 
 ![Allow Execute](./img/allow-execute-linux.png)
 
-Now try running it again. Please be patient on the first install as a number of libraries must installed on the first run. If the install isn't progressing for a few minutes, quit the app and run it again (we are working on a bug that makes the install display freeze sometimes.)
+Now try running it again. Please be patient on the first install as a number of libraries must installed on the first run.
