@@ -10,6 +10,7 @@ import styles from "./index.module.css";
 import Content from "./homepage-content.mdx";
 
 import Logo from "/img/logo2_nocolor.svg";
+import FullLogo from "/img/Transformer-Lab_Logo.svg";
 
 import "./style.css";
 import GithubStar from "../components/GithubStar";
@@ -20,20 +21,19 @@ function HomepageHeader() {
       <div className={clsx("container", styles.container)}>
         <GithubStar />
         <h1
-          className="hero__title"
+          className="hero__title comfortaa-font"
           style={{
             display: "flex",
             alignItems: "center",
             fontWeight: "400",
           }}
         >
-          <Logo
+          <FullLogo
             style={{
               height: "1.1em",
               marginRight: "0px",
             }}
           />
-          {siteConfig.title}
         </h1>
         <h2 className={clsx("hero__subtitle ", styles.hero__subtitle)}>
           {siteConfig.tagline}

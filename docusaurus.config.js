@@ -9,7 +9,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 const config = {
   title: "Transformer Lab",
   tagline:
-    "Open Source Toolkit for Large Language Models: Train, Tune, Chat on your own Machine",
+    "100% Open Source Toolkit for Large Language Models: Train, Tune, Chat on your own Machine",
   favicon: "img/logo2.svg",
 
   // Set the production url of your site here
@@ -25,6 +25,37 @@ const config = {
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+
+  /* we need to add the following using links :
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"></link>
+*/
+
+  // headTags: [
+  //   {
+  //     tagName: "link",
+  //     attributes: {
+  //       rel: "preconnect",
+  //       href: "https://fonts.googleapis.com",
+  //     },
+  //   },
+  //   {
+  //     tagName: "link",
+  //     attributes: {
+  //       rel: "preconnect",
+  //       href: "https://fonts.gstatic.com",
+  //       crossorigin: "true",
+  //     },
+  //   },
+  //   {
+  //     tagName: "link",
+  //     attributes: {
+  //       href: "https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap",
+  //       rel: "stylesheet",
+  //     },
+  //   },
+  // ],
 
   markdown: {
     mermaid: true,
