@@ -56,3 +56,7 @@ Right-click on the app then click on Properties -> Permissions -> then check "Al
 ![Allow Execute](./img/allow-execute-linux.png)
 
 Now try running it again. Please be patient on the first install as a number of libraries must installed on the first run.
+
+## Other Notes
+
+If you are running a recent version of Ubuntu or an Ubuntu based disto, you may have to run the appimage with the --no-sandbox flag to allow the installer the ability to install.
