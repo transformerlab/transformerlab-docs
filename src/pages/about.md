@@ -6,10 +6,15 @@ hide_table_of_contents: false
 
 # Who are the people behind Transformer Lab?
 
-Transformer Lab was created by a small team of engineers from Canada led by Tony Salomone and Ali Asaria.
+Transformer Lab is being actively developed by a small team of engineers from Canada led by Tony Salomone, Ali Asaria, and Deep Gandhi.
 
-<img src={require('./img/tony.jpg').default} width={150} />&nbsp;&nbsp;
-<img src={require('./img/ali.jpg').default} width={150} />
+<img src={require('./img/tony.jpg').default} width={100} />&nbsp;&nbsp;
+<img src={require('./img/ali.jpg').default} width={100} />&nbsp;&nbsp;
+<img src={require('./img/deep.jpg').default} width={100} />
+
+We have also had some amazing interns and contributors help, including:
+
+<a href="https://github.com/sanjaycal">sanjaycal</a>, <a href="https://github.com/safiyamak">safiyamak</a>, <a href="https://github.com/rohannair">rohannnair</a>. And more!
 
 # Our Vision
 
