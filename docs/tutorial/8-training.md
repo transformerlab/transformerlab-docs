@@ -15,7 +15,7 @@ When it is time to train or finetune a model, you can go to the **Train** sectio
 
 The top section of the screen shows "Training Templates" which are instructions that you can send to Transformer Lab that indicate the training program you would like to schedule.
 
-You can create your own training template, or you can install a prebuilt [recipe](../concepts/recipes.md) as a starting point.
+You can create your own training template, or you can install a prebuilt  as a starting point.
 
 ### Create a New Training Template
 
