@@ -1,6 +1,6 @@
 ---
 title: Recipes
-sidebar_position: 10
+sidebar_position: 100
 ---
 
 # Recipes
