@@ -77,25 +77,26 @@ cd transformerlab-api
 ```bash
 conda activate transformerlab
 conda install -y cuda -c nvidia/label/cuda-12.1.1 # only if you have an NVIDIA GPU
-pip install -r requirements.txt
+pip install uv
+uv pip install --upgrade -r requirements-uv.txt
 # Now install flash attention
-pip install packaging
-pip install ninja
-pip install -U flash-attn==2.6.3 --no-build-isolation
+uv pip install packaging
+uv pip install ninja
+uv pip install -U flash-attn==2.7.3 --no-build-isolation
 ```
 
 #### Or For machines without a GPU (e.g. a Mac):
 
 ```bash
 conda activate transformerlab
-pip install -r requirements-no-gpu.txt
+uv pip install --upgrade -r requirements-no-gpu-uv.txt
 ```
 
 **Step 4:** Run the Transformer Lab Server
 
 ```bash
 conda activate transformerlab
-uvicorn api:app --port 8000 --host 0.0.0.0
+uv run -v uvicorn api:app --port 8383 --host 0.0.0.0 --no-access-log
 ```
 
 **To Connect:**
