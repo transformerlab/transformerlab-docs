@@ -89,6 +89,7 @@ uv pip install -U flash-attn==2.7.3 --no-build-isolation
 
 ```bash
 conda activate transformerlab
+pip install uv
 uv pip install --upgrade -r requirements-no-gpu-uv.txt
 ```
 
