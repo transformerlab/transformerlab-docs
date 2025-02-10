@@ -25,6 +25,14 @@ curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/in
 
 This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/.transformerlab/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
 
+:::info Requirements
+The following Linux commands must be installed on your machine for the installer to work:
+
+- curl
+- git
+
+:::
+
 **Run the Transformer Lab Server**
 
 Now you can run the server:
