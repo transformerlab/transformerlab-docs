@@ -65,9 +65,14 @@ conda activate transformerlab
 
 **Step 2:** Download Transformer Lab
 
+For the following command, you can find the latest release by visiting:
+
+https://github.com/transformerlab/transformerlab-api/releases/latest
+
 ```bash
 git clone git@github.com:transformerlab/transformerlab-api.git
 cd transformerlab-api
+git checkout v0.9.20 # where "v0.9.20" is the latest release version
 ```
 
 **Step 3:** Install Python Dependencies
