@@ -8,7 +8,7 @@ sidebar_position: 10
 
 An experiment needs a foundation model (LLM).
 
-Open-source LLM's are typicaly very large files (e.g. 3GB or more) that are composed of some configuration files that define the architecture of the LLM they encapsulate as well as a large blog of binary data that captures the values of each neuron in the trained neural net.
+Open-source LLM's are typicaly very large files (e.g. 3GB or more) that are composed of some configuration files that define the architecture of the LLM they encapsulate as well as a large blob of binary data that captures the values of each neuron in the trained neural net.
 
 Transfomer Lab works with many model formats that support a variety of platforms and engines, and it provides a gallery of common models that serve as a starting point for your experiment. You can also import models from the thousands hosted on [Hugging Face](https://huggingface.co/models), or from your server's file system. For more information, see the section on [Importing Models](../concepts/import.md).
 
