@@ -42,4 +42,4 @@ Now take both files and drag them into the Transformer Lab App and click on <But
 
 <img src={require('./img/dataset-build.gif').default} alt="Dataset Zoo" width="700" />
 
-This will create a new Dataset that you can later use to [train or finetine a model](./8-training.md).
+This will create a new Dataset that you can later use to [train or finetune a model](./8-training.md).
