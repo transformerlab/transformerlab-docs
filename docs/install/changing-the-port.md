@@ -3,7 +3,7 @@ title: Changing the Default Port
 sidebar_position: 100
 ---
 
-# Default Port 8339
+# Default Port 8338
 
 By default, Transformer Lab runs the Transformer Lab Server on port 8338 on your machine. If something else on your computer is holding that port, the local server will fail to load.
 

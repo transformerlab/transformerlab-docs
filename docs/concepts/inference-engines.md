@@ -1,4 +1,5 @@
 ---
+sidebar_position: 20
 ---
 
 import MuxPlayer from '@mux/mux-player-react';
