@@ -57,4 +57,4 @@ If you see that, click on "More Info" and then "Run Anyway" to allow Windows to 
 
 ## Step 4 - Install Dependencies
 
-If you select Local Install, Transformer Lab will go through the steps to install itself locally along with all of the dependencies. This step takes a long time. The app may get to the very last step that reads "Check for Important Plugins" and then stall -- if you see this, close the app and restart it and everything should work from then on.
+If you select Local Install, Transformer Lab will go through the steps to install itself locally along with all of the dependencies. This step takes a long time the very first time you run the app, but will be fast afterwards.
