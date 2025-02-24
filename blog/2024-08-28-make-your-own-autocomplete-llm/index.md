@@ -21,6 +21,8 @@ Autocomplete is a great initial application to current applications because it i
 
 In this post we will set up a system to add autocomplete to an existing product, and then we will suggest future opportunities to improve it.
 
+<!--truncate-->
+
 ## Getting Started
 
 Let's get started by setting up our computer so we can play with different models and techniques.

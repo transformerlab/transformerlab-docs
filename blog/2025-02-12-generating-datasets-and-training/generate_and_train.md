@@ -9,6 +9,8 @@ tags: [generation, fine-tuning, lora]
 
 In this tutorial, we'll explore how to bridge a knowledge gap in our model by generating custom dataset content and then fine-tuning the model using a LoRA adapter. The process begins with generating data from raw text using the **Generate Data from Raw Text Plugin** and concludes with fine-tuning via the **MLX LoRA Plugin** within TransformerLab.
 
+<!--truncate-->
+
 ## Step 1: Testing the Model's Base Knowledge
 
 We start by asking our model a question about the character **Richard Hendricks** from the TV show _Silicon Valley_. Powered by the `mlx-community/Llama-3.2-1B-Instruct-4bit` model, it quickly reveals that it has no knowledge of the show or its characters—setting the stage for why fine-tuning is necessary.
