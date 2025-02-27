@@ -9,6 +9,8 @@ tags: [plugin, transformerlab, guide]
 
 In this guide, we'll walk through creating an evaluator plugin within TransformerLab named **sample-data-print**. This plugin will load a dataset available within TransformerLab and print its contents, along with some sample parameters.
 
+<!--truncate-->
+
 ## Step 1: Plugin Directory Structure
 
 First, create a dedicated directory for your plugin under the TransformerLab API repository:
