@@ -102,7 +102,7 @@ uv pip install --upgrade -r requirements-no-gpu-uv.txt
 
 ```bash
 conda activate transformerlab
-uv run -v uvicorn api:app --port 8383 --host 0.0.0.0 --no-access-log
+uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 ```
 
 **To Connect:**
