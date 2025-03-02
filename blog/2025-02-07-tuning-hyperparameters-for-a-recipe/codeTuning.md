@@ -5,13 +5,13 @@ authors: sanjay
 tags: [fine-tuning, training]
 ---
 
-# Fine-tuning a Code Completion Model with LoRA and TransformerLab: An Iterative Approach
+# Fine-tuning a Code Completion Model with LoRA and Transformer Lab: An Iterative Approach
 
 This post details our journey to fine-tune smolLM 135M, a compact language model, for Python code completion.
 
 We chose smolLM 135M for its size, which allows for rapid iteration. Instead of full fine-tuning, we employed LoRA (Low-Rank Adaptation), a technique that introduces trainable "adapter" matrices into the transformer layers. This provides a good balance between parameter efficiency and achieving solid results on the downstream task (code completion).
 
-TransformerLab handled the training, evaluation, and inference, abstracting away much of the underlying complexity. We used the `flytech/python codes-25k` dataset, consisting of 25,000 Python code snippets, without any specific pre-processing. Our training setup involved a constant learning rate, a batch size of 4, and an NVIDIA RTX 4060 GPU.
+Transformer Lab handled the training, evaluation, and inference, abstracting away much of the underlying complexity. We used the `flytech/python codes-25k` dataset, consisting of 25,000 Python code snippets, without any specific pre-processing. Our training setup involved a constant learning rate, a batch size of 4, and an NVIDIA RTX 4060 GPU.
 
 ## The Iterative Fine-tuning Process: Nine Runs to Success
 
@@ -172,7 +172,7 @@ Due to the fact that we were finetuning a 135M model, we didn't check for the co
 
 ## Conclusion and Next Steps
 
-We successfully developed a LoRA-based fine-tuning recipe for smolLM 135M that balances training efficiency and code completion performance. The final configuration (Run 9) achieves strong results in a 15-minute training run on an RTX 4060, making it a suitable default recipe for TransformerLab users.
+We successfully developed a LoRA-based fine-tuning recipe for smolLM 135M that balances training efficiency and code completion performance. The final configuration (Run 9) achieves strong results in a 15-minute training run on an RTX 4060, making it a suitable default recipe for Transformer Lab users.
 
 Limitations exist: the model is restricted to Python and trained on a relatively small dataset. Future work could involve:
 
@@ -181,6 +181,6 @@ Limitations exist: the model is restricted to Python and trained on a relatively
 - Exploring different LoRA configurations.
 - More rigorous quantitative evaluation.
 
-This project highlights the value of iterative experimentation and combining quantitative and qualitative evaluation when fine-tuning language models. The resulting recipe provides a solid foundation for further exploration of code generation within TransformerLab.
+This project highlights the value of iterative experimentation and combining quantitative and qualitative evaluation when fine-tuning language models. The resulting recipe provides a solid foundation for further exploration of code generation within Transformer Lab.
 
 So it was cool that I did this kind of vibes based iterative approach, and this is usually how you get started with training, however this just highlights the importance of having some sort more measurable evaluation process. Coming soon!

@@ -8,7 +8,7 @@ EleutherAI Harness is a powerful evaluation framework that lets you measure how 
 
 ## 1. Selecting a Model from the Foundation Tab
 
-Start by navigating to the Foundation tab in TransformerLab. Choose the model you want to evaluate from the list provided.
+Start by navigating to the Foundation tab in Transformer Lab. Choose the model you want to evaluate from the list provided.
 
 <!-- Insert GIF showing model selection -->
 

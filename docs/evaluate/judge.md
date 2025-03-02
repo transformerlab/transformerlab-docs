@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # LLM-as-Judge Evaluations
 
-TransformerLab provides an easier way to intergrate the LLM-as-judge suite of metrics by DeepEval to evaluate model outputs across multiple dimensions. Here's an overview of the available metrics:
+Transformer Lab provides an easier way to intergrate the LLM-as-judge suite of metrics by DeepEval to evaluate model outputs across multiple dimensions. Here's an overview of the available metrics:
 
 - **Bias**: Measures the presence of unfair prejudices or discriminatory content in model outputs
 - **Toxicity**: Evaluates the presence of harmful, offensive, or inappropriate content
@@ -46,7 +46,7 @@ a) **Basic Configuration**
 
 b) **Plugin Configuration**
 
-- Choose a judge model (select 'local' to use TransformerLab's local model)
+- Choose a judge model (select 'local' to use Transformer Lab's local model)
 - Set the sample fraction for evaluation
 - For GEval tasks:
   - Specify the Criteria Name and Description

@@ -7,13 +7,13 @@ tags: [plugin, transformerlab, guide]
 
 # How to Plugin? A Step-by-Step Guide to Transformer Lab Plugins
 
-In this guide, we'll walk through creating an evaluator plugin within TransformerLab named **sample-data-print**. This plugin will load a dataset available within TransformerLab and print its contents, along with some sample parameters.
+In this guide, we'll walk through creating an evaluator plugin within Transformer Lab named **sample-data-print**. This plugin will load a dataset available within Transformer Lab and print its contents, along with some sample parameters.
 
 <!--truncate-->
 
 ## Step 1: Plugin Directory Structure
 
-First, create a dedicated directory for your plugin under the TransformerLab API repository:
+First, create a dedicated directory for your plugin under the Transformer Lab API repository:
 
 ```bash
 mkdir transformerlab/plugins/sample-data-print
@@ -26,18 +26,18 @@ This directory will hold all the essential files for your plugin.
 Within the `sample-data-print` directory, you will need to create three mandatory files:
 
 1. **setup.sh** – Handles the environment setup and configuration.
-2. **index.json** – Provides meta information about your plugin for TransformerLab to discover and load it.
+2. **index.json** – Provides meta information about your plugin for Transformer Lab to discover and load it.
 3. **main.py** – Contains the Python code that runs your plugin logic (loading the dataset and printing contents).
 
 ## Step 3: Setting Up index.json
 
-The `index.json` file serves as the manifest for your plugin. It provides TransformerLab with important metadata and instructions. Below is an adapted version from a generator plugin example. Notice we have also added some sample parameters as text fields which we will simply print later in our plugin.
+The `index.json` file serves as the manifest for your plugin. It provides Transformer Lab with important metadata and instructions. Below is an adapted version from a generator plugin example. Notice we have also added some sample parameters as text fields which we will simply print later in our plugin.
 
 ```json
 {
   "name": "Sample Data Print",
   "uniqueId": "sample-data-print",
-  "description": "An evaluator plugin that loads a dataset from TransformerLab and prints its contents along with sample parameter values.",
+  "description": "An evaluator plugin that loads a dataset from Transformer Lab and prints its contents along with sample parameter values.",
   "plugin-format": "python",
   "type": "evaluator",
   "version": "0.1.0",
@@ -51,7 +51,7 @@ The `index.json` file serves as the manifest for your plugin. It provides Transf
     "sample_text": {
       "title": "Sample Text",
       "type": "string",
-      "default": "Hello, TransformerLab!"
+      "default": "Hello, Transformer Lab!"
     },
     "additional_info": {
       "title": "Additional Information",
@@ -70,7 +70,7 @@ The `index.json` file serves as the manifest for your plugin. It provides Transf
 }
 ```
 
-This manifest informs TransformerLab of the following:
+This manifest informs Transformer Lab of the following:
 
 - **Plugin Meta Information:** Name, unique identifier, description, version, etc.
 - **Plugin Files:** The required files (main.py and setup.sh) for the plugin.
@@ -95,7 +95,7 @@ parser.add_argument("--job_id",
                     type=str, help="Job identifier")
 parser.add_argument("--dataset_name",
                     type=str, help="Path to the dataset CSV file")
-parser.add_argument("--sample_text", default="Hello, TransformerLab!",
+parser.add_argument("--sample_text", default="Hello, Transformer Lab!",
                     type=str, help="Sample text parameter")
 parser.add_argument("--additional_info", default="This is a sample parameter for demonstration.",
                     type=str, help="Additional information")
@@ -173,10 +173,10 @@ transformerlab/
 
 ## Step 6: Running and Testing Your Plugin
 
-To run your plugin, just save all files and build the TransformerLab API locally. Note that new plugins will only appear in the locally built API and will not be visible in the production app (which is built only during official releases). For testing your new plugin:
+To run your plugin, just save all files and build the Transformer Lab API locally. Note that new plugins will only appear in the locally built API and will not be visible in the production app (which is built only during official releases). For testing your new plugin:
 
-1. Build and run the TransformerLab API locally.
-2. Once running, launch the TransformerLab app.
+1. Build and run the Transformer Lab API locally.
+2. Once running, launch the Transformer Lab app.
 3. Install the plugin by navigating to the **Plugins** section and clicking **Install** on the `sample-data-print` plugin.
 4. Navigate to the **Evaluate** section where you should see your **sample-data-print** plugin listed.
 5. Run the plugin, then review the outputs in the app.
@@ -211,6 +211,6 @@ Place the `info.md` file in your `sample-data-print` directory alongside the oth
 
 ## Step 7: Contributing Your Plugin
 
-When you’re ready to share your plugin, please create a pull request on the [TransformerLab API repository](https://github.com/transformerlab/transformerlab-api) and tag the team for review.
+When you’re ready to share your plugin, please create a pull request on the [Transformer Lab API repository](https://github.com/transformerlab/transformerlab-api) and tag the team for review.
 
 Happy coding!

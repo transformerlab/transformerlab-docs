@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Generate Data from Raw Text
 
-This page explains how to generate data from raw text using TransformerLab. Follow the steps below and refer to the screenshots as placeholders until you add your images.
+This page explains how to generate data from raw text using Transformer Lab. Follow the steps below and refer to the screenshots as placeholders until you add your images.
 
 <img src={require('./gifs/raw_text/DownloadPlugin.gif').default} alt="Docs Upload Gif" width="500" />
 

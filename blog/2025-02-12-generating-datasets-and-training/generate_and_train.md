@@ -1,13 +1,13 @@
 ---
 slug: generate-and-train
-title: Generating Datasets and Training Models with TransformerLab
+title: Generating Datasets and Training Models with Transformer Lab
 authors: deep
 tags: [generation, fine-tuning, lora]
 ---
 
 ## Introduction
 
-In this tutorial, we'll explore how to bridge a knowledge gap in our model by generating custom dataset content and then fine-tuning the model using a LoRA adapter. The process begins with generating data from raw text using the **Generate Data from Raw Text Plugin** and concludes with fine-tuning via the **MLX LoRA Plugin** within TransformerLab.
+In this tutorial, we'll explore how to bridge a knowledge gap in our model by generating custom dataset content and then fine-tuning the model using a LoRA adapter. The process begins with generating data from raw text using the **Generate Data from Raw Text Plugin** and concludes with fine-tuning via the **MLX LoRA Plugin** within Transformer Lab.
 
 <!--truncate-->
 
@@ -51,7 +51,7 @@ Realizing the model's limitations, we sourced a concise synopsis of the TV show 
 
 ## Step 3: Fine-Tuning with the MLX LoRA Plugin
 
-With your dataset ready, the next stage is fine-tuning the model. We utilize the **MLX LoRA Plugin** in TransformerLab to train a LoRA adapter on the custom dataset. This process adjusts the model's behavior, empowering it to incorporate the new context provided by the Silicon Valley synopsis.
+With your dataset ready, the next stage is fine-tuning the model. We utilize the **MLX LoRA Plugin** in Transformer Lab to train a LoRA adapter on the custom dataset. This process adjusts the model's behavior, empowering it to incorporate the new context provided by the Silicon Valley synopsis.
 
 <img src={require('./gifs/raw_text/TrainingSetup.gif').default} alt="Docs Upload Gif" width="500" />
 

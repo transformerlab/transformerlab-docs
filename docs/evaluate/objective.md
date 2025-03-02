@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Evaluating with Objective Metrics
 
-TransformerLab provides a suite of industry-standard objective metrics supported by DeepEval to evaluate model outputs. Here's an overview of the available metrics:
+Transformer Lab provides a suite of industry-standard objective metrics supported by DeepEval to evaluate model outputs. Here's an overview of the available metrics:
 
 - **Rouge**: Evaluates text similarity based on overlapping word sequences
 - **BLEU**: Measures the quality of machine-translated text by comparing it with reference translations

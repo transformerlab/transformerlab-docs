@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # Generate Data from Scratch
 
-This page explains how to generate data from just concepts of a dataset using TransformerLab. Follow the steps below and refer to the screenshots as placeholders until you add your images.
+This page explains how to generate data from just concepts of a dataset using Transformer Lab. Follow the steps below and refer to the screenshots as placeholders until you add your images.
 
 ## Step 1: Download the Generate From Scratch Plugin
 

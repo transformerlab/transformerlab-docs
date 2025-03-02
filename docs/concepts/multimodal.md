@@ -4,7 +4,7 @@ sidebar_position: 50
 
 # Multimodal Models
 
-In order to run and interact with multimodal models using TransformerLab, you must first [download a model from the Model Zoo](../tutorial/3-models.md) or [import your own model](import.md). We currently only support models under the [LlavaForConditionalGeneration](https://huggingface.co/docs/transformers/en/model_doc/llava#transformers.LlavaForConditionalGeneration) architecture.
+In order to run and interact with multimodal models using Transformer Lab, you must first [download a model from the Model Zoo](../tutorial/3-models.md) or [import your own model](import.md). We currently only support models under the [LlavaForConditionalGeneration](https://huggingface.co/docs/transformers/en/model_doc/llava#transformers.LlavaForConditionalGeneration) architecture.
 
 # Choosing a Plugin/Inference Engine
 
