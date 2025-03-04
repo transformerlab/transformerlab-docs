@@ -11,7 +11,7 @@ For Windows users, you should be able to download our application from our downl
 
 ## Step 1 - Install WSL2 and CUDA
 
-CUDA is the toolkit that allows you to connect to NVIDIA GPUs. If you do not have a GPU, Transformer Lab can do basic tasks, but a GPU is needed to unlock advanced LLM work.
+CUDA is the toolkit that allows you to connect to NVIDIA GPUs. You can skip installing CUDA if you do not have an NVIDIA GPU. Without CUDA, Transformer Lab can do basic tasks, but an NVIDIA GPU is needed to unlock advanced LLM work.
 
 To run Transformer Lab, you also need to install WSL2. WSL2 is a full Linux kernel integration in Windows that enables running Linux distributions natively -- this is where our Transformer Lab's Python Machine Learning workspace will run.
 
@@ -36,7 +36,7 @@ wsl --install
 For Transformer Lab to work, make sure that your default WSL instance is **Ubuntu**. WSL lets you install multiple distros but you can set the default using the following command:
 
 ```
-wsl --set-default <Distribution Name>
+wsl --set-default Ubuntu
 ```
 
 :::
