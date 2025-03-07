@@ -18,7 +18,7 @@ Out of the box, Transformer Lab supports:
 
 Many models, especially Chat or Instruction tuned ones, support sending data to the model in the format of a chat.
 
-Internally, a chat is just a pre-formated completion sent to the model in a per-model format.
+Internally, a chat is just a pre-formatted completion sent to the model in a per-model format.
 
 Transformer Lab provides a user interface that allows you to send messages to the LLM in this format, and it uses the FastChat library to format the chat in the right format appropriate for each type of model.
 
