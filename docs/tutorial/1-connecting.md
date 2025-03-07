@@ -6,7 +6,7 @@ import { LuLink2 } from "react-icons/lu";
 
 # 1. Connect to a Server
 
-The Transformer Lab GUI needs to connect to a Transformer Lab Server in order to get stated. If you are using a Local Connection, you can follow the steps on the Local Connection tab and skip this step.
+The Transformer Lab GUI needs to connect to a Transformer Lab Server in order to get started. If you are using a Local Connection, you can follow the steps on the Local Connection tab and skip this step.
 
 <img src={require('./img/connect.png').default} alt="Connect Gif" width="350" />
 
