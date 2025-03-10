@@ -1,6 +1,6 @@
 {
-    "label": "Evaluate",
-    "position": 7,
+    "label": "Train",
+    "position": 5,
     "link": {
       "type": "generated-index"
     }
