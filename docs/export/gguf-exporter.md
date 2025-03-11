@@ -3,6 +3,8 @@ sidebar_position: 2
 ---
 # GGUF Exporter Plugin
 
+GGUF is a binary format optimized for quick loading and saving of models, making it highly efficient for inference and designed for use with GGML and other executors. [Learn more about GGUF](https://github.com/ggml-org/ggml/blob/master/docs/gguf.md).
+
 The GGUF Exporter Plugin allows you to export your model to the GGUF format with quantization. Follow the steps below to use the plugin.
 
 <img src={require('./gifs/GGUFExporter.gif').default} alt="Exporter GIF" width="500" />
