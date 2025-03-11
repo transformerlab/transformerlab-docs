@@ -104,6 +104,20 @@ const config = {
       }),
     ],
   ],
+    // New plugin instance for the Resources tab acting like a blog:
+    plugins: [
+      [
+        '@docusaurus/plugin-content-blog',
+        {
+          id: 'resources',
+          routeBasePath: 'resources',
+          path: './resources',
+          blogSidebarTitle: 'All Resources',
+          blogSidebarCount: 'ALL',
+          showReadingTime: true,        
+        },
+      ],
+    ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -127,6 +141,11 @@ const config = {
           {
             to: "/blog",
             label: "Blog",
+            position: "left",
+          },
+          {
+            to: "resources",
+            label: "Resources",
             position: "left",
           },
           { to: "/docs/download", label: "Download ↓", position: "right" },
@@ -173,6 +192,10 @@ const config = {
               {
                 label: "Blog",
                 to: "/blog",
+              },
+              {  
+                  label: "Resources",
+                  to: "/resources",
               },
               {
                 label: "GitHub",
