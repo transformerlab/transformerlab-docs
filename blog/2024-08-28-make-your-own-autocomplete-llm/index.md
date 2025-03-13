@@ -31,7 +31,7 @@ I will start by [downloading Transformer Lab](/docs/download) on a Linux box wit
 
 ![Transformer Lab Installed](./transformerlab-installed.png)
 
-Now that we have a running LLM workspace, create a [new Experiment](/docs/tutorial/experiment) in Transformer Lab and let's begin.
+Now that we have a running LLM workspace, create a new Experiment in Transformer Lab and let's begin.
 
 ## Using Non-Instruction Tuned vs Instruction Tuned Models
 
