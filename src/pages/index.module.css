@@ -20,7 +20,10 @@
 } */
 
 h2.hero__subtitle {
-  margin-bottom: 2rem;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 @media screen and (max-width: 996px) {
@@ -79,3 +82,8 @@ h2.hero__subtitle {
 }
 
 
+.video_container {
+  border: 5px solid rgb(83, 103, 169);
+  border-radius: 10px;
+  width: 80%;
+}

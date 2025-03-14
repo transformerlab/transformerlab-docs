@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Screenshot from "./img/TransformerLab_train.mp4";
+import Screenshot from "./img/TFLDemoMarch25_HQ_2.mp4";
 import styles from "./index.module.css";
 import Content from "./homepage-content.mdx";
 import FullLogo from "/img/Transformer-Lab_Logo.svg";
@@ -48,10 +48,12 @@ function HomepageHeader() {
             or <a href="docs/intro">Learn More</a>
           </div>
         </div>
-        <video width="80%" autoPlay loop muted>
-          <source src={Screenshot} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div className={clsx("video_container", styles.video_container)}>
+          <video width="100%" autoPlay loop muted>
+            <source src={Screenshot} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <div className={styles.embedded_markdown}>
           <article>
             <Content />
