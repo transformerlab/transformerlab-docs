@@ -9,7 +9,7 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 const config = {
   title: "Transformer Lab",
   tagline:
-    "100% Open Source Toolkit for Large Language Models: Train, Tune, Chat on your own Machine",
+    "100% Open Source Toolkit for Large Language Models: Train, Tune, Eval on your own Machine",
   favicon: "img/logo2.svg",
 
   // Set the production url of your site here
@@ -104,20 +104,20 @@ const config = {
       }),
     ],
   ],
-    // New plugin instance for the Resources tab acting like a blog:
-    plugins: [
-      [
-        '@docusaurus/plugin-content-blog',
-        {
-          id: 'resources',
-          routeBasePath: 'resources',
-          path: './resources',
-          blogSidebarTitle: 'All Resources',
-          blogSidebarCount: 'ALL',
-          showReadingTime: true,        
-        },
-      ],
+  // New plugin instance for the Resources tab acting like a blog:
+  plugins: [
+    [
+      "@docusaurus/plugin-content-blog",
+      {
+        id: "resources",
+        routeBasePath: "resources",
+        path: "./resources",
+        blogSidebarTitle: "All Resources",
+        blogSidebarCount: "ALL",
+        showReadingTime: true,
+      },
     ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -193,9 +193,9 @@ const config = {
                 label: "Blog",
                 to: "/blog",
               },
-              {  
-                  label: "Resources",
-                  to: "/resources",
+              {
+                label: "Resources",
+                to: "/resources",
               },
               {
                 label: "GitHub",
