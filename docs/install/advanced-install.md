@@ -144,7 +144,3 @@ Read carefully. Do not run the Transformer Lab API on a machine exposed to the p
 :::
 
 Today, Transformer Lab exposes a public API on your server that accepts unauthenticated network requests. If you were to run Transformer Lab on the public internet, this would create a significant security issue. We recommend only running the API server on internal networks. If you need to access the API server from outside your internal network, use a VPN or a tool like Tailscale to avoid exposing the server to the public internet.
-
-For more information, read our document on how to run Transformer Lab publicly (@TODO)
-
-In addition, note that Transformer Lab allows a user to upload and run arbitrary Python scripts which can be potentially dangerous. Do not run untrusted scripts on a machine.
