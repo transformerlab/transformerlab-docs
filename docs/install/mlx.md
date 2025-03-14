@@ -19,12 +19,6 @@ With MLX, you can use a macOS computer with Apple Silicon (M1, M2, M3, M4) to do
 
 Transformer Lab works natively with MLX, using plugins.
 
-## Performance
-
-MLX is relatively new. We encourage you to try different models and tasks to test performance. LLMs perform better on MLX with the M2, M3 and M4 series of Apple chips. Larger models require more memory.
-
-If you have a lower tier M1 Mac with 16GB of RAM (like I do), you will find that MLX can easily be used for inference for smaller model sizes (i.e. less than 3 billion parameters). Training will work, but it's more performant on more powerful Mac computers. The M2, M3 and M4 can handle much larger models at high performance.
-
 ## Simple Install Instructions:
 
 Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and follow the on-screen instructions. Video below:
@@ -50,3 +44,9 @@ Play around Transformer Lab to see how to do more advanced things like training 
 Apple Macs without Apple Silicon are not ideal for doing advanced machine learning.
 
 If this is your situation, you can install Transformer Lab and do basic inference (i.e. talk to LLMs) using your Intel CPU. But if you want to do things like train or tune LLMs, you will need to get access to a computer with a GPU or a Mac with Silicon (e.g. in the cloud or locally).
+
+## Increasing Performance using MLX
+
+You can increase the performance of MLX by tweaking some of the memory limits set in the operating system. The script below is a good example of how to do that:
+
+[MLX Tuning Script](https://gist.github.com/ivanfioravanti/44b4284be930b3c340cc1696d60c6143)
