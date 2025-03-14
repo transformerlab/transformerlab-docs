@@ -5,6 +5,12 @@ authors: ali
 tags: [hello]
 ---
 
+:::note
+
+Since writing this post, we updated our installer to use uv, and it's great. We now use conda to install python then use uv for everything else.
+
+:::
+
 One of our primary goals is to make <a href="//transformerlab.ai">Transformer Lab</a> the most powerful tool available when working with local LLMs. Almost all of the most powerful libraries and tools out there are written in Python. So, we need a way to package Python, PyTorch, and associated tools as part of our application. All of this has to work reliably across multiple operating systems and hardware architectures.
 
 This ended up being **much** harder than we could ever have imagined...
