@@ -4,4 +4,6 @@ sidebar_position: 1
 
 # Opensource Philosophy
 
-More here soon. Transformer Lab is fully opensource as a community project.
+Transformer Lab is open source under the AGPL-3.0 License.
+
+Our goal is to make complex LLM work possible for everyone.
