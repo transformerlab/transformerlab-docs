@@ -174,9 +174,8 @@ train_model()
 1. **Decorator**: Added `@tfl_trainer.job_wrapper` to wrap the function
 2. **Dataset Loading**: Used `tfl_trainer.load_dataset()` instead of direct loading
 3. **Parameter Access**: Accessed parameters via `tfl_trainer.parameter_name` or `getattr(tfl_trainer, "parameter_name", default_value)`
-4. **Logging Setup**: Added `tfl_trainer.setup_train_logging()` for TensorBoard and W&B integration
-5. **Progress Tracking**: Added `tfl_trainer.create_progress_callback(framework="huggingface")` for reporting progress
-6. **Return Value**: Added a return value with status information
+4. **Progress Tracking**: Added `tfl_trainer.create_progress_callback(framework="huggingface")` for reporting progress
+5. **Return Value**: Added a return value with status information
 
 ## Parameter Access
 
