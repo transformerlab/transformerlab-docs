@@ -5,7 +5,7 @@ authors: deep
 tags: [evaluation, fine-tuning, llm-judge]
 ---
 
-When working with language models, fine-tuning often seems like the magic solution to adapt models for specialized tasks. But how effective is it really? In this technical study, we'll explore the tangible benefits and limitations of fine-tuning through a controlled experiment using the Transformer Lab platform.
+When working with language models, fine-tuning often seems like the magic solution to adapt models for specialized tasks. But how effective is it really? In this technical study, we'll explore the tangible benefits and limitations of fine-tuning on small dataset through a controlled experiment using the Transformer Lab platform.
 
 <!-- truncate -->
 
@@ -16,7 +16,7 @@ For this study, we used two models:
 1. **Base Model**: `mlx-community/Llama-3.2-1B-Instruct-4bit` (vanilla)
 2. **Fine-tuned Model**: The same Llama-3.2-1B base with an adapter trained specifically on a Silicon Valley TV show Q&A dataset
 
-Our fine-tuning dataset consisted of manually created question-answer pairs about the HBO show "Silicon Valley," deliberately kept small to simulate a common real-world scenario where domain-specific training data is limited.
+Our fine-tuning dataset consisted of only 20 manually created question-answer pairs about the HBO show "Silicon Valley," deliberately kept small to simulate a common real-world scenario where domain-specific training data is limited.
 
 ## Qualitative Comparison
 
@@ -88,8 +88,6 @@ Several factors likely contributed to the limited quantitative improvements:
 
 2. **Overfitting Risk**: Small datasets can lead to memorization rather than true generalization.
 
-3. **Evaluation Breadth**: Our evaluation tested the model on a broader set of questions than it was trained on, revealing limitations in generalization.
-
 <img src={require('./gifs/5_DetailedComparison.png').default} alt="Demo Plugin Gif" width="500" />
 
 ## Technical Implications
@@ -110,10 +108,9 @@ The results suggest that for specialized domains, the quantity and quality of fi
 
 <img src={require('./gifs/7_BarChart.png').default} alt="Demo Plugin Gif" width="500" />
 
-
 ## Conclusion
 
-Is fine-tuning really all you need? Our study suggests a more nuanced answer: fine-tuning can provide meaningful improvements for specific use cases, but those gains might be more limited than qualitative observations suggest.
+Our study suggests a more nuanced answer: fine-tuning can provide meaningful improvements for specific use cases, but those gains might be more limited than qualitative observations suggest.
 
 For practitioners looking to adapt models for specialized domains:
 
