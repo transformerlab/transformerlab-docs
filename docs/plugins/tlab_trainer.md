@@ -1,10 +1,10 @@
 # Creating Trainer Plugins within Transformer Lab
 
-This guide explains how to adapt your existing training scripts to work with Transformer Lab using the `tfl_trainer` decorator class. By integrating with Transformer Lab, your training scripts gain progress tracking, parameter management, dataset handling, and integrated logging with minimal code changes. This is a part of the active development we are conducting with the Transformer Lab Plugin SDK to make integrating third-party plugins easier.
+This guide explains how to adapt your existing training scripts to work with Transformer Lab using the `tlab_trainer` decorator class. By integrating with Transformer Lab, your training scripts gain progress tracking, parameter management, dataset handling, and integrated logging with minimal code changes. This is a part of the active development we are conducting with the Transformer Lab Plugin SDK to make integrating third-party plugins easier.
 
-## What is `tfl_trainer`?
+## What is `tlab_trainer`?
 
-`tfl_trainer` is a decorator class that helps integrate your training script with Transformer Lab's job management system. It provides:
+`tlab_trainer` is a decorator class that helps integrate your training script with Transformer Lab's job management system. It provides:
 
 - Argument parsing and configuration loading
 - Dataset loading helpers
@@ -19,7 +19,7 @@ This guide explains how to adapt your existing training scripts to work with Tra
 Add this import to your training script:
 
 ```python
-from transformerlab.tfl_decorators import tfl_trainer
+from transformerlab.sdk.v1.train import tlab_trainer
 ```
 
 ### 2. Decorate your main training function
@@ -27,9 +27,7 @@ from transformerlab.tfl_decorators import tfl_trainer
 Wrap your main training function with the `job_wrapper` decorator:
 
 ```python
-@tfl_trainer.job_wrapper(
-    progress_start=0, 
-    progress_end=100,
+@tlab_trainer.job_wrapper(
     wandb_project_name="my_project",  # Optional: Set a custom Weights & Biases project name
     manual_logging=False  # Optional: Set to True for manual metric logging
 )
@@ -41,24 +39,24 @@ def train_model():
 
 The decorator parameters include:
 
-- `progress_start` and `progress_end`: Define the progress range (typically 0-100)
-- `wandb_project_name`: Optional custom name for your Weights & Biases project. Default is `TFL_Training`
+- `progress_start` and `progress_end`: Define the progress range (typically 0-100). These are optional fields and will typically track from 0 to 100 if not tracked.
+- `wandb_project_name`: Optional custom name for your Weights & Biases project. Default is `TLAB_Training`
 - `manual_logging`: Set to `True` for training scripts without automatic logging integration. Default is `False`.
 
-**Note**: There is also an async version of the job wrapper available for functions which might need to run asynchronously. This can be used by just changing ```@tfl_trainer.job_wrapper``` to ```@tfl_trainer.async_job_wrapper```.
+**Note**: There is also an async version of the job wrapper available for functions which might need to run asynchronously. This can be used by just changing ```@tlab_trainer.job_wrapper``` to ```@tlab_trainer.async_job_wrapper```.
 
 
 ### 3. Use helper methods
 
-Replace parts of your code with `tfl_trainer` helper methods:
+Replace parts of your code with `tlab_trainer` helper methods:
 
-- For dataset loading: `tfl_trainer.load_dataset()`
-- For progress tracking: `tfl_trainer.create_progress_callback()`
-- For storing anything to the job data (optional): `tfl_trainer.add_job_data(key, value)`
+- For dataset loading: `tlab_trainer.load_dataset()`
+- For progress tracking: `tlab_trainer.create_progress_callback()`
+- For storing anything to the job data (optional): `tlab_trainer.add_job_data(key, value)`
 
 ## Complete example
 
-Here's how a typical training script can be adapted to use `tfl_trainer`:
+Here's how a typical training script can be adapted to use `tlab_trainer`:
 
 ```python
 import argparse
@@ -118,34 +116,34 @@ if __name__ == "__main__":
 ```
 
 
-### Adapted Script with `tfl_trainer`
+### Adapted Script with `tlab_trainer`
 
 ```python
-from transformerlab.tfl_decorators import tfl_trainer
+from transformerlab.sdk.v1.train import tlab_trainer
 from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments, Trainer
 
 
-@tfl_trainer.job_wrapper(progress_start=0, progress_end=100)
+@tlab_trainer.job_wrapper(progress_start=0, progress_end=100)
 def train_model():
     # 1. Load dataset with helper
-    datasets = tfl_trainer.load_dataset()
+    datasets = tlab_trainer.load_dataset()
     dataset = datasets["train"]
     
     # 2. Load model and tokenizer (same as before)
-    model = AutoModelForCausalLM.from_pretrained(tfl_trainer.model_name)
-    tokenizer = AutoTokenizer.from_pretrained(tfl_trainer.model_name)
+    model = AutoModelForCausalLM.from_pretrained(tlab_trainer.model_name)
+    tokenizer = AutoTokenizer.from_pretrained(tlab_trainer.model_name)
     
     # 3. Setup training arguments with parameters from Transformer Lab
     training_args = TrainingArguments(
-        output_dir=tfl_trainer.output_dir,
-        learning_rate=float(tfl_trainer.learning_rate),
-        num_train_epochs=int(tfl_trainer.num_train_epochs),
-        report_to=report_to,
+        output_dir=tlab_trainer.params.output_dir,
+        learning_rate=float(tlab_trainer.params.learning_rate),
+        num_train_epochs=int(tlab_trainer.params.num_train_epochs),
+        report_to=tlab_trainer.report_to,
         # other arguments...
     )
     
     # 4. Create progress callback
-    progress_callback = tfl_trainer.create_progress_callback(framework="huggingface")
+    progress_callback = tlab_trainer.create_progress_callback(framework="huggingface")
     
     # 5. Create trainer with callback
     trainer = Trainer(
@@ -158,10 +156,7 @@ def train_model():
     
     # 6. Train and save
     trainer.train()
-    trainer.save_model(tfl_trainer.output_dir)
-    
-    # 7. Store results in job data
-    tfl_trainer.add_job_data("model_saved_path", tfl_trainer.output_dir)
+    trainer.save_model(tlab_trainer.output_dir)
     
     return True
 
@@ -171,34 +166,34 @@ train_model()
 
 ## Key Differences
 
-1. **Decorator**: Added `@tfl_trainer.job_wrapper` to wrap the function
-2. **Dataset Loading**: Used `tfl_trainer.load_dataset()` instead of direct loading
-3. **Parameter Access**: Accessed parameters via `tfl_trainer.parameter_name` or `getattr(tfl_trainer, "parameter_name", default_value)`
-4. **Progress Tracking**: Added `tfl_trainer.create_progress_callback(framework="huggingface")` for reporting progress
-5. **Return Value**: Added a return value with status information
+1. **Decorator**: Added `@tlab_trainer.job_wrapper` to wrap the function
+2. **Dataset Loading**: Used `tlab_trainer.load_dataset()` instead of direct loading
+3. **Parameter Access**: Accessed parameters via `tlab_trainer.parameter_name` or `getattr(tlab_trainer, "parameter_name", default_value)`
+4. **Progress Tracking**: Added `tlab_trainer.create_progress_callback(framework="huggingface")` for reporting progress
+5. **Return Value**: The return value could be anything, but it's recommended to return a boolean to indicate success/failure. The job wrapper will handle catching the errors and report them accordingly.
 
 ## Parameter Access
 
 Parameters are automatically loaded from the Transformer Lab configuration. You can access them in several ways:
 
-1. **Direct access** (if sure the parameter exists): `tfl_trainer.parameter_name`
-2. **Safe access with default** (recommended): `getattr(tfl_trainer, "parameter_name", default_value)`
+1. **Direct access** (if sure the parameter exists): `tlab_trainer.params.<parameter_name>`
+2. **Safe access with default** (recommended): `tlab_trainer.params.get(<parameter_name>, <default_value>)`
 
 Common parameters include:
 
-- `tfl_trainer.model_name`: Model to use for training
-- `tfl_trainer.dataset_name`: Dataset to use
-- `tfl_trainer.output_dir`: Directory for saving outputs
-- `tfl_trainer.num_train_epochs`: Number of training epochs
-- `tfl_trainer.batch_size`: Batch size for training
-- `tfl_trainer.learning_rate`: Learning rate
+- `tlab_trainer.params.model_name`: Model to use for training
+- `tlab_trainer.params.dataset_name`: Dataset to use
+- `tlab_trainer.params.output_dir`: Directory for saving outputs
+- `tlab_trainer.params.num_train_epochs`: Number of training epochs
+- `tlab_trainer.params.batch_size`: Batch size for training
+- `tlab_trainer.params.learning_rate`: Learning rate
 
 ## Progress Reporting
 
 Transformer Lab expects progress updates from 0 to 100. Use these methods:
 
-1. **Create callback**: Create a progress callback with `tfl_trainer.create_progress_callback(framework="huggingface")` and fetch it to your trainer. 
-2. **Manual updates**: For custom loops, use `tfl_trainer.progress_update(progress)` where progress is 0-100
+1. **Create callback**: Create a progress callback with `tlab_trainer.create_progress_callback(framework="huggingface")` and fetch it to your trainer. 
+2. **Manual updates**: For custom loops, use `tlab_trainer.progress_update(progress)` where progress is 0-100
 
 
 ## Manual Metric Logging
@@ -206,12 +201,12 @@ Transformer Lab expects progress updates from 0 to 100. Use these methods:
 For training scripts that don't have automatic integration with logging platforms like Huggingface Trainer does, you can use manual logging:
 
 1. **Enable manual logging**: Set `manual_logging=True` in the decorator
-2. **Log metrics**: Use `tfl_trainer.log_metric(name, value, step)` to log metrics during training
+2. **Log metrics**: Use `tlab_trainer.log_metric(name, value, step)` to log metrics during training
 
 Example with a custom training loop:
 
 ```python
-@tfl_trainer.job_wrapper(progress_start=0, progress_end=100, manual_logging=True)
+@tlab_trainer.job_wrapper(manual_logging=True)
 def train_model():
     # Setup model, data, etc.
     
@@ -221,12 +216,12 @@ def train_model():
         loss = model.train_step(batch)
         
         # Log metrics manually
-        tfl_trainer.log_metric("training_loss", loss.item(), step)
-        tfl_trainer.log_metric("learning_rate", scheduler.get_last_lr()[0], step)
+        tlab_trainer.log_metric("train/loss", loss.item(), step)
+        tlab_trainer.log_metric("train/lr", scheduler.get_last_lr()[0], step)
         
         # Update progress
         progress = (step / total_steps) * 100
-        tfl_trainer.progress_update(progress)
+        tlab_trainer.progress_update(progress)
 ```
 
 The `log_metric` function automatically handles logging to both Tensorboard and Weights & Biases (if enabled), so you don't need separate code paths for different logging backends.
@@ -236,7 +231,7 @@ The `log_metric` function automatically handles logging to both Tensorboard and 
 ## Best Practices
 
 1. **Error Handling**: The decorator handles basic error reporting, but include try/except blocks for specific operations
-2. **Parameter Access**: Always use `getattr()` with sensible defaults for optional parameters
+2. **Parameter Access**: Always use `.get()` with sensible defaults for optional parameters
 
 ## Summary
 
