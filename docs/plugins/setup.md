@@ -79,35 +79,24 @@ The `info.md` file provides user documentation in Markdown format. This should i
 1. A clear explanation of what the plugin does
 2. Instructions for using the plugin
 3. Details about available parameters
-4. Any troubleshooting tips
 
 ### Example Structure
 
 ```markdown
-# GGUF Exporter
+# My Plugin
 
 ## Overview
 
-This plugin exports Transformer Lab models to GGUF format, enabling them to run efficiently on computers without dedicated GPUs.
+This plugin does xyz
 
 ## Usage
 
-1. Select your model in the Model Hub
-2. Navigate to the Export tab
-3. Choose "GGUF Exporter" from the dropdown
-4. Configure your export settings
-5. Click "Export Model"
+...
 
 ## Parameters
 
-- **Output Format**: Determines the quantization level
-  - `q8_0`: 8-bit quantization (best balance of size and quality)
-  - `f16`: 16-bit floating point (higher quality, larger size)
-  - `f32`: 32-bit floating point (highest quality, largest size)
+...
 
-## Troubleshooting
-
-If you encounter errors during export, check that your model architecture is supported in the compatibility list.
 ```
 
 ## Creating setup.sh
