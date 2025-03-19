@@ -1,4 +1,4 @@
-# Creating Trainer Plugins within Transformer Lab
+# Creating a Full Trainer Plugin Script
 
 This guide explains how to adapt your existing training scripts to work with Transformer Lab using the `tlab_trainer` decorator class. By integrating with Transformer Lab, your training scripts gain progress tracking, parameter management, dataset handling, and integrated logging with minimal code changes. This is a part of the active development we are conducting with the Transformer Lab Plugin SDK to make integrating third-party plugins easier.
 
