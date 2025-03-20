@@ -101,6 +101,18 @@ const config = {
           trackingID: process.env.GTAG_TRACKING_ID || "G-XXXXXXXXXX",
           anonymizeIP: true,
         },
+        sitemap: {
+          lastmod: "date",
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+          createSitemapItems: async (params) => {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes("/page/"));
+          },
+        },
       }),
     ],
   ],
@@ -213,6 +225,12 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        appId: "R2IYF7ETH7",
+        apiKey: process.env.ALGOLIA_API_KEY || "API_KEY",
+        indexName: "docsearch",
+        contextualSearch: true,
       },
     }),
 };
