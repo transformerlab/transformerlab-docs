@@ -227,7 +227,7 @@ const config = {
         darkTheme: darkCodeTheme,
       },
       algolia: {
-        appId: "R2IYF7ETH7",
+        appId: "DNW29T8T7Z",
         apiKey: process.env.ALGOLIA_API_KEY || "API_KEY",
         indexName: "transformerlab",
         contextualSearch: true,
