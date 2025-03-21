@@ -1,3 +1,6 @@
+---
+sidebar_position: 3
+---
 # Creating a Demo Plugin Script
 
 This guide explains how to create a simple demo plugin for Transformer Lab using the `tlab_trainer` decorator class. Demo plugins are a great way to understand how the Transformer Lab plugin system works without needing to implement complex functionality. This example will focus on creating a plugin that simply takes parameters and prints them.
