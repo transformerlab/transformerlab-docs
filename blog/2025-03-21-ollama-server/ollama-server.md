@@ -7,13 +7,13 @@ tags: [transformerlab]
 
 # Integration with Ollama using the Ollama Python SDK
 
-Transformer Lab has recently added an [Ollama Server](/docs/interact/ollama) plugin which allows users to run inference through Ollama on their local machine. This is the best plugin to use for running GGUF models through Transformer Lab. If you aren't already familiar with Ollama or GGUF models, or if you want to know more about why this is important to support, I've included more background [at the end of this article](#background).
+Transformer Lab has recently added an [Ollama Server](/docs/interact/ollama) plugin which allows users to run inference through Ollama on their local machine. If you aren't already familiar with Ollama or GGUF models, or if you want to know more about why this is important for us to support, I've included more background [at the end of this article](#background).
 
 ## Getting Started
 
-Ollama is written in Go which has allowed them to create a very simple onboarding experience for users through compiled cross-platform support with an easy installation process. Transformer Lab is written in python, which has become the defacto language for many cutting edge AI libraries, but means there is not a simple direct way to work with Ollama. Fortunately so us, Ollama now has [their own python library](https://github.com/ollama/ollama-python) to help address this!
+Ollama is written in the Go programming language. This has several benefits, but perhaps most notably, it has made Ollama easy to distribute cross-platform and very easy for its users to install. But with python becoming the defacto language of choice for so many cutting edge AI libraries and applications (like Transformer Lab), it means there hasn't been a simple direct way to write programs that integration these applications with Ollama. Fortunately for us, Ollama has released the [Ollama python library](https://github.com/ollama/ollama-python) to help address this!
 
-Let me walk through our process of developing with the Ollama python library.
+Let me walk through our process of building a plugin in Transformer Lab using this python library...
 
 ### Setting up Ollama python library
 
@@ -37,16 +37,16 @@ response = chat(model='llama3.2', messages=[
 print(response['message']['content'])
 ```
 
-The resposne comes back in a ChatResponse object, which wraps a Message object.
-There isn't a lot of documentation on these classes, and the best way to get details is to look at
+Note that the resposne comes back in the form of a ChatResponse object, which wraps a Message object.
+The documentation on these classes is minimal, and your best bet is to look directly at the code in
 [_types.py](https://github.com/ollama/ollama-python/blob/main/ollama/_types.py) in their github.
-But the best way to get going is to start with the [examples](https://github.com/ollama/ollama-python/tree/main/examples) they've posted, where you'll see that most things can be done in a a few lines of code.
+Fortunately, their github page also comes with a pretty thorough set of [examples](https://github.com/ollama/ollama-python/tree/main/examples), where you'll see that most things can be done in a a few lines of code.
 
 ### Streaming responses
 
 While it's convenient to type a prompt into the command line and get your resopnse in a single output, Transformer Lab needs to be able stream responses. Streaming allows us to create a UI in our application that shows progress to the user, and streaming is also the standard way that our OpenAI-compatible API responds.
 
-Fortunately, Ollama supports streaming as a parameter you can pass to the `generate` and `chat` functions:
+Fortunately, Ollama supports streaming as a parameter that you can pass to the `generate` and `chat` functions:
 
 ```
 stream = chat(
@@ -59,15 +59,15 @@ for chunk in stream:
   print(chunk['message']['content'], end='', flush=True)
 ```
 
-Getting Ollama installed and returning chats was very easy. But there were a few details we needed to figure out in order to get a working plugin published for our users...
+Getting Ollama installed and returning chats was very easy. But there were a few details we needed to figure out in order to get a working plugin published for our users.
 
 ## Building the Ollama Server plugin
 
 ### Running Transformer Lab Model In Ollama - Take 1: Modelfiles
 
-When you are using the Ollama application, downloading a model from Ollama's model library is a single command (e.g. `ollama pull llama3.2`). But we need to be able to run models from Transformer Lab's model library (by default, these are found at `~/.transformerlab/workspace/models`). So we will need to somehow "import" our models into Ollama, and we want to do that without copying files since these models are often many gigabytes in size!
+Downloading a model from Ollama's model library is a single command in their application (e.g. `ollama pull llama3.2`). But we need to be able to run models from Transformer Lab's model library (by default, these are found at `~/.transformerlab/workspace/models`). So we will need to somehow "import" our models into Ollama, and we want to do that without copying files since these models are often many gigabytes in size!
 
-The Ollama API and python library both have a way of creating a model in Ollama based on files on your hard drive, but it involves copied your model to the Ollama cache first (details [here](https://github.com/ollama/ollama/blob/main/docs/api.md#create-a-model-from-gguf)). I was hoping for something simpler that involve managing blobs in their system (more on that shortly) and I really wanted to avoid copying files to their cache.
+The Ollama API and python library both have a way of creating a model in Ollama based on files on your hard drive, but it involves copying your files into Ollama in a special way first (details [here](https://github.com/ollama/ollama/blob/main/docs/api.md#create-a-model-from-gguf)). Ideally, we'd like to avoid managing these blobs in their system (more on that shortly) and, more importantly, we don't want to make copies of our files.
 
 Ollama also supports importing models from your hard drive by using something called Modelfiles. To do this, you first create a file called `Modelfile` in the same directory as your GGUF file, and populate it with a path to the GGUF file. Ollama's Modelfile format also allows you to set a number of parameters for how to run the model, but for now let's just worry about getting our model file into Ollama so it can be run.  
 
@@ -77,21 +77,21 @@ The most basic version of `Modelfile` has a single line with a path to your GGUF
 FROM /Users/username/.transformerlab/workspace/models/llama3.2.gguf
 ```
 
-This worked and I could use the Modelfile to set a number of other parameters as well. In order to load from a modelfile I had to call out to the system like `ollama create <model_name> -f /path/to/Modelfile`. This was a little uglier than using the API, but worked well...until I realized this approach will also copy files into the Ollama cache!
+This works well but is not supported by the python library (at least not as far as I can tell). Instead, this can be done with a simple system call like `ollama create <model_name> -f /path/to/Modelfile`. This is pretty simple but it turns out it also suffers from the same issue: Duplicating model files!
 
 ### Running Transformer Lab Model In Ollama - Take 2: Symlinks
 
-So it looks like there are multiple ways to import into Ollama but all of them require making a copy of your model file. I wanted to find a way to avoid this.
+So, there are multiple ways to import into Ollama but all of them require making a copy of your model file. So how can we get around this?
 
-Ollama stores its models in its own cache which by default can be found at `~/.ollama/models`. When you load a model into Ollama from your hard drive, it makes its own copy of the modelfiles in its cache a directory called `blobs`, where the files can be found with names in a format like `sha256-<long_string_of_hex_digits>` (where the string of hex digits is the output of calculating `hashlib.sha256()` on the contents of the file). It also creates manifest files in a separate `manifest` directory with metadata needed to run the file.
+Ollama stores its models in its own cache which by default can be found at `~/.ollama/models`. When you load a model into Ollama from your hard drive, it makes its own copy of the modelfiles in its cache in a directory called `blobs`, where the files can be found with names in a format like `sha256-<long_string_of_hex_digits>` (the string of hex digits is the output of calculating `hashlib.sha256()` on the contents of the file). It also creates a manifest file in a separate `manifests` directory with metadata needed to run the model.
 
-After a quick experiment, I realized Ollama only creates blobs if they don't already exist. So we can use a bit of a hack to prevent model file copying: create a symlink in the `blobs` directory with the correct name and pointing to the Transformer Lab cache. This worked as long as I created the link before calling `ollama create`. But it means we will have to do this check every time before running the model (or risk having a surprise copy if the model file changes for any reason).
+Fortunately, Ollama checks and only creates blobs if they don't already exist. So we can use a bit of a hack to prevent model file copying: create a symlink in the `blobs` directory with the name Ollama is expecting! We can do this and point the symlink to the Transformer Lab cache. But it means we will have to do this check every time before running the model (or risk having a surprise copy if the model file in Transformer Lab changes for any reason).
 
 ### Loading models
 
-Transformer Lab has a concept of "Starting" and "Stopping" a model, which is essentially loading the model parameters into memory and starting a model worker that is ready to take calls. Ollama also supports this although silghtly indirectly.
+Transformer Lab has a concept of "Starting" and "Stopping" a model, which is essentially loading the model parameters into memory and starting a model worker thread. Ollama also supports this although silghtly indirectly.
 
-Ollama automatically loads a model into memory the first time you use it so that users don't need to remember this step. We can take advantage of this and load a model by calling Ollama's `generate` command without a prompt:
+Ollama automatically loads a model into memory the first time you use it so that users don't need to do it themselves. We can take advantage of this and load a model by calling Ollama's `generate` command without a prompt:
 
 ```
 load_model = self.model.generate(
@@ -99,26 +99,43 @@ load_model = self.model.generate(
 )
 ```
 
-You can print the response object to see details of the loaded model.
+Now when you make a subsequent call to `generate` the model will already be loaded into memory. You can also see details of the loaded model by printing `load_model` in the above code.
 
-## Conclusion
+## Success!
 
- After making these changes to the Ollama Server plugin we now have everything we need to serve and run a model in Transformer Lab. Although this has added a requirement to install Ollama first, we've found that the benefit of having a robust and simple installation process has made that a better experience overall. This has also made it much easier for us to stay up-to-date on support for latest models as Ollama routinely has support for major models on release or shortly after. As a result, the Ollama Server plugin is our recommended way to use GGUF models in Transformer Lab.
+ After making these changes to the Ollama Server plugin we now have everything we need to serve and run a model in Transformer Lab. Although this plugin requires the user to install Ollama first, we've found that the benefit of having a robust and simple installation process has made that a better experience overall. This has also made it much easier for us to stay up-to-date on support for latest models, as Ollama routinely has support for major models on release or shortly after. 
+ 
+ The Ollama Server plugin is our recommended way to use GGUF models in Transformer Lab today.
 
-## Next Steps
+## What Next?
 
 There are a few things we are working to improve with our Ollama integration:
 
 ### Unloading models
 
-When the user clicks "Stop" in Transformer Lab we want to immediately free the memory the model was previously using. By default, the way Ollama works is that it keeps the model in memory for some amount of time (default 5 minutes) before unloading. You can change this by using the `keep_alive` parameter. We could potentially set a longer `keep_alive` (or -1 to set forever) to prevent the model from prematurely unloading, and also forcibly unload a model by setting this to 0. For example:
+When the user clicks "Stop" in Transformer Lab we want to immediately free the memory the model was previously using. By default, the way Ollama works is that it keeps the model in memory for some amount of time (default 5 minutes) before unloading. Today, Transformer Lab maintains this behaviour to stay consistent with Ollama.
+
+We could change this to make models stay in memory by using the `keep_alive` parameter. We could potentially set a longer `keep_alive` (or -1 to set forever) to prevent the model from unloading, and also forcibly unload a model by setting this to 0 when the user clicks "Stop". This can be done by:
 
 ```
 self.model.generate(model=<model_name>, keep_alive=0)
 ```
+
 ### Tokenizer and Logprobs
 
-Transformer Lab has support for useful developer features like displaying tokenizer output from a model and exploring logprobs to understand how the model chose its output. It looks like there isn't a way to get this through the SDK or API but ollama does serve an Open It looks like the Ollama team has been working on adding logprobs recently so hopefully that will be in a release in the future.
+Transformer Lab has support for useful developer features like displaying tokenizer output from a model and exploring logprobs to understand how the model chose its output. 
+
+When we built the Ollama plugin it didn't look like there was a way to get details tokenized data to show our users, but now it appears that this is possible!
+
+```
+client = ollama.Client()
+
+# Tokenize input text
+input_text = "How many rs are there in Transformer Lab?"
+tokens = client.tokenize(input_text)
+```
+
+Based on github activity, it also looks like the Ollama team has been working on adding logprobs. So hopefully that will also be in a future release!
 
 ## Background
 
