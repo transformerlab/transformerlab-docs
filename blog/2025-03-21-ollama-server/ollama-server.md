@@ -9,6 +9,8 @@ tags: [transformerlab]
 
 Transformer Lab has recently added an [Ollama Server](/docs/interact/ollama) plugin which allows users to run inference through Ollama on their local machine. If you aren't already familiar with Ollama or GGUF models, or if you want to know more about why this is important for us to support, I've included more background [at the end of this article](#background).
 
+<!--truncate-->
+
 ## Getting Started
 
 Ollama is written in the Go programming language. This has several benefits, but perhaps most notably, it has made Ollama easy to distribute cross-platform and very easy for its users to install. But with python becoming the defacto language of choice for so many cutting edge AI libraries and applications (like Transformer Lab), it means there hasn't been a simple direct way to write programs that integration these applications with Ollama. Fortunately for us, Ollama has released the [Ollama python library](https://github.com/ollama/ollama-python) to help address this!
