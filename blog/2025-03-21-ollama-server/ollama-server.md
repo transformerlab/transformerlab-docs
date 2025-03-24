@@ -101,16 +101,6 @@ load_model = self.model.generate(
 
 Now when you make a subsequent call to `generate` the model will already be loaded into memory. You can also see details of the loaded model by printing `load_model` in the above code.
 
-## Success!
-
- After making these changes to the Ollama Server plugin we now have everything we need to serve and run a model in Transformer Lab. Although this plugin requires the user to install Ollama first, we've found that the benefit of having a robust and simple installation process has made that a better experience overall. This has also made it much easier for us to stay up-to-date on support for latest models, as Ollama routinely has support for major models on release or shortly after. 
- 
- The Ollama Server plugin is our recommended way to use GGUF models in Transformer Lab today.
-
-## What Next?
-
-There are a few things we are working to improve with our Ollama integration:
-
 ### Unloading models
 
 By default, the way Ollama works is that it keeps a model in memory and only unloads it from memory if there has been no activity for some amount of time (default 5 minutes). Today, Transformer Lab maintains this behaviour to stay consistent with Ollama. But this is different than the way most models work in Transformer Lab and might cause confusion for users.
@@ -121,9 +111,11 @@ We could change this to make models stay in memory by using the `keep_alive` par
 self.model.generate(model=<model_name>, keep_alive=0)
 ```
 
-### Tokenizer and Logprobs
+## Conclusion
 
-Transformer Lab has support for useful developer features like displaying tokenizer output from a model and exploring logprobs to understand how the model chose its output. As of today, the Ollama python library doesn't have support for tokenization or logprobs, although based on github activity it looks like they may be adding support for these.
+After making these changes to the Ollama Server plugin we now have everything we need to serve and run a model in Transformer Lab. Although this plugin requires the user to install Ollama first, we've found that the benefit of having a robust and simple installation process has made that a better experience overall. This has also made it much easier for us to stay up-to-date on support for latest models, as Ollama routinely has support for major models on release or shortly after.
+ 
+The Ollama Server plugin is our recommended way to use GGUF models in Transformer Lab today.
 
 ## Background
 
