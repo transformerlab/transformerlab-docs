@@ -113,7 +113,7 @@ There are a few things we are working to improve with our Ollama integration:
 
 ### Unloading models
 
-When the user clicks "Stop" in Transformer Lab we want to immediately free the memory the model was previously using. By default, the way Ollama works is that it keeps the model in memory for some amount of time (default 5 minutes) before unloading. Today, Transformer Lab maintains this behaviour to stay consistent with Ollama.
+By default, the way Ollama works is that it keeps a model in memory and only unloads it from memory if there has been no activity for some amount of time (default 5 minutes). Today, Transformer Lab maintains this behaviour to stay consistent with Ollama. But this is different than the way most models work in Transformer Lab and might cause confusion for users.
 
 We could change this to make models stay in memory by using the `keep_alive` parameter. We could potentially set a longer `keep_alive` (or -1 to set forever) to prevent the model from unloading, and also forcibly unload a model by setting this to 0 when the user clicks "Stop". This can be done by:
 
@@ -123,19 +123,7 @@ self.model.generate(model=<model_name>, keep_alive=0)
 
 ### Tokenizer and Logprobs
 
-Transformer Lab has support for useful developer features like displaying tokenizer output from a model and exploring logprobs to understand how the model chose its output. 
-
-When we built the Ollama plugin it didn't look like there was a way to get details tokenized data to show our users, but now it appears that this is possible!
-
-```
-client = ollama.Client()
-
-# Tokenize input text
-input_text = "How many rs are there in Transformer Lab?"
-tokens = client.tokenize(input_text)
-```
-
-Based on github activity, it also looks like the Ollama team has been working on adding logprobs. So hopefully that will also be in a future release!
+Transformer Lab has support for useful developer features like displaying tokenizer output from a model and exploring logprobs to understand how the model chose its output. As of today, the Ollama python library doesn't have support for tokenization or logprobs, although based on github activity it looks like they may be adding support for these.
 
 ## Background
 
