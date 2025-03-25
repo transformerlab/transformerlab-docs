@@ -13,7 +13,7 @@ Transformer Lab has recently added an [Ollama Server](/docs/interact/ollama) plu
 
 ## Getting Started
 
-Ollama is written in the Go programming language. This has several benefits, but perhaps most notably, it has made Ollama easy to distribute cross-platform and very easy for its users to install. But with python becoming the defacto language of choice for so many cutting edge AI libraries and applications (like Transformer Lab), it means there hasn't been a simple direct way to write programs that integration these applications with Ollama. Fortunately for us, Ollama has released the [Ollama python library](https://github.com/ollama/ollama-python) to help address this!
+Ollama is written in the Go programming language. This has several benefits, but perhaps most notably, it has made Ollama easy to distribute cross-platform and very easy for its users to install. But with python becoming the defacto language of choice for so many cutting edge AI libraries and applications (like Transformer Lab), it means there hasn't been a simple direct way to write programs that integrate these applications with Ollama. Fortunately for us, Ollama has released the [Ollama python library](https://github.com/ollama/ollama-python) to help address this!
 
 Let me walk through our process of building a plugin in Transformer Lab using this python library...
 
@@ -39,14 +39,14 @@ response = chat(model='llama3.2', messages=[
 print(response['message']['content'])
 ```
 
-Note that the resposne comes back in the form of a ChatResponse object, which wraps a Message object.
+Note that the response comes back in the form of a ChatResponse object, which wraps a Message object.
 The documentation on these classes is minimal, and your best bet is to look directly at the code in
 [_types.py](https://github.com/ollama/ollama-python/blob/main/ollama/_types.py) in their github.
-Fortunately, their github page also comes with a pretty thorough set of [examples](https://github.com/ollama/ollama-python/tree/main/examples), where you'll see that most things can be done in a a few lines of code.
+Fortunately, their github page also comes with a pretty thorough set of [examples](https://github.com/ollama/ollama-python/tree/main/examples), where you'll see that most things can be done in a few lines of code.
 
 ### Streaming responses
 
-While it's convenient to type a prompt into the command line and get your resopnse in a single output, Transformer Lab needs to be able stream responses. Streaming allows us to create a UI in our application that shows progress to the user, and streaming is also the standard way that our OpenAI-compatible API responds.
+While it's convenient to type a prompt into the command line and get your response in a single output, Transformer Lab needs to be able to stream responses. Streaming allows us to create a UI in our application that shows progress to the user, and streaming is also the standard way that our OpenAI-compatible API responds.
 
 Fortunately, Ollama supports streaming as a parameter that you can pass to the `generate` and `chat` functions:
 
@@ -91,7 +91,7 @@ Fortunately, Ollama checks and only creates blobs if they don't already exist. S
 
 ### Loading models
 
-Transformer Lab has a concept of "Starting" and "Stopping" a model, which is essentially loading the model parameters into memory and starting a model worker thread. Ollama also supports this although silghtly indirectly.
+Transformer Lab has a concept of "Starting" and "Stopping" a model, which is essentially loading the model parameters into memory and starting a model worker thread. Ollama also supports this although slightly indirectly.
 
 Ollama automatically loads a model into memory the first time you use it so that users don't need to do it themselves. We can take advantage of this and load a model by calling Ollama's `generate` command without a prompt:
 
@@ -128,15 +128,14 @@ Ollama is the most popular open-source application for running inference on loca
 It is built on top of the [llama.cpp](https://github.com/ggml-org/llama.cpp) library which enables running LLMs on a wide range of hardware, locally and in the cloud, using a format called GGUF. 
 GGUF models are commonly available on platforms like Hugging Face, and you can even convert models from other formats to GGUF using Transformer Lab!
 
-An important benefit of using GGUF-formatted models is that you can take advantage of both both CPU and GPU prcoessing. This allows a user to run models larger than their available video card memory, or even if they do not have a video card at all!
+An important benefit of using GGUF-formatted models is that you can take advantage of both CPU and GPU processing. This allows a user to run models larger than their available video card memory, or even if they do not have a video card at all!
 
 ### Why is supporting GGUF in Transformer Lab important?
 
-One of the key objectives for Transformer Lab is to be able to support a wide range of platforms and users.  GGUF is the most popular way to run inference both locally and in the cloud, and through applications like Ollama, users are able to run LLMs on their computer even without access to a GPU. For Transformer Lab users who do have advanced hardware or who are building models using traditional formats like Safetensors, GGUF is still an important tool.  A common final step when builing an LLM is to convert the model into GGUF in order to distribute for efficient inference hosting.
+One of the key objectives for Transformer Lab is to be able to support a wide range of platforms and users. GGUF is the most popular way to run inference both locally and in the cloud, and through applications like Ollama, users are able to run LLMs on their computer even without access to a GPU. For Transformer Lab users who do have advanced hardware or who are building models using traditional formats like Safetensors, GGUF is still an important tool. A common final step when building an LLM is to convert the model into GGUF in order to distribute for efficient inference hosting.
 
 ### Why not just build directly on llama.cpp?
 
-Since Ollama is built on llama.cpp it might seem more flexible if we just integrated with llama.cpp directly. In fact, this is what Transformer Lab did initially! But as Transformer Lab was adopted by a broader set of users across diverse permutations of hardware/GPU/OS, we found it increasingly difficult to maintain a consistant install experience for all users, and struggled to ensure we were optimally configured on every system.
+Since Ollama is built on llama.cpp it might seem more flexible if we just integrated with llama.cpp directly. In fact, this is what Transformer Lab did initially! But as Transformer Lab was adopted by a broader set of users across diverse permutations of hardware/GPU/OS, we found it increasingly difficult to maintain a consistent install experience for all users, and struggled to ensure we were optimally configured on every system.
 
 Ollama not only makes installation and setup a lot easier, as one of the most popular open-source applications it has a wide user base and is a well-tested platform. Many of our users want to use Transformer Lab and Ollama in tandem.
-
