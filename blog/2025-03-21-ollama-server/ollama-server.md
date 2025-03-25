@@ -118,24 +118,3 @@ self.model.generate(model=<model_name>, keep_alive=0)
 After making these changes to the Ollama Server plugin we now have everything we need to serve and run a model in Transformer Lab. Although this plugin requires the user to install Ollama first, we've found that the benefit of having a robust and simple installation process has made that a better experience overall. This has also made it much easier for us to stay up-to-date on support for latest models, as Ollama routinely has support for major models on release or shortly after.
  
 The Ollama Server plugin is our recommended way to use GGUF models in Transformer Lab today.
-
-## Background
-
-### What is Ollama?
-
-Ollama is the most popular open-source application for running inference on local LLMs. It is available across platforms and its simple setup makes it one of the fastest ways to get up and running quickly if you want to chat with an LLM.
-
-It is built on top of the [llama.cpp](https://github.com/ggml-org/llama.cpp) library which enables running LLMs on a wide range of hardware, locally and in the cloud, using a format called GGUF. 
-GGUF models are commonly available on platforms like Hugging Face, and you can even convert models from other formats to GGUF using Transformer Lab!
-
-An important benefit of using GGUF-formatted models is that you can take advantage of both CPU and GPU processing. This allows a user to run models larger than their available video card memory, or even if they do not have a video card at all!
-
-### Why is supporting GGUF in Transformer Lab important?
-
-One of the key objectives for Transformer Lab is to be able to support a wide range of platforms and users. GGUF is the most popular way to run inference both locally and in the cloud, and through applications like Ollama, users are able to run LLMs on their computer even without access to a GPU. For Transformer Lab users who do have advanced hardware or who are building models using traditional formats like Safetensors, GGUF is still an important tool. A common final step when building an LLM is to convert the model into GGUF in order to distribute for efficient inference hosting.
-
-### Why not just build directly on llama.cpp?
-
-Since Ollama is built on llama.cpp it might seem more flexible if we just integrated with llama.cpp directly. In fact, this is what Transformer Lab did initially! But as Transformer Lab was adopted by a broader set of users across diverse permutations of hardware/GPU/OS, we found it increasingly difficult to maintain a consistent install experience for all users, and struggled to ensure we were optimally configured on every system.
-
-Ollama not only makes installation and setup a lot easier, as one of the most popular open-source applications it has a wide user base and is a well-tested platform. Many of our users want to use Transformer Lab and Ollama in tandem.
