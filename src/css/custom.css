@@ -105,18 +105,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  line-height: 24px;
-  font-size: 16px;
-  font-weight: 400;
-}
-
 p {
   margin: 0;
 }
@@ -137,12 +125,6 @@ article h6 {
   outline: none;
 }
 
-article h1 {
-  letter-spacing: -0.02em;
-  line-height: 40px;
-  font-size: 28px;
-}
-
 article h2 {
   margin: 48px 0 16px;
   border-top: 1px solid var(--vp-c-divider);
@@ -150,6 +132,12 @@ article h2 {
   letter-spacing: -0.02em;
   line-height: 32px;
   font-size: 24px;
+}
+
+.blog-list-page article h2 {
+  font-size: 2rem;
+  margin: 0;
+  line-height: normal;
 }
 
 article h3 {
