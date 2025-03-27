@@ -76,3 +76,7 @@ After completion, you can:
 <!-- Insert GIF for viewing results -->
 
 <img src={require('./gifs/judge/4_ResultsPreview.gif').default} alt="View Results" width="500" />
+
+> **Note**: You can now create custom evaluation metrics using GEval by providing custom evaluation metrics' description and the Judge LLM would use that to formulate and score based on your description and provide a score and reason for the same.
+
+<img src={require('./gifs/judge/5_GEval.gif').default} alt="View Results" width="500" />

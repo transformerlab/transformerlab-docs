@@ -58,12 +58,15 @@ This plugin allows you to perform common evaluation checks, such as string match
   - Click the **Add Field** button.
   - Three fields will appear:
     - **Evaluation Name:** Provide a name for your custom check.
-    - **Regular Expression/String:** Input your regex pattern or string criteria.
+    - **Regular Expression/String:** Input your regex pattern or string criteria or a Python code block.
     - **Type Drop Down:** Choose from `Boolean`, `Number`, `Contains`, or `IsEqual`.
       - **Boolean:** Returns the percentage (out of 1) where the regular expression holds true.
       - **Number:** Returns the average length of matches found.
       - **Contains:** Checks if a specific string is found within your output.
       - **IsEqual:** Compares the output for an exact match to the provided string.
+      - **Code**: You can also use the `Code` option to write custom Python code for evaluation.
+
+> **Note**: If using the `Code` option, ensure that the code returns a numeric value or a boolean. The code must contain a function called `evaluate` which will be used for the main execution. The params provided will be called `output_text` which represents the text in the output column for each row provided one at a time.
 
 <img src={require('./gifs/common-evals/4_SettingCustomAndOthers.gif').default} alt="GIF Animation" width="500" />
 
