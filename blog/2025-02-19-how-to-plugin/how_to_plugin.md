@@ -5,9 +5,7 @@ authors: deep
 tags: [plugin, transformerlab, guide]
 ---
 
-# How to Plugin? A Step-by-Step Guide to Transformer Lab Plugins
-
-In this guide, we'll walk through creating an evaluator plugin within Transformer Lab named **sample-data-print**. This plugin will load a dataset available within Transformer Lab and print its contents, along with some sample parameters.
+In this guide, we'll walk through creating an evaluator plugin within Transformer Lab named **sample-data-print**. This plugin will load a dataset and print its contents, along with some sample parameters, using the new `tlab_trainer` decorator approach.
 
 <!--truncate-->
 
@@ -82,82 +80,68 @@ This manifest informs Transformer Lab of the following:
 In your `main.py` file, we’ll use Python’s argparse to retrieve our job information, the dataset file path, and our sample parameters. Then, we’ll load the dataset using pandas and print out the dataset along with the parameters.
 
 ```python
-import argparse
-import os
-import sys
-
-import transformerlab.plugin
+from transformerlab.sdk.v1.train import tlab_trainer
 from datasets import load_dataset
+import time
 
-parser = argparse.ArgumentParser(
-    description="Evaluator plugin: Display dataset and parameters")
-parser.add_argument("--job_id",
-                    type=str, help="Job identifier")
-parser.add_argument("--dataset_name",
-                    type=str, help="Path to the dataset CSV file")
-parser.add_argument("--sample_text", default="Hello, Transformer Lab!",
-                    type=str, help="Sample text parameter")
-parser.add_argument("--additional_info", default="This is a sample parameter for demonstration.",
-                    type=str, help="Additional information")
+@tlab_trainer.job_wrapper()
+def sample_data_print():
+    """
+    A simple evaluator plugin that loads a dataset and prints its contents
+    along with the provided parameters.
+    """
 
-args, other = parser.parse_known_args()
-
-# Initialize the plugin job
-job = transformerlab.plugin.Job(args.job_id)
-job.update_progress(0)
-
-
-def get_tflab_dataset(dataset_types=["train"]):
+    # Access specific parameters
+    sample_text = tlab_trainer.params.get("sample_text", "Hello, Transformer Lab!")
+    additional_info = tlab_trainer.params.get("additional_info", 
+                                             "This is a sample parameter for demonstration.")
+    print("Job ID:", tlab_trainer.params.job_id)
+    print("\nSample Text Parameter:", sample_text)
+    print("Additional Info Parameter:", additional_info)
+    
+    # Update progress
+    tlab_trainer.progress_update(25)
+    
+    # Load the dataset
     try:
-        dataset_target = transformerlab.plugin.get_dataset_path(
-            args.dataset_name)
+            
+        print(f"\nLoading dataset: {dataset_name}")
+        dataset = tlab_trainer.load_dataset(['train'])
+        
+        # Update progress
+        tlab_trainer.progress_update(50)
+        
+        # Convert to pandas and print
+        df = dataset.to_pandas()
+        print("\nDataset Contents:")
+        print(df)
+        
     except Exception as e:
-        job.set_job_completion_status("failed", "Failure to get dataset")
-        raise e
-    dataset = {}
-    for dataset_type in dataset_types:
-        try:
-            dataset[dataset_type] = load_dataset(
-                dataset_target, split=dataset_type, trust_remote_code=True)
+        print(f"Error loading dataset: {str(e)}")
+        return False
+    
+    # Final progress update
+    tlab_trainer.progress_update(100)
+    print("\nDataset and parameters printed successfully!")
+    
+    return True
 
-        except Exception as e:
-            job.set_job_completion_status(
-                "failed", "Failure to load dataset")
-            raise e
-    # Convert the dataset to a pandas dataframe
-    df = dataset["train"].to_pandas()
-    return df
-
-
-# Load the dataset
-df = get_tflab_dataset()
-
-# Print the job details, dataset contents, and sample parameters
-print("Job ID:", args.job_id)
-print("\nDataset Contents:")
-print(df)
-print("\nSample Text Parameter:", args.sample_text)
-print("Additional Info Parameter:", args.additional_info)
-
-job.update_progress(100)
-job.set_job_completion_status(
-    "success", "Dataset and parameters printed successfully.")
+# Call the function directly when the script runs
+sample_data_print()
 ```
 
 In this version, our evaluator plugin:
 
-- Initializes a job via `transformerlab.plugin.Job` using the provided job ID.
-- Checks for the existence of the dataset file and loads it.
 - Loads the dataset to pandas dataframe.
 - Prints the contents of the dataset along with the sample parameters: `sample_text` and `additional_info`.
-- Updates the job progress and sets the completion status.
+- Updates the job progress and sets the completion status using the `tlab_trainer`.
 
 ## Step 5: Creating setup.sh
 
 Create a file named setup.sh in your `sample-data-print` directory with the following content:
 
 ```bash
-pip install datasets
+uv pip install datasets
 ```
 
 This script will ensure that the necessary dependencies are installed when your plugin is installed.
