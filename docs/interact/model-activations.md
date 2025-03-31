@@ -8,6 +8,8 @@ The Model Activations interface provides advanced insights into how a language m
 
 <img src={require('./gifs/ModelActivations.gif').default} alt="Model Activations GIF" width="500" />
 
+> **Note**: This feature is currently experimental and is only available to use with the Fastchat and MLX Server.  
+
 ## Accessing Model Activations
 
 After running a model in the Foundation tab, you can analyze its internal workings:
