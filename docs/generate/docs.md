@@ -35,7 +35,6 @@ This page explains how to generate data from reference documents using Transform
 #### Name Your Generation Task
 
 - In the first tab of the pop-up window, enter a name for your generation task.
-<!-- - **Screenshot Placeholder:** ![Name Task](path/to/name-task-placeholder.png) -->
 
 #### Plugin Configuration
 
@@ -47,7 +46,7 @@ This page explains how to generate data from reference documents using Transform
 
 #### Selecting Documents
 
-- After configuring the plugin, navigate back to the **Documents Tab**.
+- After configuring the plugin, navigate to the **Documents Tab**.
 - Select the file(s) or folder(s) you want to use to generate your datasets.
 
 <img src={require('./gifs/docs/GenerationTaskCreation.gif').default} alt="Generation Task Gif" width="500" />
@@ -55,13 +54,13 @@ This page explains how to generate data from reference documents using Transform
 ## Step 4: Run the Task
 
 - Once you have saved your evaluation task, click on the **Queue** button to start the generation process.
-- When the generation is complete, the generated dataset will be visible under the **Generated Tab** in the **Training Data** section.
+- When the generation is complete, the generated dataset will be visible under the **Generated Tab** in the **Datasets** section.
 
 <img src={require('./gifs/docs/GeneratingData.gif').default} alt="Generation Task Gif" width="500" />
 
 ## Step 5: Preview Your Data
 
-- Go to the **Generated** tab in the **Training Data** section.
+- Go to the **Generated** tab in the **Datasets** section.
 - Click on the dataset you generated to preview the data.
 
 <img src={require('./gifs/docs/DatasetPreview.gif').default} alt="Generation Task Gif" width="500" />
