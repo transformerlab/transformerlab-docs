@@ -21,3 +21,7 @@ rm -rf ~/Library/Logs/transformerlab/
 ```
 
 This will remove all the packages installed for Transformer Lab, freeing up space.
+
+Transformer Lab uses `uv` to install Python packages. You may also want to clear the `uv` cache. Instructions are below:
+
+https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache
