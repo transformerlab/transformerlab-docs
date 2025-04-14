@@ -54,7 +54,7 @@ function HomepageHeader() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className={styles.embedded_markdown}>
+        <div className={clsx(styles.embedded_markdown, "container")}>
           <article>
             <Content />
           </article>
