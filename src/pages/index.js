@@ -10,7 +10,6 @@ import { AllFeatures } from "./homepage-components/all-features";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className={clsx("container", styles.container)}>

@@ -1,0 +1,34 @@
+.all-features {
+    margin-top: 4rem;
+}
+
+.featureCard {
+    /* border: 10px solid red; */
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+
+.featureCardVideo {
+    border-radius: 1rem;
+    /* border: 4px solid var(--ifm-color-primary); */
+    overflow: hidden;
+    flex: 4;
+}
+
+.featureCardText {
+    flex: 3;
+    padding-left: 4rem;
+}
+
+.featureCardText h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+}
