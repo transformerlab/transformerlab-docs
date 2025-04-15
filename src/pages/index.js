@@ -6,7 +6,6 @@ import Layout from "@theme/Layout";
 import Screenshot from "./img/TFLDemoMarch25_HQ_2.mp4";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
-import FullLogo from "/img/Transformer-Lab_Logo.svg";
 
 import "./style.css";
 import GithubStar from "../components/GithubStar";
@@ -16,7 +15,7 @@ function HomepageHeader() {
     <header className={clsx("hero", styles.heroBanner)}>
       <div className={clsx("container", styles.container)}>
         <GithubStar />
-        <h1 className="hero__title ">
+        <h1 className={clsx("hero__title", styles.hero__title)}>
           The Open Source Platform for Training Advanced AI Models
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
