@@ -35,4 +35,11 @@ article h1 {
 .hero {
     padding: 1rem 2rem;
     background-color: inherit;
-    }
+}
+.navbar {
+    /*set navbar to blur what is behind*/
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    /* and lighten what is behind too: */
+    background-color: rgba(255, 255, 255, 0.8);
+}
