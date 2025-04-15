@@ -5,7 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Screenshot from "./img/TFLDemoMarch25_HQ_2.mp4";
 import styles from "./index.module.css";
-import Content from "./homepage-content.mdx";
+import Content from "./homepage-components/homepage-content.mdx";
 import FullLogo from "/img/Transformer-Lab_Logo.svg";
 
 import "./style.css";
@@ -16,23 +16,13 @@ function HomepageHeader() {
     <header className={clsx("hero", styles.heroBanner)}>
       <div className={clsx("container", styles.container)}>
         <GithubStar />
-        <h1
-          className="hero__title comfortaa-font"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            fontWeight: "400",
-          }}
-        >
-          <FullLogo
-            style={{
-              height: "1.1em",
-              marginRight: "0px",
-            }}
-          />
+        <h1 className="hero__title ">
+          The Open Source Platform for Training Advanced AI Models
         </h1>
-        <h2 className={clsx("hero__subtitle ", styles.hero__subtitle)}>
-          {siteConfig.tagline}
+        <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
+          With Transformer Lab, researchers, ML engineers, and developers can
+          collaborate to build, study, and evaluate AI models—with provenance,
+          reproducibility, evals, and transparency included.
         </h2>
         <div className={styles.buttons}>
           <div className="block">
@@ -51,10 +41,9 @@ function HomepageHeader() {
         <div className={clsx("video_container", styles.video_container)}>
           <video width="100%" autoPlay loop muted>
             <source src={Screenshot} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
         </div>
-        <div className={clsx(styles.embedded_markdown, "container")}>
+        <div className={clsx(styles.embedded_markdown)}>
           <article>
             <Content />
           </article>

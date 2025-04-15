@@ -9,7 +9,7 @@ const darkCodeTheme = require("prism-react-renderer").themes.dracula;
 const config = {
   title: "Transformer Lab",
   tagline:
-    "100% Open Source Toolkit for Large Language Models: Train, Tune, Eval on your own Machine",
+    "With Transformer Lab, ML engineers, researchers, and developers can all collaborate to build and deploy advanced AI models—with provenance, reproducibility, evals, and transparency included.",
   favicon: "img/logo2.svg",
 
   // Set the production url of your site here
@@ -32,30 +32,30 @@ const config = {
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet"></link>
 */
 
-  // headTags: [
-  //   {
-  //     tagName: "link",
-  //     attributes: {
-  //       rel: "preconnect",
-  //       href: "https://fonts.googleapis.com",
-  //     },
-  //   },
-  //   {
-  //     tagName: "link",
-  //     attributes: {
-  //       rel: "preconnect",
-  //       href: "https://fonts.gstatic.com",
-  //       crossorigin: "true",
-  //     },
-  //   },
-  //   {
-  //     tagName: "link",
-  //     attributes: {
-  //       href: "https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap",
-  //       rel: "stylesheet",
-  //     },
-  //   },
-  // ],
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "true",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+        rel: "stylesheet",
+      },
+    },
+  ],
 
   markdown: {
     mermaid: true,

@@ -30,19 +30,5 @@ article h1 {
 }
 
 .hero {
-    padding: 2rem 2rem;
-}
-
-
-.comfortaa-font {
-    font-family: "Comfortaa", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    letter-spacing: -0.03em;
-    color: black;
-}
-
-h2 {
-    width: 70%;
+    padding: 1rem 2rem;
 }
