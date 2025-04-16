@@ -58,3 +58,6 @@ mux-player {
     border: none;
     margin-top: 1rem;
 }
+div.feature-card.row ul {
+    padding-left: 1rem;
+}
