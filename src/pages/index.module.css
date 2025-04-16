@@ -27,19 +27,21 @@ h1.hero__title {
   margin-bottom: 0.5rem;
   font-weight: 700;
   max-width: 70%;
+
   @media screen and (max-width: 500px) {
-      max-width: 100%;
-    }
+    max-width: 100%;
+  }
 }
+
 h2.hero__subtitle {
   font-size: clamp(1rem,
-        1rem + 1 * ((100vw - 20rem) / 58),
-        1.5rem);
+      1rem + 1 * ((100vw - 20rem) / 58),
+      1.5rem);
   text-align: left;
-    font-weight: 400;
-    max-width: 70%;
-    line-height: 1.4;
-      color: var(--ifm-font-color-secondary);
+  font-weight: 400;
+  max-width: 70%;
+  line-height: 1.4;
+  color: var(--ifm-font-color-secondary);
 }
 
 @media screen and (max-width: 996px) {
@@ -51,8 +53,8 @@ h2.hero__subtitle {
 .buttons {
   display: flex;
   align-items: center;
-    justify-content: center;
-      margin-bottom: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .embedded_markdown {
@@ -108,4 +110,3 @@ h2.hero__subtitle {
 .video_container video {
   display: block;
 }
-

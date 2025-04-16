@@ -57,6 +57,8 @@ article h1 {
 
 mux-player {
     --bottom-controls: none;
+    --seek-backward-button: none;
+    --seek-forward-button: none;
 }
 
 .featureCard h2 {

@@ -12,9 +12,9 @@
     border-radius: 1rem;
     overflow: hidden;
     max-width: 500px;
+    padding: 0;
 }
 
- .featureCardText {
+.featureCardText {
     padding-left: 4rem;
 }
-
