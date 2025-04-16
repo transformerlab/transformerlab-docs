@@ -13,6 +13,7 @@ import TrainImage from "./features/img/train.png";
 import EvalImage from "./features/img/eval.png";
 import PluginsImage from "./features/img/plugins.png";
 import RagImage from "./features/img/rag.png";
+import PlatformsImage from "./features/img/platforms.png";
 
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -51,7 +52,10 @@ export default function AllFeatures() {
         text={<FeaturePlugins />}
       />
       <FeatureCard video={<img src={RagImage} />} text={<FeatureRag />} flip />
-      <FeatureCard video={null} text={<FeatureHardware />} />
+      <FeatureCard
+        video={<img src={PlatformsImage} />}
+        text={<FeatureHardware />}
+      />
     </div>
   );
 }
