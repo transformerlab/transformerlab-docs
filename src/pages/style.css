@@ -39,11 +39,16 @@ article h1 {
 }
 
 .navbar {
-    /*set navbar to blur what is behind*/
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    /* and lighten what is behind too: */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--ifm-navbar-background-color);
+    opacity: 0.97;
+    /* backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.navbar-sidebar--show {
+    opacity: 1;
+    backdrop-filter: none;
 }
 
 .all-features {
@@ -58,6 +63,7 @@ mux-player {
     border: none;
     margin-top: 1rem;
 }
+
 div.feature-card.row ul {
     padding-left: 1rem;
 }
