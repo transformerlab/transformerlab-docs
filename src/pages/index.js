@@ -12,6 +12,7 @@ import GithubStar from "../components/GithubStar";
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
+      <div id="background-holder"></div>
       <div className={clsx("container", styles.container)}>
         <GithubStar />
         <h1 className={clsx("hero__title", styles.hero__title)}>
