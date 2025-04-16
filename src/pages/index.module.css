@@ -24,15 +24,17 @@
 }
 
 h1.hero__title {
-  font-size: 65px;
   margin-bottom: 0.5rem;
   font-weight: 700;
   max-width: 70%;
-
+  @media screen and (max-width: 500px) {
+      max-width: 100%;
+    }
 }
 h2.hero__subtitle {
-  font-size: 24px;
-  margin-bottom: 1rem;
+  font-size: clamp(1rem,
+        1rem + 1 * ((100vw - 20rem) / 58),
+        1.5rem);
   text-align: left;
     font-weight: 400;
     max-width: 70%;
