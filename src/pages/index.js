@@ -42,13 +42,12 @@ function HomepageHeader() {
           </video>
         </div>
         <div className={clsx(styles.embedded_markdown)}>
-          <article>
+          <div style={{ margin: "2rem auto", textAlign: "center" }}>
             <Content />
-            <AllFeatures />
-          </article>
+          </div>
+          <AllFeatures />
         </div>
-        <br />
-        <div className={styles.buttons}>
+        <div className={styles.buttons} style={{ textAlign: "center" }}>
           <div className="block">
             <Link
               className="button button--primary button--lg"

@@ -32,10 +32,12 @@ article h1 {
 .navbar {
     background-color: inherit;
 }
+
 .hero {
     padding: 1rem 2rem;
     background-color: inherit;
 }
+
 .navbar {
     /*set navbar to blur what is behind*/
     backdrop-filter: blur(4px);
@@ -43,15 +45,16 @@ article h1 {
     /* and lighten what is behind too: */
     background-color: rgba(255, 255, 255, 0.8);
 }
+
 .all-features {
     margin-top: 5rem;
 }
 
-.featureCard h2 {
-    margin: 0;
-    margin-bottom: 1rem;
-}
-
 mux-player {
     --bottom-controls: none;
+}
+
+.featureCard h2 {
+    border: none;
+    margin-top: 1rem;
 }
