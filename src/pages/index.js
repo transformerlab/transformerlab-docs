@@ -6,7 +6,7 @@ import Layout from "@theme/Layout";
 import Screenshot from "./img/TFLDemoMarch25_HQ_2.mp4";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
-import { AllFeatures } from "./homepage-components/AllFeatures";
+import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
 function HomepageHeader() {

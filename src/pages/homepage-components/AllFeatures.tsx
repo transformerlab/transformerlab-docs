@@ -17,7 +17,7 @@ import RagImage from "./features/img/rag.png";
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-export function AllFeatures() {
+export default function AllFeatures() {
   return (
     <div className={"all-features"}>
       <FeatureCard
