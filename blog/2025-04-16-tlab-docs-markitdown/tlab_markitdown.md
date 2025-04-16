@@ -7,6 +7,8 @@ tags: [documents, rag, pipeline, transformerlab, markitdown]
 
 We're excited to announce a significant enhancement to Transformer Lab - integration with the open-source [Markitdown](https://github.com/microsoft/markitdown) library from Microsoft! This update dramatically expands the types of documents you can work with in Transformer Lab, making it more versatile and powerful for your AI projects.
 
+<!-- truncate -->
+
 ## Enhanced Document Support
 
 Previously, Transformer Lab supported a limited set of document formats. With the Markitdown integration, you can now upload and process:
