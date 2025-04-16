@@ -89,3 +89,7 @@ div.feature-card.row ul {
 /* html[data-theme='dark'] #background-holder {
     filter: invert(0);
 } */
+
+.button {
+    border-radius: 100px;
+}

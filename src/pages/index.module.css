@@ -53,7 +53,8 @@ h2.hero__subtitle {
 .buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 1rem;
   margin-bottom: 2rem;
 }
 
