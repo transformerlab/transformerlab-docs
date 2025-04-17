@@ -48,7 +48,10 @@ function HomepageHeader() {
           </div>
           <AllFeatures />
         </div>
-        <div className={styles.buttons} style={{ textAlign: "center" }}>
+        <div
+          className={styles.buttons}
+          style={{ textAlign: "center", justifyContent: "center" }}
+        >
           <div className="block">
             <Link
               className="button button--primary button--lg"
