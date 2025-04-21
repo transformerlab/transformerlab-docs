@@ -5,6 +5,12 @@ sidebar_position: 1
 
 import Button from '@site/src/components/Button';
 
+:::tip
+
+These are instructions to install Transormer Lab as an App. You can also install Transformer Lab as a WebUI locally or in the cloud which will allow you to run Transformer Lab in a web browser [click here to learn more](./install-on-cloud.md).
+
+:::
+
 For most situations, you can just download Transformer Lab and it should work as is. But if you are setting up from scratch and haven't installed CUDA drivers (drivers for your GPU) the following instructions can help.
 
 ## What Distro

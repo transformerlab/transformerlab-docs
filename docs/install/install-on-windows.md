@@ -5,7 +5,11 @@ sidebar_position: 3
 
 import Button from '@site/src/components/Button';
 
-# Install on Windows
+:::tip
+
+These are instructions to install Transormer Lab as an App. You can also install Transformer Lab as a WebUI locally or in the cloud which will allow you to run Transformer Lab in a web browser [click here to learn more](./install-on-cloud.md).
+
+:::
 
 For Windows users, you should be able to download our application from our downloads page and have it work out of the box. But if you haven't installed WSL2 or CUDA drivers before, the following instructions will help you set up your computer to ensure everything works.
 

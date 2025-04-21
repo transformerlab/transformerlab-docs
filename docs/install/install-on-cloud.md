@@ -1,23 +1,11 @@
 ---
-title: Install in the Cloud
+title: Install in the Cloud (Web App)
 sidebar_position: 5
 ---
 
-## Connect to Remote Engine
+## Installing the Server
 
-Transformer Lab supports running the engine in the cloud (or on a machine that can be accessed on your network).
-
-To do this, install Transformer Lab normally on a client machine in order to access the GUI. But instead of selecting "Local Connection" you should click on the "Remote Connection" tab and provide connection details.
-
-<img
-src={require('../about/img/loginModal.png').default}
-alt="Login Modal"
-width="400"
-/>
-
-## Starting a Remote Engine
-
-To start a remote engine, SSH into your network device and run the following command:
+To install Transformer Lab as a server, SSH into your network device, or access the terminal, and run the following command:
 
 ```bash
 curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
@@ -33,7 +21,7 @@ The following Linux commands must be installed on your machine for the installer
 
 :::
 
-**Run the Transformer Lab Server**
+## Running the Server
 
 Now you can run the server:
 
@@ -41,5 +29,17 @@ Now you can run the server:
 cd ~/.transformerlab/src
 ./run.sh
 ```
+
+## Access the Web UI
+
+You can now go to any modern browser and visit the URL of the server that was run by the previous command. For example if you are running on localhost, open Firefox or Chrome and visit:
+
+`http://localhost:8338`
+
+Here is a screenshot of what you should see:
+
+![Web UI](./img/webui.png)
+
+## Advanced
 
 For more advanced options, [see the advanced install article](./advanced-install.md).

@@ -3,11 +3,11 @@ title: Install on a Mac
 sidebar_position: 2
 ---
 
-## Running on a Mac with Apple Silicon
+:::tip
 
-### A Quick Guide
+These are instructions to install Transormer Lab as an App. You can also install Transformer Lab as a WebUI locally or in the cloud which will allow you to run Transformer Lab in a web browser [click here to learn more](./install-on-cloud.md).
 
-This is a quick guide to getting Transformer Lab up and running on a Mac with Apple Silicon
+:::
 
 ## What is MLX
 
