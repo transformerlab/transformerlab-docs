@@ -17,7 +17,6 @@ For MacOS, here is a script you can run in a Terminal that will do all of the ab
 ```bash
 rm -rf /Applications/Transformer\ Lab.app/
 rm -rf ~/.transformerlab/
-rm -rf ~/.cache/huggingface/hub/
 rm -rf ~/Library/Logs/transformerlab/
 ```
 
