@@ -89,6 +89,8 @@ Let's run the model server with our selected embedding model:
 
 *The model server needs to be running for the RAG pipeline to generate embeddings for our documents.*
 
+> **Note:** If you haven't used RAG before on the app, then you will have to download a RAG plugin such as `LlamaIndex Simple Document Search (RAG)` from the Plugins Tab. We also strongly recommend that you initialize RAG once by just running the model and navigating to `Interact > Query Docs (RAG)` and selecting and setting the RAG engine there so you see a page which prompts you ask questions. This will ensure that the RAG engine is initialized and ready to use. You can then move to the next step for generating RAG answers.
+
 ## Step 6: Generate Answers Using RAG with the Pre-trained Model
 
 Now we'll test our RAG pipeline using the original pre-trained embedding model:
