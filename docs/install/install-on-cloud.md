@@ -11,7 +11,7 @@ To install Transformer Lab as a server, SSH into your network device, or access 
 curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
 ```
 
-This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/.transformerlab/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
+This script will attempt to download the project to `~/.transformerlab`, install Miniforge at `~/.transformerlab/miniforge3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
 
 :::info Requirements
 The following Linux commands must be installed on your machine for the installer to work:
@@ -43,3 +43,4 @@ Here is a screenshot of what you should see:
 ## Advanced
 
 For more advanced options, [see the advanced install article](./advanced-install.md).
+
