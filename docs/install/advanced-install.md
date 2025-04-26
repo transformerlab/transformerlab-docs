@@ -7,7 +7,7 @@ sidebar_position: 10
 
 ## Cloud or Local
 
-When you download the Transformer Lab App, it contains an auto-installer that will download the server API and attempt to install it on your (local) computer. It downloads the code, installs a [Python Conda](https://docs.anaconda.com/free/miniconda/index.html) environment, and then installs the Python dependencies necessary for the API.
+When you download the Transformer Lab App, it contains an auto-installer that will download the server API and attempt to install it on your (local) computer. It downloads the code, installs a [Python Conda](https://docs.conda.io/en/latest/) environment, and then installs the Python dependencies necessary for the API.
 
 <img
 src={require('../img/autoinstaller.png').default}
@@ -29,7 +29,7 @@ The recommended way to install the server is to run install.sh which is in the r
 curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
 ```
 
-This script will attempt to download the project to `~/.transformerlab`, install Miniconda at `~/.transformerlab/miniconda3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
+This script will attempt to download the project to `~/.transformerlab`, install Miniforge at `~/.transformerlab/miniforge3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
 
 **Run the Transformer Lab Server**
 
@@ -52,9 +52,9 @@ width="400"
 
 You can also install all of the Transformer Lab dependencies yourself by following the following steps. We do not recommend this path unless you are having issues with `install.sh` or need more control.
 
-**Step 1:** Install Miniconda and Create Environment
+**Step 1:** Install Miniforge and Create Environment
 
-Install Miniconda [full instructions here](https://docs.anaconda.com/free/miniconda/#quick-command-line-install)
+Install Miniforge [full instructions here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#install)
 
 Create a Conda Environment for Transformer Lab (after restarting the shell):
 
