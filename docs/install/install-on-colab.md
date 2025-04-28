@@ -1,19 +1,12 @@
 ---
-slug: tlab-on-colab
-title: Running Transformer Lab on Google Colab
-authors: deep
-tags: [google-colab, transformerlab, gpu]
+title: Install Transformer Lab on Google Colab
+sidebar_position: 6
 ---
 
-In today's fast-evolving AI landscape, having access to powerful tools without breaking the bank is essential for researchers, students, and hobbyists alike. Google Colab offers free GPU access, making it an excellent platform for AI experimentation. In this guide, we'll walk through setting up Transformer Lab—a powerful AI development environment—on Google Colab, allowing you to harness GPU capabilities without spending a dime.
-
-<!-- truncate -->
+In today's fast-evolving AI landscape, having access to powerful tools without breaking the bank is essential for researchers, students, and hobbyists alike. Google Colab offers free GPU access, making it an excellent platform for AI experimentation. In this guide, we'll walk through setting up Transformer Lab on Google Colab, allowing you to harness GPU capabilities without spending a dime.
 
 > **Ready to jump in?** Access the complete Transformer Lab Colab notebook here: [Open Transformer Lab Notebook](https://colab.research.google.com/drive/18d98Ve8Ai5CIGzsQ0lBYMCNoTZV1B55S)
 
-## What is Transformer Lab?
-
-With Transformer Lab, researchers, ML engineers, and developers can collaborate to build, study, and evaluate AI models—with provenance, reproducibility, evals, and transparency included.
 
 ## Step-by-Step Setup Guide
 
