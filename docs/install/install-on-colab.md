@@ -1,5 +1,5 @@
 ---
-title: Install Transformer Lab on Google Colab
+title: Install on Google Colab
 sidebar_position: 6
 ---
 
