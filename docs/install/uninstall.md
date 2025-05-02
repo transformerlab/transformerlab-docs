@@ -1,14 +1,17 @@
 ---
 slug: Uninstall Transformer Lab
 title: Uninstall Transformer Lab
-authors: ali
-tags: [resources]
+sidebar_position: 100000
 ---
-{/* truncate */}
 
 ## Uninstall Application:
 
-- Delete the Transformer Lab application from your `/Applications` Folder
+- **MacOS:** Delete the Transformer Lab application from your `/Applications` Folder
+- **Windows:** Uninstall the Application
+- **Linux:** Delete the App whereever you stored it
+
+## Stored Data:
+
 - Transformer Lab stores models and data in your `~/.transformerlab/` folder -- deleting everything there will destroy all your settings and experiments
 - On MacOS, there may be a small folder in `~/Library/Logs/transformerlab/`
 

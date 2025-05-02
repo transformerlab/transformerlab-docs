@@ -5,48 +5,11 @@ sidebar_position: 10
 
 # Advanced Installation Instructions
 
-## Cloud or Local
-
-When you download the Transformer Lab App, it contains an auto-installer that will download the server API and attempt to install it on your (local) computer. It downloads the code, installs a [Python Conda](https://docs.conda.io/en/latest/) environment, and then installs the Python dependencies necessary for the API.
-
-<img
-src={require('../img/autoinstaller.png').default}
-alt="Auto Installer"
-width="280"
-/>
-
-If you are running the server in the cloud (for example in a situation where you have a separate computer with a GPU that is designed to run machine learning code), you will need to install the API yourself.
-
-Even if you are running the API locally, you may want to install the server yourself so you can control how (or if) Conda is installed, and where conda and Transformer Lab is located on your disk.
-
 ## Manual Install Instructions:
 
 ### install.sh Remote Script
 
-The recommended way to install the server is to run install.sh which is in the root directory of the Transformer Lab API project.
-
-```bash
-curl https://raw.githubusercontent.com/transformerlab/transformerlab-api/main/install.sh | bash
-```
-
-This script will attempt to download the project to `~/.transformerlab`, install Miniforge at `~/.transformerlab/miniforge3`, create a Conda environment for Transformer Lab, then finally it will install Python dependencies.
-
-**Run the Transformer Lab Server**
-
-Now you can run the server:
-
-```bash
-cd ~/.transformerlab/src
-./run.sh
-```
-
-And connect by entering your server's IP address:
-
-<img
-src={require('../about/img/loginModal.png').default}
-alt="Login Modal"
-width="400"
-/>
+The recommended way to install the app on a server is to follow the instructions for [Installing on Cloud](./install-on-cloud.md). If you want to do all the steps manually, then the instructions below describe what `install.sh` does behind the scenes.
 
 ### Manual step-by-step Install
 
