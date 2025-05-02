@@ -59,7 +59,7 @@ Install Miniforge [full instructions here](https://github.com/conda-forge/minifo
 Create a Conda Environment for Transformer Lab (after restarting the shell):
 
 ```bash
-conda create -y -n transformerlab python=3.11
+conda create -y -k --prefix "$HOME/.transformerlab/envs/transformerlab2" python=3.11
 conda activate transformerlab
 ```
 
@@ -80,7 +80,7 @@ git checkout v0.9.20 # where "v0.9.20" is the latest release version
 #### For machines with an NVIDIA GPU:
 
 ```bash
-conda activate transformerlab
+conda activate ~/.transformerlab/envs/transformerlab
 conda install -y cuda -c nvidia/label/cuda-12.1.1 # only if you have an NVIDIA GPU
 pip install uv
 uv pip install --upgrade -r requirements-uv.txt
@@ -93,7 +93,7 @@ uv pip install -U flash-attn==2.7.3 --no-build-isolation
 #### Or For machines without a GPU (e.g. a Mac):
 
 ```bash
-conda activate transformerlab
+conda activate ~/.transformerlab/envs/transformerlab
 pip install uv
 uv pip install --upgrade -r requirements-no-gpu-uv.txt
 ```
@@ -101,7 +101,7 @@ uv pip install --upgrade -r requirements-no-gpu-uv.txt
 **Step 4:** Run the Transformer Lab Server
 
 ```bash
-conda activate transformerlab
+conda activate ~/.transformerlab/envs/transformerlab
 uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 ```
 
