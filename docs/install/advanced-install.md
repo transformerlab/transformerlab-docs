@@ -59,7 +59,7 @@ Install Miniforge [full instructions here](https://github.com/conda-forge/minifo
 Create a Conda Environment for Transformer Lab (after restarting the shell):
 
 ```bash
-conda create -y -k --prefix "$HOME/.transformerlab/envs/transformerlab2" python=3.11
+conda create -y -k --prefix "$HOME/.transformerlab/envs/transformerlab" python=3.11
 conda activate transformerlab
 ```
 
