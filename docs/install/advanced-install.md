@@ -44,13 +44,9 @@ git checkout v0.9.20 # where "v0.9.20" is the latest release version
 
 ```bash
 conda activate ~/.transformerlab/envs/transformerlab
-conda install -y cuda -c nvidia/label/cuda-12.1.1 # only if you have an NVIDIA GPU
+conda install -y cuda==12.8.1 --force-reinstall -c nvidia/label/cuda-12.8.1 # only if you have an NVIDIA GPU
 pip install uv
-uv pip install --upgrade -r requirements-uv.txt
-# Now install flash attention
-uv pip install packaging
-uv pip install ninja
-uv pip install -U flash-attn==2.7.3 --no-build-isolation
+uv pip install --upgrade --index https://download.pytorch.org/whl/cu128 -r requirements-uv.txt
 ```
 
 #### Or For machines without a GPU (e.g. a Mac):
