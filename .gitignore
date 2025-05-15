@@ -132,3 +132,6 @@ dist
 
 # Docusaurus
 build/
+
+# Local Netlify folder
+.netlify

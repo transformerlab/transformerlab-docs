@@ -1,0 +1,8 @@
+# Netlify Edge Functions configuration
+[functions]
+  included_files = []
+
+[[edge_functions]]
+  path = "/install.sh"
+  function = "install-sh"
+  cache = "manual"

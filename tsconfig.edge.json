@@ -1,0 +1,14 @@
+// TypeScript config for Netlify Edge Functions
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "outDir": "./.netlify/edge-functions-dist"
+  },
+  "include": ["netlify/edge-functions/**/*.ts"]
+}
