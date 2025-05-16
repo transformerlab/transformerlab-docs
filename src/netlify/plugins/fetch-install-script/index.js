@@ -75,7 +75,7 @@ module.exports = {
       };
 
       fs.writeFileSync(
-        path.join(PUBLISH_DIR, "static", "version-info.json"),
+        path.join(PUBLISH_DIR, "static", "api-version.json"),
         JSON.stringify(versionInfo, null, 2)
       );
     } catch (error) {
