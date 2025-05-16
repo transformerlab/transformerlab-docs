@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[[plugins]]
+  package = "./src/netlify/plugins/fetch-install-script"
+
+[build.environment]
+  APP_GITHUB_REPO = "transformerlab/transformerlab-api"
+  NODE_VERSION = "18"
+
+# Optional: Configure build hooks that can receive parameters
+[template.environment]
+  APP_VERSION = "Set automatically by build hook"

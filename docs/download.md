@@ -6,10 +6,13 @@ import Button from '@site/src/components/Button';
 import { FaApple } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
 import { FaWindows } from "react-icons/fa";
+import AppVersion from '@site/src/components/AppVersion';
 
 # Download ↓
 
-## <FaApple /> macOS
+Current Version: <AppVersion />
+
+## <FaApple /> macOS 
 
 <a href="https://github.com/transformerlab/transformerlab-app/releases/download/v0.16.1/Transformer-Lab-0.16.1-arm64.dmg">
   <Button>Download for <FaApple /> Mac (Silicon)</Button>

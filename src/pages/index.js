@@ -9,6 +9,7 @@ import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
+import AppVersion from "../components/AppVersion";
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>

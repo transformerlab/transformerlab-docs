@@ -132,3 +132,10 @@ dist
 
 # Docusaurus
 build/
+
+# Local Netlify folder
+.netlify
+
+
+# Generated files from our netlify plugin:
+static/version-info.json
