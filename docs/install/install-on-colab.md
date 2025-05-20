@@ -1,6 +1,6 @@
 ---
 title: Install on Google Colab
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 In today's fast-evolving AI landscape, having access to powerful tools without breaking the bank is essential for researchers, students, and hobbyists alike. Google Colab offers free GPU access, making it an excellent platform for AI experimentation. In this guide, we'll walk through setting up Transformer Lab on Google Colab, allowing you to harness GPU capabilities without spending a dime.
