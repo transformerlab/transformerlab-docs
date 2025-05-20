@@ -23,7 +23,7 @@ Create a Conda Environment for Transformer Lab (after restarting the shell):
 
 ```bash
 conda create -y -k --prefix "$HOME/.transformerlab/envs/transformerlab" python=3.11
-conda activate transformerlab
+conda activate ~/.transformerlab/envs/transformerlab
 ```
 
 **Step 2:** Download Transformer Lab
