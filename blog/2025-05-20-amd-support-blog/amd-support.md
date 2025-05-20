@@ -5,8 +5,6 @@ authors: deep
 tags: [transformerlab, amd, hardware, gpu]
 ---
 
-## 🎉 Transformer Lab Now Works with AMD GPUs
-
 We’re excited to announce that **Transformer Lab now supports AMD GPUs**! Whether you’re on Linux or Windows, you can now harness the power of your AMD hardware to run and train models with Transformer Lab.  
 👉 Read the full installation guide [here](/docs/install/install-on-amd)
 

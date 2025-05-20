@@ -20,7 +20,7 @@ These are instructions to install Transformer Lab as an App on systems with AMD 
 
 For most situations, you can just download Transformer Lab and it should work as is. But if you are setting up from scratch and haven't installed ROCm drivers (drivers for your AMD GPU), the following instructions can help.
 
-### What Distro
+### Supported Linux Distributions
 
 Transformer Lab should work on most distros of Linux. If you are getting started from scratch, we recommend installing [Ubuntu 24.04 (or 22.04)](https://ubuntu.com/) as they have good support for AMD GPUs and ROCm.
 
