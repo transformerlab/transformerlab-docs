@@ -28,29 +28,14 @@ In this detailed account of our AMD support journey, we'll cover:
 
 Adding AMD support wasn't just a matter of flipping a switch. It was a journey that started with us buying AMD hardware from scratch, rolling up our sleeves, and diving deep into the world of ROCm, drivers, and the quirks of PyTorch on AMD. What began as a straightforward feature addition quickly evolved into a comprehensive exploration of an entirely different GPU ecosystem.
 
-### Building the AMD Test Rig
+### Selecting Hardware and Installing Distribution
 
-#### The Challenge of Building Custom Hardware
+#### Building Our AMD Test Rig
 
-Building any custom computer from scratch is always a challenging endeavor, but when you're targeting specific hardware for testing purposes, the complexity multiplies significantly. Unlike buying a pre-built system where components are guaranteed to work together, we needed to carefully research and select each component to ensure compatibility while staying representative of what our typical users might have.
+To properly support AMD GPUs, we built our own dedicated test machine from scratch. After researching AMD's consumer GPU lineup, we settled on the **Radeon RX 7900 XTX**—a high-performance consumer GPU that represents the sweet spot for serious AI enthusiasts. You can view our complete hardware configuration here: **[https://newegg.io/b594cf4](https://newegg.io/b594cf4)**. While assembling the hardware was straightforward, we quickly discovered that the real challenges lay in the software configuration ahead.
 
-#### Why We Chose to Build Our Own
+<img src={require('./images/radeon.jpeg').default} width="400" />
 
-Since AMD was clearly here to stay in the GPU market and we were committed to supporting our users across different hardware platforms, we made the strategic decision to invest in building our own dedicated AMD test machine. This wasn't just about having AMD hardware—it was about understanding the entire user experience from the ground up, from initial hardware selection to final software configuration.
-
-#### The Parts Hunt
-
-One of the first challenges we encountered was finding all the necessary components available in one place. Unlike the well-established supply chains for popular gaming builds, sourcing components for a specific AMD GPU testing rig required more research and patience. Our goal was clear: build a single AMD GPU system that would mirror what a typical Transformer Lab user might have at home or in their lab.
-
-#### Choosing the Right GPU
-
-After extensive research into AMD's consumer GPU lineup, we settled on the **Radeon RX 7900 XTX**. This card emerged as the sweet spot for our needs—it's a high-performance consumer GPU that represents the kind of hardware serious AI enthusiasts and researchers might realistically purchase. The 7900 XTX offers substantial compute power while remaining accessible to individual users rather than requiring enterprise-level investment.
-
-#### Our Final Hardware Configuration
-
-After some research, compatibility checking, and parts sourcing, we assembled our AMD test rig. You can view our complete hardware configuration and parts list here: **[https://newegg.io/b594cf4](https://newegg.io/b594cf4)**
-
-This build represents a realistic AMD-based system that our users might have, giving us the perfect testbed to develop and validate our AMD support. Once the hardware was assembled and running, we set out to make Transformer Lab run smoothly on it—little did we know the software challenges that lay ahead.
 
 #### Choosing the Right Linux Distribution
 
@@ -143,6 +128,9 @@ This discovery was crucial for maintaining feature parity between our NVIDIA and
 
 With ROCm, PyTorch, and GPU monitoring all working properly on our Linux system, we were able to successfully integrate AMD GPU support into Transformer Lab's plugin ecosystem and get the entire platform working smoothly with AMD GPUs in a Linux environment. This was a major milestone, but our journey was far from over—we still needed to tackle the most challenging part of this entire project: getting ROCm working on Windows via WSL.
 
+<img src={require('./images/tlab-amd-support-meme.png').default} width="400" />
+
+
 ### Installing ROCm on WSL: The Ultimate Challenge
 
 Having successfully navigated the Linux installation process and learned valuable lessons about ROCm's quirks and requirements, we felt confident approaching the Windows WSL installation. After all, we had already figured out the proper installation methods, user permissions, and PyTorch setup. How different could WSL be?
@@ -167,6 +155,9 @@ This was particularly puzzling because:
 The loss of `rocm-smi` in WSL was already a significant limitation, as it meant we couldn't programmatically monitor GPU usage, temperature, or memory consumption like we could on native Linux. This would later impact our ability to provide real-time GPU metrics to users on Windows systems.
 
 Yet, despite all these indicators suggesting a successful installation, PyTorch simply could not detect or access the AMD GPU through WSL. We had entered what would become the most challenging and time-consuming phase of our entire AMD support journey.
+
+<img src={require('./images/this_is_fine_meme.jpg').default} width="400" />
+
 
 #### The Journey to Find a Fix
 
@@ -219,6 +210,8 @@ This was particularly disheartening because we had now tried:
 
 At this point, it became clear that the issue was more fundamental than simple version mismatches or library conflicts. There was something deeper at play in the WSL environment that was preventing proper AMD GPU access, regardless of the specific software versions we used.
 
+<img src={require('./images/spidermen-meme.png').default} width="400" />
+
 #### The Breakthrough: Community Solutions to the Rescue
 
 Just when we were beginning to think that reliable AMD GPU support in WSL might be impossible, help came from an unexpected source: the ROCm community itself. Our GitHub issue started generating responses from both official maintainers and community members who had faced similar challenges.
@@ -262,6 +255,9 @@ print(torch.cuda.is_available())
 # Finally returns: True!
 ```
 
+<img src={require('./images/success_kid.jpg').default} width="400" />
+
+
 ##### The Power of Open Source Community
 
 This breakthrough highlighted one of the most valuable aspects of working with open-source technologies: the power of community knowledge sharing. While official documentation and support channels are essential, sometimes the most practical solutions come from fellow developers who have fought the same battles and are willing to share their hard-won knowledge.
@@ -303,8 +299,10 @@ The only functional difference AMD users will encounter is on **Windows/WSL setu
 
 **Linux Users**: Experience no limitations whatsoever—all features, including comprehensive GPU monitoring, work perfectly.
 
+<img src={require('./images/tlab_hands.png').default} width="400" />
 
-### Conclusion: The State of AMD Support in 2025
+
+### Conclusion: The State of AMD Support
 
 Our journey to add AMD GPU support to Transformer Lab has been one of the most technically challenging and educational projects we've undertaken. What started as a seemingly straightforward feature addition evolved into a deep exploration of GPU ecosystems, driver complexities, and the realities of developing for multiple hardware platforms.
 
@@ -329,4 +327,3 @@ Whether you choose NVIDIA or AMD, the most important thing is that you can focus
 **Ready to try AMD GPU support?** Check out our comprehensive installation guide: [/docs/install/install-on-amd](/docs/install/install-on-amd)
 
 **Questions or issues?** Join our community discussions where we share tips, troubleshoot problems, and collaborate on making AMD GPU support even better.
-
