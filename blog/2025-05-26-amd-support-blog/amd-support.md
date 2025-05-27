@@ -8,25 +8,13 @@ tags: [transformerlab, amd, hardware, gpu]
 We're excited to announce that **Transformer Lab now supports AMD GPUs**! Whether you're on Linux or Windows, you can now harness the power of your AMD hardware to run and train models with Transformer Lab.  
 👉 Read the full installation guide [here](/docs/install/install-on-amd)
 
-This has been one of our most challenging technical journeys yet, involving everything from building custom hardware to diving deep into the intricacies of ROCm, WSL limitations, and PyTorch compatibility issues. What started as a simple feature request turned into a months-long adventure that taught us valuable lessons about AMD's ecosystem and the current state of GPU computing beyond NVIDIA.
+## TL;DR
 
-## TL;DR - What You'll Learn in This Blog
+If you have an AMD GPU and want to do ML work, just follow our guide above and skip a lot of stress.
 
-In this detailed account of our AMD support journey, we'll cover:
-
-- **Building a Custom AMD Test Rig**: The challenges of sourcing parts and assembling a representative AMD system from scratch
-- **Installing ROCm on Linux**: The right installation methods, critical permission requirements, and PyTorch setup procedures  
-- **WSL Installation Challenges**: Why Windows users face unique challenges with AMD GPU support and the community solutions we discovered
-- **PyTorch Detection Issues**: The frustrating world of version compatibility and the critical symlink fixes required to make everything work
-- **Community Solutions**: How open-source collaboration helped us solve critical blocking issues that official documentation missed
-- **Library Compatibility**: How we handled bitsandbytes limitations and ensured full Transformer Lab functionality
-- **What Users Can Actually Expect**: The excellent news that AMD GPU users get identical functionality to NVIDIA, with only minor monitoring limitations on Windows/WSL
+The journey for us to figure out how to build a reliable PyTorch workspace on AMD was... messy. And we've documented everything below.
 
 <!-- truncate -->
-
-## The Journey: From Zero to AMD Hero
-
-Adding AMD support wasn't just a matter of flipping a switch. It was a journey that started with us buying AMD hardware from scratch, rolling up our sleeves, and diving deep into the world of ROCm, drivers, and the quirks of PyTorch on AMD. What began as a straightforward feature addition quickly evolved into a comprehensive exploration of an entirely different GPU ecosystem.
 
 ### Selecting Hardware and Installing Distribution
 
@@ -34,38 +22,35 @@ Adding AMD support wasn't just a matter of flipping a switch. It was a journey t
 
 To properly support AMD GPUs, we built our own dedicated test machine from scratch. After researching AMD's consumer GPU lineup, we settled on the **Radeon RX 7900 XTX**—a high-performance consumer GPU that represents the sweet spot for serious AI enthusiasts. You can view our complete hardware configuration here: **[https://newegg.io/b594cf4](https://newegg.io/b594cf4)**. While assembling the hardware was straightforward, we quickly discovered that the real challenges lay in the software configuration ahead.
 
-<img src={require('./images/radeon.jpeg').default} width="400" />
+From a price perspective, the 24GB **Radeon RX 7900 XTX** comes out at about $1,800 CAD, while a 24GB consumer NVIDIA GPU costs $2,700 CAD.
 
+<img src={require('./images/radeon.jpeg').default} width="400" />
 
 #### Choosing the Right Linux Distribution
 
-With our hardware ready, the next critical decision was selecting the appropriate Linux distribution for our AMD GPU testing. This choice would prove to be more important than we initially anticipated.
+With our hardware ready, the next critical decision was selecting the appropriate Linux distribution for our AMD GPU testing. This ended up being messier than expected.
 
-We started with **Pop!_OS**, a popular distribution known for its excellent GPU support and developer-friendly features. Pop!_OS seemed like a natural choice given System76's focus on hardware compatibility and their reputation for making GPU setup straightforward. However, we quickly discovered that not all Linux distributions are created equal when it comes to AMD's ROCm ecosystem.
+We started with **Pop!_OS**, a popular distribution known for its excellent GPU support and developer-friendly features. Pop!_OS seemed like a natural choice given System76's focus on hardware compatibility and their reputation for making GPU setup straightforward. Not when it comes to AMD and ROCm :)
 
 The first red flag appeared when trying to install ROCm using AMD's official installation instructions. The official ROCm installation process from AMD's website wasn't well-suited for Pop!_OS, leading to dependency conflicts and version mismatches. Hoping to find a better path, we turned to System76's own documentation for ROCm installation: **[https://support.system76.com/articles/rocm/](https://support.system76.com/articles/rocm/)**
 
-Unfortunately, following the Pop!_OS official ROCm installation guide resulted in errors when attempting to install the newer ROCm 6.4. The guide appeared to be designed for older ROCm versions and hadn't been updated to handle the latest release properly. After several failed attempts and troubleshooting sessions, it became clear that Pop!_OS, despite its many strengths, wasn't the ideal platform for our AMD GPU development work.
+Unfortunately, following the Pop!_OS official ROCm installation guide resulted in errors when attempting to install the newer ROCm 6.4.
 
-Learning from this experience, we made the decision to switch to **Ubuntu 24.04 LTS (Noble)**. Ubuntu's long-term support release provided the stability we needed, and more importantly, AMD's ROCm documentation and installation procedures are primarily tested and optimized for Ubuntu. This change proved to be the right call—the ROCm installation process on Ubuntu 24.04 was significantly smoother and more reliable.
-
-This OS selection process taught us an important lesson: when working with specialized hardware and software stacks like ROCm, choosing a distribution that's explicitly supported and tested by the vendor can save hours of troubleshooting and frustration.
+After a day or two of failed attempts and troubleshooting sessions, we had to abandon Pop!_OS and switched to **Ubuntu 24.04 LTS (Noble)**.
 
 ### Installing ROCm on Linux: The Right Way
 
-With Ubuntu 24.04 LTS installed on our AMD test rig, the next challenge was getting ROCm properly installed and configured. This turned out to be more nuanced than we initially expected, and we learned some important lessons about the different installation methods available.
-
 #### The Quick Start Trap
 
-Our first instinct was to follow AMD's official "Quick Start" [installation guide](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html)
+Time to install ROCm. Our first instinct was to follow AMD's official "Quick Start" [installation guide](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/quick-start.html).
 
 The quick start guide seemed straightforward and promised to get us up and running fast. However, after following the instructions, we discovered that while some ROCm components were installed, many core packages were missing. Most notably, essential tools like `rocm-smi` (the GPU monitoring utility equivalent to NVIDIA's `nvidia-smi`) were nowhere to be found. This incomplete installation left us with a partially functional ROCm setup that couldn't provide basic GPU usage metrics.
 
 #### The AMDGPU Install Solution
 
-After some research and trial-and-error, we discovered that the more comprehensive approach was to use the AMDGPU install method: **[https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/amdgpu-install.html](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/amdgpu-install.html)**
+After some research and a day of trial and error, we discovered that the more comprehensive approach was to use the AMDGPU install method: **[https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/amdgpu-install.html](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/amdgpu-install.html)**
 
-This installation method proved to be much more stable and complete. Unlike the quick start approach, the AMDGPU install properly installed all necessary libraries and tools, including the crucial `rocm-smi` utility for tracking GPU usage. The installation process was more thorough and ensured that all ROCm components were properly configured and integrated with the system.
+This installation method proved to be much more stable and complete.
 
 #### The Permission Problem: A Critical Discovery
 
@@ -78,9 +63,7 @@ sudo usermod -a -G render $USER
 sudo usermod -aG video $USER
 ```
 
-After running these commands and logging out/back in (or rebooting), the AMD GPU finally became accessible to our user account. This permission requirement is a significant difference from the NVIDIA ecosystem and caught us off guard initially.
-
-This step is so critical that we now consider it an essential part of any AMD GPU setup process. Without these permissions, users will experience the frustrating situation where ROCm appears to be installed correctly, but PyTorch and other applications simply can't detect or use the GPU hardware.
+After running these commands and logging out/back in (or rebooting), the AMD GPU finally became accessible to our user account. Without these permissions, users will experience the frustrating situation where ROCm appears to be installed correctly, but PyTorch and other applications can't detect or use the GPU hardware.
 
 #### PyTorch Installation: The Easy Part
 
@@ -107,7 +90,7 @@ print(torch.cuda.is_available())
 
 The key thing to check is that `torch.__version__` includes the `+rocm6.3` suffix (or whatever ROCm version you're using), which confirms that the ROCm-enabled version of PyTorch was successfully installed.
 
-Interestingly, even though we're using AMD GPUs, PyTorch still uses the familiar `torch.cuda.is_available()` command to check for GPU availability. This is because PyTorch wraps AMD's HIP backend under the CUDA interface for easier compatibility and developer convenience. This design choice means that most existing CUDA-based PyTorch code can work with AMD GPUs without modification, which is a significant advantage for developers transitioning from NVIDIA hardware.
+Interestingly, even though we're using AMD GPUs, **PyTorch still uses the familiar `torch.cuda.is_available()` command to check for GPU availability**. This is because PyTorch wraps AMD's HIP backend under the CUDA interface for easier compatibility and developer convenience. This design choice means that most existing CUDA-based PyTorch code can work with AMD GPUs without modification, which is a significant advantage for developers transitioning from NVIDIA hardware.
 
 #### GPU Monitoring: Finding the AMD Equivalent of pynvml
 
@@ -124,14 +107,11 @@ The `pyrsmi` package provides Python bindings for AMD's ROCm SMI (System Managem
 - GPU utilization percentages
 - Memory usage (used/total VRAM)
 
-This discovery was crucial for maintaining feature parity between our NVIDIA and AMD GPU support in Transformer Lab. Users expect to see real-time GPU metrics during model training and inference, regardless of whether they're using NVIDIA or AMD hardware. With `pyrsmi`, we could provide the same level of monitoring and feedback that our NVIDIA users were accustomed to.
-
-With ROCm, PyTorch, and GPU monitoring all working properly on our Linux system, we were able to successfully integrate AMD GPU support into Transformer Lab's plugin ecosystem and get the entire platform working smoothly with AMD GPUs in a Linux environment. This was a major milestone, but our journey was far from over—we still needed to tackle the most challenging part of this entire project: getting ROCm working on Windows via WSL.
+With ROCm, PyTorch, and GPU monitoring all working properly on our Linux system, we were able to successfully integrate AMD GPU support into Transformer Lab's plugin ecosystem and get the entire platform working smoothly with AMD GPUs in a Linux environment. This was a major milestone, but our journey was far from over—we still needed to tackle the most challenging part of this entire project: **getting ROCm working on Windows via WSL.**
 
 <img src={require('./images/tlab-amd-support-meme.png').default} width="400" />
 
-
-### Installing ROCm on WSL: The Ultimate Challenge
+### Installing ROCm on WSL: So Many Tear-Filled Nights
 
 Having successfully navigated the Linux installation process and learned valuable lessons about ROCm's quirks and requirements, we felt confident approaching the Windows WSL installation. After all, we had already figured out the proper installation methods, user permissions, and PyTorch setup. How different could WSL be?
 
@@ -147,7 +127,7 @@ This was particularly puzzling because:
 
 - ROCm had installed without errors
 - `rocm-smi` was not available (as expected in WSL due to kernel limitations), which already affected our ability to get GPU statistics and monitoring information
-- `rocminfo` command worked correctly, showing the AMD GPU was recognized by the ROCm stack
+- The `rocminfo` command worked correctly, showing the AMD GPU was recognized by the ROCm stack
 - All the installation steps had completed successfully
 - PyTorch with ROCm support was properly installed (confirmed by the `+rocm6.3` suffix in the version)
 - We had even installed the latest Adrenalin driver as recommended in AMD's WSL [compatibility documentation](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/compatibility/wsl/wsl_compatibility.html), but this also did not resolve the issue
@@ -157,7 +137,6 @@ The loss of `rocm-smi` in WSL was already a significant limitation, as it meant 
 Yet, despite all these indicators suggesting a successful installation, PyTorch simply could not detect or access the AMD GPU through WSL. We had entered what would become the most challenging and time-consuming phase of our entire AMD support journey.
 
 <img src={require('./images/this_is_fine_meme.jpg').default} width="400" />
-
 
 #### The Journey to Find a Fix
 
@@ -189,7 +168,7 @@ During our research, we also discovered a potential workaround mentioned in vari
 
 This manual intervention was based on the theory that PyTorch might be shipping with its own version of certain ROCm libraries that could conflict with the system-installed ROCm components. By removing these files, PyTorch would be forced to use the system-level libraries, potentially resolving compatibility issues.
 
-We carefully implemented this fix:
+So we:
 
 1. Located the PyTorch installation directory within our Python environment
 2. Identified and removed the potentially conflicting `libhsa-runtime64.so*` files
@@ -214,15 +193,13 @@ At this point, it became clear that the issue was more fundamental than simple v
 
 #### The Breakthrough: Community Solutions to the Rescue
 
-Just when we were beginning to think that reliable AMD GPU support in WSL might be impossible, help came from an unexpected source: the ROCm community itself. Our GitHub issue started generating responses from both official maintainers and community members who had faced similar challenges.
+Internally, our team met and we decided to just not support WSL + AMD. On the same day we made this decision, the ROCm community helped us out! Our GitHub issue started generating responses from both official maintainers and community members who had faced similar challenges.
 
 ##### The Maintainer's Driver Downgrade Suggestion
 
-One of the first responses we received came from an official ROCm maintainer who suggested that our issue might be related to having too recent of an Adrenalin driver installed. The maintainer recommended downgrading to an older, more stable version that had been more extensively tested with the current ROCm WSL implementation.
+One of the first responses we received came from an official ROCm maintainer who suggested that our issue might be related to having too recent an Adrenalin driver installed. The maintainer recommended downgrading to an older, more stable version that had been more extensively tested with the current ROCm WSL implementation.
 
-We dutifully followed this advice, carefully uninstalling our current Adrenalin driver and installing the recommended older version. The process was straightforward, and we were hopeful that this might be the missing piece of the puzzle. However, after completing the driver downgrade and testing our PyTorch installation again, we encountered the same frustrating result: `torch.cuda.is_available()` still returned `False`.
-
-While the driver downgrade didn't solve our specific problem, it was valuable to learn that driver version compatibility can be a significant factor in ROCm WSL installations. This reinforced the importance of following not just the software installation guides, but also ensuring that the entire hardware-software stack is properly aligned.
+We dutifully followed this advice, uninstalling our current Adrenalin driver and installing the recommended older version. However, after completing the driver downgrade and testing our PyTorch installation again, we encountered the same frustrating result: `torch.cuda.is_available()` still returned `False`.
 
 ##### The Community Hero: A Critical Symlink Discovery
 
@@ -233,8 +210,6 @@ This community member had faced the exact same issue we were experiencing and di
 The missing symlink was causing PyTorch to be unable to properly interface with the ROCm runtime, even though all the individual components were correctly installed. This explained why `rocminfo` could detect our GPU (proving ROCm was working at the system level) while `torch.cuda.is_available()` returned `False` (indicating PyTorch couldn't access the ROCm backend).
 
 ##### Implementing the Symlink Fix
-
-Following the community member's detailed instructions, we implemented the missing symlink configuration. The fix involved creating specific symbolic links that would allow PyTorch to properly locate and interface with the ROCm runtime libraries in the WSL environment.
 
 The solution was surprisingly straightforward once we knew what to do, but it would have been nearly impossible to discover without community knowledge sharing. This symlink step addressed a fundamental connectivity issue between PyTorch and ROCm that the official documentation had overlooked.
 
@@ -257,24 +232,13 @@ print(torch.cuda.is_available())
 
 <img src={require('./images/success_kid.jpg').default} width="400" />
 
-
-##### The Power of Open Source Community
-
-This breakthrough highlighted one of the most valuable aspects of working with open-source technologies: the power of community knowledge sharing. While official documentation and support channels are essential, sometimes the most practical solutions come from fellow developers who have fought the same battles and are willing to share their hard-won knowledge.
-
-The fact that this critical fix came from a community member rather than official documentation also revealed an important gap in AMD's WSL installation guides. It showed us that the ROCm ecosystem, while powerful, still has some rough edges that require community collaboration to smooth out.
-
-This experience reinforced our appreciation for open-source communities and the importance of contributing back when we encounter and solve problems. By documenting our entire journey in this blog post, we hope to help other developers avoid the same frustrations we experienced and get their AMD GPU setups working more quickly.
-
-With the WSL detection issue finally resolved, we could move forward with integrating AMD GPU support into Transformer Lab's Windows workflow. However, our challenges weren't over yet—we still had to address some significant limitations in the broader AMD ecosystem that would affect our training capabilities.
-
 ### The Bitsandbytes Challenge: A Simple Solution
 
 With PyTorch finally detecting our AMD GPU on both Linux and WSL, we thought the hardest part of our journey was behind us. However, we quickly discovered one more hurdle: **bitsandbytes**, a popular library used for quantization and memory-efficient training techniques in some of our training plugins.
 
-We attempted to build the official bitsandbytes from source for AMD GPUs, but encountered build issues that prevented successful installation: **[https://github.com/bitsandbytes-foundation/bitsandbytes/issues/1608](https://github.com/bitsandbytes-foundation/bitsandbytes/issues/1608)**
+We attempted to build the official bitsandbytes from source for AMD GPUs but encountered build issues that prevented successful installation: **[https://github.com/bitsandbytes-foundation/bitsandbytes/issues/1608](https://github.com/bitsandbytes-foundation/bitsandbytes/issues/1608)**
 
-Since bitsandbytes was only used as an optional dependency in a couple of our training plugins, we made the pragmatic decision to modify those plugins to work without bitsandbytes rather than waiting for a working AMD-compatible version. This approach ensured that AMD users would have access to the full Transformer Lab experience without any feature limitations.
+Since bitsandbytes was only used as an optional dependency in a couple of our training plugins, we made the decision to modify those plugins to work without bitsandbytes rather than waiting for a working AMD-compatible version. This approach ensured that AMD users would have access to the full Transformer Lab experience without any feature limitations.
 
 ### What AMD GPU Users Can Actually Expect
 
@@ -286,9 +250,9 @@ Through our extensive development and testing process, we've ensured that Transf
 
 **Model Support**: All supported model architectures work equally well on AMD and NVIDIA hardware, with no differences in compatibility or capabilities.
 
-**Training Features**: The full range of training options, including LoRA fine-tuning, full parameter training, and custom training recipes, work identically across both GPU ecosystems with plugins labelled appropriately for AMD support.
+**Training Features**: The full range of training options, including LoRA fine-tuning, full parameter training, and custom training recipes, work identically across both GPU ecosystems with plugins labeled appropriately for AMD support.
 
-**Plugin Ecosystem**: The compatible plugins are labelled with the `amd` tag, indicating they have been tested and verified to work on AMD GPUs. Users can expect the same functionality as with NVIDIA plugins, with no compromises.
+**Plugin Ecosystem**: The compatible plugins are labeled with the `amd` tag, indicating they have been tested and verified to work on AMD GPUs. Users can expect the same functionality as with NVIDIA plugins, with no compromises.
 
 #### The One Windows/WSL Limitation
 
@@ -300,7 +264,6 @@ The only functional difference AMD users will encounter is on **Windows/WSL setu
 **Linux Users**: Experience no limitations whatsoever—all features, including comprehensive GPU monitoring, work perfectly.
 
 <img src={require('./images/tlab_hands.png').default} width="400" />
-
 
 ### Conclusion: The State of AMD Support
 
