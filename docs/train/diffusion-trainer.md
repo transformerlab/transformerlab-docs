@@ -26,6 +26,8 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
    - **Dataset Tab:**  
      Select a **Text-Image dataset** to use for training. Text-Image datasets contain paired image and caption data required for diffusion model training. Datasets are loaded from the `Datasets` tab in Transformer Lab.
 
+     **Example Dataset:** For testing and learning, you can use the `datasets-examples/doc-image-6` dataset, which contains 4 high-quality images with detailed captions - perfect for experimenting with diffusion training.
+
    - **Plugin Config Tab:**  
      Configure the training parameters. Each parameter controls a specific aspect of diffusion training:
 
