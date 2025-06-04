@@ -13,7 +13,7 @@ Out of the box we support major open weight models including:
 
 * Stable Diffusion (1.5, XL, 3)
 * Flux
-* And a lot more! (see the [full list here](../../docs/diffusion/downloading-models.md))
+* And a lot more! (see the [full list here](/docs/diffusion/downloading-models))
 
 What can you do? Well...
 
