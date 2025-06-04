@@ -1,3 +1,6 @@
+---
+sidebar_position: 2
+---
 # Text-to-Image Generation
 
 Generate high-quality images from text descriptions using diffusion models in TransformerLab.

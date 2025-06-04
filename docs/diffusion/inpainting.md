@@ -1,3 +1,6 @@
+---
+sidebar_position: 4
+---
 # Image Inpainting
 
 Fill in missing parts of images or replace specific regions using diffusion models in TransformerLab.

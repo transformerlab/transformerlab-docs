@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Downloading Diffusion Models
 
 This guide covers how to download and manage diffusion models in TransformerLab.
@@ -155,8 +159,6 @@ Models are automatically organized by:
 
 - **Architecture type**: Grouped by pipeline compatibility
 - **Model family**: Related models grouped together
-- **Download date**: Chronological organization
-- **Usage frequency**: Recently used models prioritized
 
 ### Model Visibility
 

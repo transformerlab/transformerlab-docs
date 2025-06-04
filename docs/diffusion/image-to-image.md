@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # Image-to-Image Processing
 
 Transform existing images using diffusion models with text guidance in TransformerLab.
@@ -28,6 +32,7 @@ Image-to-image processing allows you to modify existing images using text prompt
 ### Strength Parameter
 
 The strength parameter controls how much the original image is preserved:
+
 - **Low strength (0.1-0.3)**: Subtle modifications, preserves most original details
 - **Medium strength (0.4-0.7)**: Balanced transformation
 - **High strength (0.8-1.0)**: Major changes, less original image preservation
