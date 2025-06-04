@@ -111,3 +111,11 @@ h2.hero__subtitle {
 .video_container video {
   display: block;
 }
+
+.announcement {
+  background-color: rgba(0, 164, 0, 0.15);
+  border: 1px solid rgba(0, 164, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 8px;
+  width: fit-content
+}

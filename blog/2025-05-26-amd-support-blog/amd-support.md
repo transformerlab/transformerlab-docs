@@ -1,6 +1,6 @@
 ---
 slug: amd-support
-title: 🎉 Transformer Lab Now Works with AMD GPUs
+title: Transformer Lab Now Works with AMD GPUs
 authors: deep
 tags: [transformerlab, amd, hardware, gpu]
 ---

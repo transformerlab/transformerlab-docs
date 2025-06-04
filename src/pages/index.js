@@ -15,6 +15,10 @@ function HomepageHeader() {
       <div id="background-holder"></div>
       <div className={clsx("container", styles.container)}>
         <GithubStar />
+        <h3 className={styles.announcement}>
+          We now support Inference and Training for Diffusion Models!{" "}
+          <a href="./blog/diffusion-support">Read More...</a>
+        </h3>
         <h1 className={clsx("hero__title", styles.hero__title)}>
           The Open Source Platform for Training Advanced AI Models
         </h1>

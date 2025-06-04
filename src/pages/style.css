@@ -93,3 +93,11 @@ div.feature-card.row ul {
 .button {
     border-radius: 100px;
 }
+
+.announcement {
+    border: '1px solid var(--ifm-color-primary)';
+    background-color: var(--ifm-alert-background-color-highlight);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    color: var(--ifm-color-primary-inverse);
+}
