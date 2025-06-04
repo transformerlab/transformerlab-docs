@@ -23,19 +23,19 @@ In our GUI, running on your own hardware (locally or in the cloud) you can gener
 
 ![Generate Images](./images/screenshot.png)
 
-# But you can also do inpainting
+## But you can also do inpainting
 
 Inpainting is a popular technique where you select parts of an existing image you'd like to change and the model only edits those parts. We built a native paint tool inside Transformer Lab so you can paint directly on images like this example where we turned Audrey Hepburn's hair to pink.
 
 ![Inpaint](./images/inpainting.png)
 
-# You can also do img2img generation
+## You can also do img2img generation
 
 You can provide an existing image to a model and it will modify it based on your prompt.
 
 (examplehere)
 
-# Perhaps most importantly, you can train models
+## Perhaps most importantly, you can train models
 
 Transformer Lab really shines when it comes to training. Using our entire framework that supports jobs, status tracking, workflows (coming soon) and more, you can now train your own Diffusion LoRAs within our UI.
 
