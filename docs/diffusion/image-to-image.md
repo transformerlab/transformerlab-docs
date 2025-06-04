@@ -2,13 +2,22 @@
 sidebar_position: 3
 ---
 
-# Image-to-Image Processing
+# Image-to-Image (img2img) Generation
 
-Transform existing images using diffusion models with text guidance in TransformerLab.
+Transform existing images using diffusion models with text guidance in Transformer Lab.
 
 ## Overview
 
 Image-to-image processing allows you to modify existing images using text prompts while preserving the original structure and composition. This powerful feature enables creative transformations, style transfers, and artistic modifications using the same intuitive interface as text-to-image generation.
+
+For example:
+
+<img src={require('./gifs/happyfamily.jpg').default} width="500" />
+
+Can turn to:
+
+<img src={require('./gifs/familyimg2img.png').default} width="500" />
+
 
 ## Getting Started
 
@@ -17,7 +26,7 @@ Image-to-image processing allows you to modify existing images using text prompt
 - Downloaded diffusion model (see [Downloading Models](./downloading-models.md))
 - Source image to transform (either uploaded or from generation history)
 - Clear text prompt describing desired changes
-- Sufficient GPU memory for inference
+- NVIDIA or AMD GPU with sufficient GPU memory for inference
 
 ### Accessing Image-to-Image Processing
 
@@ -30,7 +39,7 @@ Image-to-image processing allows you to modify existing images using text prompt
 
 ### Main Generation Controls
 
-The TransformerLab image-to-image interface shares the same intuitive controls as text-to-image generation, with the addition of reference image functionality:
+The Transformer Lab image-to-image interface shares the same intuitive controls as text-to-image generation, with the addition of reference image functionality:
 
 #### **Reference Image**
 
@@ -45,10 +54,10 @@ The key difference for image-to-image processing is the reference image input:
 
 #### **Prompt**
 
-Describe the transformation you want to apply to the reference image. Be specific about the changes while considering the existing image content.
+Give a full description of the new image, as if you were generating from scratch.
 
 ```text
-Transform this landscape into a winter scene with snow-covered mountains and frozen lake
+A happy family of three. Mom, dad and baby. They each have a relaxed, stylish vibe, wearing 90s-inspired casual outfits including graphic tees, jeans, sneakers, and sunglasses. The overall scene is drawn in a soft anime or watercolor style, with warm tones and natural lighting. Studio Ghibli inspo. The setting feels nostalgic and urban, giving off a vintage band poster or indie movie still kind of energy.
 ```
 
 #### **Steps**
@@ -111,45 +120,6 @@ Enhance the generated image resolution by upscaling it 2x using an upscaling mod
 - **Consider composition**: Simple compositions often transform more successfully
 - **Match aspect ratios**: Use images with appropriate dimensions for your desired output
 - **Leverage generation history**: Previously generated images often work well as reference inputs
-
-### Prompt Writing for Transformations
-
-- **Reference the original**: Acknowledge the existing image content in your prompt
-- **Be specific about changes**: Clearly describe what should be transformed
-- **Maintain context**: Consider lighting, perspective, and style consistency
-- **Use descriptive language**: Include artistic styles, techniques, and quality modifiers
-
-### Example Transformation Prompts
-
-**Using an Uploaded Image (Astronaut in Space):**
-
-```text
-Transform this astronaut floating in space into a medieval knight floating in a fantasy cosmic realm with magical nebulas and ancient runes
-```
-
-<div style={{textAlign: 'center'}}>
-  <img src={require('./gifs/img2img-astronaut-example.gif').default} width="500" />
-</div>
-
-**Using an Image from History (Text-to-Image Generation):**
-
-```text
-Convert this ethereal glitchcore avatar into a realistic oil painting portrait with classical lighting and traditional brushwork techniques
-```
-
-<div style={{textAlign: 'center'}}>
-  <img src={require('./gifs/img2img-history-example.gif').default} width="500" />
-</div>
-
-**Additional Transformation Examples:**
-
-You can also use image-to-image processing for various creative transformations:
-
-**Style Transfer:**
-
-```text
-Transform this photograph into an impressionist painting style, with visible brushstrokes and vibrant colors
-```
 
 **Environmental Changes:**
 

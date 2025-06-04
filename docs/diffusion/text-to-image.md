@@ -5,23 +5,23 @@ sidebar_position: 2
 
 Generate high-quality images from text descriptions using diffusion models in TransformerLab.
 
+![Generate](./gifs/screenshot.png)
+
 ## Overview
 
-Text-to-image generation allows you to create images from natural language descriptions. TransformerLab provides an intuitive interface for this powerful capability, supporting various diffusion model architectures.
+Text-to-image generation allows you to create images from natural language descriptions. Transformer Lab provides an intuitive interface for this powerful capability, supporting various diffusion model architectures.
 
 ## Getting Started
 
 ### Prerequisites
 
 - Downloaded diffusion model (see [Downloading Models](./downloading-models.md))
-- Sufficient GPU memory for inference
-- TransformerLab running with diffusion support
+- NVIDIA or AMD GPU with sufficient GPU memory for inference
 
 ### Accessing Text-to-Image Generation
 
 1. **Select a diffusion model** from the **Foundation tab**
-2. **Navigate to the Diffusion tab** (appears in place of the Interact tab when a supported diffusion model is selected)
-3. **Verify your model selection** - you'll see the selected model displayed along with any adaptor if one was selected on the Foundation screen
+2. **Navigate to the Diffusion tab**
 4. **Configure generation parameters** and start creating images
 
 ## Interface Overview
@@ -122,7 +122,7 @@ Ethereal glitchcore avatar, ghostly neon lights, transparent digital face, color
 ```
 
 <div style={{textAlign: 'center'}}>
-  <img src={require('./gifs/t2i_eg2.png').default} width="500" />
+  <img src={require('./gifs/screenshot.png').default} width="500" />
 </div>
 
 ### Parameter Optimization
@@ -165,10 +165,3 @@ This feature is particularly useful when generating multiple images in a batch, 
 - **Quality improvement**: Combine detailed prompts with appropriate guidance scale settings
 - **Speed optimization**: Use fewer steps during experimentation, more for final generation
 - **Consistency**: Use the same seed value to reproduce successful results
-
-## Next Steps
-
-Explore other diffusion capabilities:
-
-- [Image-to-Image Processing](./image-to-image.md)
-- [Image Inpainting](./inpainting.md)
