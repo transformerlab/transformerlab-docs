@@ -142,16 +142,7 @@ TransformerLab seamlessly integrates with the Hugging Face Model Hub, providing 
 
 ### Storage Location
 
-Downloaded models are stored in your local model directory and can be managed through the TransformerLab interface.
-
-### Model Information
-
-Each model includes:
-
-- Model architecture details
-- Size and memory requirements
-- Supported inference modes
-- License information
+Downloaded models from Huggingface are stored in your local HF cache directory and can be managed through the TransformerLab interface.
 
 ### Model Organization
 
