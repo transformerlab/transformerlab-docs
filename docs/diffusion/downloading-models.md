@@ -207,4 +207,4 @@ Once you have downloaded diffusion models, you can use them for:
 - [Text-to-Image Generation](./text-to-image.md)
 - [Image-to-Image Processing](./image-to-image.md)
 - [Image Inpainting](./inpainting.md)
-- [Training Custom Models](../train/diffusion-trainer.md)
+<!-- - [Training Custom Models](../train/diffusion-trainer.md) -->
