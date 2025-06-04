@@ -198,7 +198,7 @@ Using just the base diffusion model without any adaptor:
   <p><em>Base model result: Generic interpretation without specialized style</em></p>
 </div>
 
-**Result:** The base model generates a standard interpretation of "pikachu attacking" but lacks the specific Pokemon style characteristics that were learned during training.
+**Result:** The base model generates a standard interpretation of "pikachu attacking" but lacks the specific Pokemon style characteristics and instead tries to assign a cat-style face to Pikachu.
 
 ### Adaptor Only (No Trigger Word)
 
