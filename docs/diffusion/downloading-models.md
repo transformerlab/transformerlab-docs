@@ -12,7 +12,7 @@ Transformer Lab makes downloading diffusion models as simple as downloading text
 
 1. **Navigate to the Model Zoo tab** in Transformer Lab
 2. **Browse pre-curated models** or **type in the ID of any Hugging Face model**
-4. **Click download** and monitor progress
+3. **Click download** and monitor progress
 
 
 ### System Requirements
