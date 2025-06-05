@@ -1,10 +1,10 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Managing Image History
 
-TransformerLab automatically saves all your generated images from Text-to-Image, Image-to-Image, and Inpainting workflows, creating a comprehensive history that you can manage, organize, and even convert into datasets for future training.
+Transformer Lab automatically saves all your generated images from Text-to-Image, Image-to-Image, and Inpainting workflows, creating a comprehensive history that you can manage, organize, and even convert into datasets for future training.
 
 ## Accessing Image History
 
@@ -71,13 +71,13 @@ In the dataset creation dialog:
 #### **Step 4: Create Dataset**
 
 1. Click **Create Dataset** to finalize the export
-2. TransformerLab will process the selected images and create a new dataset
+2. Transformer Lab will process the selected images and create a new dataset
 
 ### Accessing Your Generated Datasets
 
 #### **Navigate to Datasets Tab**
 
-1. Go to the **Datasets** tab in the main TransformerLab interface
+1. Go to the **Datasets** tab in the main Transformer Lab interface
 2. Look for the **Generated** section in the dataset browser
 3. Your newly created datasets will appear here with their names and descriptions
 

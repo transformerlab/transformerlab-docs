@@ -1,9 +1,9 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 # Text-to-Image Generation
 
-Generate high-quality images from text descriptions using diffusion models in TransformerLab.
+Generate high-quality images from text descriptions using diffusion models in Transformer Lab.
 
 ![Generate](./gifs/screenshot.png)
 
@@ -28,7 +28,7 @@ Text-to-image generation allows you to create images from natural language descr
 
 ### Main Generation Controls
 
-The TransformerLab diffusion interface provides intuitive controls for text-to-image generation:
+The Transformer Lab diffusion interface provides intuitive controls for text-to-image generation:
 
 #### **Prompt**
 
