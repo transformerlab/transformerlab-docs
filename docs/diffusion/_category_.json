@@ -1,6 +1,6 @@
 {
-    "label": "Generate",
-    "position": 8,
+    "label": "Diffusion",
+    "position": 5,
     "link": {
       "type": "generated-index"
     }
