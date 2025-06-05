@@ -38,8 +38,7 @@ So you can convert an existing photo like this one:
 
 <img src={ require('./images/img2img3.png').default} width={300} />
 
-Apply styling and have it look like this:
-
+Apply a prompt with styling and you can make it look like this:
 
 <img src={ require('./images/img2img1.png').default} width={300} />
 
@@ -47,9 +46,9 @@ Apply styling and have it look like this:
 
 ## Perhaps most importantly, you can train models
 
-Transformer Lab really shines when it comes to training. Using our entire framework that supports jobs, status tracking, workflows (coming soon) and more, you can now train your own Diffusion LoRAs within our UI.
+Transformer Lab excels at training. Using our entire framework that supports jobs, status tracking, workflows (coming soon) and more, you can now train your own Diffusion LoRAs within our UI.
 
-[We have a doc on how to train Diffusion LoRAs here.](/docs/train/diffusion-trainer.md)
+[We have a doc on how to train Diffusion LoRAs here.](/docs/train/diffusion-trainer)
 
 ## What will you build?
 
