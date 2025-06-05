@@ -18,7 +18,7 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
 
 1. Navigate to the `Train` tab.
 2. Click on the `New` button.
-3. In the pop-up, complete the following sections:
+3. In the pop-up, you can leave most settings to their defaults. Click here to see detailed descriptions of all the advanced settings
 
    - **Template/Task Name:**  
      Set a unique name for your training template/task.
@@ -28,9 +28,12 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
 
      **Example Dataset:** For testing and learning, you can use the `datasets-examples/doc-image-6` dataset, which contains 4 high-quality images with detailed captions - perfect for experimenting with diffusion training.
 
+
+  <details>
+    <summary>
    - **Plugin Config Tab:**  
      Configure the training parameters. Each parameter controls a specific aspect of diffusion training:
-
+    </summary>
      **Core Training Parameters:**
 
      - **Trigger Word:**  
@@ -130,6 +133,7 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
 
      - **Log to Weights and Biases:**  
        Toggle whether to log training metrics and outputs to Weights and Biases for monitoring purposes.
+  </details>
 
 4. Save the training template by clicking on **Save Training Template**.
 
