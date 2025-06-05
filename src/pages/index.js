@@ -16,7 +16,7 @@ function HomepageHeader() {
       <div className={clsx("container", styles.container)}>
         <GithubStar />
         <h3 className={styles.announcement}>
-          We now support Inference and Training for Diffusion Models!{" "}
+          We now support Image Diffusion Models!{" "}
           <a href="./blog/diffusion-support">Read More...</a>
         </h3>
         <h1 className={clsx("hero__title", styles.hero__title)}>
