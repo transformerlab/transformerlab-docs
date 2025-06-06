@@ -22,9 +22,9 @@ Current API Version: {apiVersion.version}
 
 <br/><br/>
 
-<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-${appVersion.version}.dmg`}>
+<!-- <a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-${appVersion.version}.dmg`}>
   <Button>Download for <FaApple /> Mac (Intel)</Button>
-  </a>
+  </a> -->
 
 ## <FaWindows/> Windows
 
