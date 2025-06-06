@@ -90,7 +90,6 @@ If you are looking to train models and get higher performance, you need a server
 | ------------------------- | --------- | --------------- |
 | PC or Linux - with GPU    | ✅ Yes    | ✅ Yes          |
 | PC or Linux - without GPU | ✅ Yes    | No              |
-| Mac (Intel)               | ✅ Yes    | No              |
 | Mac (M1)                  | ✅ Yes    | ✅ Yes (slower) |
 | Mac (M2+)                 | ✅ Yes    | ✅ Yes          |
 
