@@ -44,7 +44,18 @@ export default function AllFeatures() {
         flip
       />
       <FeatureCard
-        video={<img src={DiffusionImage} />}
+        video={
+          <MuxPlayer
+            loading="viewport"
+            autoPlay
+            loop
+            playbackId="CWm5w01gczy7fKwa7CLlDWzCAf3zH01nTpElW8MTTl3Zg"
+            metadata={{
+              video_id: "video-id-123456",
+              video_title: "Inference",
+            }}
+          />
+        }
         text={<FeatureDiffusion />}
       />
       <FeatureCard
