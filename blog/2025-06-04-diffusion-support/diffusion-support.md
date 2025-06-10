@@ -50,6 +50,16 @@ Transformer Lab excels at training. Using our entire framework that supports job
 
 [We have a doc on how to train Diffusion LoRAs here.](/docs/train/diffusion-trainer)
 
+Here’s a quick comparison for the prompt **"An astronaut floating in space"**:
+
+| Base model result | With Simpsons adaptor |
+| ----------------- | --------------------- |
+| ![Base astronaut result](./images/base_astronaut.png) | ![Simpsons astronaut result](./images/simpsons_astronaut.png) |
+
+*Comparing base and Simpsons-enabled outputs.*
+
+The Simpsons adaptor is a tiny LoRA add-on trained on cartoon captions. It learns bright colors, simple outlines, and flat shading, so it can turn a realistic astronaut into a fun, colorful scene that feels like Springfield.
+
 ## What will you build?
 
 There are so many possibilites when using and training Diffusion Models. And everything you do in Transformer Lab is private. Companies may want to design their own proprietary checkpoints for diffusion models that their teams can use to generate on-brand images. Artists can create their own models that generate in a unique style, never seen before. Researchers can push the limits of what's possible with these models, while also exploring their biases and edge cases.
