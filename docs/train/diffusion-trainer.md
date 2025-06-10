@@ -191,50 +191,35 @@ This diffusion trainer enables you to create powerful custom adaptors that can t
 
 ## Training Effectiveness Comparison
 
-To demonstrate the power of trained LoRA adaptors and the importance of trigger words, let's examine three different scenarios using the same prompt: **"pokemon-style-123 pikachu attacking"** where `pokemon-style-123` is the trigger word.
+To demonstrate the power of a Simpsons-style LoRA adaptor trained on the [Simpsons BLIP Captions dataset](https://huggingface.co/datasets/Norod78/simpsons-blip-captions), let's compare two scenarios using the prompt **"An astronaut floating in space"**.
 
 ### Base Model Only
 
-Using just the base diffusion model without any adaptor:
+Using the base diffusion model without any adaptor:
 
 <div style={{textAlign: 'center'}}>
-  <img src={require('./gifs/diffusion_trainer/base_model_only.png').default} width="400" />
-  <p><em>Base model result: Generic interpretation without specialized style</em></p>
+  <img src={require('./gifs/diffusion_trainer/base_astronaut.png').default} width="400" />
+  <p><em>Base model result: Standard realistic style</em></p>
 </div>
 
-**Result:** The base model generates a standard interpretation of "pikachu attacking" but lacks the specific Pokemon style characteristics and instead tries to assign a cat-style face to Pikachu.
+**Result:** The base diffusion model generates a realistic depiction of an astronaut floating in space without any stylized characteristics.
 
-### Adaptor Only (No Trigger Word)
+### With Simpsons Adaptor
 
-Using the trained LoRA adaptor but omitting the trigger word from the prompt (**"pikachu attacking"**):
+Using the trained Simpsons-style LoRA adaptor:
 
 <div style={{textAlign: 'center'}}>
-  <img src={require('./gifs/diffusion_trainer/adaptor_only.png').default} width="400" />
-  <p><em>Adaptor without trigger word: Partial style activation</em></p>
+  <img src={require('./gifs/diffusion_trainer/simpsons_astronaut.png').default} width="400" />
+  <p><em>Simpsons style: Vibrant animation aesthetic</em></p>
 </div>
 
-**Result:** The adaptor provides some style influence, but without the trigger word, the learned characteristics are not fully activated. The result shows improvement over the base model but lacks the full stylistic transformation.
-
-### Trigger Word + Adaptor
-
-Using both the trained LoRA adaptor and the trigger word (**"pokemon-style-123 pikachu attacking"**):
-
-<div style={{textAlign: 'center'}}>
-  <img src={require('./gifs/diffusion_trainer/trigger_word_adaptor.png').default} width="400" />
-  <p><em>Complete setup: Full style activation with trigger word and adaptor</em></p>
-</div>
-
-**Result:** The combination of trigger word and adaptor produces the most accurate and stylistically consistent result, fully activating the learned Pokemon style characteristics.
+**Result:** Applying the Simpsons adaptor transforms the scene into a bright, animated aesthetic reminiscent of The Simpsons while preserving the astronaut theme.
 
 ### Key Takeaways
 
-1. **Adaptor Impact:** Training a LoRA adaptor significantly improves style consistency and quality compared to the base model alone.
-
-2. **Trigger Word Importance:** The trigger word acts as a "key" that fully activates the learned style. Without it, the adaptor's influence is diminished.
-
-3. **Combined Power:** The most effective results come from using both the trained adaptor and the associated trigger word together.
-
-4. **Training Quality:** This comparison demonstrates how well-trained adaptors can transform generic model outputs into highly specialized, stylistically consistent results.
+1. **Stylistic Transformation:** LoRA adaptors can inject distinct artistic styles into diffusion outputs with minimal overhead.
+2. **Resource Efficiency:** Fine-tuning with LoRA adapters requires far fewer resources than full model training.
+3. **Data Quality Matters:** High-quality, targeted datasets like the Simpsons captions dataset ensure coherent and consistent style transfer.
 
 When training your own adaptors, remember to:
 
@@ -242,3 +227,42 @@ When training your own adaptors, remember to:
 - Use the trigger word consistently during training
 - Always include the trigger word when generating images with your trained adaptor
 - Test different trigger word strategies to find what works best for your specific use case
+
+<details>
+<summary>Additional Pokemon-style Example</summary>
+
+#### Pokemon Training Effectiveness Comparison
+
+To demonstrate the power of LoRA adaptors and the importance of trigger words, let's compare three scenarios using the prompt **"pokemon-style-123 pikachu attacking"** where `pokemon-style-123` is the trigger word.
+
+##### Pokemon Base Model Only
+
+<div style={{textAlign: 'center'}}>
+  <img src={require('./gifs/diffusion_trainer/base_model_only.png').default} width="400" />
+</div>
+
+*Result:* The base model generates a standard interpretation of "pikachu attacking" but lacks the specific Pokemon style characteristics and instead tries to assign a cat-style face to Pikachu.
+
+##### Pokemon Adaptor Only (No Trigger Word)
+
+<div style={{textAlign: 'center'}}>
+  <img src={require('./gifs/diffusion_trainer/adaptor_only.png').default} width="400" />
+</div>
+
+*Result:* The adaptor provides some style influence, but without the trigger word, the learned characteristics are not fully activated.
+
+##### Pokemon Trigger Word + Adaptor
+
+<div style={{textAlign: 'center'}}>
+  <img src={require('./gifs/diffusion_trainer/trigger_word_adaptor.png').default} width="400" />
+</div>
+
+*Result:* Combining the trigger word with the adaptor produces full style activation, displaying vivid Pokemon-style visuals.
+
+###### Pokemon Key Takeaways
+
+1. **Adaptor Impact:** Training a LoRA adaptor significantly improves style consistency compared to the base model.
+2. **Trigger Word Importance:** The trigger word fully unlocks the learned style.
+3. **Combined Approach:** The best results come from using both the adaptor and the trigger word.
+
+</details>
