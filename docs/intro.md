@@ -24,11 +24,11 @@ You can contribute plugins or to the core application -- we'd love your help! St
 
 With Transformer Lab, you can:
 
-1. **Download** LLMs
-2. **Chat** with LLMs
-3. Calculate **embeddings**
-4. **Create and download datasets** for training LLMs
-5. **Finetune and Train** LLMs
+1. **Download** LLMs and Diffusion Models
+2. **Chat** with LLMs, and **generate images** with Diffusion Models
+3. Calculate LLM **embeddings**
+4. **Create and download datasets** for training LLMs and Image Models
+5. **Finetune and Train** LLMs and Diffusion Models
 6. **Training using RLHF or Preference Tuning**
 7. **Use RAG** to talk to your documents
 
