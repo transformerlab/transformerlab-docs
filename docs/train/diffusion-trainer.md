@@ -78,106 +78,83 @@ This structure ensures your dataset is compatible and supports advanced features
     <summary>
     **Advanced Plugin Configuration**  
     </summary>
-     **Core Training Parameters:**
+     ### Core Training Parameters
 
-     - **Trigger Word:**  
-       Optional trigger word to prepend to all captions during training. Example: 'sks person' or 'ohwx style'. Leave empty if not needed.
+- **Adaptor Name**: Name for the LoRA adaptor that will be created and saved (required)
+- **Trigger Word**: Optional trigger word to prepend to all captions during training (e.g., 'sks person' or 'ohwx style')
+- **Number of Training Epochs**: Number of training epochs (default: 100)
+- **Train Batch Size**: Number of images per batch (default: 1)
+- **Gradient Accumulation Steps**: Steps to accumulate gradients before updating weights (default: 1)
 
-     - **Number of Training Epochs:**  
-       Determines how many times the entire training dataset is passed through the model (1-1000).
+### Dataset Configuration
 
-     - **Train Batch Size:**  
-       Number of images processed together in each training iteration. Start with 1 for memory efficiency.
+- **Caption Column**: Name of the column containing image captions (default: "text")
+- **Image Column**: Name of the column containing images (default: "image")
+- **Caption Dropout Rate**: Probability of dropping captions during training (default: 0.0)
 
-     - **Learning Rate:**  
-       Specifies the initial step size at which the model learns. Default is 1e-4.
+### Image Processing
 
-     **Optimizer Parameters:**
+- **Image Resolution**: Image resolution for training (default: 512)
+- **Center Crop**: Use center crop instead of random crop (default: false)
+- **Image Interpolation Mode**: Interpolation method for resizing (default: "lanczos")
+- **Random Horizontal Flip**: Apply random horizontal flip (default: false)
 
-     - **Adam Beta 1:**  
-       The beta1 hyperparameter for Adam optimizer. Controls momentum (default: 0.9).
+### Data Augmentation
 
-     - **Adam Beta 2:**  
-       The beta2 hyperparameter for Adam optimizer. Controls second moment estimates (default: 0.999).
+- **Enable Color Jitter**: Enable color jitter augmentation (default: false)
+- **Color Jitter Brightness**: Brightness variation amount (default: 0.1)
+- **Color Jitter Contrast**: Contrast variation amount (default: 0.1) 
+- **Color Jitter Saturation**: Saturation variation amount (default: 0.1)
+- **Color Jitter Hue**: Hue variation amount (default: 0.05)
+- **Enable Random Rotation**: Enable random rotation (default: false)
+- **Random Rotation Degrees**: Maximum rotation degrees (default: 5)
+- **Random Rotation Probability**: Probability of applying rotation (default: 0.3)
 
-     - **Adam Weight Decay:**  
-       Regularization parameter to prevent overfitting (default: 0.01).
+### LoRA Configuration
 
-     - **Adam Epsilon:**  
-       A small constant for numerical stability in Adam optimizer (default: 1e-8).
+- **LoRA Rank (r)**: LoRA rank - higher values = more parameters but better quality (default: 8)
+- **LoRA Alpha**: LoRA scaling factor (default: 16)
 
-     - **Max Grad Norm:**  
-       Maximum gradient norm for clipping to prevent exploding gradients (default: 1.0).
+### Optimizer Settings
 
-     - **Gradient Accumulation Steps:**  
-       Number of steps to accumulate gradients before updating model weights (1-32).
+- **Learning Rate**: Learning rate for optimizer (default: 1e-4)
+- **LR Scheduler**: Learning rate schedule type (default: "constant")
+- **LR Warmup Steps**: Steps to gradually increase learning rate (default: 50)
+- **Adam Beta 1**: Adam optimizer beta1 parameter (default: 0.9)
+- **Adam Beta 2**: Adam optimizer beta2 parameter (default: 0.999)
+- **Adam Weight Decay**: Weight decay for regularization (default: 0.01)
+- **Adam Epsilon**: Adam epsilon for numerical stability (default: 1e-8)
+- **Max Grad Norm**: Maximum gradient norm for clipping (default: 1.0)
 
-     **Image Processing Parameters:**
+### Advanced Training Options
 
-     - **Image Resolution:**  
-       Target image size for training. Must match model requirements (64-1024 pixels, default: 512).
+- **Loss Type**: Loss function type - "l2" or "huber" (default: "l2")
+- **Huber Loss Beta**: Beta parameter for Huber loss (default: 0.1)
+- **Prediction Type**: Prediction type - "epsilon" or "v_prediction" (default: "epsilon")
+- **SNR Gamma**: Signal-to-noise ratio gamma for loss weighting (default: 0)
+- **Min-SNR Gamma**: Minimum SNR gamma value (default: 0)
+- **Noise Offset**: Offset added to noise for training (default: 0)
 
-     - **Center Crop:**  
-       Whether to center crop images during preprocessing.
+### Performance Optimization
 
-     - **Random Horizontal Flip:**  
-       Apply random horizontal flips for data augmentation.
+- **Mixed Precision**: Enable mixed precision training - "no", "fp16", or "bf16" (default: "no")
+- **Enable xFormers Memory Efficient Attention**: Use xFormers for memory efficiency (default: false)
+- **Enable Gradient Checkpointing**: Trade compute for memory (default: false)
+- **Use EMA (Exponential Moving Average)**: Use Exponential Moving Average of weights (default: false)
+- **EMA Decay Rate**: EMA decay rate (default: 0.9999)
 
-     - **Image Interpolation Mode:**  
-       Method for image resizing: lanczos, bilinear, bicubic, or nearest.
+### Evaluation
 
-     **Dataset Configuration:**
+- **Evaluation Prompt**: Text prompt for generating evaluation images (default: "")
+- **Evaluation Steps**: Generate evaluation images every N epochs (default: 1)
+- **Evaluation Inference Steps**: Denoising steps for evaluation images (default: 50)
+- **Evaluation Guidance Scale**: Guidance scale for evaluation generation (default: 7.5)
 
-     - **Caption Column:**  
-       Name of the column containing text captions (default: "text").
+### Logging
 
-     - **Image Column:**  
-       Name of the column containing image data (default: "image").
+- **Log to Weights and Biases**: Log training metrics to Weights & Biases (default: true)
 
-     **LoRA Parameters:**
-
-     - **LoRA Rank (r):**  
-       Rank of LoRA update matrices. Higher values allow more fine-tuning capacity (4-128, default: 8).
-
-     - **LoRA Alpha:**  
-       LoRA scaling factor. Typically set to 2x the rank value (4-128, default: 16).
-
-     **Advanced Training Settings:**
-
-     - **Mixed Precision:**  
-       Enable mixed precision training for faster speed and lower memory usage. Options: no, fp16, bf16.
-
-     - **LR Scheduler:**  
-       Learning rate schedule: constant, linear, cosine, or constant_with_warmup.
-
-     - **LR Warmup Steps:**  
-       Number of steps for learning rate warmup (default: 50).
-
-     - **Noise Offset:**  
-       Adds noise to improve training stability (default: 0).
-
-     - **Prediction Type:**  
-       Type of prediction: epsilon or v_prediction (default: epsilon).
-
-     - **SNR Gamma:**  
-       Signal-to-noise ratio gamma for loss weighting (optional).
-
-     **Evaluation Parameters:**
-
-     - **Evaluation Prompt:**  
-       Text prompt used to generate evaluation images during training. Leave empty to skip evaluation image generation.
-
-     - **Evaluation Steps:**  
-       Generate evaluation images every N epochs. Set to 1 to generate after each epoch.
-
-     **Output Configuration:**
-
-     - **Adaptor Name:**  
-       Unique identifier for the training adaptor. This name will be used to identify your trained LoRA adaptor.
-
-     - **Log to Weights and Biases:**  
-       Toggle whether to log training metrics and outputs to Weights and Biases for monitoring purposes.
-  </details>
+</details>
 
 4. Save the training template by clicking on **Save Training Template**.
 
