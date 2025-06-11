@@ -6,15 +6,29 @@ sidebar_position: 4
 
 The Diffusion Trainer allows you to create and manage LoRA training jobs for diffusion models using Transformer Lab. This plugin enables training custom adaptors that can be used with Text-to-Image, Image-to-Image, and Inpainting workflows. The trainer supports CUDA environments and offers flexibility in setting up custom diffusion training tasks.
 
-## Step 1: Installing the Plugin
+## Step 1: Setup
 
 1. Open the `Plugins` tab.
 2. Filter by trainer plugins.
 3. Install the `Diffusion Trainer` plugin.
 
-**Note:** This plugin only works with CUDA environments and requires diffusion models to be downloaded from the Model Zoo.
+:::note
+This plugin only works with CUDA (i.e. NVIDIA)
+:::
 
-## Step 2: Creating a Training Task
+4. Now download a diffusion model in the Model Zoo. We recommend **stabilityai/stable-diffusion-xl-base-1.0** as a good starting point.
+
+## Step 2: Create an Image Dataset
+
+Transformer Lab works with Hugging Face Datasets. You can use any impage dataset on HF, for example [datasets-examples/doc-image-6](https://huggingface.co/datasets/datasets-examples/doc-image-6)
+
+But most likely you'd like to train your Diffusion Model on your own images. To create a new dataset, go to 
+
+[VERY brief explanation here]
+
+
+
+## Step 3: Setup a Train
 
 1. Navigate to the `Train` tab.
 2. Click on the `New` button.
@@ -31,8 +45,7 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
 
   <details>
     <summary>
-   - **Plugin Config Tab:**  
-     Configure the training parameters. Each parameter controls a specific aspect of diffusion training:
+    **Advanced Plugin Configuration**  
     </summary>
      **Core Training Parameters:**
 
@@ -139,7 +152,7 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
 
 <img src={require('./gifs/diffusion_trainer/1_CreatingTask.gif').default} alt="Plugin Gif" width="500" />
 
-## Step 3: Queueing the Training Job
+## Step 4: Queueing the Training Job
 
 After saving the training template, click on **Queue** to start the training job.
 
@@ -152,7 +165,7 @@ While the training is running, you can view the output logs and monitor progress
 
 <img src={require('./gifs/diffusion_trainer/2_RunningTask.gif').default} alt="Plugin Gif" width="500" />
 
-## Step 4: Using the Trained Adaptor
+## Step 5: Using the Trained Adaptor
 
 Once the training is finished, the LoRA adaptor becomes available for use with diffusion models. You can:
 
@@ -164,6 +177,8 @@ Once the training is finished, the LoRA adaptor becomes available for use with d
 The trained adaptor will enhance the base diffusion model with your custom style or subject learned from the training dataset.
 
 <img src={require('./gifs/diffusion_trainer/3_PostTraining.gif').default} alt="Plugin Gif" width="500" />
+
+<divider />
 
 ## Training Tips
 
