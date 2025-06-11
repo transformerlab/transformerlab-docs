@@ -13,19 +13,50 @@ The Diffusion Trainer allows you to create and manage LoRA training jobs for dif
 3. Install the `Diffusion Trainer` plugin.
 
 :::note
-This plugin only works with CUDA (i.e. NVIDIA)
+This plugin only works with NVIDIA and AMD GPUs. It requires a CUDA environment to run.
 :::
 
 4. Now download a diffusion model in the Model Zoo. We recommend **stabilityai/stable-diffusion-xl-base-1.0** as a good starting point.
 
 ## Step 2: Create an Image Dataset
 
-Transformer Lab works with Hugging Face Datasets. You can use any impage dataset on HF, for example [datasets-examples/doc-image-6](https://huggingface.co/datasets/datasets-examples/doc-image-6)
+Transformer Lab works with Hugging Face Datasets. You can use any image dataset on HF, for example [datasets-examples/doc-image-6](https://huggingface.co/datasets/datasets-examples/doc-image-6)
 
-But most likely you'd like to train your Diffusion Model on your own images. To create a new dataset, go to 
+But most likely you'd like to train your Diffusion Model on your own images. To create a new dataset:
 
-[VERY brief explanation here]
+1. Go to the **Datasets** tab.
+2. Click `New +`.
+3. In the pop-up, select **Image** as the dataset type, enter a name, and click **Next**.
+4. Upload your folder of images. The folder should follow the Hugging Face Image Datasets format:
 
+   ```
+   folder_uploaded/
+   ├── image1.jpg
+   ├── image2.jpg
+   ├── image3.jpg
+   └── ...
+   └── metadata.jsonl
+   ```
+
+   - The `metadata.jsonl` file is optional but recommended. It can include captions or tags for each image, which help during training.
+   - If you include `metadata.jsonl`, it must have a column named `file_name` that matches each image file. Other columns (e.g., captions, tags) are allowed and can be named as you like.
+   - If you don’t provide `metadata.jsonl`, only the images will be loaded.
+
+5. You can also organize your dataset into subfolders for splits or labels, for example:
+
+   ```text
+   folder_uploaded/
+   ├── train/
+   │   ├── image1.jpg
+   │   ├── image2.jpg
+   │   └── metadata.jsonl
+   ├── valid/
+   │   ├── image3.jpg
+   │   ├── image4.jpg
+   │   └── metadata.jsonl
+   ```
+
+This structure ensures your dataset is compatible and supports advanced features like captions and data splits.
 
 
 ## Step 3: Setup a Train
