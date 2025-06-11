@@ -16,6 +16,8 @@ You must upload a dataset with prompts using the `Datasets` tab.
 - `negative_prompt`: Optional. Used to guide the model away from undesired traits.
 - Any additional metadata fields are ignored during generation.
 
+<img src={require('./gifs/dataset_imagegen/dataset.gif').default} alt="Dataset Creation" width="500" />
+
 ## Step 2: Configure Plugin Parameters
 
 When setting up a generation job with `dataset_imagegen`, configure the following parameters:
@@ -32,7 +34,7 @@ When setting up a generation job with `dataset_imagegen`, configure the followin
 | `Guidance Scale` | How strictly the model follows the prompt | ✅ | `7.5` |
 | `Number of Inference Steps` | Quality/speed trade-off for generation | ✅ | `30` |
 
-📌 **Note:** The plugin will always use a local generation model—no selection needed.
+<img src={require('./gifs/dataset_imagegen/parameters.gif').default} alt="Input Parameters" width="500" />
 
 ## Step 3: Start the Job
 
@@ -42,24 +44,14 @@ Each row in your dataset will be used to generate one or more images (the number
 
 ## Step 4: View the Output
 
-The output will include:
-
-- Generated images saved with filenames like `prompt_0_image_0.jpg`.
-- A `metadata.jsonl` file with rows like:
-  ```json
-  {
-    "file_name": "prompt_0_image_0.jpg",
-    "prompt": "a cyberpunk city at night",
-    "negative_prompt": "blurry, low quality"
-  }
-  ```
-
 You can preview the dataset using the UI inside the `Generate` or the `Datasets` -> `Generated Datasets` tabs (the latter provides a tool to edit the text fields and create a new dataset as well) or export it for downstream use.
 
 ## Example Use Case
 
 | Prompt | Negative Prompt | Postfix |
 |--------|------------------|---------|
-| `"a futuristic vehicle"` | `"low resolution"` | `"as a watercolor"` |
+| `"a futuristic city skyline at sunset"` | `"low resolution"` | `"as Persian artwork"` |
 
-This will generate image(s) of futuristic vehicles painted in a watercolor style, while avoiding low-resolution features.
+This will generate image(s) of futuristic cities painted using a Persian artwork style, while avoiding low-resolution features.
+
+<img src={require('./gifs/dataset_imagegen/process.gif').default} alt="Generation Process" width="500" />
