@@ -55,7 +55,7 @@ h5 {
 }
 
 .theme-doc-sidebar-container {
-  border-right: 0px black !important;
+  border-right: 0px var(--ifm-heading-color) !important;
 }
 
 .embedded-button {
@@ -187,7 +187,7 @@ article blockquote>p {
 article a {
   font-weight: 500;
   transition: color 0.25s, opacity 0.25s;
-  color: black;
+  color: var(--ifm-heading-color);
 }
 
 article a:hover {
@@ -284,7 +284,7 @@ article hr {
       5.2015803828rem);
   font-weight: 700;
   margin-bottom: 10px;
-  stroke: black;
+  stroke: var(--ifm-heading-color);
 }
 
 
