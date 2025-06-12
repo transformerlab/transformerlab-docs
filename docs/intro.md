@@ -12,7 +12,7 @@ import MuxPlayer from '@mux/mux-player-react';
 
 <!-- <img src={require('/img/flask.png').default} alt="Login Modal" width="80" /> -->
 
-Transformer Lab is a free, open-source LLM workspace that you can run on your own computer. It is designed to go beyond what most modern open LLM applications allow. Using Transformer Lab you can easily finetune, evaluate, export and test LLMs across different inference engines and platforms.
+Transformer Lab is a free, open-source LLM and Diffusion workspace that you can run on your own computers or in the cloud. It is designed to go beyond what most modern open LLM and Diffusion applications allow. Using Transformer Lab you can easily finetune, evaluate, export and test AI models across different inference engines and platforms.
 
 <img src={require('/img/screenshot.png').default} alt="Login Modal" width="500" />
 
@@ -24,11 +24,11 @@ You can contribute plugins or to the core application -- we'd love your help! St
 
 With Transformer Lab, you can:
 
-1. **Download** LLMs
-2. **Chat** with LLMs
-3. Calculate **embeddings**
-4. **Create and download datasets** for training LLMs
-5. **Finetune and Train** LLMs
+1. **Download** LLMs and Diffusion Models
+2. **Chat** with LLMs, and **generate images** with Diffusion Models
+3. Calculate LLM **embeddings**
+4. **Create and download datasets** for training LLMs and Image Models
+5. **Finetune and Train** LLMs and Diffusion Models
 6. **Training using RLHF or Preference Tuning**
 7. **Use RAG** to talk to your documents
 

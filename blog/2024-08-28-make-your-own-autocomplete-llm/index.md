@@ -3,6 +3,7 @@ slug: autocomplete-llm
 title: Using a Local LLM for AutoComplete
 authors: ali
 tags: [llm-applications]
+unlisted: true
 ---
 
 # Building a Local LLM Powered Autocomplete

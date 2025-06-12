@@ -10,8 +10,8 @@ The Llama Trainer allows you to create and manage training jobs using Transforme
 
 1. Open the `Plugins` tab.
 2. Filter by trainer plugins.
-3. Install the `Llama SFT Trainer -- Huggingface TRL` plugin.  
-   If you have a multi-GPU setup, you can choose `Llama SFT Trainer -- Huggingface TRL (Multi GPU Support)`.
+3. Install the `Huggingface TRL Trainer` plugin.  
+   If you have a multi-GPU setup, you can choose `Huggingface TRL Trainer (Multi GPU Support)`.
 
 **Note:** These plugins only work with CUDA environments.
 
