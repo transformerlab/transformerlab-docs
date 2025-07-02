@@ -26,13 +26,16 @@ When launching a generation job with `synthetic-dataset-kit`, configure the foll
 
 | Parameter | Description | Required | Example |
 |----------|-------------|----------|---------|
-| `Generation Model` | Must be `local` and vLLM-compatible. No external/proxy-backed models supported. | ✅ | `local` |
+| `Generation Model` | Must be `local` (downloaded via `Model Zoo`) and vLLM-compatible[^vllm-models]. No external or proxy-backed models supported. | ✅ | `local` |
 | `Generation Type` (`task_type`) | Select what to generate: QA pairs, Chain of Thought examples, or Summaries | ✅ | `qa`, `cot`, `summary` |
 | `Number of Pairs to Generate` | Total examples to create per document | ✅ | `100` |
 | `Curation Threshold` | Min score (1–10) a generated sample must meet to be included | ✅ | `7.0` |
 | `Output Format` | Choose the output format for the dataset | ✅ | `jsonl`, `alpaca`, `chatml` |
 | `Custom Prompt Template` | (Optional) Override the default prompt used for generation | ❌ | _Your prompt here_ |
 | `vLLM Server API Base` | Endpoint of the vLLM server (usually default) | ✅ | `http://localhost:8338/v1` |
+
+[^vllm-models]: To check if your model is vLLM-compatible, see the [vLLM Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html) list. vLLM currently supports many popular architectures like LLaMA, Mistral, Falcon, Baichuan, and more. Ensure your model is in a supported architecture and format (e.g., Hugging Face Transformers or Safetensors, not GGUF).
+
 
 ## Step 3: Review the Output
 
