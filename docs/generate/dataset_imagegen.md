@@ -26,7 +26,7 @@ When setting up a generation job with `dataset_imagegen`, configure the followin
 |----------|-------------|----------|---------|
 | `Prompt Column` | Name of the column that contains prompts | ✅ | `"prompt"` |
 | `Negative Prompt Column` | Name of the column for negative prompts (leave empty if not used) | ❌ | `"negative_prompt"` |
-| `Prompt Postfix` | Optional text to append to each prompt | ❌ | `"as a painting"` |
+| `Prompt Postfix` | Optional text to append to each prompt (useful for adding trigger words or style cues) | ❌ | `"as a painting"` |
 | `Image Width` | Width of generated images (pixels) | ✅ | `512` |
 | `Image Height` | Height of generated images (pixels) | ✅ | `512` |
 | `Images Per Prompt` | How many images to generate per prompt | ✅ | `4` |
