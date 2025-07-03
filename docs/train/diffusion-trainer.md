@@ -38,9 +38,10 @@ But most likely you'd like to train your Diffusion Model on your own images. To 
    └── metadata.jsonl
    ```
 
-   - The `metadata.jsonl` file is optional but recommended. It can include captions or tags for each image, which help during training.
-   - If you include `metadata.jsonl`, it must have a column named `file_name` that matches each image file. Other columns (e.g., captions, tags) are allowed and can be named as you like.
-   - If you don’t provide `metadata.jsonl`, only the images will be loaded.
+   - You **do not need** to include a `metadata.jsonl` file when uploading images.
+   - After the images are uploaded, **you can add captions** manually in the app by editing the dataset.
+   - Alternatively, you may upload a `metadata.jsonl` file alongside the images, which is helpful if you already have captions or tags prepared.
+   - If you decide to include `metadata.jsonl`, it must have a column named `file_name` that matches each image file. Other columns (e.g., captions, tags) are allowed and can be named as you like.
 
 5. You can also organize your dataset into subfolders for splits or labels, for example:
 
