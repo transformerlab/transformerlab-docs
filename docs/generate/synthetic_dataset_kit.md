@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 6
 ---
 
 # Generate QA, CoT, or Summary Dataset from Documents (`synthetic-dataset-kit`)
