@@ -36,7 +36,7 @@ There are two ways to get an SGLang-compatible model:
 **Option A: Download from the Model Zoo**
 
 - Go to the **Model Zoo** tab.
-- Use the filters to select a supported architecture (e.g. `llava`, `internlm-xcomposer`, etc.).
+- Find a compatible model.
 - Click the **Download** button next to the model you wish to use.
 
 **Option B: Use the download bar**
