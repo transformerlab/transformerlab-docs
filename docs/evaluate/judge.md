@@ -29,7 +29,7 @@ To perform these evaluations, you'll need to upload a dataset with the following
 
 ### 1. Download the Plugin
 
-Navigate to the Plugins section and install the `DeepEval Evaluations (LLM-as-Judge)` plugin.
+Navigate to the Plugins section and install the `LLM-as-Judge Evaluator` plugin.
 
 <!-- Insert GIF for plugin download -->
 
