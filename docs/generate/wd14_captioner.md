@@ -51,7 +51,7 @@ You can also edit the captions and create a new dataset for downstream tasks lik
 
 | image | caption |
 |-------|---------|
-| `dog.png` | `1girl, dog, outdoors, tail wagging` |
+| `dog.png` | `dog, outdoors, tail wagging` |
 | `cat.jpg` | `cat, lying down, looking at viewer` |
 
 ## Model Variants
