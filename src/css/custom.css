@@ -30,7 +30,7 @@
   --ifm-color-primary-lightest: #ffffff;
 } */
 
-*/:root {
+:root {
   --ifm-hover-overlay: rgba(161, 125, 179, 0.12);
   --ifm-menu-color-active: #0d1017;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darkest);
