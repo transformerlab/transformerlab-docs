@@ -108,14 +108,6 @@ If you don't already have a RunPod account:
 For both platforms, once your pod is up and running, allow approximately 2 minutes for the initial setup to complete. This time is needed to install hardware-specific dependencies based on your selected GPU.
 :::
 
-### What Happens During Setup
-
-The initial 2-minute setup period installs:
-
-- GPU-specific drivers and libraries
-- CUDA dependencies matching your hardware
-- Performance optimizations for your specific GPU model
-
 ### Monitoring Setup Progress
 
 You can monitor the setup progress by:
@@ -128,7 +120,7 @@ You can monitor the setup progress by:
 
 Once your remote instance is running:
 
-1. Open your local Transformer Lab desktop application
+1. Open your local Transformer Lab desktop application or web app
 2. Go to connection settings
 3. Enter the IP address and port from your cloud instance
 4. Test the connection to ensure everything is working properly
