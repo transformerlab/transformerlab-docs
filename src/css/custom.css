@@ -5,11 +5,11 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #a3aab8;
-  --ifm-color-primary-dark: #8f98a9;
-  --ifm-color-primary-darker: #868fa1;
-  --ifm-color-primary-darkest: #6a7489;
+/* :root {
+  --ifm-color-primary: rgb(38, 71, 136);
+  --ifm-color-primary-dark: #021944;
+  --ifm-color-primary-darker: #00143c;
+  --ifm-color-primary-darkest: #000000;
   --ifm-color-primary-light: #b7bcc7;
   --ifm-color-primary-lighter: #c0c5cf;
   --ifm-color-primary-lightest: #dee0e5;
@@ -20,7 +20,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --ifm-color-primary: #c7cbd6;
   --ifm-color-primary-dark: #afb5c5;
   --ifm-color-primary-darker: #a3aabc;
@@ -28,9 +28,9 @@
   --ifm-color-primary-light: #dfe1e7;
   --ifm-color-primary-lighter: #ebecf0;
   --ifm-color-primary-lightest: #ffffff;
-}
+} */
 
-:root {
+*/:root {
   --ifm-hover-overlay: rgba(161, 125, 179, 0.12);
   --ifm-menu-color-active: #0d1017;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darkest);
@@ -187,7 +187,7 @@ article blockquote>p {
 article a {
   font-weight: 500;
   transition: color 0.25s, opacity 0.25s;
-  color: var(--ifm-heading-color);
+  /* color: rgb(127, 127, 198); */
 }
 
 article a:hover {
