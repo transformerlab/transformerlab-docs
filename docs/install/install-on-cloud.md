@@ -1,6 +1,6 @@
 ---
 title: Install in the Cloud (Web App)
-sidebar_position: 5
+sidebar_position: 10
 ---
 
 ## Installing the Server
