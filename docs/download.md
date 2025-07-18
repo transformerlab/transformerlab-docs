@@ -38,12 +38,4 @@ Local Connection on Windows requires Windows 10+ with WSL installed.
 
 ## <FaLinux/> Linux
 
-<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-${appVersion.version}.AppImage`}>
-  <Button>Download AppImage</Button>
-  </a>
-
-<br/><br/>
-
-<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-${appVersion.version}-arm64.AppImage`}>
-  <Button>Download AppImage (ARM64)</Button>
-  </a>
+Follow our [Cloud Install Instructions](./install/install-on-cloud.md)
