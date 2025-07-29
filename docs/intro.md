@@ -52,4 +52,4 @@ If the simple install doesn't work for you, or you'd like more control over the 
 
 ## Recipes: Pre-defined Workflows
 
-Want to get started quickly with common tasks like training, evaluating, or exporting models? Check out our [Recipes](./getting-started/recipes.md) section! Recipes are step-by-step guides for popular workflows, tailored to your hardware and goals. Browse the list and follow a recipe to get productive fast.
+Want to get started quickly with common tasks like training, evaluating, or exporting models? Check out our [Recipes](./recipes/intro.md) section! Recipes are step-by-step guides for popular workflows, tailored to your hardware and goals. Browse the list and follow a recipe to get productive fast.
