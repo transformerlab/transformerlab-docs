@@ -1,6 +1,6 @@
 ---
-title: Install on Linux
-sidebar_position: 1
+title: Install on Linux (NVIDIA)
+sidebar_position: 3
 ---
 
 import Button from '@site/src/components/Button';
@@ -11,11 +11,13 @@ These are instructions to install Transormer Lab as an App. You can also install
 
 :::
 
-For most situations, you can just download Transformer Lab and it should work as is. But if you are setting up from scratch and haven't installed CUDA drivers (drivers for your GPU) the following instructions can help.
+For most situations, you can just install Transformer Lab and it should work. But if you are setting up from scratch and haven't installed CUDA drivers (drivers for your GPU) the following instructions can help.
 
 ## What Distro
 
-Transformer Lab should work on most distros of Linux. If you are getting started from scratch, we recommend installing [PopOS](https://pop.system76.com/) because it has great support for automatically installing NVIDIA drivers.
+Transformer Lab should work on most distros of Linux that support your GPU. If you are getting started from scratch and have an NVIDIA GPU, we recommend installing [PopOS](https://pop.system76.com/) because it has great support for automatically installing NVIDIA drivers.
+
+If you have a machine with an [AMD GPU, follow the instructions here](./install-on-amd.md).
 
 ![PopOS Screenshot](./img/popos.webp)
 
@@ -39,30 +41,4 @@ If you need to install the nvidia drivers from scratch, there are instructions b
 
 ## Step 2 - Download and Install Transformer Lab
 
-Go to the Transformer Lab download page and click on the app image that is appropriate for your computer:
-
-<a href="https://transformerlab.ai/docs/download">
-    <Button>Download Transformer Lab</Button>
-</a>
-
-## Step 3 - Run the Installer
-
-You can double click on the installer to run Transformer Lab.
-
-![App Image](./img/downloads-transformerlab.png)
-
-If you get an error that says "Could not display..."
-
-![Could Not Display](./img/could-not-display-transformerlab-appimage.png)
-
-You may need to change the permissions of the AppImage.
-
-Right-click on the app then click on Properties -> Permissions -> then check "Allow Executing File as a Program"
-
-![Allow Execute](./img/allow-execute-linux.png)
-
-Now try running it again. Please be patient on the first install as a number of libraries must installed on the first run.
-
-## Other Notes
-
-If you are running a recent version of Ubuntu or an Ubuntu based disto, you may have to run the appimage with the --no-sandbox flag to allow the installer the ability to install.
+Now follow the [cloud install instructions](./install-on-cloud.md) to install Transformer Lab as a local web app.

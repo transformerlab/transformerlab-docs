@@ -1,6 +1,6 @@
 ---
 title: Install on Windows
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 import Button from '@site/src/components/Button';

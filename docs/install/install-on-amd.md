@@ -72,33 +72,7 @@ sudo apt install curl git
 
 ### Step 2 - Download and Install Transformer Lab
 
-Go to the Transformer Lab download page and click on the app image that is appropriate for your computer:
-
-<a href="https://transformerlab.ai/docs/download">
-    <Button>Download Transformer Lab</Button>
-</a>
-
-### Step 3 - Run the Installer
-
-You can double click on the installer to run Transformer Lab.
-
-![App Image](./img/downloads-transformerlab.png)
-
-If you get an error that says "Could not display..."
-
-![Could Not Display](./img/could-not-display-transformerlab-appimage.png)
-
-You may need to change the permissions of the AppImage.
-
-Right-click on the app then click on Properties -> Permissions -> then check "Allow Executing File as a Program"
-
-![Allow Execute](./img/allow-execute-linux.png)
-
-Now try running it again. Please be patient on the first install as a number of libraries must be installed on the first run.
-
-### Other Notes
-
-If you are running a recent version of Ubuntu or an Ubuntu-based distro, you may have to run the appimage with the `--no-sandbox` flag to allow the installer the ability to install.
+Now follow the [cloud install instructions](./install-on-cloud.md).
 
 
 ## Windows Instructions
