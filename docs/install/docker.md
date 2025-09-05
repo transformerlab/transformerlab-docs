@@ -1,6 +1,8 @@
-# Running TransformerLab with Docker
-
-TransformerLab provides pre-built Docker images that make it easy to get started quickly without worrying about dependencies or environment setup. This guide covers how to run TransformerLab using Docker containers.
+---
+title: Running with Docker
+sidebar_position: 11
+---
+Transformer Lab provides pre-built Docker images that make it easy to get started quickly without worrying about dependencies or environment setup. This guide covers how to run Transformer Lab using Docker containers.
 
 ## Prerequisites
 
@@ -188,9 +190,8 @@ docker build -t my-transformerlab-amd .
 Once TransformerLab is running:
 
 1. Visit `http://localhost:8338` in your browser
-2. Follow the [Getting Started Guide](../getting-started/overview.md) to learn the basics
-3. Check out the [Download Models](../getting-started/download-models.md) guide to get some models
-4. Explore [Training](../train/overview.md) and [Generation](../generate/overview.md) features
+2. Follow the [Getting Started Guide](../intro) to learn the basics
+3. Explore [Training](../category/train), [Evaluation](../category/evaluate) and [Generation](../category/generate) features
 
 ## Docker Compose (Optional)
 
