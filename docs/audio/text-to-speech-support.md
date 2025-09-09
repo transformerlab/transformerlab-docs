@@ -2,6 +2,14 @@
 sidebar_position: 1
 ---
 
+import AudioMLXTTSGeneration from './audio/mlx-tts-generation.wav'
+import AudioTTSGeneration from './audio/tts_generation.wav'
+import AudioBritishDanielMLX from './audio/british_daniel_mlx.wav'
+import AudioCudaAudioCloningDaniel from './audio/cuda_audio_cloning_daniel.wav'
+import AudioEmergentTTSEval from './audio/emergentTTS-eval.wav'
+import AudioTrainedTTS from './audio/trained_tts.wav'
+
+
 # Transformer Lab Speaks: TTS, Training & Voice Cloning
 
 
@@ -49,7 +57,11 @@ In just a few clicks, we went from plain text to lifelike audio. For this exampl
 > “Hello! Welcome to Transformer Lab, where we turn text into natural-sounding speech.”
 > 
 
-[mlx-tts-generation.wav](audio/mlx-tts-generation.wav)
+<audio controls>
+    <source src={AudioMLXTTSGeneration} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
+
 
 ## 🎛️ MLX Generation Parameters
 
@@ -88,15 +100,24 @@ Here’s a quick demo showing how simple it is to generate speech in Transformer
 
 First, here’s the model generating speech directly from text:
 
-[tts_generation.wav](audio/tts_generation.wav)
+<audio controls>
+    <source src={AudioTTSGeneration} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
 
 Next, we provided a single sample of the target voice we wanted to clone:
 
-[british_daniel_mlx.wav](audio/british_daniel_mlx.wav)
+<audio controls>
+    <source src={AudioBritishDanielMLX} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
 
 Finally, here’s the result — the model speaking the same sentence, but now in the cloned voice:
 
-[cuda_audio_cloning_daniel.wav](audio/cuda_audio_cloning_daniel.wav)
+<audio controls>
+    <source src={AudioCudaAudioCloningDaniel} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
 
 ---
 
@@ -135,15 +156,24 @@ Here are the key parameters you’ll see in the training configuration tab:
 To compare, here are three samples:
 **Before training** — the model’s default voice generating our sentence:
 
-[tts_generation.wav](audio/tts_generation.wav)
+<audio controls>
+    <source src={AudioTTSGeneration} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
 
 **Sample from dataset** — a real voice clip the model trained on:
 
-[emergentTTS-eval.wav](audio/emergentTTS-eval.wav)
+<audio controls>
+    <source src={AudioEmergentTTSEval} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
 
 **After training** — the model reproducing the same sentence in the target voice:
 
-[trained_tts.wav](audio/trained_tts.wav)
+<audio controls>
+    <source src={AudioTrainedTTS} type="audio/wav" />
+    Your browser does not support the audio element.
+</audio>
 
 We’re just getting started with audio support in Transformer Lab, and we want to make sure we’re adding the models that matter most to you. 🎙️
 
