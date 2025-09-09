@@ -104,7 +104,7 @@ Finally, here’s the result — the model speaking the same sentence, but now i
 
 While one-shot cloning is powerful, you can take it even further by **training a model directly on the target voice**. This gives the model more examples to learn from, resulting in more consistent and natural-sounding speech.
 
-For this demo, we used the [**bosonai/EmergentTTS-Eval](https://huggingface.co/datasets/bosonai/EmergentTTS-Eval?utm_source=chatgpt.com)** dataset and trained a custom TTS model inside Transformer Lab.
+For this demo, we used the [bosonai/EmergentTTS-Eval](https://huggingface.co/datasets/bosonai/EmergentTTS-Eval?utm_source=chatgpt.com) dataset and trained a custom TTS model inside Transformer Lab.
 
 ![training_tts.gif](gifs/training_tts.gif)
 
