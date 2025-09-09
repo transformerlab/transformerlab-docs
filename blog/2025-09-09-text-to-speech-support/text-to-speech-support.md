@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 import AudioMLXTTSGeneration from './audio/mlx-tts-generation.wav'
 import AudioTTSGeneration from './audio/tts_generation.wav'
 import AudioBritishDanielMLX from './audio/british_daniel_mlx.wav'
