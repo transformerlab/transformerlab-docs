@@ -18,7 +18,6 @@ import AudioTrainedTTS from './audio/trained_tts.wav'
 - 🎙️ **Turn text into speech (TTS)** with CUDA and MLX
 - 🛠️ **Train your own TTS models** on CUDA
 - 🧬 **Clone a voice in one shot** for lightning-fast replication on CUDA
-
 ---
 
 ## 🚀 Text-to-Speech on MLX
