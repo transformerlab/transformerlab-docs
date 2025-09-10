@@ -58,5 +58,11 @@ Here's a visual guide to the TTS generation process in Transformer Lab:
 
 ![MLX TTS Generation](./gif/mlx-tts-generation.gif)
 
-This animation demonstrates the complete workflow from model selection to audio output generation.
+This demonstrates the complete workflow from model selection to audio output generation.
+
+## Next Steps
+
+Learn how to train your own TTS models:
+
+- [Text-to-Speech Training](./text-to-speech-training.md)
 
