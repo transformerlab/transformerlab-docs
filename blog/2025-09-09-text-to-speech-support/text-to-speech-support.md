@@ -1,23 +1,17 @@
----
-sluimport AudioMLXTTSGeneration from './audio/mlx-tts-generation.wav'
-import AudioTTSGeneration from './audio/tts_generation.wav'
-import AudioBritishDanielMLX from './audio/british_daniel_mlx.wav'
-import AudioCudaAudioCloningDaniel from './audio/cuda_audio_cloning_daniel.wav'
-import AudioEmergentTTSEval from './audio/emergentTTS-eval.wav'
-import AudioTrainedTTS from './audio/trained_tts.wav'
-
-🎉 Transformer Lab just got a voice! We're thrilled to announce **audio modality support**, so you can generate, clone, and train voices directly in Transformer Lab.to-speech-support
-title: Transformer Lab Speaks: TTS, Training & Voice Cloning
-authors: [mina]
-tags: [audio, text-to-speech, tts, audio-cloning]
----
-
 import AudioMLXTTSGeneration from './audio/mlx-tts-generation.wav'
 import AudioTTSGeneration from './audio/tts_generation.wav'
 import AudioBritishDanielMLX from './audio/british_daniel_mlx.wav'
 import AudioCudaAudioCloningDaniel from './audio/cuda_audio_cloning_daniel.wav'
 import AudioEmergentTTSEval from './audio/emergentTTS-eval.wav'
 import AudioTrainedTTS from './audio/trained_tts.wav'
+
+---
+slug: text-to-speech-support
+title: Transformer Lab Speaks: TTS, Training & Voice Cloning
+authors: mina
+tags: [audio, text-to-speech, tts, audio-cloning]
+---
+
 
 🎉 Transformer Lab just got a voice! We’re thrilled to announce **audio modality support**, so you can generate, clone, and train voices directly in Transformer Lab.
 
