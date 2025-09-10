@@ -15,14 +15,11 @@ tags: [audio, text-to-speech, tts, audio-cloning]
 
 🎉 Transformer Lab just got a voice! We’re thrilled to announce **audio modality support**, so you can generate, clone, and train voices directly in Transformer Lab.
 
----
-
 ## What’s included in this release
 
 - 🎙️ **Turn text into speech (TTS)** with CUDA and MLX
 - 🛠️ **Train your own TTS models** on CUDA
 - 🧬 **Clone a voice in one shot** for lightning-fast replication on CUDA
----
 
 ## 🚀 Text-to-Speech on MLX
 
@@ -71,8 +68,6 @@ When you generate audio with the MLX plugin, you’ll see a set of parameters yo
 - **Temperature** → Controls randomness in speech; lower = consistent, higher = more expressive and varied.
 - **Speech Speed** → Adjusts how quickly the text is spoken — slower for clarity, faster for natural pacing.
 
----
-
 ## **⚡ Text-to-Speech & One-Shot Cloning on CUDA**
 
 On CUDA, Transformer Lab unlocks even more power:
@@ -117,8 +112,6 @@ Finally, here’s the result — the model speaking the same sentence, but now i
     <source src={AudioCudaAudioCloningDaniel} type="audio/wav" />
     Your browser does not support the audio element.
 </audio>
-
----
 
 ## 🏗️Training Your Own TTS Model on CUDA
 
