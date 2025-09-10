@@ -19,8 +19,6 @@ Transformer Lab supports **Text-to-Speech (TTS)** on both **MLX (Apple Silicon)*
 3. Switch to the **Audio tab**  
 4. Enter text, adjust generation parameters, and generate audio
 
----
-
 ## Supported Model Families
 
 You can start generating audio today with the following models:
@@ -32,8 +30,6 @@ You can start generating audio today with the following models:
 - **CSM (MLX)** → [mlx-community/csm-1b](https://huggingface.co/mlx-community/csm-1b)  
 - **Orpheus (CUDA)** → [unsloth/orpheus-3b-0.1-ft](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)  
 - **CSM (CUDA)** → [unsloth/csm-1b](https://huggingface.co/unsloth/csm-1b)  
-
----
 
 ## Generation Parameters
 
