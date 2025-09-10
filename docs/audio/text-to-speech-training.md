@@ -15,14 +15,6 @@ Transformer Lab allows you to **train custom Text-to-Speech (TTS) models** on CU
 3. Configure your training parameters in the **Train tab**  
 4. Start training and track progress 
 
----
-
-## Example Dataset
-
-- [bosonai/EmergentTTS-Eval](https://huggingface.co/datasets/bosonai/EmergentTTS-Eval)  
-
----
-
 ## Training Parameters
 
 You can adjust a wide range of parameters when training:
@@ -42,8 +34,6 @@ You can adjust a wide range of parameters when training:
 - **Text Column Name** → Dataset column containing transcriptions  
 - **Log to Weights & Biases** → Track training metrics in real time  
 
----
-
 ## Training Process
 
 Here's a visual guide to the TTS training process in Transformer Lab:
@@ -51,8 +41,6 @@ Here's a visual guide to the TTS training process in Transformer Lab:
 ![TTS Training Steps](./gif/training_tts.gif)
 
 This demonstrates the complete workflow from setup to model training completion.
-
----
 
 ## Next Steps
 
