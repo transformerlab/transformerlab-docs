@@ -1,6 +1,6 @@
 ---
 slug: text-to-speech-support
-title: Transformer Lab Speaks: TTS, Training & Voice Cloning
+title: "Transformer Lab Speaks: TTS, Training & Voice Cloning"
 authors: mina
 tags: [audio, text-to-speech, tts, audio-cloning]
 ---
