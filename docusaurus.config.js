@@ -116,6 +116,18 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "cloud",
+        path: "cloud",
+        routeBasePath: "cloud",
+        sidebarPath: require.resolve("./sidebars.js"),
+        // ... other options
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -130,10 +142,9 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "documentationSidebar",
-            position: "left",
+            to: "/documentation",
             label: "Documentation",
+            position: "left",
           },
           { to: "/about", label: "About", position: "left" },
           {

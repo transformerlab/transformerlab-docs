@@ -1,0 +1,33 @@
+<div style={{ display: "flex", justifyContent: "space-between", gap: "20px" }}>
+  <a href="/docs/intro" style={{ flex: 1, textDecoration: "none" }}>
+    <div
+      style={{
+        border: "2px solid black",
+        borderRadius: "10px",
+        padding: "20px",
+        height: "600px",
+      }}
+    >
+      <img src={require("./img/singlenode.png").default} width={300} />
+      <h2>Learn about **Transformer Lab Local**</h2>
+      <p>
+        Train models on your own computer (local or in the cloud) on a single
+        node.
+      </p>
+    </div>
+  </a>
+  <a href="/cloud" style={{ flex: 1, textDecoration: "none" }}>
+    <div
+      style={{
+        border: "2px solid black",
+        borderRadius: "10px",
+        padding: "20px",
+        height: "600px",
+      }}
+    >
+      <img src={require("./img/multinode.png").default} width={300} />
+      <h2>Learn more about **Transformer Lab Cloud** with GPU Orchestration</h2>
+      <p>Run ML Tasks on any GPU Cluster, across 1 to 1000 nodes.</p>
+    </div>
+  </a>
+</div>
