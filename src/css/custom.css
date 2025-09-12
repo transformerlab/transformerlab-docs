@@ -295,7 +295,3 @@ article hr {
 [data-theme="dark"] .navbar__logo {
   filter: invert(1) brightness(2);
 }
-
-.hidden {
-  display: none !important;
-}
