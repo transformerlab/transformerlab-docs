@@ -1,8 +1,6 @@
 ---
 title: Transformer Lab Local
 sidebar_position: 1
-displayed_sidebar: null
-hide_table_of_contents: true
 ---
 
 import { FaDiscord } from "react-icons/fa";

@@ -1,7 +1,6 @@
 ---
 title: Transformer Lab Cloud
 sidebar_position: 1
-displayed_sidebar: null
 ---
 
 import { FaDiscord } from "react-icons/fa";
