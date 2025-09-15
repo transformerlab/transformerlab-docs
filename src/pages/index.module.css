@@ -2,8 +2,6 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -31,6 +29,7 @@ h1.hero__title {
   @media screen and (max-width: 500px) {
     max-width: 100%;
   }
+
 }
 
 h2.hero__subtitle {

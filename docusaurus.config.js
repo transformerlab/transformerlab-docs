@@ -55,6 +55,13 @@ const config = {
         rel: "stylesheet",
       },
     },
+    {
+      tagName: "link",
+      attributes: {
+        href: "https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap",
+        rel: "stylesheet",
+      },
+    },
   ],
 
   markdown: {
@@ -142,8 +149,13 @@ const config = {
         },
         items: [
           {
-            to: "/documentation",
-            label: "Documentation",
+            to: "/docs/intro",
+            label: "Local",
+            position: "left",
+          },
+          {
+            to: "/cloud",
+            label: "Cloud",
             position: "left",
           },
           { to: "/about", label: "About", position: "left" },
