@@ -124,22 +124,14 @@ For this demo, we used the [**bosonai/EmergentTTS-Eval**](https://huggingface.co
 Here are the key parameters you’ll see in the training configuration tab:
 
 - **Sampling Rate** → Audio sampling frequency
-- **Maximum Sequence Length** → Max length of input sequences
 - **Batch Size** → Number of sequences per training step
-- **Learning Rate Schedule** → Strategy for adjusting learning rate (e.g. linear)
 - **Learning Rate** → Base learning rate for optimization
 - **Number of Training Epochs** → How many times the dataset is passed through
-- **Max Steps** → Maximum training steps (-1 = unlimited)
-- **LoRA R** → Rank of LoRA update matrices
-- **LoRA Alpha** → LoRA scaling factor
-- **LoRA Dropout** → Dropout rate for LoRA layers
-- **Max Grad Norm** → Gradient clipping threshold
-- **Weight Decay** → Regularization strength
-- **Adam Beta 1 / Beta 2 / Epsilon** → Adam optimizer parameters
 - **Adapter Name** → Name for the saved adapter model
 - **Audio Column Name** → Dataset column containing audio files
 - **Text Column Name** → Dataset column containing transcriptions
-- **Log to Weights & Biases** → Option to track training metrics with W&B
+
+For a complete list of training parameters and detailed explanations, see the [Text-to-Speech Training Documentation](../../docs/audio/text-to-speech-training.md).
 
 ## 👀 Watch It in Action
 
