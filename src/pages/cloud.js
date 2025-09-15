@@ -6,28 +6,50 @@ import Layout from "@theme/Layout";
 import Screenshot from "./img/TFLDemoMarch25_HQ_2.mp4";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
-import AllFeatures from "./homepage-components/AllFeatures";
+import CloudFeatures from "./homepage-components/CloudFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
-import DocumentationPage from "./documentation.mdx";
+import MultiNode from "./img/multinode.png";
+import Lattice from "./img/lattice.png";
+
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div id="background-holder"></div>
       <div className={clsx("container", styles.container)}>
-        <GithubStar />
-        {/* <h3 className={styles.announcement}>
-          Introducing Transformer Lab Cloud - run distributed workloads across
-          GPU clusters <a href="./blog/diffusion-support">Read More...</a>
-        </h3> */}
-        <h1 className={clsx("hero__title", styles.hero__title)}>
-          The ML Platform your Team will ❤️
-        </h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "1rem",
+            flexDirection: "row-reverse",
+          }}
+        >
+          <img src={MultiNode} height="200px" />
+          <h1 className={clsx("hero__title", styles.hero__title)}>
+            Transformer Lab Cloud
+          </h1>
+        </div>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          More experiments. Less time managing environments and infrastructure.
+          A platform build for research teams to reserve GPUs, run multi-node ML
+          jobs, and manage experiments. Open source. Cross-cloud.
         </h2>
-        <DocumentationPage />
-        {/* <div
+        <div className={clsx("video_container", styles.video_container)}>
+          <img src={Lattice} />
+        </div>
+        <div className={clsx(styles.embedded_markdown)}>
+          <div style={{ margin: "1rem auto", textAlign: "center" }}>
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/download"
+            >
+              Get Started
+            </Link>
+          </div>
+          <CloudFeatures />
+        </div>
+        <div
           className={styles.buttons}
           style={{ textAlign: "center", justifyContent: "center" }}
         >
@@ -36,14 +58,14 @@ function HomepageHeader() {
               className="button button--primary button--lg"
               to="/docs/download"
             >
-              Download Now ↓
+              Get Started
             </Link>
           </div>
           &nbsp;&nbsp;
           <div>
             or <a href="docs/intro">Learn More</a>
           </div>
-        </div> */}
+        </div>
       </div>
     </header>
   );

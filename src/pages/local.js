@@ -9,27 +9,51 @@ import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
-import DocumentationPage from "./documentation.mdx";
+import SingleNode from "./img/singlenode.png";
+
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div id="background-holder"></div>
       <div className={clsx("container", styles.container)}>
-        <h1 className={clsx("hero__title", styles.hero__title)}>
-          Transformer Lab Local
-        </h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: "1rem",
+            flexDirection: "row-reverse",
+          }}
+        >
+          <img src={SingleNode} height="200px" />
+          <h1 className={clsx("hero__title", styles.hero__title)}>
+            Transformer Lab Local
+          </h1>
+        </div>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          With Transformer Lab, researchers, ML engineers, and developers can
-          collaborate to build, study, and evaluate AI models—with provenance,
-          reproducibility, evals, and transparency included.
+          Open source app where researchers, ML engineers, and developers can
+          build, study, and evaluate AI models.
         </h2>
         <div className={clsx("video_container", styles.video_container)}>
           <video width="100%" autoPlay loop muted>
             <source src={Screenshot} type="video/mp4" />
           </video>
         </div>
+
         <div className={clsx(styles.embedded_markdown)}>
-          <div style={{ margin: "2rem auto", textAlign: "center" }}>
+          <div
+            style={{
+              margin: "2rem auto",
+              textAlign: "center",
+            }}
+          >
+            <Link
+              className="button button--primary button--lg"
+              to="/docs/download"
+              style={{ marginBottom: "2rem" }}
+            >
+              Download Now ↓
+            </Link>
             <Content />
           </div>
           <AllFeatures />
