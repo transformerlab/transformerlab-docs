@@ -121,13 +121,9 @@ For this demo, we used the [**bosonai/EmergentTTS-Eval**](https://huggingface.co
 
 ### 🎛️ Training Parameters
 
-Here are the key parameters you’ll see in the training configuration tab:
+Here are some of the key parameters you’ll see in the training configuration tab:
 
 - **Sampling Rate** → Audio sampling frequency
-- **Batch Size** → Number of sequences per training step
-- **Learning Rate** → Base learning rate for optimization
-- **Number of Training Epochs** → How many times the dataset is passed through
-- **Adapter Name** → Name for the saved adapter model
 - **Audio Column Name** → Dataset column containing audio files
 - **Text Column Name** → Dataset column containing transcriptions
 
