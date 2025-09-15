@@ -127,7 +127,7 @@ Here are some of the key parameters you’ll see in the training configuration t
 - **Audio Column Name** → Dataset column containing audio files
 - **Text Column Name** → Dataset column containing transcriptions
 
-For a complete list of training parameters and detailed explanations, see the [Text-to-Speech Training Documentation](../../docs/audio/text-to-speech-training.md).
+For a complete list of training parameters and detailed explanations, see the [Text-to-Speech Training Documentation](/docs/audio/text-to-speech-training).
 
 ## 👀 Watch It in Action
 
