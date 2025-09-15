@@ -7,8 +7,6 @@ Transformer Lab supports **Text-to-Speech (TTS)** on both **MLX (Apple Silicon)*
 
 ![TTS Screenshot](./img/tts-generation.png)
 
----
-
 ## How It Works
 
 1. Install the appropriate plugin:
@@ -35,6 +33,14 @@ You can start generating audio today with the following models:
 - **Orpheus** → [unsloth/orpheus-3b-0.1-ft](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)  
 - **CSM** → [unsloth/csm-1b](https://huggingface.co/unsloth/csm-1b)
 
+## TTS Generation Process
+
+Here's a visual guide to the TTS generation process in Transformer Lab:
+
+![MLX TTS Generation](./gif/mlx-tts-generation.gif)
+
+This demonstrates the complete workflow from model selection to audio output generation.
+
 ## Generation Parameters
 
 When generating speech, you’ll see the following parameters:
@@ -50,15 +56,7 @@ Some models expose extra controls for more flexibility:
 - **Language** → Choose the language for generation (if multilingual support is available)  
 - **Voice** → Select a specific voice style or speaker profile offered by the model 
 
----
 
-## TTS Generation Process
-
-Here's a visual guide to the TTS generation process in Transformer Lab:
-
-![MLX TTS Generation](./gif/mlx-tts-generation.gif)
-
-This demonstrates the complete workflow from model selection to audio output generation.
 
 ## Next Steps
 

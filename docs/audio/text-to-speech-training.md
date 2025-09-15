@@ -6,14 +6,21 @@ sidebar_position: 2
 
 Transformer Lab allows you to **train custom Text-to-Speech (TTS) models** on CUDA. Fine-tune a model on your own dataset to capture a specific **voice, accent, or speaking style**.
 
----
-
 ## How It Works
 
 1. Install the **Unsloth Text-to-Speech Trainer** plugin  
 2. Upload or Download a dataset containing audio + transcripts  
 3. Configure your training parameters in the **Train tab**  
 4. Start training and track progress 
+
+
+## Training Process
+
+Here's a visual guide to the TTS training process in Transformer Lab:
+
+![TTS Training Steps](./gif/training_tts.gif)
+
+This demonstrates the complete workflow from setup to model training completion.
 
 ## Training Parameters
 
@@ -34,13 +41,7 @@ You can adjust a wide range of parameters when training:
 - **Text Column Name** → Dataset column containing transcriptions  
 - **Log to Weights & Biases** → Track training metrics in real time  
 
-## Training Process
 
-Here's a visual guide to the TTS training process in Transformer Lab:
-
-![TTS Training Steps](./gif/training_tts.gif)
-
-This demonstrates the complete workflow from setup to model training completion.
 
 ## Next Steps
 
