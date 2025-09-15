@@ -15,21 +15,26 @@ function HomepageHeader() {
     <header className={clsx("hero", styles.heroBanner)}>
       <div id="background-holder"></div>
       <div className={clsx("container", styles.container)}>
-        <GithubStar />
-        <h3 className={styles.announcement}>
-          Introducing Transformer Lab Cloud - run distributed workloads across
-          GPU clusters <a href="./blog/diffusion-support">Read More...</a>
-        </h3>
         <h1 className={clsx("hero__title", styles.hero__title)}>
-          The ML Platform your Team will ❤️
+          Transformer Lab Local
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           With Transformer Lab, researchers, ML engineers, and developers can
           collaborate to build, study, and evaluate AI models—with provenance,
           reproducibility, evals, and transparency included.
         </h2>
-        <DocumentationPage />
-        {/* <div
+        <div className={clsx("video_container", styles.video_container)}>
+          <video width="100%" autoPlay loop muted>
+            <source src={Screenshot} type="video/mp4" />
+          </video>
+        </div>
+        <div className={clsx(styles.embedded_markdown)}>
+          <div style={{ margin: "2rem auto", textAlign: "center" }}>
+            <Content />
+          </div>
+          <AllFeatures />
+        </div>
+        <div
           className={styles.buttons}
           style={{ textAlign: "center", justifyContent: "center" }}
         >
@@ -45,7 +50,7 @@ function HomepageHeader() {
           <div>
             or <a href="docs/intro">Learn More</a>
           </div>
-        </div> */}
+        </div>
       </div>
     </header>
   );

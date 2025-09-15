@@ -7,6 +7,8 @@ hide_table_of_contents: true
 
 import { FaDiscord } from "react-icons/fa";
 import MuxPlayer from '@mux/mux-player-react';
+import AllFeatures from '../src/pages/homepage-components/AllFeatures.tsx'
+
 
 # Transformer Lab Local
 

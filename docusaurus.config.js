@@ -149,7 +149,7 @@ const config = {
         },
         items: [
           {
-            to: "/docs/intro",
+            to: "/local",
             label: "Local",
             position: "left",
           },
