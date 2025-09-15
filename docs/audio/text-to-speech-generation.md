@@ -22,14 +22,18 @@ Transformer Lab supports **Text-to-Speech (TTS)** on both **MLX (Apple Silicon)*
 ## Supported Model Families
 
 You can start generating audio today with the following models:
+### MLX (Apple Silicon)
 
 - **Kokoro** → [mlx-community/Kokoro-82M-4bit](https://huggingface.co/mlx-community/Kokoro-82M-4bit)  
 - **Dia** → [mlx-community/Dia-1.6B](https://huggingface.co/mlx-community/Dia-1.6B)  
 - **Spark** → [mlx-community/Spark-TTS-0.5B-bf16](https://huggingface.co/mlx-community/Spark-TTS-0.5B-bf16)  
 - **Bark** → [mlx-community/bark-small](https://huggingface.co/mlx-community/bark-small)  
-- **CSM (MLX)** → [mlx-community/csm-1b](https://huggingface.co/mlx-community/csm-1b)  
-- **Orpheus (CUDA)** → [unsloth/orpheus-3b-0.1-ft](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)  
-- **CSM (CUDA)** → [unsloth/csm-1b](https://huggingface.co/unsloth/csm-1b)  
+- **CSM** → [mlx-community/csm-1b](https://huggingface.co/mlx-community/csm-1b)  
+
+### CUDA (NVIDIA GPUs)
+
+- **Orpheus** → [unsloth/orpheus-3b-0.1-ft](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)  
+- **CSM** → [unsloth/csm-1b](https://huggingface.co/unsloth/csm-1b)
 
 ## Generation Parameters
 
