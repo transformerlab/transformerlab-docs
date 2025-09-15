@@ -63,7 +63,7 @@ function HomepageHeader() {
           </div>
           &nbsp;&nbsp;
           <div>
-            or <a href="docs/intro">Learn More</a>
+            or <a href="cloud/intro">Learn More</a>
           </div>
         </div>
       </div>

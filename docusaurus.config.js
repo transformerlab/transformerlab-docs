@@ -158,7 +158,7 @@ const config = {
             label: "Cloud",
             position: "left",
           },
-          { to: "/about", label: "About", position: "left" },
+          // { to: "/about", label: "About", position: "left" },
           {
             to: "/blog",
             label: "Blog",
