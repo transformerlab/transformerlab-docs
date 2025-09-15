@@ -1,15 +1,14 @@
 ---
 slug: .
-title: GPU Orchestration
+title: Transformer Lab Cloud
 sidebar_position: 1
+displayed_sidebar: null
 ---
 
 import { FaDiscord } from "react-icons/fa";
 import MuxPlayer from '@mux/mux-player-react';
 
-# Introduction
-
-## What is Lattice
+# Transformer Lab Cloud
 
 <!-- <img src={require('/img/flask.png').default} alt="Login Modal" width="80" /> -->
 

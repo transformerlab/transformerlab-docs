@@ -1,16 +1,15 @@
 ---
-title: Getting Started
+title: Transformer Lab Local
 sidebar_position: 1
+displayed_sidebar: null
+hide_table_of_contents: true
 ---
 
 import { FaDiscord } from "react-icons/fa";
 import MuxPlayer from '@mux/mux-player-react';
 
-# Introduction
+# Transformer Lab Local
 
-## What is Transformer Lab?
-
-<!-- <img src={require('/img/flask.png').default} alt="Login Modal" width="80" /> -->
 
 Transformer Lab is a free, open-source LLM and Diffusion workspace that you can run on your own computers or in the cloud. It is designed to go beyond what most modern open LLM and Diffusion applications allow. Using Transformer Lab you can easily finetune, evaluate, export and test AI models across different inference engines and platforms.
 
@@ -39,21 +38,3 @@ And **more**. The best way to learn about how you can use Transformer Lab is to 
 The easiest way to learn about Transformer Lab is to watch the [5 Minute Getting Started Video](https://youtu.be/tY5TAvKviLo) to get a quick tour.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tY5TAvKviLo?si=slR1NNtkOC6oWAF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-## Simple Install Instructions:
-
-Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and follow the on-screen instructions. Video below:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/SEYpvEOQ-Vw?si=eUYIzKR7rTZFLGVQ&cc_load_policy=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-## Recipes: Pre-defined Experiment Templates
-
-After launching Transformer Lab, and when creating a new experiment, you have the option of starting your next project from a Recipe. Recipes in Transformer Lab are ready-made template experiments that help you complete common tasks like training, evaluating, or exporting machine learning models. Think of them as step-by-step guides that make it easier to get started, even if you're new to the platform.
-
-<img src={require('./img/recipes-intro.gif').default} alt="Recipe Usage" width="500" />
-
-
-## Advanced Install Instructions:
-
-If the simple install doesn't work for you, or you'd like more control over the components, read our section on [Advanced Install Instructions](./install/advanced-install.md).
-
