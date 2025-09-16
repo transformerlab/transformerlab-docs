@@ -6,8 +6,8 @@ tags: [audio, text-to-speech, tts, audio-cloning]
 ---
 import AudioMLXTTSGeneration from './audio/mlx-tts-generation.wav'
 import AudioTTSGeneration from './audio/tts_generation.wav'
-import AudioBritishDanielMLX from './audio/british_daniel_mlx.wav'
-import AudioCudaAudioCloningDaniel from './audio/cuda_audio_cloning_daniel.wav'
+import AudioTonyVoiceReference from './audio/Tony_voice_reference.wav'
+import AudioClonedTony from './audio/audio_cloned_Tony.wav'
 import AudioEmergentTTSEval from './audio/emergentTTS-eval.wav'
 import AudioTrainedTTS from './audio/trained_tts.wav'
 
@@ -100,14 +100,14 @@ First, here’s the model generating speech directly from text:
 Next, we provided a single sample of the target voice we wanted to clone:
 
 <audio controls>
-    <source src={AudioBritishDanielMLX} type="audio/wav" />
+    <source src={AudioTonyVoiceReference} type="audio/wav" />
     Your browser does not support the audio element.
 </audio>
 
 Finally, here’s the result — the model speaking the same sentence, but now in the cloned voice:
 
 <audio controls>
-    <source src={AudioCudaAudioCloningDaniel} type="audio/wav" />
+    <source src={AudioClonedTony} type="audio/wav" />
     Your browser does not support the audio element.
 </audio>
 
