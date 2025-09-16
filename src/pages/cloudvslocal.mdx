@@ -6,6 +6,8 @@ export default function CloudVSLocal() {
   const history = useHistory();
   const localVideoRef = React.useRef(null);
   const cloudVideoRef = React.useRef(null);
+  const [showLocalVideo, setShowLocalVideo] = React.useState(false);
+  const [showCloudVideo, setShowCloudVideo] = React.useState(false);
 
   // Browser detection for Chrome
   const isChrome =
@@ -13,7 +15,8 @@ export default function CloudVSLocal() {
     /Chrome/.test(navigator.userAgent) &&
     /Google Inc/.test(navigator.vendor);
 
-  const handleMouseEnter = (ref) => {
+  const handleMouseEnter = (ref, setShowVideo) => {
+    setShowVideo(true);
     if (ref.current) {
       ref.current.play();
     }
@@ -26,6 +29,7 @@ export default function CloudVSLocal() {
   };
 
   return (
+
     <div
       style={{
         display: "flex",
@@ -47,11 +51,10 @@ export default function CloudVSLocal() {
           flexDirection: "column",
         }}
         onClick={() => history.push("/local")}
-        onMouseEnter={() => handleMouseEnter(localVideoRef)}
+        onMouseEnter={() => handleMouseEnter(localVideoRef, setShowLocalVideo)}
         onMouseLeave={() => handleMouseLeave(localVideoRef)}
       >
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
-
           <video
             ref={localVideoRef}
             src={require("./img/singlenode.mov").default}
@@ -59,8 +62,8 @@ export default function CloudVSLocal() {
             muted
             playsInline
             loop
+            poster={require("./img/singlenode.png").default}
           />
-
         </div>
         <h1 className="bitcount-grid-double-heading">
           <span style={{ color: "var(--ifm-color-primary)" }}>
@@ -68,8 +71,7 @@ export default function CloudVSLocal() {
           </span>
         </h1>
         <p>
-          Train, test, and eval models (LLMs, Distillation, Audio) on a single
-          node.
+          Train, test, and eval models (LLMs, Distillation, Audio) on a single node.
         </p>
         <div style={{ flex: 1 }} />
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
@@ -88,7 +90,7 @@ export default function CloudVSLocal() {
           flexDirection: "column",
         }}
         onClick={() => history.push("/cloud")}
-        onMouseEnter={() => handleMouseEnter(cloudVideoRef)}
+        onMouseEnter={() => handleMouseEnter(cloudVideoRef, setShowCloudVideo)}
         onMouseLeave={() => handleMouseLeave(cloudVideoRef)}
       >
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
@@ -99,6 +101,7 @@ export default function CloudVSLocal() {
             muted
             playsInline
             loop
+            poster={require("./img/multinode.png").default}
           />
         </div>
         <h1 className="bitcount-grid-double-heading">

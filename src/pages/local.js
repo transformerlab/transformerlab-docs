@@ -22,13 +22,13 @@ function HomepageHeader() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: "1rem",
-            flexDirection: "row-reverse",
+            flexDirection: "row",
           }}
         >
-          <img src={SingleNode} height="200px" />
           <h1 className={clsx("hero__title", styles.hero__title)}>
             Transformer Lab Local
           </h1>
+          <img src={SingleNode} height="200px" />
         </div>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           Open source app where researchers, ML engineers, and developers can

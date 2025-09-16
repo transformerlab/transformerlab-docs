@@ -23,13 +23,13 @@ function HomepageHeader() {
             alignItems: "center",
             justifyContent: "space-between",
             gap: "1rem",
-            flexDirection: "row-reverse",
+            flexDirection: "row",
           }}
         >
-          <img src={MultiNode} height="200px" />
           <h1 className={clsx("hero__title", styles.hero__title)}>
             Transformer Lab Cloud
           </h1>
+          <img src={MultiNode} style={{ maxHeight: "200px" }} />
         </div>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           <ol>
