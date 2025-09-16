@@ -32,8 +32,21 @@ function HomepageHeader() {
           </h1>
         </div>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          A platform build for research teams to reserve GPUs, run multi-node ML
-          jobs, and manage experiments. Open source. Cross-cloud.
+          <ol>
+            <li>
+              Researchers define jobs and requirements in a simple YAML file.
+            </li>
+            <li>
+              The system automatically provisions the required infrastructure on
+              your compute.
+            </li>
+            <li>
+              Jobs are queued and executed, with real-time monitoring, failure
+              detection, checkpointing, and logging.
+            </li>
+          </ol>
+          Researchers can focus on their work, while Transformer Lab Cloud
+          manages quotas, networking, and infrastructure.
         </h2>
         <div className={clsx("video_container", styles.video_container)}>
           <img src={Lattice} />
@@ -44,7 +57,7 @@ function HomepageHeader() {
               className="button button--primary button--lg"
               to="/docs/download"
             >
-              Get Started
+              Join the Beta
             </Link>
           </div>
           <CloudFeatures />
@@ -58,7 +71,7 @@ function HomepageHeader() {
               className="button button--primary button--lg"
               to="/docs/download"
             >
-              Get Started
+              Join the Beta
             </Link>
           </div>
           &nbsp;&nbsp;

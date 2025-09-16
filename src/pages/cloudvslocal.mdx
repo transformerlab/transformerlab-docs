@@ -2,10 +2,16 @@ import Button from "@site/src/components/Button";
 import { useHistory } from "@docusaurus/router";
 import React from "react";
 
-export default function DocumentationPage() {
+export default function CloudVSLocal() {
   const history = useHistory();
   const localVideoRef = React.useRef(null);
   const cloudVideoRef = React.useRef(null);
+
+  // Browser detection for Chrome
+  const isChrome =
+    typeof navigator !== "undefined" &&
+    /Chrome/.test(navigator.userAgent) &&
+    /Google Inc/.test(navigator.vendor);
 
   const handleMouseEnter = (ref) => {
     if (ref.current) {
@@ -31,30 +37,36 @@ export default function DocumentationPage() {
     >
       <div
         style={{
-          border: "1px solid var(--ifm-color-primary-darkest)",
+          // border: "2px solid var(--ifm-color-primary-darkest)",
           borderRadius: "10px",
           padding: "20px",
           flex: 1,
           minWidth: "300px",
           cursor: "pointer",
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
         onClick={() => history.push("/local")}
         onMouseEnter={() => handleMouseEnter(localVideoRef)}
         onMouseLeave={() => handleMouseLeave(localVideoRef)}
       >
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+
           <video
             ref={localVideoRef}
-            src={require("./img/singlenode.webm").default}
+            src={require("./img/singlenode.mov").default}
             width={300}
             muted
             playsInline
             loop
           />
+
         </div>
-        <h1 className="bitcount-grid-double-heading"><span style={{ color: "var(--ifm-color-primary)" }}>Transformer Lab Local</span></h1>
+        <h1 className="bitcount-grid-double-heading">
+          <span style={{ color: "var(--ifm-color-primary)" }}>
+            Transformer Lab Local
+          </span>
+        </h1>
         <p>
           Train, test, and eval models (LLMs, Distillation, Audio) on a single
           node.
@@ -66,23 +78,23 @@ export default function DocumentationPage() {
       </div>
       <div
         style={{
-          border: "1px solid var(--ifm-color-primary-darkest)",
+          // border: "2px solid var(--ifm-color-primary-darkest)",
           borderRadius: "10px",
           padding: "20px",
           flex: 1,
           minWidth: "300px",
           cursor: "pointer",
           display: "flex",
-          flexDirection: "column"
+          flexDirection: "column",
         }}
         onClick={() => history.push("/cloud")}
         onMouseEnter={() => handleMouseEnter(cloudVideoRef)}
         onMouseLeave={() => handleMouseLeave(cloudVideoRef)}
       >
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <video
             ref={cloudVideoRef}
-            src={require("./img/multinode.webm").default}
+            src={require("./img/multinode.mov").default}
             width={300}
             muted
             playsInline
@@ -90,7 +102,10 @@ export default function DocumentationPage() {
           />
         </div>
         <h1 className="bitcount-grid-double-heading">
-          <span style={{ color: "var(--ifm-color-primary)" }}>Transformer Lab Cloud</span> with GPU Orchestration
+          <span style={{ color: "var(--ifm-color-primary)" }}>
+            Transformer Lab Cloud
+          </span>{" "}
+          with GPU Orchestration
         </h1>
         <p>Run ML Tasks on any GPU Cluster, across 1 to 1000 nodes.</p>
         <div style={{ flex: 1 }} />
