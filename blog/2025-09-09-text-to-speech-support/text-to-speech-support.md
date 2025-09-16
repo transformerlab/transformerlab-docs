@@ -17,9 +17,9 @@ import AudioTrainedTTS from './audio/trained_tts.wav'
 
 ## What’s included in this release
 
-- 🎙️ **Turn text into speech (TTS)** with CUDA and MLX
-- 🛠️ **Train your own TTS models** on CUDA
-- 🧬 **Clone a voice in one shot** for lightning-fast replication on CUDA
+- 🎙️ **Turn text into speech (TTS)** with CUDA, AMD and MLX
+- 🛠️ **Train your own TTS models** on CUDA and AMD
+- 🧬 **Clone a voice in one shot** for lightning-fast replication on CUDA and AMD
 
 ## 🚀 Text-to-Speech on MLX
 
@@ -68,9 +68,9 @@ When you generate audio with the MLX plugin, you’ll see a set of parameters yo
 - **Temperature** → Controls randomness in speech; lower = consistent, higher = more expressive and varied.
 - **Speech Speed** → Adjusts how quickly the text is spoken: slower for clarity, faster for natural pacing.
 
-## **⚡ Text-to-Speech & One-Shot Cloning on CUDA**
+## **⚡ Text-to-Speech & One-Shot Cloning on CUDA and AMD**
 
-On CUDA, you can perform **one-shot audio cloning** replicating a voice instantly from just one reference sample
+On CUDA and AMD, you can perform **one-shot audio cloning** replicating a voice instantly from just one reference sample
 
 Here’s how you can try it today:
 
@@ -111,7 +111,7 @@ Finally, here’s the result — the model speaking the same sentence, but now i
     Your browser does not support the audio element.
 </audio>
 
-## 🏗️Training Your Own TTS Model on CUDA
+## 🏗️Training Your Own TTS Model on CUDA and AMD
 
 While one-shot cloning is powerful, you can take it even further by **training a model directly on the target voice**. This gives the model more examples to learn from, resulting in more consistent and natural-sounding speech.
 
