@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Training Text-to-Speech Models
 
-Transformer Lab allows you to **train custom Text-to-Speech (TTS) models** on CUDA. Fine-tune a model on your own dataset to capture a specific **voice, accent, or speaking style**.
+Transformer Lab allows you to **train custom Text-to-Speech (TTS) models** on CUDA and AMD. Fine-tune a model on your own dataset to capture a specific **voice, accent, or speaking style**.
 
 ## How It Works
 

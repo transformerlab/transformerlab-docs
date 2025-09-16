@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Text-to-Speech (TTS) Generation
 
-Transformer Lab supports **Text-to-Speech (TTS)** on both **MLX (Apple Silicon)** and **CUDA (NVIDIA GPUs)**. This feature lets you convert plain text into **natural-sounding speech** directly inside Transformer Lab.
+Transformer Lab supports **Text-to-Speech (TTS)** on **MLX (Apple Silicon)**, **CUDA (NVIDIA GPUs)**, and **ROCm (AMD GPUs)**. This feature lets you convert plain text into **natural-sounding speech** directly inside Transformer Lab.
 
 ![TTS Screenshot](./img/tts-generation.png)
 
@@ -11,7 +11,7 @@ Transformer Lab supports **Text-to-Speech (TTS)** on both **MLX (Apple Silicon)*
 
 1. Install the appropriate plugin:
    - **Apple Audio MLX Server** (for MLX)
-   - **Unsloth Text-to-Speech Server** (for CUDA)
+   - **Unsloth Text-to-Speech Server** (for CUDA and ROCm)
 
 2. Select a **TTS model** in the **Foundation tab**  
 3. Switch to the **Audio tab**  
@@ -28,7 +28,7 @@ You can start generating audio today with the following models:
 - **Bark** → [mlx-community/bark-small](https://huggingface.co/mlx-community/bark-small)  
 - **CSM** → [mlx-community/csm-1b](https://huggingface.co/mlx-community/csm-1b)  
 
-### CUDA (NVIDIA GPUs)
+### CUDA and AMD
 
 - **Orpheus** → [unsloth/orpheus-3b-0.1-ft](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)  
 - **CSM** → [unsloth/csm-1b](https://huggingface.co/unsloth/csm-1b)
