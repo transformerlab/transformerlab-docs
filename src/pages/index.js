@@ -9,7 +9,7 @@ import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
-import DocumentationPage from "./documentation.mdx";
+import CloudVSLocalPage from "./cloudvslocal.mdx";
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
@@ -26,7 +26,7 @@ function HomepageHeader() {
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           More experiments. Less time managing environments and infrastructure.
         </h2>
-        <DocumentationPage />
+        <CloudVSLocalPage />
         {/* <div
           className={styles.buttons}
           style={{ textAlign: "center", justifyContent: "center" }}
