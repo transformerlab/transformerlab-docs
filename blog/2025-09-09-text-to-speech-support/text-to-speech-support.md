@@ -15,7 +15,7 @@ import AudioTrainedTTS from './audio/trained_tts.wav'
 
 🎉 Transformer Lab just got a voice! We’re thrilled to announce **audio modality support** so you can generate, clone, and train voices directly in Transformer Lab.
 
-## What’s included in this release
+### What’s included in this release
 
 - 🎙️ **Turn text into speech (TTS)** with CUDA, AMD and MLX
 - 🛠️ **Train your own TTS models** on CUDA and AMD
@@ -42,7 +42,7 @@ We currently support several powerful TTS model categories. Here are a few examp
 - **Bark** → [mlx-community/bark-small](https://huggingface.co/mlx-community/bark-small?utm_source=chatgpt.com)
 - **CSM** → [mlx-community/csm-1b](https://huggingface.co/mlx-community/csm-1b)
 
-## 👀 Watch It in Action
+### 👀 Watch It in Action
 
 Here’s a quick demo showing how simple it is to generate speech in Transformer Lab using **Kokoro-82M-4bit**:
 
@@ -59,7 +59,7 @@ In just a few clicks, we went from plain text to lifelike audio. For this exampl
 </audio>
 
 
-## 🎛️ MLX Generation Parameters
+### 🎛️ MLX Generation Parameters
 
 When you generate audio with the MLX plugin, you’ll see a set of parameters you can adjust to customize the output. Here’s what each one does:
 
@@ -84,7 +84,7 @@ Here’s how you can try it today:
 - **Orpheus** → [unsloth/orpheus-3b-0.1-ft](https://huggingface.co/unsloth/orpheus-3b-0.1-ft)
 - **CSM** → [unsloth/csm-1b](https://huggingface.co/unsloth/csm-1b)
 
-## 👀 Watch It in Action
+### 👀 Watch It in Action
 
 Here’s a quick demo showing how simple it is to generate speech in Transformer Lab using unsloth/orpheus-3b-0.1-ft:
 
@@ -129,7 +129,7 @@ Here are some of the key parameters you’ll see in the training configuration t
 
 For a complete list of training parameters and detailed explanations, see the [Text-to-Speech Training Documentation](/docs/audio/text-to-speech-training).
 
-## 👀 Watch It in Action
+### 👀 Watch It in Action
 
 To compare, here are three samples:
 **Before training** — the model’s default voice generating our sentence:
