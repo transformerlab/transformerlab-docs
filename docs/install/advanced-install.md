@@ -35,7 +35,7 @@ https://github.com/transformerlab/transformerlab-api/releases/latest
 ```bash
 git clone https://github.com/transformerlab/transformerlab-api.git
 cd transformerlab-api
-git checkout v0.9.20 # where "v0.9.20" is the latest release version
+git checkout v0.23.3 # where "v0.23.3" is the latest release version
 ```
 
 **Step 3:** Install Python Dependencies
@@ -46,7 +46,15 @@ git checkout v0.9.20 # where "v0.9.20" is the latest release version
 conda activate ~/.transformerlab/envs/transformerlab
 conda install -y cuda==12.8.1 --force-reinstall -c nvidia/label/cuda-12.8.1 # only if you have an NVIDIA GPU
 pip install uv
-uv pip install --upgrade --index https://download.pytorch.org/whl/cu128 -r requirements-uv.txt
+uv pip install --upgrade  -r requirements-uv.txt
+```
+
+### For machines with an AMD GPU:
+
+```bash 
+conda activate ~/.transformerlab/envs/transformerlab
+pip install uv
+uv pip install --upgrade -r requirements-rocm-uv.txt --index=https://download.pytorch.org/whl/rocm6.4 --index-strategy unsafe-best-match # assuming you have rocm installed on your system
 ```
 
 #### Or For machines without a GPU (e.g. a Mac):
@@ -63,6 +71,12 @@ uv pip install --upgrade -r requirements-no-gpu-uv.txt
 conda activate ~/.transformerlab/envs/transformerlab
 uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 ```
+
+**Step 5:** GUI Setup
+You can access the Transformer Lab GUI by going to the browser and navigating to `http://<your-server-ip>:8338/`.
+Your server IP will be `localhost` or `127.0.0.1` if you are running it locally, or the public IP if you are running it on a cloud server.
+
+Incase you'd like to run it within the GUI Electron app, you can download the app for your OS from [the website](https://transformerlab.ai/docs/download)
 
 **To Connect:**
 
