@@ -129,7 +129,7 @@ const config = {
       {
         id: "cloud",
         path: "cloud",
-        routeBasePath: "cloud",
+        routeBasePath: "cloud/docs",
         sidebarPath: require.resolve("./sidebars.js"),
         // ... other options
       },
