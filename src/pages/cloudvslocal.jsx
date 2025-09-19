@@ -33,7 +33,7 @@ export default function CloudVSLocal() {
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
+        justifyContent: "flex-start",
         gap: "20px",
         flexWrap: "wrap",
       }}
@@ -73,9 +73,8 @@ export default function CloudVSLocal() {
         <p>
           A comprehensive workbench for training, fine-tuning, evaluating and interacting with text, image and voice models. Open source including a Windows, MacOS and Linux app with training and inference across NVIDIA, AMD and Apple silicon.
         </p>
-        <div style={{ flex: 1 }} />
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
-          <Button>Learn More</Button>
+          <a className="button button--primary button--lg">Learn More</a>
         </span>
       </div>
       <div
@@ -111,11 +110,11 @@ export default function CloudVSLocal() {
           with GPU Orchestration
         </h1>
         <p>Modern open source GPU orchestration platform that helps AI teams effortlessly manage training jobs across distributed compute resources (on-prem, cloud plus any cloud provider). A mission control for machine reservation, training job allocation across nodes, failover handling, progress tracking, usage quota enforcement and comprehensive reporting. Built on top of proven and powerful infrastructure: SkyPilot, Ray and kubernetes.</p>
-        <div style={{ flex: 1 }} />
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
-          <Button>Learn More</Button>
+          <a className="button button--primary button--lg">Learn More</a>
         </span>
       </div>
     </div>
+
   );
 }

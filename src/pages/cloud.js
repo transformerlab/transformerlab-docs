@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Screenshot from "./img/TFLDemoMarch25_HQ_2.mp4";
+import Screenshot from "./img/cloud-screenshot.png";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
 import CloudFeatures from "./homepage-components/CloudFeatures";
@@ -32,25 +32,15 @@ function HomepageHeader() {
           <img src={MultiNode} style={{ maxHeight: "200px" }} />
         </div>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          <ol>
-            <li>
-              Researchers define jobs and requirements in a simple YAML file.
-            </li>
-            <li>
-              The system automatically provisions the required infrastructure on
-              your compute.
-            </li>
-            <li>
-              Jobs are queued and executed, with real-time monitoring, failure
-              detection, checkpointing, and logging.
-            </li>
-          </ol>
-          Researchers can focus on their work, while Transformer Lab Cloud
-          manages quotas, networking, and infrastructure.
+          The open source GPU orchestration platform that abstracts your entire
+          compute ecosystem, from on-premise labs to 20+ cloud providers. Jobs
+          are automatically queued and executed across n nodes, with real-time
+          monitoring, failure detection, checkpointing, and logging.
         </h2>
-        <div className={clsx("video_container", styles.video_container)}>
-          <img src={Lattice} />
-        </div>
+        <img
+          src={Screenshot}
+          className={clsx("video_container", styles.video_container)}
+        />
         <div className={clsx(styles.embedded_markdown)}>
           <div style={{ margin: "1rem auto", textAlign: "center" }}>
             <Link
