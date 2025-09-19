@@ -11,17 +11,24 @@ export default function MyCustomToolbar() {
   const timeoutRef = useRef(null);
   const menuRef = useRef(null);
   const navItemRef = useRef(null);
-  const isMobile = useRef(window?.innerWidth <= 768);
+  const isMobile = useRef(false); // Initialize without window reference
 
   // Handle menu visibility with delay to prevent immediate closing
   useEffect(() => {
-    // Update isMobile on window resize
+    // Update isMobile on initial load and window resize
     const handleResize = () => {
-      isMobile.current = window?.innerWidth <= 768;
+      isMobile.current =
+        typeof window !== "undefined" && window.innerWidth <= 768;
     };
 
-    window?.addEventListener("resize", handleResize);
-    return () => window?.removeEventListener("resize", handleResize);
+    // Set initial value
+    handleResize();
+
+    // Add event listener only on client-side
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }
   }, []);
 
   // Handle hover state effect
@@ -91,7 +98,7 @@ export default function MyCustomToolbar() {
             href="/"
             style={{ color: "inherit", textDecoration: "none" }}
             onClick={(e) => {
-              if (window.innerWidth <= 768) {
+              if (typeof window !== "undefined" && window.innerWidth <= 768) {
                 e.preventDefault();
                 const newState = !showMegaMenu;
                 setShowMegaMenu(newState);
