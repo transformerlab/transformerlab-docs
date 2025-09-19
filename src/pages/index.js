@@ -10,6 +10,7 @@ import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
 import CloudVSLocalPage from "./cloudvslocal.mdx";
+import UserValidation from "./homepage-components/uservalidation.mdx";
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
@@ -21,11 +22,26 @@ function HomepageHeader() {
           GPU clusters <a href="./blog/diffusion-support">Read More...</a>
         </h3> */}
         <h1 className={clsx("hero__title", styles.hero__title)}>
-          The ML Platform your Team will ❤️
+          The industry-leading open source workspace for AI/ML teams.
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          More experiments. Less time managing environments and infrastructure.
+          Train, fine-tune and evaluate models with provenance, reproducibility
+          and transparency. Effortlessly orchestrate training jobs across any
+          number of on-premise and cloud GPUs. More experiments. Better models.
+          Less GPU waste.
         </h2>
+        <div
+          style={{
+            width: "100%",
+            height: "400px",
+            border: "1px solid blue",
+            borderRadius: "8px",
+            overflow: "hidden",
+            backgroundColor: "#ccc",
+          }}
+        >
+          Screenshot
+        </div>
         <CloudVSLocalPage />
         {/* <div
           className={styles.buttons}
@@ -44,6 +60,7 @@ function HomepageHeader() {
             or <a href="docs/intro">Learn More</a>
           </div>
         </div> */}
+        <UserValidation />
       </div>
     </header>
   );
