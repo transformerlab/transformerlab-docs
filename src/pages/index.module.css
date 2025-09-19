@@ -24,7 +24,6 @@
 h1.hero__title {
   margin-bottom: 0.5rem;
   font-weight: 700;
-  max-width: 70%;
 
   @media screen and (max-width: 500px) {
     max-width: 100%;
