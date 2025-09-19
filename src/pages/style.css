@@ -40,7 +40,7 @@ article h1 {
 
 .navbar {
     background-color: var(--ifm-navbar-background-color);
-    opacity: 0.97;
+    opacity: 1;
     /* backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px); */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
