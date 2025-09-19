@@ -55,6 +55,13 @@ const config = {
         rel: "stylesheet",
       },
     },
+    {
+      tagName: "link",
+      attributes: {
+        href: "https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap",
+        rel: "stylesheet",
+      },
+    },
   ],
 
   markdown: {
@@ -116,6 +123,18 @@ const config = {
       }),
     ],
   ],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "cloud",
+        path: "cloud",
+        routeBasePath: "cloud/docs",
+        sidebarPath: require.resolve("./sidebars.js"),
+        // ... other options
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -130,18 +149,22 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "documentationSidebar",
+            to: "/local",
+            label: "Local",
             position: "left",
-            label: "Documentation",
           },
-          { to: "/about", label: "About", position: "left" },
+          {
+            to: "/cloud",
+            label: "Cloud",
+            position: "left",
+          },
+          { to: "/documentation", label: "Docs", position: "left" },
           {
             to: "/blog",
             label: "Blog",
             position: "left",
           },
-          { to: "/docs/download", label: "Download ↓", position: "right" },
+          // { to: "/docs/download", label: "Download ↓", position: "right" },
           {
             href: "https://github.com/transformerlab/transformerlab-app",
             label: "GitHub",

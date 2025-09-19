@@ -11,15 +11,18 @@ We want to build the very best tool for ML teams to build, train, and evaluate a
 
 # Who are the people behind Transformer Lab?
 
-Transformer Lab is being actively developed by a small team of engineers from Canada led by Tony Salomone, Ali Asaria, and Deep Gandhi.
+Transformer Lab is being actively developed by a small team of engineers from Canada led by Tony, Ali, Deep, Mina, and Mike.
 
-<img src={require('./img/tony.jpg').default} width={100} />&nbsp;&nbsp;
-<img src={require('./img/ali.jpg').default} width={100} />&nbsp;&nbsp;
+<img src={require('./img/tony.jpg').default} width={100} />
+<img src={require('./img/ali.jpg').default} width={100} />
 <img src={require('./img/deep.jpg').default} width={100} />
+<img src={require('./img/mina.jpg').default} width={100} />
+<img src={require('./img/mash.jpg').default} width={100} />
+
 
 We have also had some amazing interns and contributors help, including:
 
-<a href="https://github.com/sanjaycal">sanjaycal</a>, <a href="https://github.com/safiyamak">safiyamak</a>, <a href="https://github.com/rohannair">rohannnair</a>. And more!
+<a href="https://github.com/aahaanmaini">aahaanmaini</a>, <a href="https://github.com/sanjaycal">sanjaycal</a>, <a href="https://github.com/safiyamak">safiyamak</a>, <a href="https://github.com/rohannair">rohannnair</a>. And more!
 
 # Join Us
 

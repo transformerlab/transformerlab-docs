@@ -295,3 +295,16 @@ article hr {
 [data-theme="dark"] .navbar__logo {
   filter: invert(1) brightness(2);
 }
+
+
+.bitcount-grid-double-heading {
+  font-family: "Bitcount Grid Double", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400 !important;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0,
+    "CRSV" 0.5,
+    "ELSH" 0,
+    "ELXP" 0;
+}
