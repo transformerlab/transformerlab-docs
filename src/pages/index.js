@@ -30,10 +30,10 @@ function HomepageHeader() {
           number of on-premise and cloud GPUs. More experiments. Better models.
           Less GPU waste.
         </h2>
-        <img
+        {/* <img
           src={Screenshot}
           className={clsx("video_container", styles.video_container)}
-        />
+        /> */}
         <CloudVSLocalPage />
         <UserValidation />
       </div>
