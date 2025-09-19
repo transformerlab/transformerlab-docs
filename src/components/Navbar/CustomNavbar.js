@@ -206,7 +206,7 @@ export default function MyCustomToolbar() {
                       setIsHovering(false);
                     }}
                   >
-                    Join Beta Join Beta
+                    Join Beta
                   </Link>
                 </div>
               </div>
