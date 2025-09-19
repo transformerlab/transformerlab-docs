@@ -11,6 +11,8 @@ export default function MyCustomToolbar() {
   const timeoutRef = useRef(null);
   const menuRef = useRef(null);
   const navItemRef = useRef(null);
+  const isNavHovering = useRef(false); // Track hover on nav item
+  const isMenuHovering = useRef(false); // Track hover on megamenu
   const isMobile = useRef(false); // Initialize without window reference
 
   // Handle menu visibility with delay to prevent immediate closing
@@ -33,57 +35,100 @@ export default function MyCustomToolbar() {
 
   // Handle hover state effect
   useEffect(() => {
+    // Always clear any existing timeout to avoid race conditions
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+
     if (isHovering) {
+      // Show menu immediately when hovering
       setShowMegaMenu(true);
+    } else if (!isMobile.current) {
+      // Use a longer delay before hiding for better UX
+      // This prevents the menu from flickering when moving between elements
+      timeoutRef.current = setTimeout(() => {
+        // Double-check hover state before hiding to prevent premature hiding
+        if (!isNavHovering.current && !isMenuHovering.current) {
+          setShowMegaMenu(false);
+        }
+      }, 200); // Extended delay for smoother experience
+    }
+
+    // Clean up timeout on component unmount or when effect re-runs
+    return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
         timeoutRef.current = null;
       }
-    } else if (!isMobile.current) {
-      // Only use timeout for non-mobile devices
-      timeoutRef.current = setTimeout(() => {
-        setShowMegaMenu(false);
-      }, 500); // 500ms delay before hiding menu - increased for reliability
-    }
-
-    return () => {
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
     };
   }, [isHovering]);
 
-  // Function to handle mouse movement
-  const handleMouseMovement = (e) => {
-    // If we're already in a hover state, don't do anything
-    if (isHovering) return;
+  // Handle mouse enter for entire navigation component
+  const handleMouseEnter = (e) => {
+    // Cancel any pending timeouts to prevent the menu from closing
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
 
-    // Check if we're over the nav item or the menu
-    const isOverNavItem = navItemRef.current?.contains(e.target);
-    const isOverMenu = menuRef.current?.contains(e.target);
-
-    if (isOverNavItem || isOverMenu) {
-      setIsHovering(true);
+    // Set hovering state only if not on mobile
+    if (!isMobile.current) {
+      // Use a very small timeout to prevent race conditions
+      setTimeout(() => {
+        setIsHovering(true);
+      }, 10);
     }
   };
 
-  // Add global mouse move listener to help with hover detection
-  useEffect(() => {
-    if (!isMobile.current) {
-      document.addEventListener("mousemove", handleMouseMovement);
+  // Handle mouse leave with intent detection
+  const handleMouseLeave = (e) => {
+    if (isMobile.current) return;
+
+    // Safe check for relatedTarget
+    try {
+      // Check if we're moving to a child element of the menu
+      if (e.relatedTarget) {
+        // Only attempt to use contains if both refs are valid DOM nodes
+        if (
+          menuRef.current &&
+          e.relatedTarget instanceof Node &&
+          menuRef.current.contains(e.relatedTarget)
+        ) {
+          return; // Moving to the mega menu
+        }
+        if (
+          navItemRef.current &&
+          e.relatedTarget instanceof Node &&
+          navItemRef.current.contains(e.relatedTarget)
+        ) {
+          return; // Moving to the nav item
+        }
+      }
+    } catch (error) {
+      // Silently handle any errors with relatedTarget
+      console.debug("Hover detection error handled:", error);
     }
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMovement);
-    };
-  }, [isHovering]);
+
+    // Use a longer timeout for a better user experience
+    timeoutRef.current = setTimeout(() => {
+      setIsHovering(false);
+    }, 200); // Longer delay for smoother experience
+  };
 
   return (
     <div className={styles.customToolbar}>
       <div
         ref={navItemRef}
         className={styles.navItem}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseEnter={(e) => {
+          isNavHovering.current = true;
+          handleMouseEnter(e);
+        }}
+        onMouseLeave={(e) => {
+          isNavHovering.current = false;
+          handleMouseLeave(e);
+        }}
       >
         <span
           className={styles.navTrigger}
@@ -124,136 +169,147 @@ export default function MyCustomToolbar() {
           </button>
         </span>
 
-        {showMegaMenu && (
-          <div
-            className={styles.megaMenu}
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
-          >
-            <div className={styles.megaMenuContainer}>
-              <div className={styles.megaMenuSection}>
-                <img
-                  src={SingleNode}
-                  style={{
-                    maxHeight: "100px",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
-                  }}
-                />
-                <h3>Transformer Lab Local</h3>
-                <p className={styles.subtitle}>
-                  Run, Train, Eval Models on your own Machine
-                </p>
+        {/* Always render the menu but conditionally apply visible class */}
+        <div
+          ref={menuRef}
+          className={`${styles.megaMenu} ${
+            showMegaMenu ? styles.megaMenuVisible : ""
+          }`}
+          onMouseOver={(e) => {
+            isMenuHovering.current = true;
+            handleMouseEnter(e);
+          }}
+          onMouseLeave={(e) => {
+            // Small delay before updating the state to prevent flicker
+            setTimeout(() => {
+              isMenuHovering.current = false;
+              handleMouseLeave(e);
+            }, 50);
+          }}
+        >
+          <div className={styles.megaMenuContainer}>
+            <div className={styles.megaMenuSection}>
+              <img
+                src={SingleNode}
+                style={{
+                  maxHeight: "100px",
+                  maxWidth: "100%",
+                  marginBottom: "10px",
+                }}
+              />
+              <h3>Transformer Lab Local</h3>
+              <p className={styles.subtitle}>
+                Run, Train, Eval Models on your own Machine
+              </p>
 
-                <div className={styles.megaMenuLinks}>
-                  <Link
-                    to="/local"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Features
-                  </Link>
-                  <Link
-                    to="/docs/intro"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Documentation
-                  </Link>
-                  <Link
-                    to="/docs/download"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Download
-                  </Link>
-                </div>
+              <div className={styles.megaMenuLinks}>
+                <Link
+                  to="/local"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
+                  }}
+                >
+                  Features
+                </Link>
+                <Link
+                  to="/docs/intro"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
+                  }}
+                >
+                  Documentation
+                </Link>
+                <Link
+                  to="/docs/download"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
+                  }}
+                >
+                  Download
+                </Link>
               </div>
+            </div>
 
-              <div className={styles.megaMenuSection}>
-                <img
-                  src={MultiNode}
-                  style={{
-                    maxHeight: "100px",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
+            <div className={styles.megaMenuSection}>
+              <img
+                src={MultiNode}
+                style={{
+                  maxHeight: "100px",
+                  maxWidth: "100%",
+                  marginBottom: "10px",
+                }}
+              />
+              <h3>Transformer Lab Cloud</h3>
+              <p className={styles.subtitle}>GPU Orchestration for Teams</p>
+              <div className={styles.megaMenuLinks}>
+                <Link
+                  to="/cloud"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
                   }}
-                />
-                <h3>Transformer Lab Cloud</h3>
-                <p className={styles.subtitle}>GPU Orchestration for Teams</p>
-                <div className={styles.megaMenuLinks}>
-                  <Link
-                    to="/cloud"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Features
-                  </Link>
-                  <Link
-                    to="/cloud/docs/intro"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Documentation
-                  </Link>
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Join Beta
-                  </Link>
-                </div>
+                >
+                  Features
+                </Link>
+                <Link
+                  to="/cloud/docs/intro"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
+                  }}
+                >
+                  Documentation
+                </Link>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
+                  }}
+                >
+                  Join Beta
+                </Link>
               </div>
+            </div>
 
-              <div className={styles.megaMenuSection}>
-                <img
-                  src={Group}
-                  style={{
-                    maxHeight: "100px",
-                    maxWidth: "100%",
-                    marginBottom: "10px",
+            <div className={styles.megaMenuSection}>
+              <img
+                src={Group}
+                style={{
+                  maxHeight: "100px",
+                  maxWidth: "100%",
+                  marginBottom: "10px",
+                }}
+              />
+              <h3>About Us</h3>
+              <p className={styles.subtitle}>&nbsp;</p>
+
+              <div className={styles.megaMenuLinks}>
+                <Link
+                  to="/about"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
                   }}
-                />
-                <h3>About Us</h3>
-                <p className={styles.subtitle}>&nbsp;</p>
-
-                <div className={styles.megaMenuLinks}>
-                  <Link
-                    to="/about"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Team
-                  </Link>
-                  <Link
-                    to="/blog"
-                    onClick={() => {
-                      setShowMegaMenu(false);
-                      setIsHovering(false);
-                    }}
-                  >
-                    Blog
-                  </Link>
-                </div>
+                >
+                  Team
+                </Link>
+                <Link
+                  to="/blog"
+                  onClick={() => {
+                    setShowMegaMenu(false);
+                    setIsHovering(false);
+                  }}
+                >
+                  Blog
+                </Link>
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

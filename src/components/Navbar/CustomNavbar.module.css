@@ -57,7 +57,7 @@
     content: '';
     position: absolute;
     height: 30px;
-    /* Increased height */
+    /* Increased height to create a larger hover bridge */
     width: 100%;
     left: 0;
     top: 100%;
@@ -68,15 +68,18 @@
     display: inline-block;
     padding: 0.5rem 0;
     font-weight: 500;
+    width: 300px;
 }
 
 .navTrigger:hover {
     color: var(--ifm-color-primary);
 }
 
+/* Base styles for the mega menu - always present but may be hidden */
 .megaMenu {
     position: fixed;
-    top: calc(var(--ifm-navbar-height) - 0px);
+    /* top: calc(var(--ifm-navbar-height) - 0px); */
+    top: 75px;
     /* Larger overlap with navbar to prevent gaps */
     left: 0;
     z-index: 9999;
@@ -88,14 +91,24 @@
     box-shadow: 0 10px 12px rgba(0, 0, 0, 0.15);
     padding: 1.5rem;
     padding-top: 30px;
+    margin-top: -10px;
+    /* Further help eliminate any hover gaps */
     /* Increased top padding for larger overlap */
-    transition: none;
-    /* Removed transition to prevent flickering */
-    opacity: 1;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    /* Added smooth transitions */
+    opacity: 0;
     overflow-x: hidden;
     display: block;
+    pointer-events: none;
+    transform: translateY(-10px);
+    /* Initial position - slightly above */
+}
+
+/* Class for when the mega menu is visible */
+.megaMenuVisible {
+    opacity: 1;
     pointer-events: auto;
-    /* Ensure hover works properly */
+    transform: translateY(0);
 }
 
 .megaMenuContainer {
@@ -129,7 +142,7 @@
 .megaMenuLinks {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    gap: 0.0rem;
 }
 
 .megaMenuLinks a {
@@ -138,6 +151,12 @@
     font-size: 0.95rem;
     font-weight: 500;
     transition: color 0.2s;
+    display: inline-block;
+    /* Ensure full clickable/hoverable area */
+    padding: 6px 0;
+    /* Increased clickable area vertically for better usability */
+    margin: 2px 0;
+    /* Add margin for better spacing */
 }
 
 .megaMenuLinks a:hover {
