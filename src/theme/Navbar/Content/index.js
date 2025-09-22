@@ -76,11 +76,8 @@ export default function NavbarContent() {
       left={
         // TODO stop hardcoding items?
         <>
-          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
+          {/* {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />} */}
           {/* <NavbarLogo /> */}
-          <a href="/">
-            <img src="/img/logo2.svg" alt="Transformer Lab Logo" height={30} />
-          </a>
           <CustomNavbar />
           {/* <NavbarItems items={leftItems} /> */}
         </>

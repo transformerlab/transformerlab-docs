@@ -141,7 +141,13 @@ export default function MyCustomToolbar() {
         >
           <a
             href="/"
-            style={{ color: "inherit", textDecoration: "none" }}
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+            }}
             onClick={(e) => {
               if (typeof window !== "undefined" && window.innerWidth <= 768) {
                 e.preventDefault();
@@ -154,6 +160,7 @@ export default function MyCustomToolbar() {
               }
             }}
           >
+            <img src="/img/logo2.svg" alt="Transformer Lab Logo" height={30} />
             Transformer Lab
           </a>
           <button
@@ -164,6 +171,7 @@ export default function MyCustomToolbar() {
               setIsHovering(newState);
             }}
             aria-label="Toggle menu"
+            style={{ height: "24px", width: "24px", marginLeft: "8px" }}
           >
             {showMegaMenu ? "✕" : ""}
           </button>
