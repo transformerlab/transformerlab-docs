@@ -39,6 +39,15 @@ export default function CloudVSLocal() {
       }}
       className="documentation-flex-container"
     >
+        <h1 className="bitcount-grid-double-heading">
+          <span style={{ color: "var(--ifm-color-primary)" }}>
+            A smarter way to train models
+          </span>
+        </h1>
+        <p>
+          Whether you’re a research lab with racks of GPUs, a startup shipping AI products or a solo AI/ML engineer, you face the same friction: fragmented tools, brittle training scripts and limited compute budgets. Transformer Lab streamlines every part of your workflow so you can focus on the research.
+        </p>
+
       <div
         style={{
           // border: "2px solid var(--ifm-color-primary-darkest)",
@@ -65,13 +74,16 @@ export default function CloudVSLocal() {
             poster={require("./img/singlenode.png").default}
           />
         </div>
+        <p>
+          For individuals
+        </p>
         <h1 className="bitcount-grid-double-heading">
           <span style={{ color: "var(--ifm-color-primary)" }}>
             Transformer Lab Local
           </span>
         </h1>
         <p>
-          A comprehensive workbench for training, fine-tuning, evaluating and interacting with text, image and voice models. Open source including a Windows, MacOS and Linux app with training and inference across NVIDIA, AMD and Apple silicon.
+          A local workspace for training, fine-tuning, evaluating and interacting with text, image and voice models. Open source including a Windows, MacOS and Linux app with training and inference across NVIDIA, AMD and Apple silicon.
         </p>
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
           <a className="button button--primary button--lg">Learn More</a>
@@ -103,13 +115,17 @@ export default function CloudVSLocal() {
             poster={require("./img/multinode.png").default}
           />
         </div>
+        <p>
+          For teams
+        </p>
         <h1 className="bitcount-grid-double-heading">
           <span style={{ color: "var(--ifm-color-primary)" }}>
             Transformer Lab Cloud
           </span>{" "}
           with GPU Orchestration
         </h1>
-        <p>Modern open source GPU orchestration platform that helps AI teams effortlessly manage training jobs across distributed compute resources (on-prem, cloud plus any cloud provider). A mission control for machine reservation, training job allocation across nodes, failover handling, progress tracking, usage quota enforcement and comprehensive reporting. Built on top of proven and powerful infrastructure: SkyPilot, Ray and kubernetes.</p>
+        <p>
+          A cloud based training workspace plus modern GPU orchestration. Manage your entire team’s training jobs across any number of on-premise and cloud nodes. Includes machine reservation, job coordination across nodes, failover handling, progress tracking, quota enforcement and reporting. Built on SkyPilot, Ray and kubernetes.          </p>
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
           <a className="button button--primary button--lg">Learn More</a>
         </span>

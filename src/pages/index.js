@@ -22,18 +22,17 @@ function HomepageHeader() {
           GPU clusters <a href="./blog/diffusion-support">Read More...</a>
         </h3> */}
         <h1 className={clsx("hero__title", styles.hero__title)}>
-          The industry-leading open source workspace for AI/ML teams.
+          The industry-leading training workspace for AI/ML teams.
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           Train, fine-tune and evaluate models with provenance, reproducibility
-          and transparency. Effortlessly orchestrate training jobs across any
-          number of on-premise and cloud GPUs. More experiments. Better models.
-          Less GPU waste.
+          and transparency. Plus, built-in GPU orchestration to coordinate training across any
+          number of on-premise and cloud nodes.
         </h2>
-        {/* <img
+        {<img
           src={Screenshot}
           className={clsx("video_container", styles.video_container)}
-        /> */}
+        />}
         <CloudVSLocalPage />
         <UserValidation />
       </div>
