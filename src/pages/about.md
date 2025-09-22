@@ -17,12 +17,11 @@ Transformer Lab is being actively developed by a small team of engineers from Ca
 <img src={require('./img/ali.jpg').default} width={100} />
 <img src={require('./img/deep.jpg').default} width={100} />
 <img src={require('./img/mina.jpg').default} width={100} />
-<img src={require('./img/mash.jpg').default} width={100} />
 
 
 We have also had some amazing interns and contributors help, including:
 
-<a href="https://github.com/aahaanmaini">aahaanmaini</a>, <a href="https://github.com/sanjaycal">sanjaycal</a>, <a href="https://github.com/safiyamak">safiyamak</a>, <a href="https://github.com/rohannair">rohannnair</a>. And more!
+<a href="http://github.com/MashDevel">mashdevel</a>, <a href="https://github.com/aahaanmaini">aahaanmaini</a>, <a href="https://github.com/sanjaycal">sanjaycal</a>, <a href="https://github.com/safiyamak">safiyamak</a>, <a href="https://github.com/rohannair">rohannnair</a>. And more!
 
 # Join Us
 

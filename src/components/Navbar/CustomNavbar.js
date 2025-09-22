@@ -6,7 +6,7 @@ import SingleNode from "../../pages/img/singlenode.png";
 import Group from "../../pages/img/office.png";
 
 export default function MyCustomToolbar() {
-  const [showMegaMenu, setShowMegaMenu] = useState(true);
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
   const [isHovering, setIsHovering] = useState(false);
   const timeoutRef = useRef(null);
   const menuRef = useRef(null);
@@ -50,7 +50,7 @@ export default function MyCustomToolbar() {
       timeoutRef.current = setTimeout(() => {
         // Double-check hover state before hiding to prevent premature hiding
         if (!isNavHovering.current && !isMenuHovering.current) {
-          setShowMegaMenu(true);
+          setShowMegaMenu(false);
         }
       }, 200); // Extended delay for smoother experience
     }
