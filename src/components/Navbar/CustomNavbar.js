@@ -3,10 +3,10 @@ import styles from "./CustomNavbar.module.css";
 import Link from "@docusaurus/Link";
 import MultiNode from "../../pages/img/multinode.png";
 import SingleNode from "../../pages/img/singlenode.png";
-import Group from "../../pages/img/group.png";
+import Group from "../../pages/img/office.png";
 
 export default function MyCustomToolbar() {
-  const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [showMegaMenu, setShowMegaMenu] = useState(true);
   const [isHovering, setIsHovering] = useState(false);
   const timeoutRef = useRef(null);
   const menuRef = useRef(null);
@@ -50,7 +50,7 @@ export default function MyCustomToolbar() {
       timeoutRef.current = setTimeout(() => {
         // Double-check hover state before hiding to prevent premature hiding
         if (!isNavHovering.current && !isMenuHovering.current) {
-          setShowMegaMenu(false);
+          setShowMegaMenu(true);
         }
       }, 200); // Extended delay for smoother experience
     }
