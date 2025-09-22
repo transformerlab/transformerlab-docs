@@ -135,8 +135,6 @@
     font-size: 0.9rem;
     color: var(--ifm-font-color-secondary);
     margin-top: 0;
-    margin-bottom: 1rem;
-    min-height: 3rem;
 }
 
 .megaMenuLinks {
@@ -145,19 +143,7 @@
     gap: 0.0rem;
 }
 
-.megaMenuLinks a {
-    /* color: var(--ifm-font-color-base); */
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s;
-    display: inline-block;
-    /* Ensure full clickable/hoverable area */
-    padding: 6px 0;
-    /* Increased clickable area vertically for better usability */
-    margin: 2px 0;
-    /* Add margin for better spacing */
-}
+
 
 .megaMenuLinks a:hover {
     color: var(--ifm-color-primary);
