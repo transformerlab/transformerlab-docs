@@ -79,7 +79,7 @@
 .megaMenu {
     position: fixed;
     /* top: calc(var(--ifm-navbar-height) - 0px); */
-    top: 75px;
+    top: 70px;
     /* Larger overlap with navbar to prevent gaps */
     left: 0;
     z-index: 9999;
@@ -167,11 +167,15 @@
     .megaMenu {
         width: 100%;
         left: 0;
-        top: 75px;
+        top: 70px;
         position: fixed;
         transform: none;
         padding: 1rem;
         z-index: 9999;
+        max-height: 80vh;
+        /* Set maximum height to enable scrolling */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
     }
 
     .megaMenuContainer {
@@ -179,7 +183,7 @@
     }
 
     .megaMenuSection {
-        flex-basis: 100%;
+        /* flex-basis: 100%; */
     }
 
     .subtitle {
@@ -189,8 +193,15 @@
 
 @media screen and (max-width: 768px) {
     .megaMenuContainer {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1.5rem;
+    }
+
+    .megaMenu {
+        max-height: 70vh;
+        /* Further reduced height for smaller screens */
+        overflow-y: auto;
+        /* Ensure vertical scrolling is enabled */
     }
 
     .megaMenuSection img {
