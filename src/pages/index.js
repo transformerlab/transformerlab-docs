@@ -9,8 +9,11 @@ import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
 import GithubStar from "../components/GithubStar";
+import BigWhy from "./homepage-components/bigwhy.mdx";
 import CloudVSLocalPage from "./cloudvslocal.jsx";
 import UserValidation from "./homepage-components/uservalidation.mdx";
+import { FaArrowRight } from "react-icons/fa";
+
 function HomepageHeader() {
   return (
     <header className={clsx("hero", styles.heroBanner)}>
@@ -26,13 +29,31 @@ function HomepageHeader() {
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           Train, fine-tune and evaluate models with provenance, reproducibility
-          and transparency. Plus, built-in GPU orchestration to coordinate training across any
-          number of on-premise and cloud nodes.
+          and transparency. Plus, built-in GPU orchestration to coordinate
+          training across any number of on-premise and cloud nodes.
         </h2>
-        {<img
+
+        <div className={styles.buttons}>
+          <div className="block">
+            <Link
+              className="button button--primary button--lg"
+              to="/cloud"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              Learn about our new Cloud ML Platform &nbsp;
+              <FaArrowRight />
+            </Link>
+          </div>
+        </div>
+
+        <img
           src={Screenshot}
           className={clsx("video_container", styles.video_container)}
-        />}
+        />
+
+        <section className={styles.bigWhy}>
+          <BigWhy />
+        </section>
         <CloudVSLocalPage />
         <UserValidation />
       </div>

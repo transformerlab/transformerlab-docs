@@ -117,3 +117,8 @@ h2.hero__subtitle {
   border-radius: 8px;
   width: fit-content
 }
+
+.bigWhy {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
