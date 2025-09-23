@@ -50,19 +50,19 @@ export default function CloudVSLocal() {
           display: "flex",
           flexDirection: "column",
         }}
-        onClick={() => history.push("/local")}
+        onClick={() => history.push("/")}
         onMouseEnter={() => handleMouseEnter(localVideoRef, setShowLocalVideo)}
         onMouseLeave={() => handleMouseLeave(localVideoRef)}
       >
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <video
             ref={localVideoRef}
-            src={require("./img/singlenode.mov").default}
+            src={require("../img/singlenode.mov").default}
             width={300}
             muted
             playsInline
             loop
-            poster={require("./img/singlenode.png").default}
+            poster={require("../img/singlenode.png").default}
           />
         </div>
         <p>
@@ -73,11 +73,9 @@ export default function CloudVSLocal() {
             Transformer Lab Local
           </span>
         </h1>
-        <p>
-          A local workspace for training, fine-tuning, evaluating and interacting with text, image and voice models. Open source including a Windows, MacOS and Linux app with training and inference across NVIDIA, AMD and Apple silicon.
-        </p>
+
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
-          <a className="button button--primary button--lg">Learn More</a>
+          <a className="button button--primary button--lg">Download Now</a>
         </span>
       </div>
       <div
@@ -98,12 +96,12 @@ export default function CloudVSLocal() {
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <video
             ref={cloudVideoRef}
-            src={require("./img/multinode.mov").default}
+            src={require("../img/multinode.mov").default}
             width={300}
             muted
             playsInline
             loop
-            poster={require("./img/multinode.png").default}
+            poster={require("../img/multinode.png").default}
           />
         </div>
         <p>
@@ -115,10 +113,8 @@ export default function CloudVSLocal() {
           </span>{" "}
           with GPU Orchestration
         </h1>
-        <p>
-          A cloud based training workspace plus modern GPU orchestration. Manage your entire team’s training jobs across any number of on-premise and cloud nodes. Includes machine reservation, job coordination across nodes, failover handling, progress tracking, quota enforcement and reporting. Built on SkyPilot, Ray and kubernetes.          </p>
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
-          <a className="button button--primary button--lg">Learn More</a>
+          <a className="button button--primary button--lg">Join the Beta</a>
         </span>
       </div>
     </div>
