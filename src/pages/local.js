@@ -23,17 +23,21 @@ function HomepageHeader() {
             justifyContent: "space-between",
             gap: "1rem",
             flexDirection: "row",
+            paddingTop: "1rem",
           }}
         >
-          <h1 className={clsx("hero__title", styles.hero__title)}>
-            Transformer Lab Local
-          </h1>
+          <div>
+            <h1 className={clsx("hero__title", styles.hero__title)}>
+              Transformer Lab Local
+            </h1>
+            <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
+              Open source app where researchers, ML engineers, and developers
+              can build, study, and evaluate AI models.
+            </h2>
+          </div>
           <img src={SingleNode} height="200px" />
         </div>
-        <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          Open source app where researchers, ML engineers, and developers can
-          build, study, and evaluate AI models.
-        </h2>
+
         <div className={clsx("video_container", styles.video_container)}>
           <video width="100%" autoPlay loop muted>
             <source src={Screenshot} type="video/mp4" />
