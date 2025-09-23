@@ -39,15 +39,6 @@ export default function CloudVSLocal() {
       }}
       className="documentation-flex-container"
     >
-        <h1 className="bitcount-grid-double-heading">
-          <span style={{ color: "var(--ifm-color-primary)" }}>
-            A smarter way to train models
-          </span>
-        </h1>
-        <p>
-          Whether you’re a research lab with racks of GPUs, a startup shipping AI products or a solo AI/ML engineer, you face the same friction: fragmented tools, brittle training scripts and limited compute budgets. Transformer Lab streamlines every part of your workflow so you can focus on the research.
-        </p>
-
       <div
         style={{
           // border: "2px solid var(--ifm-color-primary-darkest)",
