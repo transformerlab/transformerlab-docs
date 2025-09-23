@@ -11,6 +11,7 @@ import "./style.css";
 import GithubStar from "../components/GithubStar";
 import MultiNode from "./img/multinode.png";
 import Lattice from "./img/lattice.png";
+import { FaArrowRight } from "react-icons/fa";
 
 function HomepageHeader() {
   return (
@@ -24,19 +25,35 @@ function HomepageHeader() {
             justifyContent: "space-between",
             gap: "1rem",
             flexDirection: "row",
+            paddingTop: "1rem",
           }}
         >
-          <h1 className={clsx("hero__title", styles.hero__title)}>
-            Transformer Lab Cloud
-          </h1>
+          <div>
+            <h1 className={clsx("hero__title", styles.hero__title)}>
+              Transformer Lab Cloud
+            </h1>
+            <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
+              The open source GPU orchestration platform that abstracts your
+              entire compute ecosystem, from on-premise labs to 20+ cloud
+              providers. Jobs are automatically queued and executed across n
+              nodes, with real-time monitoring, failure detection,
+              checkpointing, and logging.
+            </h2>
+          </div>
           <img src={MultiNode} style={{ maxHeight: "200px" }} />
         </div>
-        <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          The open source GPU orchestration platform that abstracts your entire
-          compute ecosystem, from on-premise labs to 20+ cloud providers. Jobs
-          are automatically queued and executed across n nodes, with real-time
-          monitoring, failure detection, checkpointing, and logging.
-        </h2>
+        <div className={styles.buttons}>
+          <div className="block">
+            <Link
+              className="button button--primary button--lg"
+              to="/cloud"
+              sx={{ display: "flex", alignItems: "center" }}
+            >
+              Join the Beta &nbsp;
+              <FaArrowRight />
+            </Link>
+          </div>
+        </div>
         <img
           src={Screenshot}
           className={clsx("video_container", styles.video_container)}
