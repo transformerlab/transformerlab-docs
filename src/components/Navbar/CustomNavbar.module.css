@@ -157,7 +157,7 @@
     color: var(--ifm-color-primary);
     cursor: pointer;
     margin-left: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    /* padding: 0.25rem 0.5rem; */
     position: relative;
     z-index: 10000;
 }

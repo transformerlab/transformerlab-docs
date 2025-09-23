@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import MultiNode from "../../pages/img/multinode.png";
 import SingleNode from "../../pages/img/singlenode.png";
 import Group from "../../pages/img/office.png";
+import IconClose from "@theme/Icon/Close";
 
 export default function MyCustomToolbar() {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
@@ -173,7 +174,7 @@ export default function MyCustomToolbar() {
             aria-label="Toggle menu"
             style={{ height: "24px", width: "24px", marginLeft: "8px" }}
           >
-            {showMegaMenu ? "✕" : ""}
+            {showMegaMenu ? <IconClose /> : ""}
           </button>
         </span>
 
