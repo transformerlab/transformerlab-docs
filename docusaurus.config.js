@@ -123,18 +123,7 @@ const config = {
       }),
     ],
   ],
-  plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "cloud",
-        path: "cloud",
-        routeBasePath: "cloud/docs",
-        sidebarPath: require.resolve("./sidebars.js"),
-        // ... other options
-      },
-    ],
-  ],
+  plugins: [],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -149,16 +138,11 @@ const config = {
         },
         items: [
           {
-            to: "/local",
-            label: "Local",
+            to: "/",
+            label: "Home",
             position: "left",
           },
-          {
-            to: "/cloud",
-            label: "Cloud",
-            position: "left",
-          },
-          { to: "/documentation", label: "Docs", position: "left" },
+          { to: "/docs/intro", label: "Docs", position: "left" },
           {
             to: "/blog",
             label: "Blog",

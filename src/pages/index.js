@@ -38,7 +38,7 @@ function HomepageHeader() {
           <div className="block">
             <Link
               className="button button--primary button--lg"
-              to="/cloud"
+              to="/"
               sx={{ display: "flex", alignItems: "center" }}
             >
               Learn about our new Cloud ML Platform &nbsp;
