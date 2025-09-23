@@ -44,7 +44,7 @@ export default function CloudFeatures() {
         text={<FeatureEasilyRun />}
         flip
       />
-      <FeatureCard
+      {/* <FeatureCard
         video={
           <img
             src={RayKubeImage}
@@ -53,7 +53,7 @@ export default function CloudFeatures() {
           />
         }
         text={<FeatureBuiltOn />}
-      />
+      /> */}
     </div>
   );
 }

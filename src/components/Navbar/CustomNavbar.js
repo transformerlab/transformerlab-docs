@@ -5,6 +5,7 @@ import MultiNode from "../../pages/img/multinode.png";
 import SingleNode from "../../pages/img/singlenode.png";
 import Group from "../../pages/img/office.png";
 import IconClose from "@theme/Icon/Close";
+import { useHistory } from "@docusaurus/router";
 
 export default function MyCustomToolbar() {
   const [showMegaMenu, setShowMegaMenu] = useState(false);
@@ -15,6 +16,7 @@ export default function MyCustomToolbar() {
   const isNavHovering = useRef(false); // Track hover on nav item
   const isMenuHovering = useRef(false); // Track hover on megamenu
   const isMobile = useRef(false); // Initialize without window reference
+  const history = useHistory();
 
   // Handle menu visibility with delay to prevent immediate closing
   useEffect(() => {
@@ -53,7 +55,7 @@ export default function MyCustomToolbar() {
         if (!isNavHovering.current && !isMenuHovering.current) {
           setShowMegaMenu(false);
         }
-      }, 200); // Extended delay for smoother experience
+      }, 100); // Extended delay for smoother experience
     }
 
     // Clean up timeout on component unmount or when effect re-runs
@@ -114,7 +116,7 @@ export default function MyCustomToolbar() {
     // Use a longer timeout for a better user experience
     timeoutRef.current = setTimeout(() => {
       setIsHovering(false);
-    }, 200); // Longer delay for smoother experience
+    }, 100); // Longer delay for smoother experience
   };
 
   return (
@@ -140,8 +142,7 @@ export default function MyCustomToolbar() {
             alignItems: "center",
           }}
         >
-          <a
-            href="/"
+          <div
             style={{
               color: "inherit",
               textDecoration: "none",
@@ -156,14 +157,15 @@ export default function MyCustomToolbar() {
                 setShowMegaMenu(newState);
                 setIsHovering(newState);
               } else {
-                setShowMegaMenu(false);
-                setIsHovering(false);
+                // setShowMegaMenu(false);
+                // setIsHovering(false);
+                history.push("/");
               }
             }}
           >
             <img src="/img/logo2.svg" alt="Transformer Lab Logo" height={30} />
             Transformer Lab
-          </a>
+          </div>
           <button
             className={styles.mobileMenuToggle}
             onClick={() => {
@@ -199,21 +201,18 @@ export default function MyCustomToolbar() {
           <div className={styles.megaMenuContainer}>
             <div className={styles.megaMenuSection}>
               <img
-                src={SingleNode}
+                src={MultiNode}
                 style={{
                   maxHeight: "100px",
                   maxWidth: "100%",
                   marginBottom: "10px",
                 }}
               />
-              <h3>Transformer Lab Local</h3>
-              <p className={styles.subtitle}>
-                Run, Train, Eval Models on your own Machine
-              </p>
-
+              <h3>Transformer Lab</h3>
+              <p className={styles.subtitle}>&nbsp;</p>
               <div className={styles.megaMenuLinks}>
                 <Link
-                  to="/local"
+                  to="/"
                   onClick={() => {
                     setShowMegaMenu(false);
                     setIsHovering(false);
@@ -229,57 +228,6 @@ export default function MyCustomToolbar() {
                   }}
                 >
                   Documentation
-                </Link>
-                <Link
-                  to="/docs/download"
-                  onClick={() => {
-                    setShowMegaMenu(false);
-                    setIsHovering(false);
-                  }}
-                >
-                  Download
-                </Link>
-              </div>
-            </div>
-
-            <div className={styles.megaMenuSection}>
-              <img
-                src={MultiNode}
-                style={{
-                  maxHeight: "100px",
-                  maxWidth: "100%",
-                  marginBottom: "10px",
-                }}
-              />
-              <h3>Transformer Lab Cloud</h3>
-              <p className={styles.subtitle}>GPU Orchestration for Teams</p>
-              <div className={styles.megaMenuLinks}>
-                <Link
-                  to="/cloud"
-                  onClick={() => {
-                    setShowMegaMenu(false);
-                    setIsHovering(false);
-                  }}
-                >
-                  Features
-                </Link>
-                <Link
-                  to="/cloud/docs/intro"
-                  onClick={() => {
-                    setShowMegaMenu(false);
-                    setIsHovering(false);
-                  }}
-                >
-                  Documentation
-                </Link>
-                <Link
-                  to="/"
-                  onClick={() => {
-                    setShowMegaMenu(false);
-                    setIsHovering(false);
-                  }}
-                >
-                  Join Beta
                 </Link>
               </div>
             </div>

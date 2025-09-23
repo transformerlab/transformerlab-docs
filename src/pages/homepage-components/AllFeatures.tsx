@@ -23,11 +23,11 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 export default function AllFeatures() {
   return (
     <div className={"all-features"}>
-      <FeatureCard
+      {/* <FeatureCard
         video={<img src={ModelsImage} />}
         text={<FeaturePopularModels />}
-      />
-      <FeatureCard
+      /> */}
+      {/* <FeatureCard
         video={
           <MuxPlayer
             loading="viewport"
@@ -42,7 +42,7 @@ export default function AllFeatures() {
         }
         text={<FeatureChat />}
         flip
-      />
+      /> */}
       <FeatureCard
         video={
           <MuxPlayer
@@ -69,12 +69,11 @@ export default function AllFeatures() {
         text={<FeaturePlugins />}
         flip
       />
-      <FeatureCard video={<img src={RagImage} />} text={<FeatureRag />} />
-      <FeatureCard
+      {/* <FeatureCard video={<img src={RagImage} />} text={<FeatureRag />} /> */}
+      {/* <FeatureCard
         video={<img src={PlatformsImage} />}
         text={<FeatureHardware />}
-        flip
-      />
+      /> */}
     </div>
   );
 }
