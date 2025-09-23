@@ -76,10 +76,10 @@ export default function NavbarContent() {
       left={
         // TODO stop hardcoding items?
         <>
-          {/* {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />} */}
-          {/* <NavbarLogo /> */}
-          <CustomNavbar />
-          {/* <NavbarItems items={leftItems} /> */}
+          {!mobileSidebar.disabled && <NavbarMobileSidebarToggle />}
+          <NavbarLogo />
+          {/* <CustomNavbar /> */}
+          <NavbarItems items={leftItems} />
         </>
       }
       right={

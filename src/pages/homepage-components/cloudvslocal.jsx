@@ -1,6 +1,10 @@
 import Button from "@site/src/components/Button";
 import { useHistory } from "@docusaurus/router";
 import React from "react";
+import Link from "@docusaurus/Link";
+import styles from "../index.module.css";
+
+
 
 export default function CloudVSLocal() {
   const history = useHistory();
@@ -74,9 +78,11 @@ export default function CloudVSLocal() {
           </span>
         </h1>
 
-        <span style={{ textDecoration: "none", marginTop: "20px" }}>
-          <a className="button button--primary button--lg">Download Now</a>
-        </span>
+        <div className={styles.buttons}>
+          <div className="block">
+            <a href="/docs/download" className="button button--primary button--lg">Download Now</a>
+          </div>
+        </div>
       </div>
       <div
         style={{
@@ -89,7 +95,7 @@ export default function CloudVSLocal() {
           display: "flex",
           flexDirection: "column",
         }}
-        onClick={() => history.push("/cloud")}
+        onClick={() => history.push("/")}
         onMouseEnter={() => handleMouseEnter(cloudVideoRef, setShowCloudVideo)}
         onMouseLeave={() => handleMouseLeave(cloudVideoRef)}
       >

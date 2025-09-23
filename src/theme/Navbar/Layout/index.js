@@ -21,7 +21,7 @@ export default function NavbarLayout({ children }) {
   const {
     navbar: { hideOnScroll, style },
   } = useThemeConfig();
-  const mobileSidebar = false; //useNavbarMobileSidebar();
+  const mobileSidebar = useNavbarMobileSidebar();
   const { navbarRef, isNavbarVisible } = useHideableNavbar(hideOnScroll);
   return (
     <nav
