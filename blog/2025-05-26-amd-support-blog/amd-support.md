@@ -6,7 +6,7 @@ tags: [transformerlab, amd, hardware, gpu]
 ---
 
 We're excited to announce that **Transformer Lab now supports AMD GPUs**! Whether you're on Linux or Windows, you can now harness the power of your AMD hardware to run and train models with Transformer Lab.  
-👉 Read the full installation guide [here](/docs/install/install-on-amd)
+👉 Read the full installation guide [here](/docs/local/install/install-on-amd)
 
 ## TL;DR
 
@@ -287,6 +287,6 @@ Whether you choose NVIDIA or AMD, the most important thing is that you can focus
 
 ---
 
-**Ready to try AMD GPU support?** Check out our comprehensive installation guide: [/docs/install/install-on-amd](/docs/install/install-on-amd)
+**Ready to try AMD GPU support?** Check out our comprehensive installation guide: [/docs/install/install-on-amd](/docs/local/install/install-on-amd)
 
 **Questions or issues?** Join our community discussions where we share tips, troubleshoot problems, and collaborate on making AMD GPU support even better.

@@ -47,7 +47,7 @@ wsl --set-default Ubuntu
 
 ## Step 2 - Download Transformer Lab for Windows
 
-<a href="https://transformerlab.ai/docs/download">
+<a href="https://transformerlab.ai/docs/local/download">
     <Button>Download Transformer Lab</Button>
 </a>
 

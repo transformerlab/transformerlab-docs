@@ -6,11 +6,11 @@ sidebar_position: 100
 
 #### Can I Run this on a Mac?
 
-Yes, using [MLX](/docs/install/mlx).
+Yes, using [MLX](/docs/local/install/mlx).
 
 #### How can I write my own Plugin?
 
-Plugin information is defined here: [Plugins](/docs/plugins/intro) . Feel free to chat with us on [Discord](https://discord.gg/transformerlab) to discuss your idea and we can offer feedback.
+Plugin information is defined here: [Plugins](/docs/local/plugins/intro) . Feel free to chat with us on [Discord](https://discord.gg/transformerlab) to discuss your idea and we can offer feedback.
 
 #### How Do I add More Models to the Gallery?
 

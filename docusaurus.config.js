@@ -148,7 +148,7 @@ const config = {
             label: "Blog",
             position: "left",
           },
-          // { to: "/docs/download", label: "Download ↓", position: "right" },
+          // { to: "/docs/local/download", label: "Download ↓", position: "right" },
           {
             href: "https://github.com/transformerlab/transformerlab-app",
             label: "GitHub",
