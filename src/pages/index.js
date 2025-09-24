@@ -11,7 +11,7 @@ import "./style.css";
 import GithubStar from "../components/GithubStar";
 import BigWhy from "./homepage-components/bigwhy.mdx";
 import CloudVSLocalPage from "./homepage-components/cloudvslocal.jsx";
-import UserValidation from "./homepage-components/uservalidation.mdx";
+import UserValidation from "./homepage-components/uservalidation.jsx";
 import { FaArrowRight } from "react-icons/fa";
 import CloudFeatures from "./homepage-components/CloudFeatures.tsx";
 
