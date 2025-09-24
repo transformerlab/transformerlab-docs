@@ -18,7 +18,7 @@ Download the [Transformer Lab App](http://transformerlab.ai) on your Mac and fol
 
 After launching Transformer Lab, and when creating a new experiment, you have the option of starting your next project from a Recipe. Recipes in Transformer Lab are ready-made template experiments that help you complete common tasks like training, evaluating, or exporting machine learning models. Think of them as step-by-step guides that make it easier to get started, even if you're new to the platform.
 
-<img src={require('./img/recipes-intro.gif').default} alt="Recipe Usage" width="500" />
+<img src={require('../img/recipes-intro.gif').default} alt="Recipe Usage" width="500" />
 
 
 ## Advanced Install Instructions:

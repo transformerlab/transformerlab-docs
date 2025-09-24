@@ -157,4 +157,4 @@ I often joke with people that my original plan with Transformer Lab was to spend
 
 When things look bleak, we always come back to telling ourselves that it's our job to hit these issues so that our users don't have to. That's why we built this thing in the first place!
 
-If you get a chance, <a href="https://transformerlab.ai/docs/download">try downloading Transformer Lab</a> and send us feedback on how the install process went for you!
+If you get a chance, <a href="https://transformerlab.ai/docs/local/download">try downloading Transformer Lab</a> and send us feedback on how the install process went for you!

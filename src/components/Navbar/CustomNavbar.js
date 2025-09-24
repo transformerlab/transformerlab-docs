@@ -221,7 +221,7 @@ export default function MyCustomToolbar() {
                   Features
                 </Link>
                 <Link
-                  to="/docs/intro"
+                  to="/docs"
                   onClick={() => {
                     setShowMegaMenu(false);
                     setIsHovering(false);

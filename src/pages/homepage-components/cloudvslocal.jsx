@@ -54,7 +54,7 @@ export default function CloudVSLocal() {
           display: "flex",
           flexDirection: "column",
         }}
-        onClick={() => history.push("/")}
+        onClick={() => history.push("/docs/local/download")}
         onMouseEnter={() => handleMouseEnter(localVideoRef, setShowLocalVideo)}
         onMouseLeave={() => handleMouseLeave(localVideoRef)}
       >
@@ -80,7 +80,7 @@ export default function CloudVSLocal() {
 
         <div className={styles.buttons}>
           <div className="block">
-            <a href="/docs/download" className="button button--primary button--lg">Download Now</a>
+            <a href="/docs/local/download" className="button button--primary button--lg">Download Now</a>
           </div>
         </div>
       </div>

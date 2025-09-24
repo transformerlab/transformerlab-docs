@@ -39,11 +39,15 @@ function HomepageHeader() {
             <Link
               className="button button--primary button--lg"
               to="/"
-              sx={{ display: "flex", alignItems: "center" }}
+              style={{ display: "flex", alignItems: "center" }}
             >
-              Learn about our new Cloud ML Platform &nbsp;
+              Join our Cloud Beta &nbsp;
               <FaArrowRight />
             </Link>
+          </div>
+          &nbsp;&nbsp;
+          <div>
+            or <a href="docs/local/download">Download our Local App</a>
           </div>
         </div>
 

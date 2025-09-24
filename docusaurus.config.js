@@ -142,7 +142,7 @@ const config = {
             label: "Home",
             position: "left",
           },
-          { to: "/docs/intro", label: "Docs", position: "left" },
+          { to: "/docs", label: "Docs", position: "left" },
           {
             to: "/blog",
             label: "Blog",
@@ -169,7 +169,7 @@ const config = {
             items: [
               {
                 label: "Getting Started",
-                to: "/docs/intro",
+                to: "/docs",
               },
             ],
           },
