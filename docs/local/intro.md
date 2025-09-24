@@ -5,7 +5,6 @@ sidebar_position: 1
 
 import { FaDiscord } from "react-icons/fa";
 import MuxPlayer from '@mux/mux-player-react';
-import AllFeatures from '../src/pages/homepage-components/AllFeatures.tsx'
 
 
 # Transformer Lab Local

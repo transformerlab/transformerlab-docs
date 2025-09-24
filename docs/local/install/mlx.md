@@ -33,7 +33,7 @@ Once a model is downloaded, go to the Foundation tab and associate a downloaded 
 
 Then press run.
 
-<img src={require('../img/tinyllamastart.png').default} alt="Login Modal" width="400" />
+<img src={require('../../img/tinyllamastart.png').default} alt="Login Modal" width="400" />
 
 You are now running a model using MLX!
 
