@@ -50,6 +50,7 @@ function HomepageHeader() {
             or <a href="docs/local/download">Download our Local App</a>
           </div>
         </div>
+        <div className="spacer" />
 
         <img
           src={Screenshot}
