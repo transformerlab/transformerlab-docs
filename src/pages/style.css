@@ -101,3 +101,7 @@ div.feature-card.row ul {
     padding: 0.5rem 1rem;
     color: var(--ifm-color-primary-inverse);
 }
+
+.spacer {
+    height: 2rem;
+}
