@@ -120,7 +120,7 @@ export default function CloudVSLocal() {
           with GPU Orchestration
         </h1>
         <span style={{ textDecoration: "none", marginTop: "20px" }}>
-          <a className="button button--primary button--lg">Join the Beta</a>
+          <a href="/beta.html" className="button button--primary button--lg">Join the Beta</a>
         </span>
       </div>
     </div>
