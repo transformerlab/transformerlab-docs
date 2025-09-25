@@ -26,7 +26,7 @@ function HomepageHeader() {
           GPU clusters <a href="./blog/diffusion-support">Read More...</a>
         </h3> */}
         <h1 className={clsx("hero__title", styles.hero__title)}>
-          The industry-leading training workspace for AI/ML teams.
+          The workspace for AI/ML teams.
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           Train, fine-tune and evaluate models with provenance, reproducibility

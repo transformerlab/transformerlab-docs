@@ -10,7 +10,7 @@ A reservation is a way for a researcher to hold onto an **instance** for an inde
 
 An instance can be a single node (e.g. one machine with 1xH100) or a group of nodes (e.g. 4 x 8xH100s) depending on what is requested.
 
-## When to use A Reservation
+## When to use a Reservation
 
 The typical path for a researcher is to tweak a script using a reservation, then deploy it at scale using Jobs.
 
