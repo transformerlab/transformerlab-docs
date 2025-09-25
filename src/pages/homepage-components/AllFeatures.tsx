@@ -64,11 +64,11 @@ export default function AllFeatures() {
         flip
       />
       <FeatureCard video={<img src={EvalImage} />} text={<FeatureEvals />} />
-      <FeatureCard
+      {/*<FeatureCard
         video={<img src={PluginsImage} />}
         text={<FeaturePlugins />}
         flip
-      />
+      />*/}
       {/* <FeatureCard video={<img src={RagImage} />} text={<FeatureRag />} /> */}
       {/* <FeatureCard
         video={<img src={PlatformsImage} />}
