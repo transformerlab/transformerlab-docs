@@ -36,14 +36,14 @@ function HomepageHeader() {
 
         <div className={styles.buttons}>
           <div className="block">
-            <Link
+            <a
               className="button button--primary button--lg"
-              to="/"
+              href="/beta.html"
               style={{ display: "flex", alignItems: "center" }}
             >
               Join our Cloud Beta &nbsp;
               <FaArrowRight />
-            </Link>
+            </a>
           </div>
           &nbsp;&nbsp;
           <div>
