@@ -27,6 +27,6 @@ The Tokenize feature provides a visual breakdown of how the model splits sentenc
 - **Process**: The sentence is tokenized by the model.
 - **Output**: You will see a visual representation of the tokenization along with the token IDs, helping you understand how the model processes your input.
 
-Explore these features to gain deeper insights into how your text data is being interpreted and transformed by the model!
+Explore these features to gain deeper insights into how your text data is being interpreted and transformed by the model.
 
 <img src={require('./gifs/Tokenize.gif').default} alt="Embedding and Tokenize GIF" width="500" />
