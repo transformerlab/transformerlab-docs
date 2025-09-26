@@ -12,12 +12,3 @@ The Visualize Logprobs interface is an experimental feature under development an
 3. **Visualization**: The generated completion is displayed with tokens highlighted in different colors. Hover over any token to view its logprobs percentage.
 
 <img src={require('./gifs/VisualizeLogprobs.gif').default} alt="Visualize Logprobs GIF" width="500" />
-
-## Benefits
-
-- **Detailed Insights**: Gain an understanding of the model's confidence levels for each output token.
-- **Interactive Analysis**: Hover over tokens to see precise probability metrics, helping you better interpret model responses.
-
-## Note
-
-This feature is still under development and currently works exclusively with the MLX inference engine.
