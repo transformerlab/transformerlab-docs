@@ -34,7 +34,7 @@
   --ifm-hover-overlay: rgba(161, 125, 179, 0.12);
   --ifm-menu-color-active: #0d1017;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darkest);
-  --ifm-link-color: var(--ifm-color-primary-darker);
+  --ifm-link-color: #1b47b8;
 }
 
 a {
