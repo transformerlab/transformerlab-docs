@@ -1,18 +1,21 @@
 import React from "react";
 
+import Ram from "./img/ram.png";
+import Tarun from "./img/tarun.jpg";
+
 const userValidations = [
     {
-        quote: "TransformerLab streamlined our ML workflow and saved us countless hours.",
-        author: "Jane Doe, CTO at DataCorp",
-        avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+        quote: "Transformer Lab has made it easy for me to experiment and use LLMs in a completely private fashion.",
+        author: "Ramanan Sivaranjan, Head of the Engineering at Quantum Bridge ",
+        avatar: Ram,
     },
     {
-        quote: "The best SaaS platform for rapid prototyping and deployment.",
-        author: "John Smith, Lead Engineer at InnovateX",
-        avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+        quote: "The best open source platform for machine learning research.",
+        author: "Tarun Sachdeva, CEO at Market.dev",
+        avatar: Tarun,
     },
     {
-        quote: "Exceptional support and a robust feature set. Highly recommended!",
+        quote: "SLURM is outdated, and Transformer Lab is the future.",
         author: "Emily Chen, Product Manager at NextGen",
         avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     },
