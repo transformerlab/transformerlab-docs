@@ -41,7 +41,7 @@ function HomepageHeader() {
               href="/beta.html"
               style={{ display: "flex", alignItems: "center" }}
             >
-              Join our Cloud Beta &nbsp;
+              Join our Private Beta &nbsp;
               <FaArrowRight />
             </a>
           </div>
