@@ -70,15 +70,18 @@ export default function CloudVSLocal() {
           />
         </div>
         <p>
-          For individuals
+          For Individuals
         </p>
         <h1 className="bitcount-grid-double-heading">
           <span style={{ color: "var(--ifm-color-primary)" }}>
             Transformer Lab Local
           </span>
         </h1>
-
-        <div className={styles.buttons}>
+        <p>
+          Train, test, and eval models (LLMs, Distillation, Audio) on a single
+          node.
+        </p>
+        <div className={styles.buttons} style={{ marginTop: "2rem" }}>
           <div className="block">
             <a href="/docs/local/download" className="button button--primary button--lg">Download Now</a>
           </div>
@@ -119,7 +122,11 @@ export default function CloudVSLocal() {
           </span>{" "}
           with GPU Orchestration
         </h1>
-        <span style={{ textDecoration: "none", marginTop: "20px" }}>
+        <p>
+          Run workloads on multiple nodes with multi-cloud job
+          scheduling, experiment management, and monitoring.
+        </p>
+        <span style={{ textDecoration: "none", marginTop: "2rem" }}>
           <a href="/beta.html" className="button button--primary button--lg">Join the Beta</a>
         </span>
       </div>
