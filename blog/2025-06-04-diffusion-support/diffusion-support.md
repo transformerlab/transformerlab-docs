@@ -11,7 +11,7 @@ Out of the box we support major open weight base models including:
 
 * Stable Diffusion (1.5, XL, 3)
 * Flux
-* And a lot more! (see the [full list here](/docs/local/diffusion/downloading-models))
+* And a lot more! (see the [full list here](/docs/diffusion/downloading-models))
 * (We also support thousands of LoRAs trained on these base models)
 
 What can you do? Well...
@@ -48,7 +48,7 @@ Apply a prompt with styling and you can make it look like this:
 
 Transformer Lab excels at training. Using our entire framework that supports jobs, status tracking, workflows (coming soon) and more, you can now train your own Diffusion LoRAs within our UI.
 
-[We have a doc on how to train Diffusion LoRAs here.](/docs/local/train/diffusion-trainer)
+[We have a doc on how to train Diffusion LoRAs here.](/docs/train/diffusion-trainer)
 
 Here’s a quick comparison for the prompt **"An astronaut floating in space"**:
 

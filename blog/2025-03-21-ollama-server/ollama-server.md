@@ -7,7 +7,7 @@ tags: [transformerlab]
 
 # Integration with Ollama using the Ollama Python SDK
 
-Transformer Lab has recently added an [Ollama Server](/docs/local/interact/ollama) plugin which allows users to run inference through Ollama on their local machine.
+Transformer Lab has recently added an [Ollama Server](/docs/interact/ollama) plugin which allows users to run inference through Ollama on their local machine.
 
 <!--truncate-->
 

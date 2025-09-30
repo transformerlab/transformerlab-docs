@@ -77,10 +77,10 @@ This example shows how to initialize a client, register a training job, add the 
 
 Explore the following sections to learn more about using the Transformer Lab Client:
 
-- [API Reference](/docs/local/transformerlab-client/api-reference):
+- [API Reference](/docs/transformerlab-client/api-reference):
     - Detailed documentation of client methods
     - Using callbacks for integration with ML frameworks
-- [Example Training Script](/docs/local/transformerlab-client/example):
+- [Example Training Script](/docs/transformerlab-client/example):
     - A complete example of a training script using the client
 
 

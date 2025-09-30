@@ -55,7 +55,7 @@ function HomepageHeader() {
           </div>
         </div>
         <div>
-          or <a href="docs/local/download">Download our Local App</a>
+          or <a href="docs/download">Download our Local App</a>
         </div>
         <div className="spacer" />
 

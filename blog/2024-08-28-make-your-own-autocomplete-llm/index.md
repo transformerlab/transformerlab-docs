@@ -28,7 +28,7 @@ In this post we will set up a system to add autocomplete to an existing product,
 
 Let's get started by setting up our computer so we can play with different models and techniques.
 
-I will start by [downloading Transformer Lab](/docs/local/download) on a Linux box with an NVIDIA GPU but Transformer Lab also works on MacOS and Windows. Once you see a screen that looks like the following, you are ready to get started!
+I will start by [downloading Transformer Lab](/docs/download) on a Linux box with an NVIDIA GPU but Transformer Lab also works on MacOS and Windows. Once you see a screen that looks like the following, you are ready to get started!
 
 ![Transformer Lab Installed](./transformerlab-installed.png)
 
