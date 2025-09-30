@@ -31,7 +31,7 @@ function HomepageHeader() {
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
           From GPU orchestration to training, fine-tuning and evaluating models
-          across any infrastructure — Transformer Lab is the next generation
+          across any infrastructure, Transformer Lab is the next generation
           platform for AI/ML research.
         </h2>
 
