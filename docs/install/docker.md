@@ -190,7 +190,6 @@ docker build -t my-transformerlab-amd .
 Once TransformerLab is running:
 
 1. Visit `http://localhost:8338` in your browser
-2. Follow the [Getting Started Guide](../intro) to learn the basics
 
 ## Docker Compose (Optional)
 

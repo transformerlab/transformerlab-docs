@@ -63,7 +63,7 @@ export default function CloudVSLocal() {
         </p>
         <div className={styles.buttons} style={{ marginTop: "2rem" }}>
           <div className="block">
-            <a href="/docs/local/download" className="button button--primary button--lg">Download Now</a>
+            <a href="/docs/download" className="button button--primary button--lg">Download Now</a>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ import Button from '@site/src/components/Button';
 
 ## Install on Mac
 
-[Download the app](/docs/local/download.md) on your Mac (with Apple Silicon) and follow the on-screen instructions.
+[Download the app](/docs/download.md) on your Mac (with Apple Silicon) and follow the on-screen instructions.
 
 ## Install on Windows
 
@@ -49,7 +49,7 @@ wsl --set-default Ubuntu
 
 ### Step 2 - Download Transformer Lab for Windows
 
-<a href="https://transformerlab.ai/docs/local/download">
+<a href="https://transformerlab.ai/docs/download">
     <Button>Download Transformer Lab</Button>
 </a>
 
