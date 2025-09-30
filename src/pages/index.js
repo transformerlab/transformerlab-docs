@@ -21,17 +21,18 @@ function HomepageHeader() {
       <div id="background-holder"></div>
       <div className={clsx("container", styles.container)}>
         <GithubStar />
-        {/* <h3 className={styles.announcement}>
-          Introducing Transformer Lab Cloud - run distributed workloads across
-          GPU clusters <a href="./blog/diffusion-support">Read More...</a>
-        </h3> */}
+        <h3 className={styles.announcement}>
+          Introducing Transformer Lab GPU Orchestration - run distributed
+          workloads across GPU clusters &nbsp;&nbsp;
+          <a href="./blog/gpu">Read More...</a>
+        </h3>
         <h1 className={clsx("hero__title", styles.hero__title)}>
           The essential open source workspace for AI/ML teams.
         </h1>
         <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          Train, fine-tune and evaluate models with provenance, reproducibility
-          and transparency. Plus, built-in GPU orchestration to coordinate
-          training across any number of on-premise and cloud nodes.
+          From GPU orchestration to training, fine-tuning and evaluating models
+          across any infrastructure — Transformer Lab is the next generation
+          platform for AI/ML research.
         </h2>
 
         <div className={styles.buttons}>
@@ -39,16 +40,22 @@ function HomepageHeader() {
             <a
               className="button button--primary button--lg"
               href="/beta.html"
-              style={{ display: "flex", alignItems: "center" }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                textWrap: "auto",
+                backgroundColor: "white",
+                border: "1px solid var(--ifm-color-primary-dark)",
+                color: "var(--ifm-color-primary-dark)",
+              }}
             >
-              Join our Private Beta &nbsp;
+              Learn about our new GPU Workload Orchestration Platform &nbsp;
               <FaArrowRight />
             </a>
           </div>
-          &nbsp;&nbsp;
-          <div>
-            or <a href="docs/local/download">Download our Local App</a>
-          </div>
+        </div>
+        <div>
+          or <a href="docs/local/download">Download our Local App</a>
         </div>
         <div className="spacer" />
 

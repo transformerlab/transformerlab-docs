@@ -69,7 +69,7 @@ uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 Now when you run the app at startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
 
 <img
-src={require('../about/img/loginModal.png').default}
+src={require('../img/loginModal.png').default}
 alt="Login Modal"
 width="400"
 />

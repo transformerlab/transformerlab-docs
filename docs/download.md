@@ -6,8 +6,8 @@ import Button from '@site/src/components/Button';
 import { FaApple } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
 import { FaWindows } from "react-icons/fa";
-import appVersion from '../../static/app-version.json';
-import apiVersion from '../../static/api-version.json';
+import appVersion from '../static/app-version.json';
+import apiVersion from '../static/api-version.json';
 
 # Download ↓
 
