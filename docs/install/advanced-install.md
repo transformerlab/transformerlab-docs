@@ -83,7 +83,7 @@ Incase you'd like to run it within the GUI Electron app, you can download the ap
 Now when you run the app at startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
 
 <img
-src={require('../about/img/loginModal.png').default}
+src={require('../img/loginModal.png').default}
 alt="Login Modal"
 width="400"
 />

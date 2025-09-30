@@ -54,8 +54,8 @@ h2.hero__subtitle {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 .embedded_markdown {
