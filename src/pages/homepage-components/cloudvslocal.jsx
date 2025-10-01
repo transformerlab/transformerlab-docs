@@ -58,7 +58,7 @@ export default function CloudVSLocal() {
           </span> for Single Node Workloads
         </h1>
         <p>
-          Train, test, and eval models (LLMs, Distillation, Audio) on a single
+          Train, test, and eval models (LLMs, Diffusion, Audio) on a single
           node.
         </p>
         <div className={styles.buttons} style={{ marginTop: "2rem" }}>
@@ -100,7 +100,7 @@ export default function CloudVSLocal() {
         </h1>
         <p>
           Run workloads on multiple nodes with multi-cloud job
-          scheduling, experiment management, and monitoring.
+          scheduling, experiment management, and monitoring. A modern SLURM replacement built on SkyPilot.
         </p>
         <span style={{ textDecoration: "none", marginTop: "2rem" }}>
           <a href="/beta.html" className="button button--primary button--lg">Join the Beta</a>
