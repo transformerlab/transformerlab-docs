@@ -106,3 +106,15 @@ div.feature-card.row ul {
 .spacer {
     height: 2rem;
 }
+
+.newChip {
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-button-color);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-right: 0.4rem;
+}
