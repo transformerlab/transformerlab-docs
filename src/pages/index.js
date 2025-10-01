@@ -22,7 +22,8 @@ function HomepageHeader() {
       <div className={clsx("container", styles.container)}>
         <GithubStar />
         <h3 className={styles.announcement}>
-          Introducing Transformer Lab GPU Orchestration, a modern SLURM replacement to run workloads across GPU clusters &nbsp;&nbsp;
+          Introducing Transformer Lab GPU Orchestration, a modern SLURM
+          replacement to run workloads across GPU clusters &nbsp;&nbsp;
           <a href="./blog/gpu">Read More...</a>
         </h3>
         <h1 className={clsx("hero__title", styles.hero__title)}>
@@ -43,9 +44,9 @@ function HomepageHeader() {
                 display: "flex",
                 alignItems: "center",
                 textWrap: "auto",
-                backgroundColor: "white",
+                backgroundColor: "var(--ifm-color-primary)",
                 border: "1px solid var(--ifm-color-primary-dark)",
-                color: "var(--ifm-color-primary-dark)",
+                color: "var(--ifm-button-color)",
               }}
             >
               Join the Beta for Transformer Lab GPU Orchestration &nbsp;
