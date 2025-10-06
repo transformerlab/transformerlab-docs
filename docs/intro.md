@@ -1,5 +1,5 @@
 ---
-title: Transformer Lab Local
+title: Transformer Lab
 slug: .
 sidebar_position: 1
 ---
@@ -21,4 +21,4 @@ Transformer Lab can be run locally as a platform to train, tune, or evaluate AI 
 
 ## GPU Orchestration
 
-The team has just lauched a GPU Workload Orchestration platform that can be used with Trasnformer Lab or on its own. You can learn [more about it here](./gpu/intro.md)
+Our team has just lauched a GPU Workload Orchestration platform that can be used with Transformer Lab or on its own. You can learn [more about it here](./gpu/intro.md)
