@@ -4,6 +4,12 @@ sidebar_position: 4
 
 # Setup Node Pools
 
+:::info
+
+Full documentation is coming in the upcoming days. Until then, please reach out through discord or our signup form.
+
+:::
+
 The first step in configuring Transformer Lab is to set up node pools. A node pool is a group of compute resources available to your team. This can be compute from a large cloud provider (for example, GCP or AWS), a neocloud (such as Runpod), or your own on-premises compute.
 
 ## Use your Own Compute

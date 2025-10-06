@@ -4,6 +4,12 @@ sidebar_position: 10
 
 # Storage
 
+:::info
+
+Full documentation is coming in the upcoming days. Until then, please reach out through discord or our signup form.
+
+:::
+
 ## Introduction
 
 Jobs and the machines they run on are ephemeral, meaning they are temporary and get deleted once your task is complete. **Object Storage** is the permanent place to store important assets like datasets, models, and logs that need to persist beyond the lifetime of a single job.

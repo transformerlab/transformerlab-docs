@@ -4,6 +4,12 @@ sidebar_position: 20
 
 # Reserve an Instance
 
+:::info
+
+Full documentation is coming in the upcoming days. Until then, please reach out through discord or our signup form.
+
+:::
+
 ## Introduction
 
 A reservation is a way for a researcher to hold onto an **instance** for an indefinite amount of time. For example, a researcher may need to reserve a machine for a day while they run inference on a model or use a Jupyter Notebook.

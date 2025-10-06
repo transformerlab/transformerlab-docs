@@ -16,3 +16,9 @@ Researchers can:
 2) Run jobs across multiple nodes
 
 While allowing the whole team to manage shared storage, checkpoints, and quota across multiple users.
+
+:::info
+
+Full documentation is coming in the upcoming days. Until then, please reach out through discord or our signup form.
+
+:::

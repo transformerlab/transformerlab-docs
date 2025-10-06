@@ -4,6 +4,12 @@ sidebar_position: 3
 
 # Terminology
 
+:::info
+
+Full documentation is coming in the upcoming days. Until then, please reach out through discord or our signup form.
+
+:::
+
 ### Node Pool: ###
 
 A node pool is group of computers a user has access to. This can be either through a public cloud such as Azure, GCP, AWS, Runpod. Or it can be a group of computers you have in your lab or on-prem cluster.

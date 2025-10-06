@@ -3,6 +3,12 @@ title: Job SDK
 sidebar_position: 40
 ---
 
+:::info
+
+Full documentation is coming in the upcoming days. Until then, please reach out through discord or our signup form.
+
+:::
+
 This guide will help you integrate the SDK into your Python scripts to monitor and manage your machine learning experiments. The SDK is designed to be lightweight and simple, allowing you to track progress, log messages, and save important files with minimal effort.
 
 ## Core Concepts
