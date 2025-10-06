@@ -7,6 +7,8 @@ description: A modern SLURM replacement built on SkyPilot for AI/ML teams to man
 
 Today, we’re launching **Transformer Lab GPU Orchestration**, a flexible open-source platform for AI/ML teams to manage large-scale training across clusters of GPUs.
 
+![Screenshot](./images/screenshot.png)
+
 Whether you’re a research lab with racks of GPUs, an enterprise AI team coordinating jobs across on-premise and cloud nodes, or a startup fine-tuning open-source models, you’ve likely run into the same pain points: constant debugging of orchestration scripts, long job queues, and underutilized hardware. In speaking with countless High-Performance Computing admins, we’ve consistently heard that **SLURM's** limitations hinder the effective use of compute resources and throttle research velocity.
 
 Unlike **SLURM**, **Transformer Lab GPU Orchestration** was purpose-built for modern AI/ML workloads. That means researchers can move from a laptop experiment to a thousand-GPU run without rewriting orchestration scripts or hiring a dedicated infrastructure team. There’s advanced built-in support for training and fine-tuning language models, diffusion models, and text-to-speech with integrated checkpointing and experiment tracking. Best of all, it’s open source.
@@ -28,6 +30,8 @@ But **Kubernetes** wasn’t designed for AI training either. Submitting a job re
 What teams really need is orchestration with the power of **Kubernetes** but the simplicity of **SLURM**.
 
 ## Enter Transformer Lab GPU Orchestration
+
+![Architecture](images/gpu-orchestration-architecture.svg)
 
 **Transformer Lab GPU Orchestration** abstracts away much of the current infrastructure challenges, while preserving the reliability AI teams expect. Built on the battle-tested foundations of **SkyPilot**, **Ray**, and **Kubernetes**, it combines proven components into a system purpose-built for AI/ML workflows.
 

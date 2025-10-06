@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="20 -10 1340 820" width="1340" height="820">
+  <defs/>
+  <g id="Canvas_1" stroke-opacity="1" stroke="none" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>Canvas 1</title>
+    <g id="Canvas_1_Background">
+      <title>Background</title>
+      <g id="Graphic_73">
+        <rect x="20" y="-10" width="1340" height="820" fill="#2c3e50"/>
+      </g>
+    </g>
+    <g id="Canvas_1_Layer_1">
+      <title>Layer 1</title>
+      <g id="Graphic_19">
+        <path d="M 291 120 L 1089 120 C 1095.0751 120 1100 124.92487 1100 131 L 1100 339 C 1100 345.07513 1095.0751 350 1089 350 L 291 350 C 284.92487 350 280 345.07513 280 339 L 280 131 C 280 124.92487 284.92487 120 291 120 Z" fill="#1abc9c"/>
+      </g>
+      <g id="Graphic_23">
+        <path d="M 301 140 L 579 140 C 585.0751 140 590 144.92487 590 151 L 590 199 C 590 205.07513 585.0751 210 579 210 L 301 210 C 294.92487 210 290 205.07513 290 199 L 290 151 C 290 144.92487 294.92487 140 301 140 Z" fill="#3498db"/>
+        <text transform="translate(295 166)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="47.63916" y="14" xml:space="preserve">GPU Orchestration GUI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_7">
+        <path d="M 291 370 L 619 370 C 625.0751 370 630 374.92487 630 381 L 630 759 C 630 765.0751 625.0751 770 619 770 L 291 770 C 284.92487 770 280 765.0751 280 759 L 280 381 C 280 374.92487 284.92487 370 291 370 Z" fill="#ccc"/>
+        <text transform="translate(285 375)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-weight="bold" font-size="15" fill="#2c3e50" x="95.82031" y="14" xml:space="preserve">Cloud Provider 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_31">
+        <path d="M 291 20 L 1309 20 C 1315.0751 20 1320 24.924868 1320 31 L 1320 89 C 1320 95.07513 1315.0751 100 1309 100 L 291 100 C 284.92487 100 280 95.07513 280 89 L 280 31 C 280 24.924868 284.92487 20 291 20 Z" fill="#3498db"/>
+        <text transform="translate(285 51)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="324.91455" y="14" xml:space="preserve">Transformer Lab Experiment Management GUI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_33">
+        <path d="M 691 370 L 1309 370 C 1315.0751 370 1320 374.92487 1320 381 L 1320 759 C 1320 765.0751 1315.0751 770 1309 770 L 691 770 C 684.9249 770 680 765.0751 680 759 L 680 381 C 680 374.92487 684.9249 370 691 370 Z" fill="#ccc"/>
+        <text transform="translate(685 375)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-weight="bold" font-size="15" fill="#2c3e50" x="236.18408" y="14" xml:space="preserve">On Prem Cluster 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_34">
+        <text transform="translate(295 421)" fill="#34495e">
+          <tspan font-family="SF Mono" font-size="15" fill="#34495e" x="6.5478516" y="14" xml:space="preserve">Cloud Provider SDK</tspan>
+        </text>
+      </g>
+      <g id="Graphic_35">
+        <text transform="translate(495 421)" fill="#34495e">
+          <tspan font-family="SF Mono" font-size="15" fill="#34495e" x="36.09131" y="14" xml:space="preserve">SSH</tspan>
+        </text>
+      </g>
+      <g id="Graphic_36">
+        <path d="M 861 410 L 949 410 C 955.0751 410 960 414.92487 960 421 L 960 429 C 960 435.07513 955.0751 440 949 440 L 861 440 C 854.9249 440 850 435.07513 850 429 L 850 421 C 850 414.92487 854.9249 410 861 410 Z" fill="#ccc"/>
+        <text transform="translate(855 416)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.09131" y="14" xml:space="preserve">SSH</tspan>
+        </text>
+      </g>
+      <g id="Graphic_38">
+        <path d="M 501 300 L 639 300 C 645.0751 300 650 304.92487 650 311 L 650 319 C 650 325.07513 645.0751 330 639 330 L 501 330 C 494.92487 330 490 325.07513 490 319 L 490 311 C 490 304.92487 494.92487 300 501 300 Z" fill="#0050ef"/>
+        <text transform="translate(495 306)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="42.546387" y="14" xml:space="preserve">Kubectl</tspan>
+        </text>
+      </g>
+      <g id="Graphic_46">
+        <path d="M 911 230 L 1079 230 C 1085.0751 230 1090 234.92487 1090 241 L 1090 279 C 1090 285.07513 1085.0751 290 1079 290 L 911 290 C 904.9249 290 900 285.07513 900 279 L 900 241 C 900 234.92487 904.9249 230 911 230 Z" fill="#3498db"/>
+        <text transform="translate(905 242)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="11.184082" y="14" xml:space="preserve">Nebula Lighthouse </tspan>
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="34.365234" y="32" xml:space="preserve">Mesh Network</tspan>
+        </text>
+      </g>
+      <g id="Graphic_47">
+        <path d="M 1036 410 L 1109 410 C 1115.0751 410 1120 414.92487 1120 421 L 1120 429 C 1120 435.07513 1115.0751 440 1109 440 L 1036 440 C 1029.9249 440 1025 435.07513 1025 429 L 1025 421 C 1025 414.92487 1029.9249 410 1036 410 Z" fill="#ccc"/>
+        <text transform="translate(1030 416)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="14.682617" y="14" xml:space="preserve">Nebula</tspan>
+        </text>
+      </g>
+      <g id="Graphic_48">
+        <path d="M 611 140 L 799 140 C 805.0751 140 810 144.92487 810 151 L 810 199 C 810 205.07513 805.0751 210 799 210 L 611 210 C 604.9249 210 600 205.07513 600 199 L 600 151 C 600 144.92487 604.9249 140 611 140 Z" fill="#3498db"/>
+        <text transform="translate(605 166)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="2.63916" y="14" xml:space="preserve">GPU Orchestration CLI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_49">
+        <path d="M 831 140 L 1079 140 C 1085.0751 140 1090 144.92487 1090 151 L 1090 199 C 1090 205.07513 1085.0751 210 1079 210 L 831 210 C 824.9249 210 820 205.07513 820 199 L 820 151 C 820 144.92487 824.9249 140 831 140 Z" fill="#3498db"/>
+        <text transform="translate(825 166)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="32.63916" y="14" xml:space="preserve">GPU Orchestration API</tspan>
+        </text>
+      </g>
+      <g id="Graphic_51">
+        <path d="M 731 300 L 869 300 C 875.0751 300 880 304.92487 880 311 L 880 319 C 880 325.07513 875.0751 330 869 330 L 731 330 C 724.9249 330 720 325.07513 720 319 L 720 311 C 720 304.92487 724.9249 300 731 300 Z" fill="#073642"/>
+        <text transform="translate(725 306)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="61.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+      <g id="Graphic_52">
+        <path d="M 491 230 L 869 230 C 875.0751 230 880 234.92487 880 241 L 880 279 C 880 285.07513 875.0751 290 869 290 L 491 290 C 484.92487 290 480 285.07513 480 279 L 480 241 C 480 234.92487 484.92487 230 491 230 Z" fill="#3498db"/>
+        <text transform="translate(485 251)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="157.91016" y="14" xml:space="preserve">Skypilot</tspan>
+        </text>
+      </g>
+      <g id="Graphic_53">
+        <text transform="translate(55 561)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="29.729004" y="14" xml:space="preserve">Compute Layer</tspan>
+        </text>
+      </g>
+      <g id="Graphic_54">
+        <text transform="translate(55 212)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="11.184082" y="14" xml:space="preserve">GPU Orchestration </tspan>
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="1.911621" y="32" xml:space="preserve">(SLURM Replacement)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_55">
+        <text transform="translate(45 42)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="43.637695" y="14" xml:space="preserve">Experiment </tspan>
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="43.637695" y="32" xml:space="preserve">Management</tspan>
+        </text>
+      </g>
+      <g id="Graphic_56">
+        <path d="M 311 470 L 419 470 C 425.07513 470 430 474.92487 430 481 L 430 739 C 430 745.0751 425.07513 750 419 750 L 311 750 C 304.92487 750 300 745.0751 300 739 L 300 481 C 300 474.92487 304.92487 470 311 470 Z" fill="#9b59b6"/>
+        <text transform="translate(305 475)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="18.273926" y="14" xml:space="preserve">Machine 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_57">
+        <path d="M 491 470 L 599 470 C 605.0751 470 610 474.92487 610 481 L 610 739 C 610 745.0751 605.0751 750 599 750 L 491 750 C 484.92487 750 480 745.0751 480 739 L 480 481 C 480 474.92487 484.92487 470 491 470 Z" fill="#9b59b6"/>
+        <text transform="translate(485 475)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="18.273926" y="14" xml:space="preserve">Machine N</tspan>
+        </text>
+      </g>
+      <g id="Graphic_58">
+        <path d="M 711 470 L 979 470 C 985.0751 470 990 474.92487 990 481 L 990 739 C 990 745.0751 985.0751 750 979 750 L 711 750 C 704.9249 750 700 745.0751 700 739 L 700 481 C 700 474.92487 704.9249 470 711 470 Z" fill="#9b59b6"/>
+        <text transform="translate(705 475)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="98.27393" y="14" xml:space="preserve">Machine 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_62">
+        <path d="M 721 540 L 969 540 C 975.0751 540 980 544.9249 980 551 L 980 559 C 980 565.0751 975.0751 570 969 570 L 721 570 C 714.9249 570 710 565.0751 710 559 L 710 551 C 710 544.9249 714.9249 540 721 540 Z" fill="white"/>
+        <text transform="translate(715 545)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="116.09131" y="14" xml:space="preserve">CRI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_61">
+        <path d="M 721 580 L 829 580 C 835.0751 580 840 584.9249 840 591 L 840 729 C 840 735.0751 835.0751 740 829 740 L 721 740 C 714.9249 740 710 735.0751 710 729 L 710 591 C 710 584.9249 714.9249 580 721 580 Z" fill="white"/>
+        <text transform="translate(715 585)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.818848" y="14" xml:space="preserve">Pod 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_60">
+        <path d="M 861 580 L 969 580 C 975.0751 580 980 584.9249 980 591 L 980 729 C 980 735.0751 975.0751 740 969 740 L 861 740 C 854.9249 740 850 735.0751 850 729 L 850 591 C 850 584.9249 854.9249 580 861 580 Z" fill="white"/>
+        <text transform="translate(855 585)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.818848" y="14" xml:space="preserve">Pod N</tspan>
+        </text>
+      </g>
+      <g id="Graphic_59">
+        <path d="M 721 500 L 969 500 C 975.0751 500 980 504.92487 980 511 L 980 519 C 980 525.07513 975.0751 530 969 530 L 721 530 C 714.9249 530 710 525.07513 710 519 L 710 511 C 710 504.92487 714.9249 500 721 500 Z" fill="#0050ef"/>
+        <text transform="translate(715 505)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="97.54639" y="14" xml:space="preserve">Kubelet</tspan>
+        </text>
+      </g>
+      <g id="Graphic_63">
+        <path d="M 321 510 L 409 510 C 415.07513 510 420 514.92487 420 521 L 420 529 C 420 535.07513 415.07513 540 409 540 L 321 540 C 314.92487 540 310 535.07513 310 529 L 310 521 C 310 514.92487 314.92487 510 321 510 Z" fill="#0050ef"/>
+        <text transform="translate(315 515)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="17.546387" y="14" xml:space="preserve">Kubelet</tspan>
+        </text>
+      </g>
+      <g id="Graphic_66">
+        <path d="M 321 550 L 409 550 C 415.07513 550 420 554.9249 420 561 L 420 569 C 420 575.0751 415.07513 580 409 580 L 321 580 C 314.92487 580 310 575.0751 310 569 L 310 561 C 310 554.9249 314.92487 550 321 550 Z" fill="white"/>
+        <text transform="translate(315 555)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.09131" y="14" xml:space="preserve">CRI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_69">
+        <path d="M 501 510 L 589 510 C 595.0751 510 600 514.92487 600 521 L 600 529 C 600 535.07513 595.0751 540 589 540 L 501 540 C 494.92487 540 490 535.07513 490 529 L 490 521 C 490 514.92487 494.92487 510 501 510 Z" fill="#0050ef"/>
+        <text transform="translate(495 515)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="17.546387" y="14" xml:space="preserve">Kubelet</tspan>
+        </text>
+      </g>
+      <g id="Graphic_68">
+        <path d="M 501 550 L 589 550 C 595.0751 550 600 554.9249 600 561 L 600 569 C 600 575.0751 595.0751 580 589 580 L 501 580 C 494.92487 580 490 575.0751 490 569 L 490 561 C 490 554.9249 494.92487 550 501 550 Z" fill="white"/>
+        <text transform="translate(495 555)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.09131" y="14" xml:space="preserve">CRI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_70">
+        <path d="M 1131 120 L 1309 120 C 1315.0751 120 1320 124.92487 1320 131 L 1320 339 C 1320 345.07513 1315.0751 350 1309 350 L 1131 350 C 1124.9249 350 1120 345.07513 1120 339 L 1120 131 C 1120 124.92487 1124.9249 120 1131 120 Z" fill="#6c71c4"/>
+        <text transform="translate(1125 190)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="25.456543" y="14" xml:space="preserve">Global Artifact </tspan>
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="62.54639" y="32" xml:space="preserve">Storage</tspan>
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="11.547852" y="68" xml:space="preserve">(s3 / GCS on FUSE)</tspan>
+        </text>
+      </g>
+      <g id="Graphic_71">
+        <path d="M 731 670 L 819 670 C 825.0751 670 830 674.9249 830 681 L 830 709 C 830 715.0751 825.0751 720 819 720 L 731 720 C 724.9249 720 720 715.0751 720 709 L 720 681 C 720 674.9249 724.9249 670 731 670 Z" fill="#6c71c4"/>
+        <text transform="translate(725 680)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="1.7832031" y="12" xml:space="preserve">Object Store </tspan>
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="33.927734" y="27" xml:space="preserve">FUSE</tspan>
+        </text>
+      </g>
+      <g id="Graphic_75">
+        <path d="M 871 670 L 959 670 C 965.0751 670 970 674.9249 970 681 L 970 709 C 970 715.0751 965.0751 720 959 720 L 871 720 C 864.9249 720 860 715.0751 860 709 L 860 681 C 860 674.9249 864.9249 670 871 670 Z" fill="#6c71c4"/>
+        <text transform="translate(865 680)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="1.7832031" y="12" xml:space="preserve">Object Store </tspan>
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="33.927734" y="27" xml:space="preserve">FUSE</tspan>
+        </text>
+      </g>
+      <g id="Graphic_90">
+        <path d="M 1021 470 L 1289 470 C 1295.0751 470 1300 474.92487 1300 481 L 1300 739 C 1300 745.0751 1295.0751 750 1289 750 L 1021 750 C 1014.9249 750 1010 745.0751 1010 739 L 1010 481 C 1010 474.92487 1014.9249 470 1021 470 Z" fill="#9b59b6"/>
+        <text transform="translate(1015 475)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="98.27393" y="14" xml:space="preserve">Machine N</tspan>
+        </text>
+      </g>
+      <g id="Graphic_89">
+        <path d="M 1031 540 L 1279 540 C 1285.0751 540 1290 544.9249 1290 551 L 1290 559 C 1290 565.0751 1285.0751 570 1279 570 L 1031 570 C 1024.9249 570 1020 565.0751 1020 559 L 1020 551 C 1020 544.9249 1024.9249 540 1031 540 Z" fill="white"/>
+        <text transform="translate(1025 545)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="116.09131" y="14" xml:space="preserve">CRI</tspan>
+        </text>
+      </g>
+      <g id="Graphic_88">
+        <path d="M 1031 580 L 1139 580 C 1145.0751 580 1150 584.9249 1150 591 L 1150 729 C 1150 735.0751 1145.0751 740 1139 740 L 1031 740 C 1024.9249 740 1020 735.0751 1020 729 L 1020 591 C 1020 584.9249 1024.9249 580 1031 580 Z" fill="white"/>
+        <text transform="translate(1025 585)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.818848" y="14" xml:space="preserve">Pod 1</tspan>
+        </text>
+      </g>
+      <g id="Graphic_87">
+        <path d="M 1171 580 L 1279 580 C 1285.0751 580 1290 584.9249 1290 591 L 1290 729 C 1290 735.0751 1285.0751 740 1279 740 L 1171 740 C 1164.9249 740 1160 735.0751 1160 729 L 1160 591 C 1160 584.9249 1164.9249 580 1171 580 Z" fill="white"/>
+        <text transform="translate(1165 585)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.818848" y="14" xml:space="preserve">Pod N</tspan>
+        </text>
+      </g>
+      <g id="Graphic_86">
+        <path d="M 1031 500 L 1279 500 C 1285.0751 500 1290 504.92487 1290 511 L 1290 519 C 1290 525.07513 1285.0751 530 1279 530 L 1031 530 C 1024.9249 530 1020 525.07513 1020 519 L 1020 511 C 1020 504.92487 1024.9249 500 1031 500 Z" fill="#0050ef"/>
+        <text transform="translate(1025 505)" fill="white">
+          <tspan font-family="SF Mono" font-size="15" fill="white" x="97.54639" y="14" xml:space="preserve">Kubelet</tspan>
+        </text>
+      </g>
+      <g id="Graphic_85">
+        <path d="M 1041 670 L 1129 670 C 1135.0751 670 1140 674.9249 1140 681 L 1140 709 C 1140 715.0751 1135.0751 720 1129 720 L 1041 720 C 1034.9249 720 1030 715.0751 1030 709 L 1030 681 C 1030 674.9249 1034.9249 670 1041 670 Z" fill="#6c71c4"/>
+        <text transform="translate(1035 680)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="1.7832031" y="12" xml:space="preserve">Object Store </tspan>
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="33.927734" y="27" xml:space="preserve">FUSE</tspan>
+        </text>
+      </g>
+      <g id="Graphic_84">
+        <path d="M 1181 670 L 1269 670 C 1275.0751 670 1280 674.9249 1280 681 L 1280 709 C 1280 715.0751 1275.0751 720 1269 720 L 1181 720 C 1174.9249 720 1170 715.0751 1170 709 L 1170 681 C 1170 674.9249 1174.9249 670 1181 670 Z" fill="#6c71c4"/>
+        <text transform="translate(1175 680)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="1.7832031" y="12" xml:space="preserve">Object Store </tspan>
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="33.927734" y="27" xml:space="preserve">FUSE</tspan>
+        </text>
+      </g>
+      <g id="Graphic_92">
+        <path d="M 321 589.41176 L 409 589.41176 C 415.07513 589.41176 420 594.3366 420 600.4118 L 420 729 C 420 735.0751 415.07513 740 409 740 L 321 740 C 314.92487 740 310 735.0751 310 729 L 310 600.4118 C 310 594.3366 314.92487 589.41176 321 589.41176 Z" fill="white"/>
+        <text transform="translate(315 594.4118)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.09131" y="14" xml:space="preserve">Pod</tspan>
+        </text>
+      </g>
+      <g id="Graphic_91">
+        <path d="M 327.92308 670 L 399 670 C 405.07513 670 410 674.9249 410 681 L 410 709 C 410 715.0751 405.07513 720 399 720 L 327.92308 720 C 321.84794 720 316.92308 715.0751 316.92308 709 L 316.92308 681 C 316.92308 674.9249 321.84794 670 327.92308 670 Z" fill="#6c71c4"/>
+        <text transform="translate(321.92308 680)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="17.430061" y="12" xml:space="preserve">Object </tspan>
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="1.3577957" y="27" xml:space="preserve">Store FUSE</tspan>
+        </text>
+      </g>
+      <g id="Graphic_94">
+        <path d="M 501 589.41176 L 589 589.41176 C 595.0751 589.41176 600 594.3366 600 600.4118 L 600 729 C 600 735.0751 595.0751 740 589 740 L 501 740 C 494.92487 740 490 735.0751 490 729 L 490 600.4118 C 490 594.3366 494.92487 589.41176 501 589.41176 Z" fill="white"/>
+        <text transform="translate(495 594.4118)" fill="#2c3e50">
+          <tspan font-family="SF Mono" font-size="15" fill="#2c3e50" x="36.09131" y="14" xml:space="preserve">Pod</tspan>
+        </text>
+      </g>
+      <g id="Graphic_93">
+        <path d="M 507.9231 670 L 579 670 C 585.0751 670 590 674.9249 590 681 L 590 709 C 590 715.0751 585.0751 720 579 720 L 507.9231 720 C 501.84794 720 496.9231 715.0751 496.9231 709 L 496.9231 681 C 496.9231 674.9249 501.84794 670 507.9231 670 Z" fill="#6c71c4"/>
+        <text transform="translate(501.9231 680)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="17.430061" y="12" xml:space="preserve">Object </tspan>
+          <tspan font-family="SF Mono" font-size="13" fill="#ecf0f1" x="1.3577957" y="27" xml:space="preserve">Store FUSE</tspan>
+        </text>
+      </g>
+      <g id="Graphic_99">
+        <path d="M 731 620 L 819 620 C 825.0751 620 830 624.9249 830 631 L 830 639 C 830 645.0751 825.0751 650 819 650 L 731 650 C 724.9249 650 720 645.0751 720 639 L 720 631 C 720 624.9249 724.9249 620 731 620 Z" fill="#073642"/>
+        <text transform="translate(725 626)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="36.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+      <g id="Graphic_100">
+        <path d="M 871 620 L 959 620 C 965.0751 620 970 624.9249 970 631 L 970 639 C 970 645.0751 965.0751 650 959 650 L 871 650 C 864.9249 650 860 645.0751 860 639 L 860 631 C 860 624.9249 864.9249 620 871 620 Z" fill="#073642"/>
+        <text transform="translate(865 626)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="36.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+      <g id="Graphic_101">
+        <path d="M 1041 620 L 1129 620 C 1135.0751 620 1140 624.9249 1140 631 L 1140 639 C 1140 645.0751 1135.0751 650 1129 650 L 1041 650 C 1034.9249 650 1030 645.0751 1030 639 L 1030 631 C 1030 624.9249 1034.9249 620 1041 620 Z" fill="#073642"/>
+        <text transform="translate(1035 626)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="36.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+      <g id="Graphic_102">
+        <path d="M 1181 620 L 1269 620 C 1275.0751 620 1280 624.9249 1280 631 L 1280 639 C 1280 645.0751 1275.0751 650 1269 650 L 1181 650 C 1174.9249 650 1170 645.0751 1170 639 L 1170 631 C 1170 624.9249 1174.9249 620 1181 620 Z" fill="#073642"/>
+        <text transform="translate(1175 626)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="36.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+      <g id="Graphic_103">
+        <path d="M 331 620 L 399 620 C 405.07513 620 410 624.9249 410 631 L 410 639 C 410 645.0751 405.07513 650 399 650 L 331 650 C 324.92487 650 320 645.0751 320 639 L 320 631 C 320 624.9249 324.92487 620 331 620 Z" fill="#073642"/>
+        <text transform="translate(325 626)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="26.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+      <g id="Graphic_104">
+        <path d="M 511 620 L 579 620 C 585.0751 620 590 624.9249 590 631 L 590 639 C 590 645.0751 585.0751 650 579 650 L 511 650 C 504.92487 650 500 645.0751 500 639 L 500 631 C 500 624.9249 504.92487 620 511 620 Z" fill="#073642"/>
+        <text transform="translate(505 626)" fill="#ecf0f1">
+          <tspan font-family="SF Mono" font-size="15" fill="#ecf0f1" x="26.09131" y="14" xml:space="preserve">Ray</tspan>
+        </text>
+      </g>
+    </g>
+  </g>
+</svg>
