@@ -21,6 +21,9 @@ import AudioTrainedTTS from './audio/trained_tts.wav'
 - 🛠️ **Train your own TTS models** on CUDA and AMD
 - 🧬 **Clone a voice in one shot** for lightning-fast replication on CUDA and AMD
 
+<!--truncate-->
+
+
 ## 🚀 Text-to-Speech on MLX
 
 We’ve added **TTS support to Transformer Lab’s MLX generation plugin**, making it easier than ever to generate natural-sounding audio.

@@ -104,10 +104,12 @@ const config = {
             require.resolve("./src/css/custom.css"),
           ],
         },
-        gtag: {
-          trackingID: process.env.GTAG_TRACKING_ID || "G-XXXXXXXXXX",
-          anonymizeIP: true,
-        },
+        ...(process.env.GTAG_TRACKING_ID && {
+          gtag: {
+            trackingID: process.env.GTAG_TRACKING_ID,
+            anonymizeIP: true,
+          },
+        }),
         sitemap: {
           lastmod: "date",
           changefreq: "weekly",
@@ -141,6 +143,7 @@ const config = {
             to: "/",
             label: "Home",
             position: "left",
+            activeBaseRegex: "^/$",
           },
           { to: "/docs", label: "Documentation", position: "left" },
           {
