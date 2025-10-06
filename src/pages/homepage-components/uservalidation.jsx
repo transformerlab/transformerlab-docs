@@ -2,6 +2,7 @@ import React from "react";
 
 import Ram from "./img/ram.png";
 import Tarun from "./img/tarun.jpg";
+import Jash from "./img/jash.jpg";
 
 const userValidations = [
     {
@@ -16,8 +17,8 @@ const userValidations = [
     },
     {
         quote: "SLURM is outdated, and Transformer Lab is the future.",
-        author: "Emily Chen, Product Manager at NextGen",
-        avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+        author: "Jash Mehta, Applied Research Scientist at ServiceNow Research",
+        avatar: Jash,
     },
 ];
 
