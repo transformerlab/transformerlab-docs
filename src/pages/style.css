@@ -40,7 +40,7 @@ article h1 {
 
 .navbar {
     background-color: var(--ifm-navbar-background-color);
-    opacity: 0.97;
+    opacity: 1;
     /* backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px); */
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
@@ -100,4 +100,20 @@ div.feature-card.row ul {
     border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--ifm-color-primary-inverse);
+}
+
+.spacer {
+    height: 2rem;
+}
+
+.newChip {
+    background-color: var(--ifm-color-primary);
+    color: var(--ifm-button-color);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-right: 0.4rem;
 }

@@ -2,8 +2,6 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
-
 .container {
   display: flex;
   flex-direction: column;
@@ -24,13 +22,14 @@
 }
 
 h1.hero__title {
+  margin-top: 4rem;
   margin-bottom: 0.5rem;
-  font-weight: 700;
-  max-width: 70%;
+  font-weight: 600;
 
   @media screen and (max-width: 500px) {
     max-width: 100%;
   }
+
 }
 
 h2.hero__subtitle {
@@ -39,9 +38,10 @@ h2.hero__subtitle {
       1.5rem);
   text-align: left;
   font-weight: 400;
-  max-width: 70%;
+  /* max-width: 70%; */
   line-height: 1.4;
   color: var(--ifm-font-color-secondary);
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 996px) {
@@ -54,8 +54,8 @@ h2.hero__subtitle {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 .embedded_markdown {
@@ -118,4 +118,20 @@ h2.hero__subtitle {
   padding: 0.5rem;
   border-radius: 8px;
   width: fit-content
+}
+
+.bigWhy {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.bigWhy h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bigWhy p {
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
