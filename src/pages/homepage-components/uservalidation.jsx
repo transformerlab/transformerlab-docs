@@ -1,7 +1,7 @@
 import React from "react";
 
 import Ram from "./img/ram.png";
-import Tarun from "./img/tarun.jpg";
+import Elena from "./img/elena.jpg";
 import Jash from "./img/jash.jpg";
 
 const userValidations = [
@@ -11,9 +11,9 @@ const userValidations = [
         avatar: Ram,
     },
     {
-        quote: "The best open source platform for machine learning research.",
-        author: "Tarun Sachdeva, CEO at Market.dev",
-        avatar: Tarun,
+        quote: "The essential open-source stack for serious ML teams",
+        author: "Elena Yunusov, Executive Director at Human Feedback Foundation",
+        avatar: Elena,
     },
     {
         quote: "SLURM is outdated, and Transformer Lab is the future.",
