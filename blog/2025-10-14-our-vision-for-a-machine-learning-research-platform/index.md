@@ -30,6 +30,8 @@ And that's just one run. Then you need to manage experiments, version datasets, 
 
 ## A New Category: Machine Learning Research Platform
 
+Frontier labs like OpenAI have spent years building and maintaining their own tooling and infrastructure. We're aiming to make this category of advanced tooling open and accessible to everyone.  Users have already told us that Transformer Lab is the "essential open source stack for serious ML teams". 
+
 Our goal is to build a unified, open-source platform that handles infrastructure so researchers can focus on research. Better tools accelerate progress for everyone—when the ML community has access to best-in-class platforms, discovery moves faster. For this to work, it must follow core principles that empower researchers, not constrain them.
 
 ## Our Guiding Principles:
@@ -64,8 +66,6 @@ Our Experiment Management layer tracks everything automatically, making models, 
 
 We built this platform because we remember losing days to broken environments and CUDA errors. We wanted a tool that lets researchers focus on the exciting "what if" questions, not infrastructure headaches.
 
-We're still early and don't have all the answers. But our goal is clear: build an open, flexible tool that gets out of your way.
-
-If you'd rather build models than debug environments, we'd love you to join the conversation. Check out our project and let us know what you think.
+Try us out, and give us feedback; or better yet sign your org up to be a design partner.  We'd love to hear about your pain points and build indispensable tools for you and your team.
 
 Let's build something better, together.
