@@ -9,7 +9,7 @@ tags: [checkpoint, resume, training, machine-learning, deep-learning, ai, experi
 
 Training AI models can be unpredictable. Hardware failures or cloud issues can stop your progress. The worst part is starting over from scratch...
 
-We’ve experienced this issue ourselves, so we added a new feature: checkpoint-based training resume. Now, every training job is versioned, and checkpoints are tracked. If training stops, you can resume from any checkpoint with a click. 🚀
+We’ve experienced this issue ourselves, so we added a new feature: resume training from any checkpoint. Now, every training job is versioned, and checkpoints are tracked. If training stops, you can resume from any checkpoint with a click. 🚀
 
 ## 🚀 How It Works
 
