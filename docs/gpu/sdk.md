@@ -58,12 +58,12 @@ Parameters: `filepath` (string): The local path to the file you want to save.
 Below is a basic Python script demonstrating how to use the SDK. It simulates a simple task that runs for a short period, logs its progress, and saves a result file.
 
 ```python
-import transformer_lab as lab
+from lab import lab
 import time
 import os
 
 # 1. Initialize the experiment
-lab.init(experiment_name="alpha-test-run")
+lab.init(experiment_id="alpha-test-run")
 
 # 2. Simulate a task and report progress/logs
 total_steps = 10
@@ -73,7 +73,7 @@ for step in range(total_steps):
     progress_percentage = int(((step + 1) / total_steps) * 100)
 
     # 3. Update progress and log a message
-    lab.progress(value=progress_percentage)
+    lab.update_progress(progress_percentage)
     lab.log(f"Completed step {step + 1}. Progress: {progress_percentage}%")
 
 # 4. Create and save an artifact
@@ -88,5 +88,5 @@ lab.log(f"Successfully saved artifact: {file_to_save}")
 # Clean up local file
 os.remove(file_to_save)
 
-lab.log("Experiment finished successfully!")
+lab.finish("Job completed successfully.")
 ```
