@@ -130,7 +130,7 @@ After months of different paths, we think we have the most reliable way to insta
 
 - We wrote an `install.sh`. script that separates out each step of the process so each step can be run separately
 - In our `install.sh`. script, we wrote checks for each step of the process to see if the previous steps worked, and if not, what might have gone wrong
-- In our `install.sh` script we incorporated dozens of hacks to prevent issues we've seen in the field. For example, before we start, we deactivate conda three times (!) just to ensure we're not inside an existing conda when installing our conda https://github.com/transformerlab/transformerlab-app/blob/main/api/install.sh#L89
+- In our `install.sh` script we incorporated dozens of hacks to prevent issues we’ve seen in the field. For example, before we start, we deactivate conda three times (!) just to ensure we’re not inside an existing conda when installing our conda https://github.com/transformerlab/transformerlab-api/blob/e2e8e56a8bc86eb73d66e9db83c7708b961dac88/install.sh#L89
 - Instead of trying to install conda in a common place like the recommended `~/miniconda3/` path we found that this just can not be reliable. So now we install our OWN conda in a Transformer Lab specific path, even if the user already has conda installed.
 - We then create a separate Transformer Lab environment and install a specific pinned version of Python to it
 - We then use Conda to install CUDA (if possible)
