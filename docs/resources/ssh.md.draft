@@ -45,7 +45,7 @@ echo "Downloading \${TFL_URL} to \${TFL_DEST_DIR}"
 curl "\${TFL_URL}" --output "\${TFL_DEST_DIR}\${TFL_FILENAME}"
 unzip -o "\${TFL_DEST_DIR}\${TFL_FILENAME}" -d "$TFL_DEST_DIR"
 echo "Starting API server"
-cd "\${TFL_DEST_DIR}" || exit
+cd "\${TFL_DEST_DIR}/api" || exit
 
 if [ -f .DEPENDENCIES_INSTALLED ]; then
     echo "Dependencies already installed. Skipping."

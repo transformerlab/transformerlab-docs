@@ -6,7 +6,7 @@
   package = "./src/netlify/plugins/fetch-install-script"
 
 [build.environment]
-  APP_GITHUB_REPO = "transformerlab/transformerlab-api"
+  APP_GITHUB_REPO = "transformerlab/transformerlab-app"
   NODE_VERSION = "18"
 
 # Optional: Configure build hooks that can receive parameters

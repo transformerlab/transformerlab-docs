@@ -30,12 +30,12 @@ conda activate ~/.transformerlab/envs/transformerlab
 
 For the following command, you can find the latest release by visiting:
 
-https://github.com/transformerlab/transformerlab-api/releases/latest
+https://github.com/transformerlab/transformerlab-app/releases/latest
 
 ```bash
-git clone https://github.com/transformerlab/transformerlab-api.git
-cd transformerlab-api
-git checkout v0.23.3 # where "v0.23.3" is the latest release version
+git clone https://github.com/transformerlab/transformerlab-app.git
+cd transformerlab-app/api
+git checkout v0.25.0 # where "v0.25.0" is the latest release version
 ```
 
 **Step 3:** Install Python Dependencies
@@ -50,6 +50,7 @@ uv pip install --upgrade  -r requirements-uv.txt
 ```
 
 ### For machines with an AMD GPU:
+Make sure you have ROCm installed on your system. You can find the instructions [here](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/).
 
 ```bash 
 conda activate ~/.transformerlab/envs/transformerlab

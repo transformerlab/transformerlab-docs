@@ -195,6 +195,6 @@ Place the `info.md` file in your `sample-data-print` directory alongside the oth
 
 ## Step 7: Contributing Your Plugin
 
-When you’re ready to share your plugin, please create a pull request on the [Transformer Lab API repository](https://github.com/transformerlab/transformerlab-api) and tag the team for review.
+When you're ready to share your plugin, please create a pull request on the [Transformer Lab App repository](https://github.com/transformerlab/transformerlab-app) and tag the team for review.
 
 Happy coding!

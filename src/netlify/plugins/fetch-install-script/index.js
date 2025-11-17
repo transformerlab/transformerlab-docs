@@ -38,7 +38,7 @@ module.exports = {
 
       console.log(`Found latest release: ${tagName}`);
 
-      installScriptUrl = `https://raw.githubusercontent.com/${appRepo}/${tagName}/install.sh`;
+      installScriptUrl = `https://raw.githubusercontent.com/${appRepo}/${tagName}/api/install.sh`;
 
       // Download the install.sh file
       const fileRes = await fetch(installScriptUrl);
