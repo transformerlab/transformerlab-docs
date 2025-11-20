@@ -38,7 +38,7 @@ module.exports = {
 
       console.log(`Found latest release: ${tagName}`);
 
-      installScriptUrl = `https://raw.githubusercontent.com/${appRepo}/${tagName}/install.sh`;
+      installScriptUrl = `https://raw.githubusercontent.com/${appRepo}/${tagName}/api/install.sh`;
 
       // Download the install.sh file
       const fileRes = await fetch(installScriptUrl);
@@ -75,7 +75,7 @@ module.exports = {
       };
 
       fs.writeFileSync(
-        path.join(PUBLISH_DIR, "static", "api-version.json"),
+        path.join(PUBLISH_DIR, "static", "app-version.json"),
         JSON.stringify(versionInfo, null, 2)
       );
     } catch (error) {

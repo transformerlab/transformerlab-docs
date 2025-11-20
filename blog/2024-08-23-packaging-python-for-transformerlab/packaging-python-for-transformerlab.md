@@ -112,7 +112,7 @@ This looks encouraging but it is brand new. We're going to keep watching as it d
 
 Once we consolidated around using Miniconda as our tool to install Python and Python packages, we started looking into what the easiest ways were to get it working on a user’s machine.
 
-We started by providing a simple [`install.sh`](https://github.com/transformerlab/transformerlab-api/blob/main/install.sh) script that we hoped would do all the steps for the user.
+We started by providing a simple [`install.sh`](https://github.com/transformerlab/transformerlab-app/blob/main/api/install.sh) script that we hoped would do all the steps for the user.
 
 But things went bad. 😖
 
@@ -137,7 +137,7 @@ After months of different paths, we think we have the most reliable way to insta
 - Then finally we the conda environment’s pip to install requirements using a plain requirements.txt file — we pin ALL package libraries using `piptools` to generate the requirements files.
 - Now after everything is installed, we **manually** install the flash_attention2 package because... fun... Flash Attention doesn't work with regular pip install alongside your other dependencies :)
 
-[The contents of our `install.sh` can be seen by clicking here](https://github.com/transformerlab/transformerlab-api/blob/main/install.sh)
+[The contents of our `install.sh` can be seen by clicking here](https://github.com/transformerlab/transformerlab-app/blob/main/api/install.sh)
 
 ## What This All Looks Like In the App
 

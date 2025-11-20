@@ -7,12 +7,10 @@ import { FaApple } from "react-icons/fa";
 import { FaLinux } from "react-icons/fa";
 import { FaWindows } from "react-icons/fa";
 import appVersion from '../static/app-version.json';
-import apiVersion from '../static/api-version.json';
 
 # Download ↓
 
-Current App Version: {appVersion.version}<br/>
-Current API Version: {apiVersion.version}
+Current Version: {appVersion.version}
 
 ## <FaApple /> macOS 
 

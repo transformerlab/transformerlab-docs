@@ -167,21 +167,21 @@ If port 8338 is already in use, either:
 
 ## Building Custom Images
 
-If you need to customize the Docker image, you can find the Dockerfiles in the [TransformerLab API repository](https://github.com/transformerlab/transformerlab-api/tree/main/docker).
+If you need to customize the Docker image, you can find the Dockerfiles in the [TransformerLab App repository](https://github.com/transformerlab/transformerlab-app/tree/main/api/docker).
 
 ### Build NVIDIA/CPU Image
 
 ```bash
-git clone https://github.com/transformerlab/transformerlab-api.git
-cd transformerlab-api/docker/common
+git clone https://github.com/transformerlab/transformerlab-app.git
+cd transformerlab-app/api/docker/common
 docker build -t my-transformerlab .
 ```
 
 ### Build AMD Image
 
 ```bash
-git clone https://github.com/transformerlab/transformerlab-api.git
-cd transformerlab-api/docker/gpu/amd
+git clone https://github.com/transformerlab/transformerlab-app.git
+cd transformerlab-app/api/docker/gpu/amd
 docker build -t my-transformerlab-amd .
 ```
 
