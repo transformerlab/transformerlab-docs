@@ -32,7 +32,9 @@ To upload your own dataset:
 2. Fill out the **Template/Task Name**, pick your dataset
 3. Switch to **Plugin Config** and review every section below.
 
-> _Media placeholder: Plugin config screenshot_
+<div style={{textAlign: 'center'}}>
+  <img src={require('./gifs/diffusion_llm_trainer/config.png').default} width="600" />
+</div>
 
 ### Core Execution Settings
 
@@ -85,11 +87,15 @@ Click **Save Training Template** once everything looks correct.
 
 - **TensorBoard:** Open the sidebar log link to inspect loss and learning-rate curves directly in Transformer Lab.
 
-> _Media placeholder: TensorBoard loss screenshot_
+<div style={{textAlign: 'center'}}>
+  <img src={require('./gifs/diffusion_llm_trainer/tensorboard.png').default} width="600" />
+</div>
 
 - **Weights & Biases:** If `log_to_wandb` is enabled and your API key is set, you’ll see the run under the project configured in settings. 
 
-> _Media placeholder: W&B loss screenshot_
+<div style={{textAlign: 'center'}}>
+  <img src={require('./gifs/diffusion_llm_trainer/wandb.png').default} width="600" />
+</div>
 
 ## Step 6: Post-Training Outputs
 

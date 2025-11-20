@@ -12,7 +12,8 @@ Use the Diffusion LLM Evaluator plugin to score BERT, Dream, and LLaDA text-diff
 2. Filter by `Evaluator` and install **Diffusion LLM Evaluator**.
 3. Ensure your workspace has CUDA GPUs—the harness backend and dllm runners currently target CUDA only.
 
-> _Media placeholder: Plugin config screenshot_
+<img src={require('./gifs/diffusion-llm-evaluator/eval_config.png').default} alt="Plugin Config" width="500" />
+
 
 ## 2. Select a Model to Evaluate
 
@@ -62,7 +63,7 @@ After reviewing everything, click **Save Evaluation Template**.
 - **Results Reports:** You can view the results reports with your run and also compare the evaluation run to other evaluation runs under the Evaluate tab.
 - **Foundation Tab:** Metrics are attached to the evaluated model under provenance so you can quickly compare.
 
-> _Media placeholder: Completed run output screenshot_
+<img src={require('./gifs/diffusion-llm-evaluator/eval_output.png').default} alt="Plugin Output" width="500" />
 
 ## Tips for Reliable Harness Runs
 
