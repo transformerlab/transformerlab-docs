@@ -1,10 +1,7 @@
 ---
-title: Advanced Install
+title: Advanced Install Instructions
 sidebar_position: 20
 ---
-
-# Advanced Installation Instructions
-
 ## Manual Install Instructions:
 
 ### install.sh Remote Script
