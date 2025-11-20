@@ -13,6 +13,8 @@ When our team first started working on machine learning, we hit a wall. CUDA err
 
 And then comes the time to scale up. Moving a project to multiple GPUs can feel nearly impossible without an entire infrastructure team to help. This was our experience, and it's the core reason we started building this platform. We wanted to build the tool we wished we'd had from day one.
 
+<!-- truncate -->
+
 ![mlrp](./gpu-orchestration-details.png)
 
 ## ML Research is Messy
