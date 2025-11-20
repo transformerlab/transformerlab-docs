@@ -9,7 +9,7 @@ The Diffusion LLM Trainer plugin brings masked-language and diffusion-style alig
 ## Step 1: Install the Plugin
 
 1. Open the `Plugins` tab.
-2. Filter by `Trainer` and install **Diffusion LLM Trainer (Multi GPU)**.
+2. Filter by `Trainer` and install **Diffusion LLM Trainer**.
 3. Confirm the environment is configured for CUDA GPUs. CPU or TPU can be selected in the config, but training performance and plugin validation currently target CUDA.
 
 :::note
