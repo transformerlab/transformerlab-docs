@@ -1,7 +1,10 @@
 ---
-title: Advanced Install Instructions
+title: Advanced Install
 sidebar_position: 20
 ---
+
+# Advanced Installation Instructions
+
 ## Manual Install Instructions:
 
 ### install.sh Remote Script
@@ -32,7 +35,7 @@ https://github.com/transformerlab/transformerlab-app/releases/latest
 ```bash
 git clone https://github.com/transformerlab/transformerlab-app.git
 cd transformerlab-app/api
-git checkout v0.25.0 # where "v0.25.0" is the latest release version
+git checkout v0.26.1 # where "v0.26.1" is the latest release version
 ```
 
 **Step 3:** Install Python Dependencies
