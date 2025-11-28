@@ -62,6 +62,13 @@ const config = {
         rel: "stylesheet",
       },
     },
+    {
+      tagName: "link",
+      attributes: {
+        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap",
+        rel: "stylesheet",
+      },
+    },
   ],
 
   markdown: {

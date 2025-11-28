@@ -100,7 +100,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   /* color: var(--vp-c-text-1); */
-  /* background-color: var(--vp-c-bg); */
+  background-color: var(--vp-c-bg);
   direction: ltr;
   font-synthesis: style;
   text-rendering: optimizeLegibility;
@@ -282,9 +282,11 @@ article hr {
   font-size: clamp(1.8020324707rem,
       1.8020324707rem + 3.3995479121 * ((100vw - 20rem)/58),
       5.2015803828rem);
-  font-weight: 700;
+  /* font-weight: 600 !important; */
   margin-bottom: 10px;
   stroke: var(--ifm-heading-color);
+  font-family: "Instrument Serif";
+  font-style: italic;
 }
 
 
