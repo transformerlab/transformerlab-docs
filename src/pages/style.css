@@ -39,11 +39,11 @@ article h1 {
 }
 
 .navbar {
-    background-color: var(--ifm-navbar-background-color);
+    background-color: #e9e8e4;
     opacity: 1;
     /* backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px); */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    box-shadow: none;
 }
 
 .navbar-sidebar--show {

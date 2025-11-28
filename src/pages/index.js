@@ -4,6 +4,7 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Screenshot from "./img/cloud-screenshot.png";
+import Oscilloscope from "./img/o8.mp4";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
@@ -17,63 +18,112 @@ import CloudFeatures from "./homepage-components/CloudFeatures.tsx";
 
 function HomepageHeader() {
   return (
-    <header className={clsx("hero", styles.heroBanner)}>
-      <div id="background-holder"></div>
-      <div className={clsx("container", styles.container)}>
-        <GithubStar />
-        <h3 className={styles.announcement}>
-          Introducing Transformer Lab GPU Orchestration, a modern SLURM
-          replacement to run workloads across GPU clusters &nbsp;&nbsp;
-          <Link to="/blog/2025/10/06/gpu-orchestration">Read More...</Link>
-        </h3>
-        <h1 className={clsx("hero__title", styles.hero__title)}>
-          The essential open source workspace for AI/ML teams.
-        </h1>
-        <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-          From GPU orchestration to training, fine-tuning and evaluating models
-          across any infrastructure, Transformer Lab is the next generation
-          platform for AI/ML research.
-        </h2>
-
-        <div className={styles.buttons}>
-          <div className="block">
-            <a
-              className="button button--primary button--lg"
-              href="/beta.html"
+    <div class="container">
+      <div class="row">
+        <div class="col col--4">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+              marginTop: "20px",
+            }}
+          >
+            <div
               style={{
                 display: "flex",
+                height: "100%",
+                width: "100%",
+                minWidth: "250px",
+                maxWidth: "300px",
                 alignItems: "center",
-                textWrap: "auto",
-                backgroundColor: "var(--ifm-color-primary)",
-                border: "1px solid var(--ifm-color-primary-dark)",
-                color: "var(--ifm-button-color)",
+                marginTop: "10px",
+                mask: "url(/img/logo2.svg) no-repeat center / contain",
+                minHeight: "150px",
               }}
             >
-              Join the Beta for Transformer Lab GPU Orchestration &nbsp;
-              <FaArrowRight />
-            </a>
+              <div
+                style={{
+                  backgroundColor: "black",
+                  width: "100%",
+                  height: "100%",
+                }}
+              >
+                <video
+                  src={Oscilloscope}
+                  autoplay="true"
+                  muted="true"
+                  loop="true"
+                  playsinline="true"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "none",
+                    opacity: 1,
+                  }}
+                ></video>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          or <a href="docs/download">Download Transformer Lab Local</a>
+        <div class="col col--8">
+          <h1 className={clsx("hero__title", styles.hero__title)}>
+            Open Source ML Research{" "}
+            <span style={{ color: "#666" }}>without Limits.</span>
+          </h1>
+          <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
+            Execute modern AI experiments while using your own compute,
+            frameworks, and workflows. Transformer Lab is a platform that
+            provides the unified research layer that tracks, organizes, and
+            visualizes your experiments without locking you into a rigid stack.
+          </h2>
+          <div className={styles.buttons}>
+            <div className="block">
+              <a
+                className="button button--primary button--lg"
+                href="/beta.html"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textWrap: "auto",
+                  backgroundColor: "var(--ifm-color-primary)",
+                  border: "1px solid var(--ifm-color-primary-dark)",
+                  color: "var(--ifm-button-color)",
+                }}
+              >
+                Sign up for Multi GPU Beta &nbsp;
+                <FaArrowRight />
+              </a>
+              <br />
+              <div>
+                or <a href="docs/download">Download Transformer Lab Local</a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="spacer" />
-
-        <img
-          src={Screenshot}
-          className={clsx("video_container", styles.video_container)}
-        />
-
-        <section className={styles.bigWhy}>
-          <BigWhy />
-        </section>
-        <CloudVSLocalPage />
-        <CloudFeatures />
-        <AllFeatures />
-
-        <UserValidation />
       </div>
-    </header>
+      <div class="row">
+        <div class="col col--12">
+          <div className="spacer" />
+
+          <img
+            src={Screenshot}
+            className={clsx("video_container", styles.video_container)}
+          />
+
+          <section className={styles.bigWhy}>
+            <BigWhy />
+          </section>
+          <CloudVSLocalPage />
+          <CloudFeatures />
+          <AllFeatures />
+
+          <UserValidation />
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -82,7 +132,7 @@ export default function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Documentation for LLM Toolkit, Transformer Lab"
+      description="Documentation for Transformer Lab, the open source platform for AI/ML researchers."
     >
       <HomepageHeader />
       <main>
