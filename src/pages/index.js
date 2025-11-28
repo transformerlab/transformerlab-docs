@@ -69,14 +69,14 @@ function HomepageHeader() {
         </div>
         <div class="col col--8">
           <h1 className={clsx("hero__title", styles.hero__title)}>
-            Open Source ML Research{" "}
-            <span style={{ color: "#666" }}>without Limits.</span>
+            We&rsquo;re here for the{" "}
+            <span style={{ color: "#666" }}>Era of Research.</span>
           </h1>
           <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-            Execute modern AI experiments while using your own compute,
-            frameworks, and workflows. Transformer Lab is a platform that
-            provides the unified research layer that tracks, organizes, and
-            visualizes your experiments without locking you into a rigid stack.
+            Execute modern AI experiments while using your own compute and
+            frameworks. Transformer Lab provides the unified research layer that
+            tracks, organizes, and visualizes your experiments without locking
+            you into a rigid stack.
           </h2>
           <div className={styles.buttons}>
             <div className="block">
