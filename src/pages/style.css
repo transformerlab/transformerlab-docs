@@ -39,12 +39,19 @@ article h1 {
 }
 
 .navbar {
-    background-color: #e9e8e4;
     opacity: 1;
-    /* backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px); */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     box-shadow: none;
+    background-color: var(--vp-c-bg);
 }
+
+[data-theme="dark"] .navbar {
+    background-color: black;
+    box-shadow: none;
+    opacity: 1;
+}
+
 
 .navbar-sidebar--show {
     opacity: 1;
