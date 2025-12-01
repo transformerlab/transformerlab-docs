@@ -117,17 +117,21 @@ function HomepageHeader() {
             src={Screenshot}
             className={clsx("video_container", styles.video_container)}
           />
-
+        </div>
+      </div>
+      <div class="row">
+        <div class="col col--12">
           <section className={styles.bigWhy}>
             <BigWhy />
           </section>
-          <CloudVSLocalPage />
-          <CloudFeatures />
-          <AllFeatures />
-
-          <UserValidation />
         </div>
       </div>
+      {/* <div class="row">
+        <CloudVSLocalPage />
+      </div> */}
+      <CloudFeatures />
+      <AllFeatures />
+      <UserValidation />
     </div>
   );
 }

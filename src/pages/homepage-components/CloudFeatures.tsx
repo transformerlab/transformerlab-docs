@@ -11,7 +11,7 @@ import RayKubeImage from "./features-cloud/img/raykube.png";
 
 export default function CloudFeatures() {
   return (
-    <div className={"all-features"}>
+    <>
       <FeatureCard
         video={
           <img
@@ -54,6 +54,6 @@ export default function CloudFeatures() {
         }
         text={<FeatureBuiltOn />}
       /> */}
-    </div>
+    </>
   );
 }

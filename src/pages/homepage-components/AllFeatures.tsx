@@ -22,7 +22,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 export default function AllFeatures() {
   return (
-    <div className={"all-features"}>
+    <>
       {/* <FeatureCard
         video={<img src={ModelsImage} />}
         text={<FeaturePopularModels />}
@@ -74,6 +74,6 @@ export default function AllFeatures() {
         video={<img src={PlatformsImage} />}
         text={<FeatureHardware />}
       /> */}
-    </div>
+    </>
   );
 }

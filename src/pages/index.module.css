@@ -123,8 +123,8 @@ h2.hero__subtitle {
 }
 
 .bigWhy {
-  padding: 2rem;
-  margin: 2rem 2rem;
+  /* padding: 4rem; */
+  margin: 4rem 2rem 0 2rem;
   color: var(--ifm-font-color-secondary);
 }
 

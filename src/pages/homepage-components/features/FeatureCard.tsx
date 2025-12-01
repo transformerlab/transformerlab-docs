@@ -4,14 +4,26 @@ import styles from "./features.module.css";
 
 export default function FeatureCard({ video, text, flip = false }) {
   return (
-    <div
-      className={clsx("feature-card row", styles.featureCard)}
-      style={{ flexDirection: flip ? "row-reverse" : "row" }}
-    >
-      <div className={clsx("col col--6", styles.featureCardVideo)}>{video}</div>
-      <div className={clsx("col col--6 featureCard", styles.featureCardText)}>
-        {text}
-      </div>
+    <div className={clsx("row", styles.featureCard)} style={{}}>
+      {flip ? (
+        <>
+          <div className={clsx("col col--6", styles.featureCardText)}>
+            {text}
+          </div>
+          <div className={clsx("col col--6", styles.featureCardVideo)}>
+            {video}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={clsx("col col--6", styles.featureCardVideo)}>
+            {video}
+          </div>
+          <div className={clsx("col col--6", styles.featureCardText)}>
+            {text}
+          </div>
+        </>
+      )}
     </div>
   );
 }

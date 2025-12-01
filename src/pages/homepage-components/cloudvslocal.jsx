@@ -17,27 +17,8 @@ export default function CloudVSLocal() {
 
 
   return (
-
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "flex-start",
-        gap: "20px",
-        flexWrap: "wrap",
-      }}
-      className="documentation-flex-container"
-    >
-      <div
-        style={{
-          // border: "2px solid var(--ifm-color-primary-darkest)",
-          borderRadius: "10px",
-          padding: "20px",
-          flex: 1,
-          minWidth: "300px",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
+    <>
+      <div className="col col--6">
         <div style={{ display: "flex", justifyContent: "flex-start" }}>
           <video
             src={require("../img/singlenode.mov").default}
@@ -48,7 +29,7 @@ export default function CloudVSLocal() {
             autoPlay
             poster={require("../img/singlenode.png").default}
           />
-        </div>
+        </div >
         <h2 style={{ paddingTop: "1rem" }}>
           Are you a <span style={{ color: "var(--ifm-color-primary)" }}>solo researcher</span>{' '}
           who just wants to run / train / eval models locally?
@@ -63,18 +44,8 @@ export default function CloudVSLocal() {
           </div>
         </div>
       </div>
-      <div
-        style={{
-          // border: "2px solid var(--ifm-color-primary-darkest)",
-          borderRadius: "10px",
-          padding: "20px",
-          flex: 1,
-          minWidth: "300px",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+      <div className="col col--6">
+        <div>
           <video
             src={require("../img/multinode.mov").default}
             width={300}
@@ -97,7 +68,6 @@ export default function CloudVSLocal() {
           <a href="/beta.html" className="button button--primary button--lg">Join the Beta</a>
         </span>
       </div>
-    </div>
-
+    </>
   );
 }
