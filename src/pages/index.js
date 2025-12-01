@@ -79,9 +79,9 @@ function HomepageHeader() {
             <span style={{ color: "#666" }}>Era of Research.</span>
           </h1>
           <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-            Designed for ML researchers. With Transformer Lab, reliably training
-            large AI / ML models has never been easier. Local or in the cloud.
-            Open source.
+            With Transformer Lab, reliably training large AI / ML models has
+            never been easier. Local or in the cloud. Designed for ML
+            researchers. Open source.
           </h2>
           <div className={styles.buttons}>
             <div className="block">
