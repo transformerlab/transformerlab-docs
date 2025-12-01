@@ -124,3 +124,15 @@ div.feature-card.row ul {
     vertical-align: middle;
     margin-right: 0.4rem;
 }
+
+#milkyway-container {
+    width: 340px;
+    height: 340px;
+}
+
+@media screen and (max-width: 996px) {
+    #milkyway-container {
+        width: 100px;
+        height: 100px;
+    }
+}

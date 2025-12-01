@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Screenshot from "./img/cloud-screenshot.png";
-import Oscilloscope from "./img/o8.mp4";
+import Milkyway from "./img/milkyway.webp";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
@@ -17,9 +17,22 @@ import { FaArrowRight } from "react-icons/fa";
 import CloudFeatures from "./homepage-components/CloudFeatures.tsx";
 
 function HomepageHeader() {
+  const [rotation, setRotation] = useState(0);
+
+  // Configurable constants
+  const rotationSpeed = 0.03; // Degrees per frame
+  const rotationPoint = "50% 50%"; // Point of rotation
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRotation((prev) => (prev + rotationSpeed) % 360);
+    }, 16); // ~60 FPS
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div class="container">
-      <div class="row">
+      <div class="row" style={{ paddingTop: "1.5rem" }}>
         <div class="col col--4">
           <div
             style={{
@@ -27,42 +40,34 @@ function HomepageHeader() {
               justifyContent: "center",
               alignItems: "center",
               height: "100%",
-              marginTop: "20px",
             }}
           >
             <div
+              id="milkyway-container"
               style={{
                 display: "flex",
-                height: "100%",
-                width: "100%",
-                minWidth: "250px",
-                maxWidth: "300px",
                 alignItems: "center",
-                marginTop: "10px",
                 mask: "url(/img/logo2.svg) no-repeat center / contain",
-                minHeight: "150px",
+                overflow: "none",
               }}
             >
               <div
                 style={{
                   backgroundColor: "black",
-                  width: "100%",
-                  height: "100%",
                 }}
               >
-                <video
-                  src={Oscilloscope}
-                  autoplay="true"
-                  muted="true"
-                  loop="true"
-                  playsinline="true"
+                <img
+                  src={Milkyway}
                   style={{
-                    width: "100%",
-                    height: "100%",
+                    maxWidth: "none",
                     objectFit: "none",
                     opacity: 1,
+                    translate: "-800px -10%",
+                    transformOrigin: rotationPoint, // Set rotation point
+                    transform: `rotate(${rotation}deg)`, // Apply rotation
+                    xborder: "15px solid red",
                   }}
-                ></video>
+                ></img>
               </div>
             </div>
           </div>
