@@ -40,6 +40,7 @@ function HomepageHeader() {
               justifyContent: "center",
               alignItems: "center",
               height: "100%",
+              overflow: "hidden",
             }}
           >
             <div

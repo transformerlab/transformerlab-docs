@@ -24,11 +24,10 @@ const userValidations = [
 
 const UserValidation = () => (
     <section style={{
-        background: "#f9fafb",
         padding: "4rem 0",
         textAlign: "center"
     }}>
-        <h2 style={{ fontSize: "2rem", marginBottom: "2rem", fontWeight: 700, color: "#111827" }}>
+        <h2 style={{ fontSize: "2rem", marginBottom: "2rem", fontWeight: 700 }}>
             Trusted by Innovative Teams
         </h2>
         <div style={{
