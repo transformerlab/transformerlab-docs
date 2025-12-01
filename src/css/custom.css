@@ -14,7 +14,7 @@
   --ifm-color-primary-lighter: #c0c5cf;
   --ifm-color-primary-lightest: #dee0e5;
   --ifm-heading-color: 'black';
-  --ifm-font-family-base: 'Inter', ui-sans-serif,
+  --ifm-font-family-base: 'DM Sans', ui-sans-serif,
     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Helvetica, Arial, 'Noto Sans', sans-serif;
 }
@@ -47,7 +47,7 @@ h2,
 h3,
 h4,
 h5 {
-  letter-spacing: -0.04em;
+  letter-spacing: -0.01em;
 }
 
 .theme-doc-sidebar-container {

@@ -35,13 +35,14 @@ h1.hero__title {
 h2.hero__subtitle {
   font-size: clamp(1rem,
       1rem + 1 * ((100vw - 20rem) / 58),
-      1.5rem);
+      1.3rem);
   text-align: left;
   font-weight: 400;
   /* max-width: 70%; */
   line-height: 1.4;
   color: var(--ifm-font-color-secondary);
   margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
 }
 
 @media screen and (max-width: 996px) {
