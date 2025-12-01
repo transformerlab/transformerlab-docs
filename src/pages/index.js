@@ -31,7 +31,7 @@ function HomepageHeader() {
   }, []);
 
   return (
-    <div class="container">
+    <div class="container homepage">
       <div class="row" style={{ paddingTop: "1.5rem" }}>
         <div class="col col--4">
           <div

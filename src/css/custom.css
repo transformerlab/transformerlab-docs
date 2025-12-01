@@ -50,6 +50,17 @@ h5 {
   letter-spacing: -0.01em;
 }
 
+.homepage h1,
+.homepage h2,
+.homepage h3 {
+  color: var(--ifm-heading-color);
+  font-family: 'Bricolage Grotesque';
+  font-weight: 400;
+  font-variation-settings:
+    "wdth" 100,
+    "wght" 400;
+}
+
 .theme-doc-sidebar-container {
   border-right: 0px var(--ifm-heading-color) !important;
 }
@@ -277,7 +288,7 @@ article hr {
 
 /* End Vitepress CSS */
 
-.hero__title {
+.homepage .hero__title {
   letter-spacing: -0.02em;
   line-height: 1;
   font-size: clamp(1.8020324707rem,
@@ -288,6 +299,7 @@ article hr {
   stroke: var(--ifm-heading-color);
   font-family: "Instrument Serif";
   font-style: italic;
+
 }
 
 

@@ -8,8 +8,8 @@ export default function FeatureCard({ video, text, flip = false }) {
       className={clsx("feature-card row", styles.featureCard)}
       style={{ flexDirection: flip ? "row-reverse" : "row" }}
     >
-      <div className={clsx("col col--7", styles.featureCardVideo)}>{video}</div>
-      <div className={clsx("col col--5 featureCard", styles.featureCardText)}>
+      <div className={clsx("col col--6", styles.featureCardVideo)}>{video}</div>
+      <div className={clsx("col col--6 featureCard", styles.featureCardText)}>
         {text}
       </div>
     </div>
