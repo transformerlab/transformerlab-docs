@@ -7,19 +7,19 @@ export default function FeatureCard({ video, text, flip = false }) {
     <div className={clsx("row", styles.featureCard)} style={{}}>
       {flip ? (
         <>
-          <div className={clsx("col col--6", styles.featureCardText)}>
+          <div className={clsx("col col--7", styles.featureCardText)}>
             {text}
           </div>
-          <div className={clsx("col col--6", styles.featureCardVideo)}>
+          <div className={clsx("col col--5", styles.featureCardVideo)}>
             {video}
           </div>
         </>
       ) : (
         <>
-          <div className={clsx("col col--6", styles.featureCardVideo)}>
+          <div className={clsx("col col--5", styles.featureCardVideo)}>
             {video}
           </div>
-          <div className={clsx("col col--6", styles.featureCardText)}>
+          <div className={clsx("col col--7", styles.featureCardText)}>
             {text}
           </div>
         </>
