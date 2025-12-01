@@ -49,14 +49,10 @@ export default function CloudVSLocal() {
             poster={require("../img/singlenode.png").default}
           />
         </div>
-        <p>
-          For Individuals
-        </p>
-        <h1 className="bitcount-grid-double-heading">
-          <span style={{ color: "var(--ifm-color-primary)" }}>
-            Transformer Lab Local
-          </span> for Single Node Workloads
-        </h1>
+        <h2 style={{ paddingTop: "1rem" }}>
+          Are you a <span style={{ color: "var(--ifm-color-primary)" }}>solo researcher</span>{' '}
+          who just wants to run / train / eval models locally?
+        </h2>
         <p>
           Train, test, and eval models (LLMs, Diffusion, Audio) on a single
           node.
@@ -89,15 +85,10 @@ export default function CloudVSLocal() {
             poster={require("../img/multinode.png").default}
           />
         </div>
-        <p>
-          For teams
-        </p>
-        <h1 className="bitcount-grid-double-heading">
-          <span style={{ color: "var(--ifm-color-primary)" }}>
-            Transformer Lab
-          </span>{" "}
-          GPU Orchestration
-        </h1>
+        <h2 style={{ paddingTop: "1rem" }}>
+          Are you a <span style={{ color: "var(--ifm-color-primary)" }}>on a team</span>{' '}
+          where you work together to train and build models on a cluster?
+        </h2>
         <p>
           Run workloads on multiple nodes with multi-cloud job
           scheduling, experiment management, and monitoring. A modern SLURM replacement built on SkyPilot.
