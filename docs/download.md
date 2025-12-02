@@ -10,6 +10,10 @@ import appVersion from '../static/app-version.json';
 
 # Download ↓
 
+:::warning
+We are moving away from a downloadable app in our upcoming release. Please install Transformer Lab [on the commandline by following the instructions here](./install/install.md).
+:::
+
 Current Version: {appVersion.version}
 
 ## <FaApple /> macOS 

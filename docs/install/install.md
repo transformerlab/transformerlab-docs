@@ -1,79 +1,60 @@
 ---
 title: Install
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 import Button from '@site/src/components/Button';
+import { FaApple } from "react-icons/fa";
+import { FaWindows } from "react-icons/fa";
+import { FaLinux } from "react-icons/fa";
+
 
 # Install
 
-## Install on Mac
+## Pre-Requisites
 
-[Download the app](/docs/download.md) on your Mac (with Apple Silicon) and follow the on-screen instructions.
+* MacOS <FaApple/>, Linux <FaLinux/>, or Windows (inside WSL2) <FaWindows/>
+* Git and curl installed
 
-## Install on Windows
-
-For Windows users, you should be able to download our application from our downloads page and have it work out of the box. But if you haven't installed WSL2 or CUDA drivers before, the following instructions will help you set up your computer to ensure everything works.
-
-### Step 1 - Install WSL2 and CUDA
-
-CUDA is the toolkit that allows you to connect to NVIDIA GPUs. You can skip installing CUDA if you do not have an NVIDIA GPU. Without CUDA, Transformer Lab can do basic tasks, but an NVIDIA GPU is needed to unlock advanced LLM work.
-
-To run Transformer Lab, you also need to install WSL2. WSL2 is a full Linux kernel integration in Windows that enables running Linux distributions natively -- this is where our Transformer Lab's Python Machine Learning workspace will run.
-
-Instructions for installing both WSL2 and CUDA are in the following document:
-
-https://learn.microsoft.com/en-us/windows/ai/directml/gpu-cuda-in-wsl
-
-Essentially, you need to install the CUDA toolkit which you can find here:
-
-https://developer.nvidia.com/cuda-downloads
-
-And then you need to install WSL2 on Windows by running the following command in the Windows Powershell (run as administrator).
+## Step 1. Install Transformer Lab
 
 ```bash
-wsl --install
+curl https://transformerlab.ai/install.sh | bash
 ```
 
-(Detailed instructions for installing WSL2 are [here](https://learn.microsoft.com/en-us/windows/wsl/install).)
+## Step 2. Run Transformer Lab
 
-:::note
-
-For Transformer Lab to work, make sure that your default WSL instance is **Ubuntu**. WSL lets you install multiple distros but you can set the default using the following command:
-
-```
-wsl --set-default Ubuntu
+```bash
+cd ~/.transformerlab/src
+./run.sh
 ```
 
-:::
+## Step 3. Access the Web UI
 
-### Step 2 - Download Transformer Lab for Windows
+You can now go to any modern browser and visit the URL of the server that was run by the previous command. For example if you are running on localhost, open Firefox or Chrome and visit:
 
-<a href="https://transformerlab.ai/docs/download">
-    <Button>Download Transformer Lab</Button>
-</a>
+`http://localhost:8338`
 
-### Step 3 - Run the Installer
+Here is a screenshot of what you should see:
 
-Double-click on the Application. The first time you run it, Windows may pop up a warning that looks like the following:
+![Web UI](./img/webui.png)
 
-![Warning](./img/windows-defender.png)
 
-If you see that, click on "More Info" and then "Run Anyway" to allow Windows to run the app for the first time.
+## Platform Specific Tips:
 
-### Step 4 - Install Dependencies
+### Windows 
 
-If you select Local Install, Transformer Lab will go through the steps to install itself locally along with all of the dependencies. This step takes a long time the very first time you run the app, but will be fast afterwards.
+1. Make sure you have WSL and CUDA drivers installed ([detailed instructions here](./windows-wsl-cuda.md))
 
-## Install on Linux
+### Linux 
 
-### What Distro
-
-Transformer Lab should work on most distros of Linux that support your GPU. If you are getting started from scratch and have an NVIDIA GPU, we recommend installing [PopOS](https://pop.system76.com/) because it has great support for automatically installing NVIDIA drivers.
+:::tip
+Transformer Lab should work on most distros of Linux that support your GPU. We recommend [PopOS](https://pop.system76.com/) because it has great support for automatically installing NVIDIA drivers.
 
 If you have a machine with an [AMD GPU, follow the instructions here](./install-on-amd.md).
 
 ![PopOS Screenshot](./img/popos.webp)
+:::
 
 ### Step 1 - Ensure NVIDIA Drivers are Installed
 
@@ -93,38 +74,4 @@ If you need to install the nvidia drivers from scratch, there are instructions b
 - For Ubuntu: https://ubuntu.com/server/docs/nvidia-drivers-installation
 - For everything else: https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/index.html
 
-### Step 2 - Download and Install Transformer Lab
 
-Now follow the [cloud install instructions](./install-on-cloud.md) to install Transformer Lab as a local web app.
-
-
-## Uninstall Application
-
-- **MacOS:** Delete the Transformer Lab application from your `/Applications` Folder
-- **Windows:** Uninstall the Application
-- **Linux:** Delete the App whereever you stored it
-
-### Stored Data
-
-- Transformer Lab stores models and data in your `~/.transformerlab/` folder -- deleting everything there will destroy all your settings and experiments
-- On MacOS, there may be a small folder in `~/Library/Logs/transformerlab/`
-
-For MacOS, here is a script you can run in a Terminal that will do all of the above steps:
-
-```bash
-rm -rf /Applications/Transformer\ Lab.app/
-rm -rf ~/.transformerlab/
-rm -rf ~/Library/Logs/transformerlab/
-```
-
-This will remove all the packages installed for Transformer Lab, freeing up space.
-
-### Clear Python Cache
-
-Transformer Lab uses `uv` to install Python packages. You may also want to clear the `uv` cache. Instructions are below:
-
-https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache
-
-### Delete Models and Datasets
-
-Most models and datasets that are downloaded in Transformer Lab are downloaded using Hugging Face Hub which stores them at `~/.cache/huggingface/hub`. Delete this directory to remove the large model files, unless you want them available to other applications.

@@ -1,6 +1,8 @@
 ---
 title: Running with Docker
-sidebar_position: 11
+sidebar_position: 110
+draft: true
+# I made this document DRAFT for now as we need to re-test under our new architecture
 ---
 Transformer Lab provides pre-built Docker images that make it easy to get started quickly without worrying about dependencies or environment setup. This guide covers how to run Transformer Lab using Docker containers.
 

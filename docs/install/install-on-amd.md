@@ -1,15 +1,11 @@
 ---
-title: Install on AMD GPUs (Linux & Windows)
-sidebar_position: 6
+title: Setting up an AMD Computer for Machine Learning
+sidebar_position: 20
 ---
 
 import Button from '@site/src/components/Button';
 
-:::tip
-
-These are instructions to install Transformer Lab as an App on systems with AMD GPUs. You can also install Transformer Lab as a WebUI locally or in the cloud, which will allow you to run Transformer Lab in a web browser. [Click here to learn more](./install-on-cloud.md).
-
-:::
+# Advanced: Setting up an AMD Computer for Machine Learning
 
 ## Table of Contents
 
@@ -18,11 +14,11 @@ These are instructions to install Transformer Lab as an App on systems with AMD 
 
 ## Linux Instructions
 
-For most situations, you can just download Transformer Lab and it should work as is. But if you are setting up from scratch and haven't installed ROCm drivers (drivers for your AMD GPU), the following instructions can help.
+For most situations, you can just download Transformer Lab and it should work as is. But if you are setting up from scratch and haven't installed ROCm drivers (drivers for your AMD GPU), the following instructions will help you set up your AMD GPU computer for machine learning.
 
 ### Supported Linux Distributions
 
-Transformer Lab should work on most distros of Linux. If you are getting started from scratch, we recommend installing [Ubuntu 24.04 (or 22.04)](https://ubuntu.com/) as they have good support for AMD GPUs and ROCm.
+You can set up ROCm on many distros of Linux. If you are getting started from scratch, we recommend installing [Ubuntu 24.04 (or 22.04)](https://ubuntu.com/) as they have good support for AMD GPUs and ROCm.
 
 ### Step 1 - Ensure ROCm Drivers are Installed
 
@@ -38,7 +34,8 @@ rocm-smi
 
 If this worked, congratulations, ROCm support for your Linux install is working and you can proceed with downloading and installing Transformer Lab.
 
-If you need to install ROCm drivers from scratch, follow the official ROCm installation instructions for your Linux distribution.  
+If you need to install ROCm drivers from scratch, follow the official ROCm installation instructions for your Linux distribution.
+
 Below are the recommended commands for installing ROCm 6.4 on **Ubuntu 24.04**. For other distributions, please refer to the [official ROCm installation guide](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/install/amdgpu-install.html).
 
 ```bash

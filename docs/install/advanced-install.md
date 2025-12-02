@@ -1,9 +1,9 @@
 ---
-title: Advanced Install
-sidebar_position: 20
+title: Manual Install
+sidebar_position: 5
 ---
 
-# Advanced Installation Instructions
+# Manual Installation Instructions
 
 ## Manual Install Instructions:
 
