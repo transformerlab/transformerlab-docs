@@ -69,7 +69,7 @@ sudo apt install curl git
 
 ### Step 2 - Download and Install Transformer Lab
 
-Now follow the [cloud install instructions](./install-on-cloud.md).
+Now follow the [install instructions](./install.md).
 
 
 ## Windows Instructions

@@ -9,7 +9,7 @@ sidebar_position: 5
 
 ### install.sh Remote Script
 
-The recommended way to install the app on a server is to follow the instructions for [Installing on Cloud](./install-on-cloud.md). If you want to do all the steps manually, then the instructions below describe what `install.sh` does behind the scenes.
+The recommended way to install the app on a server is to follow the instructions for [Installing](./install.md). If you want to do all the steps manually, then the instructions below describe what `install.sh` does behind the scenes.
 
 ### Manual step-by-step Install
 

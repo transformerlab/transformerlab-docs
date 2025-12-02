@@ -40,4 +40,4 @@ Local Connection on Windows requires Windows 10+ with WSL installed.
 
 ## <FaLinux/> Linux
 
-Follow our [Cloud Install Instructions](./install/install-on-cloud.md)
+Follow our [Install Instructions](./install/install.md)
