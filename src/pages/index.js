@@ -79,31 +79,26 @@ function HomepageHeader() {
             <span style={{ color: "#666" }}>Era of Research.</span>
           </h1>
           <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-            With Transformer Lab, reliably training large AI / ML models has
-            never been easier. Local or in the cloud. Designed for ML
-            researchers. Open source.
+            A Machine Learning Research Platform designed for frontier AI/ML
+            workflows. Local or in the cloud. Designed for ML researchers. Open
+            source.
           </h2>
           <div className={styles.buttons}>
             <div className="block">
-              <a
+              <Link
+                to="/docs/install/"
                 className="button button--primary button--lg"
-                href="/beta.html"
                 style={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  textWrap: "auto",
-                  backgroundColor: "var(--ifm-color-primary)",
-                  border: "1px solid var(--ifm-color-primary-dark)",
-                  color: "var(--ifm-button-color)",
                 }}
               >
-                Sign up for Multi GPU Beta &nbsp;
+                Get Started Now &nbsp;
                 <FaArrowRight />
-              </a>
-              <br />
-              <div>
-                or <a href="docs/download">Download Transformer Lab Local</a>
+              </Link>
+              <div style={{ marginTop: "1rem" }}>
+                or <a href="/beta.html">Book a Demo</a>
               </div>
             </div>
           </div>

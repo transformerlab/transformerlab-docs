@@ -124,14 +124,18 @@ h2.hero__subtitle {
 
 .bigWhy {
   /* padding: 4rem; */
-  margin: 4rem 2rem 0 2rem;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem 2rem 2rem;
   color: var(--ifm-font-color-secondary);
+  border: 10px solid var(--ifm-color-primary-lighter);
+  border-radius: 10px;
 }
 
 .bigWhy h1 {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 800;
   margin-bottom: 1rem;
+  font-family: "Instrument Serif", serif;
 }
 
 .bigWhy p {
