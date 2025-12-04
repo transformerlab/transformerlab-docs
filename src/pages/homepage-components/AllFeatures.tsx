@@ -23,26 +23,6 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 export default function AllFeatures() {
   return (
     <>
-      {/* <FeatureCard
-        video={<img src={ModelsImage} />}
-        text={<FeaturePopularModels />}
-      /> */}
-      {/* <FeatureCard
-        video={
-          <MuxPlayer
-            loading="viewport"
-            autoPlay
-            loop
-            playbackId="100801H57yljCfI83T8AM00exAYT661sKFyCjyTgF4rR9k"
-            metadata={{
-              video_id: "video-id-123456",
-              video_title: "Inference",
-            }}
-          />
-        }
-        text={<FeatureChat />}
-        flip
-      /> */}
       <FeatureCard
         video={
           <MuxPlayer

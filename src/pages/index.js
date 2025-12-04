@@ -4,7 +4,6 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Screenshot from "./img/cloud-screenshot.png";
-import Milkyway from "./img/milkyway.webp";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
@@ -58,7 +57,7 @@ function HomepageHeader() {
                 }}
               >
                 <img
-                  src={Milkyway}
+                  src="/img/milkyway.webp"
                   style={{
                     maxWidth: "none",
                     objectFit: "none",
@@ -80,8 +79,7 @@ function HomepageHeader() {
           </h1>
           <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
             A Machine Learning Research Platform designed for frontier AI/ML
-            workflows. Local or in the cloud. Designed for ML researchers. Open
-            source.
+            workflows. Local or in the cloud. Open source.
           </h2>
           <div className={styles.buttons}>
             <div className="block">
@@ -97,7 +95,7 @@ function HomepageHeader() {
                 Get Started Now &nbsp;
                 <FaArrowRight />
               </Link>
-              <div style={{ marginTop: "1rem" }}>
+              <div style={{ marginTop: "1rem", marginLeft: "0.3rem" }}>
                 or <a href="/beta.html">Book a Demo</a>
               </div>
             </div>
