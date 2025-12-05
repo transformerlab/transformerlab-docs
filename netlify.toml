@@ -12,3 +12,10 @@
 # Optional: Configure build hooks that can receive parameters
 [template.environment]
   APP_VERSION = "Set automatically by build hook"
+
+
+[[redirects]]
+  from = "https://transformerlab.ai/*"
+  to = "https://lab.cloud/:splat"
+  status = 301
+  force = true
