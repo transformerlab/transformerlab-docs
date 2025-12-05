@@ -34,9 +34,9 @@ function HomepageHeader() {
       <div class="row" style={{ paddingTop: "1.5rem" }}>
         <div class="col col--4">
           <div
+            id="milkyway-outer-container"
             style={{
               display: "flex",
-              justifyContent: "center",
               alignItems: "center",
               height: "100%",
               overflow: "hidden",
@@ -78,8 +78,8 @@ function HomepageHeader() {
             <span style={{ color: "#666" }}>Era of Research.</span>
           </h1>
           <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
-            A Machine Learning Research Platform designed for frontier AI/ML
-            workflows. Local or in the cloud. Open source.
+            Transformer Lab is a Machine Learning Research Platform designed for
+            frontier AI/ML workflows. Local or in the cloud. Open source.
           </h2>
           <div className={styles.buttons}>
             <div className="block">
@@ -122,7 +122,6 @@ function HomepageHeader() {
       {/* <div class="row">
         <CloudVSLocalPage />
       </div> */}
-      <CloudFeatures />
       <AllFeatures />
       <UserValidation />
     </div>

@@ -125,14 +125,24 @@ div.feature-card.row ul {
     margin-right: 0.4rem;
 }
 
+#milkyway-outer-container {
+    display: flex;
+    justify-content: center;
+}
+
 #milkyway-container {
-    width: 340px;
-    height: 340px;
+    width: 260px;
+    height: 260px;
 }
 
 @media screen and (max-width: 996px) {
     #milkyway-container {
         width: 100px;
         height: 100px;
+    }
+
+    #milkyway-outer-container {
+        display: flex;
+        justify-content: flex-start;
     }
 }
