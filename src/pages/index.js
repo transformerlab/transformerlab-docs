@@ -13,7 +13,6 @@ import BigWhy from "./homepage-components/bigwhy.mdx";
 import CloudVSLocalPage from "./homepage-components/cloudvslocal.jsx";
 import UserValidation from "./homepage-components/uservalidation.jsx";
 import { FaArrowRight } from "react-icons/fa";
-import CloudFeatures from "./homepage-components/CloudFeatures.tsx";
 
 function HomepageHeader() {
   const [rotation, setRotation] = useState(0);
@@ -79,7 +78,8 @@ function HomepageHeader() {
           </h1>
           <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
             Transformer Lab is a Machine Learning Research Platform designed for
-            frontier AI/ML workflows. Local or in the cloud. Open source.
+            frontier AI/ML workflows. Local, on-prem, or in the cloud. Open
+            source.
           </h2>
           <div className={styles.buttons}>
             <div className="block">
@@ -119,9 +119,6 @@ function HomepageHeader() {
           </section>
         </div>
       </div>
-      {/* <div class="row">
-        <CloudVSLocalPage />
-      </div> */}
       <AllFeatures />
       <UserValidation />
     </div>

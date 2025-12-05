@@ -13,7 +13,7 @@ Transformer Lab is excited to announce robust multi-GPU support for fine-tuning 
 
 We've enhanced two of our most popular training plugins to take advantage of multiple GPUs:
 
-1. **Llama SFT Trainer -- Huggingface TRL (Multi GPU Support)**
+1. **Llama SFT Trainer -- Hugging Face TRL (Multi GPU Support)**
 2. **GRPO Trainer (Multi GPU)**
 
 Both plugins deliver the same user-friendly experience you're familiar with, now with the added power of distributed training across your GPU fleet.
@@ -24,7 +24,7 @@ Both plugins deliver the same user-friendly experience you're familiar with, now
 
 ### For Llama SFT Trainer
 
-1. Install the plugin named "Llama SFT Trainer -- Huggingface TRL (Multi GPU Support)"
+1. Install the plugin named "Llama SFT Trainer -- Hugging Face TRL (Multi GPU Support)"
 2. Navigate to the Train Tab
 3. Click the `+ New` button
 4. Select the Llama Trainer Multi GPU plugin from the list

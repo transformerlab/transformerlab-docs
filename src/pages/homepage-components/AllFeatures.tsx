@@ -1,28 +1,29 @@
-import FeaturePopularModels from "./features/feature-popular-models.mdx";
-import FeatureChat from "./features/feature-chat.mdx";
 import FeatureTrain from "./features/feature-train.mdx";
 import FeatureEvals from "./features/feature-evaluate-models.mdx";
-import FeaturePlugins from "./features/feature-plugins.mdx";
-import FeatureRag from "./features/feature-rag.mdx";
-import FeatureHardware from "./features/feature-hardware.mdx";
 import FeatureDiffusion from "./features/feature-diffusion.mdx";
 import FeatureCard from "./features/FeatureCard";
 
-import ModelsImage from "./features/img/models.png";
 import MuxPlayer from "@mux/mux-player-react/lazy";
+import FeatureOrchestrate from "./features/feature-orchestrate.mdx";
+import FeatureExperiments from "./features/feature-experiments.mdx";
+import FeatureCheckpoints from "./features/feature-checkpoints.mdx";
+import FeaturesWorksWith from "./features/feature-works-with.mdx";
+
 import TrainImage from "./features/img/train.png";
 import EvalImage from "./features/img/eval.png";
-import PluginsImage from "./features/img/plugins.png";
-import RagImage from "./features/img/rag.png";
-import PlatformsImage from "./features/img/platforms.png";
-import DiffusionImage from "./features/img/diffusion.png";
-
-import React from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import ExperimentImage from "./features/img/experiments.png";
+import CheckpointsImage from "./features/img/checkpoints.png";
+import LossFunctionImage from "./features/img/lossfunction.png";
+import WorksWithImage from "./features/img/workswith.png";
 
 export default function AllFeatures() {
   return (
     <>
+      <FeatureCard
+        video={<img src={TrainImage} />}
+        text={<FeatureOrchestrate />}
+        flip
+      />
       <FeatureCard
         video={
           <MuxPlayer
@@ -39,21 +40,25 @@ export default function AllFeatures() {
         text={<FeatureDiffusion />}
       />
       <FeatureCard
-        video={<img src={TrainImage} />}
+        video={<img src={ExperimentImage} />}
+        text={<FeatureExperiments />}
+        flip
+      />
+      <FeatureCard
+        video={<img src={CheckpointsImage} />}
+        text={<FeatureCheckpoints />}
+      />
+      <FeatureCard
+        video={<img src={LossFunctionImage} />}
         text={<FeatureTrain />}
         flip
       />
       <FeatureCard video={<img src={EvalImage} />} text={<FeatureEvals />} />
-      {/*<FeatureCard
-        video={<img src={PluginsImage} />}
-        text={<FeaturePlugins />}
+      <FeatureCard
+        video={<img src={WorksWithImage} />}
+        text={<FeaturesWorksWith />}
         flip
-      />*/}
-      {/* <FeatureCard video={<img src={RagImage} />} text={<FeatureRag />} /> */}
-      {/* <FeatureCard
-        video={<img src={PlatformsImage} />}
-        text={<FeatureHardware />}
-      /> */}
+      />
     </>
   );
 }

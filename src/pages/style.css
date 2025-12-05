@@ -97,9 +97,9 @@ div.feature-card.row ul {
     filter: invert(0);
 } */
 
-.button {
+/* .button {
     border-radius: 100px;
-}
+} */
 
 .announcement {
     border: '1px solid var(--ifm-color-primary)';
@@ -131,18 +131,23 @@ div.feature-card.row ul {
 }
 
 #milkyway-container {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
 }
 
 @media screen and (max-width: 996px) {
     #milkyway-container {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     #milkyway-outer-container {
         display: flex;
         justify-content: flex-start;
+    }
+
+    /* Tighten spacing between logo and title on smaller screens */
+    h1.hero__title {
+        margin-top: 1rem;
     }
 }

@@ -30,7 +30,7 @@ Start by generating an image with your base SDXL model to establish a baseline f
 
 1. Go to the **Foundation** tab in the main Transformer Lab interface
 2. Click on the **Adaptors** tab within the Foundation section
-3. Browse available LoRA adaptors or download specific ones from HuggingFace
+3. Browse available LoRA adaptors or download specific ones from Hugging Face
 4. Select an adaptor that fits your creative needs (e.g., a style or character you want to apply)
 
 <div style={{textAlign: 'center'}}>

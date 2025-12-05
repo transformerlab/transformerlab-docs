@@ -168,7 +168,7 @@ Original output:
 Final Output:
 <img src={require('./ninthRunOutput.png').default} width="400" />
 
-Due to the fact that we were finetuning a 135M model, we didn't check for the correctness of the code that was generated.
+Due to the fact that we were fine-tuning a 135M model, we didn't check for the correctness of the code that was generated.
 
 ## Conclusion and Next Steps
 

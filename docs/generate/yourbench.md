@@ -4,15 +4,15 @@ sidebar_position: 3
 
 # Huggingface (YourBench) Dataset Generation
 
-This page explains how to generate data from reference documents using Transformer Lab leveraging the [YourBench framework](https://github.com/huggingface/yourbench) by 🤗 Huggingface.
+This page explains how to generate data from reference documents using Transformer Lab leveraging the [YourBench framework](https://github.com/huggingface/yourbench) by 🤗 Hugging Face.
 At the end you'll have **6** generated datasets for various tasks such as _Multi-hop QA_, _Single Shot QA_, _LightEval data_, etc.
 
 
-## Step 1: Download the Huggingface (YourBench) Dataset Generator Plugin
+## Step 1: Download the Hugging Face (YourBench) Dataset Generator Plugin
 
 - Go to the **Plugins Tab**.
 - Use the filter by type **generator** to narrow down the list.
-- Download the **Huggingface (YourBench) Dataset Generator** plugin.
+- Download the **Hugging Face (YourBench) Dataset Generator** plugin.
 
 <img src={require('./gifs/yourbench/1_Installing.gif').default} alt="Plugin Gif" width="500" />
 
@@ -20,7 +20,7 @@ At the end you'll have **6** generated datasets for various tasks such as _Multi
 
 - Navigate to the **Generator Tab**.
 - Click on **Create Task**.
-- From the drop-down menu, select **Huggingface (YourBench) Dataset Generator**.
+- From the drop-down menu, select **Hugging Face (YourBench) Dataset Generator**.
 - A pop-up window will appear for configuring your generation task.
 
 
