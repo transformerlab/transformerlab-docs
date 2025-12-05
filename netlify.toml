@@ -12,27 +12,3 @@
 # Optional: Configure build hooks that can receive parameters
 [template.environment]
   APP_VERSION = "Set automatically by build hook"
-
-[[redirects]]
-  from = "/"
-  to = "https://lab.cloud/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/blog/*"
-  to = "https://lab.cloud/blog/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/docs/*"
-  to = "https://lab.cloud/docs/:splat"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/about"
-  to = "https://lab.cloud/about"
-  status = 301
-  force = true
