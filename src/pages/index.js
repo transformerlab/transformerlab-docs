@@ -5,136 +5,201 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Screenshot from "./img/cloud-screenshot.png";
 import styles from "./index.module.css";
-import Content from "./homepage-components/homepage-content.mdx";
-import AllFeatures from "./homepage-components/AllFeatures";
 import "./style.css";
-import GithubStar from "../components/GithubStar";
-import BigWhy from "./homepage-components/bigwhy.mdx";
-import CloudVSLocalPage from "./homepage-components/cloudvslocal.jsx";
 import UserValidation from "./homepage-components/uservalidation.jsx";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaChevronDown } from "react-icons/fa";
+import MuxPlayer from "@mux/mux-player-react/lazy";
+
+// Feature imports
+import FeatureTrain from "./homepage-components/features/feature-train.mdx";
+import FeatureEvals from "./homepage-components/features/feature-evaluate-models.mdx";
+import FeatureDiffusion from "./homepage-components/features/feature-diffusion.mdx";
+import FeatureOrchestrate from "./homepage-components/features/feature-orchestrate.mdx";
+import FeatureExperiments from "./homepage-components/features/feature-experiments.mdx";
+import FeatureCheckpoints from "./homepage-components/features/feature-checkpoints.mdx";
+import FeaturesWorksWith from "./homepage-components/features/feature-works-with.mdx";
+
+import TrainImage from "./homepage-components/features/img/train.png";
+import EvalImage from "./homepage-components/features/img/eval.png";
+import ExperimentImage from "./homepage-components/features/img/experiments.png";
+import CheckpointsImage from "./homepage-components/features/img/checkpoints.png";
+import LossFunctionImage from "./homepage-components/features/img/lossfunction.png";
+import WorksWithImage from "./homepage-components/features/img/workswith.png";
+
+const Slide = ({ children, className, id }) => (
+  <section id={id} className={clsx(styles.section, className)}>
+    {children}
+  </section>
+);
+
+const FeatureSlide = ({ media, TextComponent, reverse }) => {
+  return (
+    <Slide className={styles.featureSlide}>
+      <div className={clsx(styles.featureContent, reverse && styles.reverse)}>
+        <div className={styles.featureMedia}>
+          {media}
+        </div>
+        <div className={clsx("embedded_markdown", styles.featureText)}>
+          <TextComponent />
+        </div>
+      </div>
+    </Slide>
+  );
+};
 
 function HomepageHeader() {
   const [rotation, setRotation] = useState(0);
 
-  // Configurable constants
-  const rotationSpeed = 0.03; // Degrees per frame
-  const rotationPoint = "50% 50%"; // Point of rotation
-
   useEffect(() => {
     const interval = setInterval(() => {
-      setRotation((prev) => (prev + rotationSpeed) % 360);
-    }, 16); // ~60 FPS
+      setRotation((prev) => (prev + 0.05) % 360);
+    }, 16);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div class="container homepage">
-      <div class="row" style={{ paddingTop: "1.5rem" }}>
-        <div class="col col--4">
-          <div
-            id="milkyway-outer-container"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              height: "100%",
-              overflow: "hidden",
-            }}
-          >
-            <div
-              id="milkyway-container"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                mask: "url(/img/logo2.svg) no-repeat center / contain",
-                overflow: "none",
-              }}
-            >
-              <div
+    <Slide className={styles.heroSection}>
+      <div className={styles.heroRow}>
+        <div className={styles.heroColLogo}>
+          <div className={styles.milkywayOuter}>
+            <div className={styles.milkywayMask}>
+              <img
+                src="/img/milkyway.webp"
+                className={styles.milkywayImage}
                 style={{
-                  backgroundColor: "black",
+                  transform: `translate(-50%, -50%) rotate(${rotation}deg)`,
                 }}
-              >
-                <img
-                  src="/img/milkyway.webp"
-                  style={{
-                    maxWidth: "none",
-                    objectFit: "none",
-                    opacity: 1,
-                    translate: "-800px -10%",
-                    transformOrigin: rotationPoint, // Set rotation point
-                    transform: `rotate(${rotation}deg)`, // Apply rotation
-                    xborder: "15px solid red",
-                  }}
-                ></img>
-              </div>
+                alt="Rotating Galaxy"
+              />
             </div>
           </div>
         </div>
-        <div class="col col--8">
-          <h1 className={clsx("hero__title", styles.hero__title)}>
-            We&rsquo;re here for the{" "}
+
+        <div className={styles.heroColText}>
+          <h1 className={styles.hero__title}>
+            We&rsquo;re here for the <br />
             <span style={{ color: "#666" }}>Era of Research.</span>
           </h1>
-          <h2 className={clsx("hero__subtitle", styles.hero__subtitle)}>
+          <h2 className={styles.hero__subtitle}>
             Transformer Lab is a Machine Learning Research Platform designed for
             frontier AI/ML workflows. Local, on-prem, or in the cloud. Open
             source.
           </h2>
           <div className={styles.buttons}>
-            <div className="block">
-              <Link
-                to="/docs/install/"
-                className="button button--primary button--lg"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                Get Started Now &nbsp;
-                <FaArrowRight />
-              </Link>
-              <div style={{ marginTop: "1rem", marginLeft: "0.3rem" }}>
-                or <a href="/beta.html">Book a Demo</a>
-              </div>
+            <Link
+              to="/docs/install/"
+              className={clsx("button button--lg", styles.heroButton)}
+            >
+              Get Started Now <FaArrowRight style={{ marginLeft: '8px' }} />
+            </Link>
+            <div style={{ marginTop: "0.5rem", textAlign: 'center', width: '100%' }}>
+              or <a href="/beta.html" style={{ fontWeight: 600 }}>Book a Demo</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col col--12">
-          <div className="spacer" />
 
-          <img
-            src={Screenshot}
-            className={clsx("video_container", styles.video_container)}
-          />
-        </div>
+      <div
+        className={styles.scrollIndicator}
+        onClick={() => document.getElementById("slide-2").scrollIntoView({ behavior: "smooth" })}
+      >
+        <span style={{ fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px" }}>
+          Scroll
+        </span>
+        <FaChevronDown size={24} />
       </div>
-      <div class="row">
-        <div class="col col--12">
-          <section className={styles.bigWhy}>
-            <BigWhy />
-          </section>
-        </div>
-      </div>
-      <AllFeatures />
-      <UserValidation />
-    </div>
+    </Slide>
   );
 }
 
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Documentation for Transformer Lab, the open source platform for AI/ML researchers."
+      description="Transformer Lab - The Open Source ML Platform"
+      noFooter={true}
     >
-      <HomepageHeader />
-      <main>
-        <div className="container"></div>
+      <main className={styles.snapContainer}>
+
+        <HomepageHeader />
+
+        <Slide id="slide-2">
+          <div className={styles.mergedSlideContent}>
+            <div className={styles.mergedText}>
+              <h1 className="hero__title" style={{ fontSize: '2.5rem', fontFamily: 'Instrument Serif', marginBottom: '1rem' }}>
+                More Research, <br /> Less Friction
+              </h1>
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--ifm-font-color-secondary)' }}>
+                Research workflows are often slowed down by brittle bash scripts, scattered S3 buckets, and manual SLURM templates.
+                <br /><br />
+                Transformer Lab replaces this fragmentation with a unified structure for reproducible science at any scale.
+              </p>
+            </div>
+            <div className={styles.mergedVideoWrapper}>
+              <img
+                src={Screenshot}
+                className={styles.mergedVideo}
+                alt="Transformer Lab Interface"
+              />
+            </div>
+          </div>
+        </Slide>
+
+
+        <FeatureSlide
+          media={<img src={TrainImage} alt="Orchestrate" />}
+          TextComponent={FeatureOrchestrate}
+          reverse={true}
+        />
+
+        <FeatureSlide
+          media={
+            <MuxPlayer
+              loading="page"
+              playbackId="CWm5w01gczy7fKwa7CLlDWzCAf3zH01nTpElW8MTTl3Zg"
+              
+              controls={true}
+              
+              style={{ width: '100%', maxWidth: '100%' }}
+            />
+          }
+          TextComponent={FeatureDiffusion}
+        />
+
+        <FeatureSlide
+          media={<img src={ExperimentImage} alt="Experiments" />}
+          TextComponent={FeatureExperiments}
+          reverse={true}
+        />
+
+        <FeatureSlide
+          media={<img src={CheckpointsImage} alt="Checkpoints" />}
+          TextComponent={FeatureCheckpoints}
+        />
+
+        <FeatureSlide
+          media={<img src={LossFunctionImage} alt="Training" />}
+          TextComponent={FeatureTrain}
+          reverse={true}
+        />
+
+        <FeatureSlide
+          media={<img src={EvalImage} alt="Evals" />}
+          TextComponent={FeatureEvals}
+        />
+
+        <FeatureSlide
+          media={<img src={WorksWithImage} alt="Works With" />}
+          TextComponent={FeaturesWorksWith}
+          reverse={true}
+        />
+
+        <Slide>
+          <UserValidation />
+        </Slide>
+
       </main>
     </Layout>
   );
