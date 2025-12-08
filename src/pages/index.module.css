@@ -44,9 +44,9 @@ h1.hero__title {
 }
 
 h2.hero__subtitle {
-  font-size: clamp(0.9rem,
-      0.9rem + 1 * ((100vw - 20rem) / 58),
-      1.2rem);
+  font-size: clamp(0.8rem,
+      0.8rem + 1 * ((100vw - 20rem) / 58),
+      1.1rem);
   text-align: left;
   font-weight: 400;
   /* max-width: 70%; */
