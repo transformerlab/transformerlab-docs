@@ -110,7 +110,7 @@ This guide will walk you through the steps to install ROCm and ensure your AMD G
 
 Once WSL and ROCm are set up, download Transformer Lab for Windows:
 
-<a href="https://transformerlab.ai/docs/download">
+<a href="https://lab.cloud/docs/download">
     <Button>Download Transformer Lab</Button>
 </a>
 

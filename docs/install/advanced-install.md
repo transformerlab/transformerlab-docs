@@ -77,7 +77,7 @@ uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 You can access the Transformer Lab GUI by going to the browser and navigating to `http://<your-server-ip>:8338/`.
 Your server IP will be `localhost` or `127.0.0.1` if you are running it locally, or the public IP if you are running it on a cloud server.
 
-Incase you'd like to run it within the GUI Electron app, you can download the app for your OS from [the website](https://transformerlab.ai/docs/download)
+Incase you'd like to run it within the GUI Electron app, you can download the app for your OS from [the website](https://lab.cloud/docs/download)
 
 **To Connect:**
 

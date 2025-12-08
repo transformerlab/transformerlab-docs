@@ -19,7 +19,7 @@ import { FaLinux } from "react-icons/fa";
 ## Step 1. Install Transformer Lab
 
 ```bash
-curl https://transformerlab.ai/install.sh | bash
+curl https://lab.cloud/install.sh | bash
 ```
 
 ## Step 2. Run Transformer Lab

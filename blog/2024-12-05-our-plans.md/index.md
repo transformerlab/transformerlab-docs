@@ -54,7 +54,7 @@ Our long-term goal is to make Transformer Lab into the very best platform for de
 
 Here are ways we'd love to collaborate:
 
-- Please [try out Transformer Lab](http://transformerlab.ai/docs/download) and let us know what you think
+- Please [try out Transformer Lab](http://lab.cloud/docs/download) and let us know what you think
 - We are looking for open source contributions on [Github](https://github.com/transformerlab/transformerlab-app)
 - Are you building tools in the LLM ecosystem that could benefit from a better GUI? Let's build together.
 - Are you a company that trains LLMs for yourself or others? Please reach out on how we could make your life easier
