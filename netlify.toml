@@ -15,6 +15,11 @@
 
 
 [[redirects]]
+  from = "https://transformerlab.ai/install.sh"
+  to = "https://transformerlab.ai/install.sh"
+  status = 200
+
+[[redirects]]
   from = "https://transformerlab.ai/*"
   to = "https://lab.cloud/:splat"
   status = 301
