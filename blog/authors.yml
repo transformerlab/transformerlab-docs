@@ -26,3 +26,9 @@ mina:
   title: Person
   url: https://www.linkedin.com/in/mina-parham/
   image_url: https://github.com/mina-parham.png
+
+josh:
+  name: Josh Janes
+  title: Person
+  url: https://www.linkedin.com/in/josh-janes
+  image_url: https://github.com/josh-janes.png
