@@ -51,7 +51,7 @@ h2.hero__subtitle {
   font-weight: 400;
   /* max-width: 70%; */
   line-height: 1.3;
-  color: var(--ifm-font-color-secondary);
+  color: var(--ifm-font-color-primary);
   margin-bottom: 1.5rem;
   letter-spacing: -0.01em;
   max-width: 80%;
