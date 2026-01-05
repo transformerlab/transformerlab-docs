@@ -36,3 +36,6 @@ And copy and past the following information:
 A=B
 C=D
 ```
+
+## Step 4 -- Configuring a Compute Service
+
