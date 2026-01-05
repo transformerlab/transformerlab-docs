@@ -7,7 +7,7 @@ sidebar_position: 10
 
 ## Description
 
-Transformer Lab can be setup on a shared computer to be used on a team. When multi-user functionality is enabled, Transformer Lab supports **multitenancy** (multiple separate organizations working from one machine) and **user accounts**, where each user logs in to access their unique experiments.
+Transformer Lab can be setup on a shared computer to be used on a team. When multi-user functionality is enabled, different users will be able to login to the system.
 
 ## Step 1. Contact us 😉
 

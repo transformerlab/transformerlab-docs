@@ -118,7 +118,19 @@ const config = {
       }),
     ],
   ],
-  plugins: [],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "nexus",
+        path: "nexus",
+        routeBasePath: "nexus",
+        sidebarPath: require.resolve("./sidebars.js"),
+        editUrl:
+          "https://github.com/transformerlab/transformerlab-docs/tree/main/",
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -138,7 +150,8 @@ const config = {
             position: "left",
             activeBaseRegex: "^/$",
           },
-          { to: "/docs", label: "Documentation", position: "left" },
+          { to: "/docs", label: "For Individuals", position: "left" },
+          // { to: "/nexus", label: "For Teams", position: "left" },
           {
             to: "/blog",
             label: "Blog",
