@@ -64,9 +64,6 @@ module.exports = {
       fs.writeFileSync(installScriptPath, fileContent);
 
       console.log(`Successfully updated install.sh to version ${tagName}`);
-
-      // Optionally store the tag name in an environment variable for use in your Docusaurus site
-      process.env.LATEST_APP_VERSION = tagName;
     } catch (error) {
       utils.build.failBuild(`Error updating install.sh: ${error.message}`);
     }
