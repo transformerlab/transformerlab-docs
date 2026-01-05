@@ -67,17 +67,6 @@ module.exports = {
 
       // Optionally store the tag name in an environment variable for use in your Docusaurus site
       process.env.LATEST_APP_VERSION = tagName;
-
-      // Create a JSON file with version info that can be loaded by your Docusaurus site
-      const versionInfo = {
-        version: tagName,
-        updatedAt: new Date().toISOString(),
-      };
-
-      fs.writeFileSync(
-        path.join(PUBLISH_DIR, "static", "app-version.json"),
-        JSON.stringify(versionInfo, null, 2)
-      );
     } catch (error) {
       utils.build.failBuild(`Error updating install.sh: ${error.message}`);
     }
