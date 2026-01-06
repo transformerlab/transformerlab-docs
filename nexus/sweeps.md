@@ -18,12 +18,15 @@ You can enable sweeps directly within your Task definition. To convert a standar
 ### Task JSON Configuration
 
 #### Required fields:
-`run_sweeps`: Set to true to enable sweeps
-`sweep_config`: An object mapping parameter names to arrays of values to try
+
+- `run_sweeps`: Set to true to enable sweeps
+
+- `sweep_config`: An object mapping parameter names to arrays of values to try
 
 #### Optional fields:
-`sweep_metric`: The metric name to track for optimization (default: "eval/loss")
-`lower_is_better`: Whether lower metric values are better (default: true)
+- `sweep_metric`: The metric name to track for optimization (default: "eval/loss")
+
+- `lower_is_better`: Whether lower metric values are better (default: true)
 
 #### Example:
 
