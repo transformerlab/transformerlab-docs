@@ -12,10 +12,10 @@ Interactive services in Nexus allow you to launch environments like Jupyter Note
 Before running a Jupyter Notebook service, ensure you have a Compute Provider set up and active.
 
 1. Navigate to Team Settings and set up a Compute Provider.
-   ![Compute Provider Setup](img/compute-provider-setup.png)
+   ![Compute Provider Setup](img/screenshot-addprovider.png)
 
 2. Make sure the provider is active by clicking on the health button.
-   ![Provider Health Check](img/provider-health-check.png)
+   ![Provider Health Check](img/screenshot-providershealth.png)
 
 ## Steps to Run a Jupyter Notebook Service
 
