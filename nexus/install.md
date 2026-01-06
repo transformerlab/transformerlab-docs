@@ -28,13 +28,20 @@ curl https://lab.cloud/install.sh | bash
 
 ## Step 3 -- Configure Team Edition
 
-Now create a file in `~/.transformerlab/src` called `.env`
+Now create a file in `~/.transformerlab` called `.env`
 
-And copy and past the following information:
+And copy and paste the following information:
 
 ```text
-A=B
-C=D
+TL_API_URL="http://localhost:8338/"  # Auto-set this as the default API URL
+MULTIUSER="true" # Set to "true" to enable multi-user features
+
+# Frontend URL (used for generating invitation links and auth redirects)
+FRONTEND_URL="http://localhost:1212" # Set to your frontend URL. If running locally, use localhost:1212 (default port when performing npm start)
+
+TRANSFORMERLAB_JWT_SECRET=<random character string for auth. Generally created by install.sh but you can set your own here>
+TRANSFORMERLAB_REFRESH_SECRET=<random character string for auth. Generally created by install.sh but you can set your own here>
+TFL_API_STORAGE_URI=true # Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
 ```
 
 ## Step 4 -- Configuring a Compute Service
