@@ -5,7 +5,7 @@ sidebar_position: 9
 
 ## Running an Ollama Server Service
 
-Interactive services in Nexus allow you to launch an Ollama server on a remote machine to run and interact with models. This guide walks you through running an Ollama Server service.
+Interactive services in Transformer Lab allow you to launch an Ollama server on a remote machine to run and interact with models. This guide walks you through running an Ollama Server service.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before running an Ollama Server service, ensure you have a Compute Provider set 
 
 ## Steps to Run an Ollama Server Service
 
-1. Go to the Interact page in Nexus.
+1. Go to the Interact page in Transformer Lab.
 
 2. Click on the "New" button to create a new interactive service.
    ![Interact Page New Button](../img/interact-page-new.png)

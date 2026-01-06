@@ -5,7 +5,7 @@ sidebar_position: 10
 
 ## Running a VSCode Service
 
-Interactive services in Nexus allow you to run VSCode on a remote machine using the official VSCode tunnels implementation. This guide walks you through running a VSCode service.
+Interactive services in Transformer Lab allow you to run VSCode on a remote machine using the official VSCode tunnels implementation. This guide walks you through running a VSCode service.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before running a VSCode service, ensure you have a Compute Provider set up and a
 
 ## Steps to Run a VSCode Service
 
-1. Go to the Interact page in Nexus.
+1. Go to the Interact page in Transformer Lab.
 
 2. Click on the "New" button to create a new interactive service.
    ![Interact Page New Button](../img/interact-page-new.png)
