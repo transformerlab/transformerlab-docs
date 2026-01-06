@@ -10,11 +10,11 @@ Transformer Lab executes tasks by sending them to a GPU orchestrator like **SLUR
 
 The following documents offer common install instructions that you can use if you are starting from scratch
 
-* [Instructions for setting up SLURM from scratch on your own compute](./install-gpu-orchestrator/install-slurm.md)
-* [Setting up SLURM on AWS](./install-gpu-orchestrator/install-slurm-on-aws.md)
-* [Setting up SLURM on Runpod] TODO
-* [Instructions for setting up SkyPilot from Scratch](./install-gpu-orchestrator/install-skypilot.md)
-* [Setting up Skypilot on Nebius Cloud] TODO
+[Choosing Between SLURM and SkyPilot -->](./install-gpu-orchestrator/skypilot-vs-slurm.md)
+
+[Instructions for setting up SLURM from scratch -->](./install-gpu-orchestrator/install-slurm.md)
+
+[Instructions for setting up SkyPilot from Scratch -->](./install-gpu-orchestrator/install-skypilot.md)
 
 ## Step 2 -- Install Transformer Lab
 

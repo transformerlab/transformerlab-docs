@@ -1,5 +1,5 @@
 ---
-title: Install SkyPilot from Scratch
+title: Installing SkyPilot
 sidebar_position: 30
 ---
 

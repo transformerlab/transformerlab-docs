@@ -1,0 +1,23 @@
+---
+title: Choosing Between SkyPilot and SLURM
+sidebar_position: 1
+---
+
+
+Transformer Lab abstracts the job submission process, so for the most part, SLURM and SkyPilot will work similary from a user-interface perspective in Transformer Lab.
+
+If you are starting from scratch, here is a practical look at how to choose the right engine for your workload.
+
+## SLURM: The On-Premise Traditional HPC Tool
+If you work in a university research lab or a large enterprise with its own private data center, you are probably already using SLURM. It is the standard scheduler for managing shared resources on hardware that you (or your organization) already own.
+
+* **When to use it:** Use SLURM if you have access to a pre-existing cluster (like a university supercomputer) where the hardware is always on and waiting for jobs.
+* **The Downside:** SLURM generally assumes the hardware is static. It isn't "smart" about cloud costs—it won't typically shut down nodes to save money or hunt for cheaper instances in different regions.
+
+## SkyPilot: The Cloud-Native Manager
+SkyPilot is a more modern framework designed specifically for the fluid nature of the cloud.
+
+* **When to use it:** Use SkyPilot if you are running on AWS, GCP, Azure, or Kubernetes (or a blend of them) and want to provision resources dynamically.
+* **The Upside:**
+    * **Auto-Provisioning:** It handles the messy work of requesting the VM, setting up the environment, and mounting storage.
+    * **Cost Savings:** It supports "Spot" instances with auto-recovery. If a cheap spot instance is taken away, SkyPilot can automatically move your job to a new one.

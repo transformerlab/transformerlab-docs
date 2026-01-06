@@ -14,13 +14,15 @@ Transformer Lab can be configured to run in one of two flavours. Both modes are 
 | Feature | Single-Node Edition | Super-Duper Team Edition |
 | --- | --- | --- |
 | Local machine training & evals | ✓ |  |
+| Experiment Management | ✓ | ✓ |
 | Model Registry | ✓ | ✓ |
 | Dataset Registry | ✓ | ✓ |
+| Artifact Management | ✓ | ✓ |
 | GPU orchestration (works with SLURM, SkyPilot) | | ✓ |
 | Team collaboration | | ✓ |
 | Cloud provider integration | | ✓ |
 | CLI interface | | ✓ | 
-| Best for | Local ML on Mac/Windows/Linux | Teams scaling across GPU clusters |
+| Best for | Local ML on Mac/Windows/Linux | Teams (Academic and Research Labs) scaling across GPU clusters |
 | License | 100% Opensource | 100% Opensource |
 
 
