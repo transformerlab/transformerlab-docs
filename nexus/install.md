@@ -58,12 +58,14 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 
 ### SkyPilot example config
 
-```jsonc
+```json5 showLineNumbers
 {
-	"server_url": "http://localhost:46580", // Replace with the IP/host of your SkyPilot server reachable by the API server
+	// Replace with the IP/host of your SkyPilot server reachable by the API server
+	"server_url": "http://localhost:46580",
 	"default_env_vars": {
-		"SKYPILOT_USER_ID": "<skypilot user id>", // Obtain from the SkyPilot server at `http://<skypilot-host>:46580/users`
-		"SKYPILOT_USER": "<skypilot username>" // Obtain from the SkyPilot server at `http://<skypilot-host>:46580/users`
+		// Obtain from the SkyPilot server at http://<skypilot-host>:46580/users
+		"SKYPILOT_USER_ID": "<skypilot user id>",
+		"SKYPILOT_USER": "<skypilot username>"
 	},
 	"default_entrypoint_command": ""
 }
@@ -74,14 +76,15 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 
 ### SLURM example config
 
-```jsonc
+```json5 showLineNumbers
 {
-"ssh_host": "<SLURM_LOGIN_NODE_IP>",
- "ssh_user": "slurm", // Many clusters use the "slurm" user; use the appropriate user for your setup
-"ssh_key_path": "~/.ssh/id_rsa", // Path to your SSH private key
-"ssh_port": 22
+	"ssh_host": "<SLURM_LOGIN_NODE_IP>",
+	// Many clusters use the "slurm" user; use the appropriate user for your setup
+	"ssh_user": "slurm",
+	// Path to your SSH private key
+	"ssh_key_path": "~/.ssh/id_rsa",
+	"ssh_port": 22
 }
-
 ```
 
 - Ensure the API node can SSH to the SLURM login node with the provided user and key.
