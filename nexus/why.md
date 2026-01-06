@@ -1,5 +1,5 @@
 ---
-title: What is Transformer Lab Super-Duper Team Edition?
+title: What is Transformer Lab Team Mode?
 sidebar_position: 15
 ---
 
