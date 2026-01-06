@@ -1,17 +1,21 @@
 ---
-title: What is Transformer Lab?
+title: What is Transformer Lab Super-Duper Team Edition?
 sidebar_position: 15
 ---
 
-# Why Transformer Lab Super-Duper Team Edition?
+# Why Transformer Lab Team Mode?
 
-Transformer Lab can be set up in one of two modes. You can use Transformer Lab in single-node mode if you are an individual hacker who wants to train, tune, or eval models locally on a single machine. If that is what you need, [follow the single-node docs here](/docs/).
+Transformer Lab can be configured to run in one of two modes:
 
-## Choose Your Edition
+- **Single-Node Mode**: Perfect for individual researchers who want to train, tune, or evaluate models locally on a single machine. [Learn more in the single-node docs](/docs/).
+- **Team Mode**: Built for teams scaling across GPU clusters with advanced orchestration and collaboration features (see comparison below).
+
+
+## Choose Your Mode
 
 Transformer Lab can be configured to run in one of two flavours. Both modes are the same app and codebase, features are just turned on and off based on which mode you activate.
 
-| Feature | Single-Node Edition | Super-Duper Team Edition |
+| Feature | Single-Node Mode | Team Mode |
 | --- | --- | --- |
 | Local machine training & evals | ✓ |  |
 | Experiment Management | ✓ | ✓ |
