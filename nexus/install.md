@@ -26,7 +26,26 @@ SSH into that node and run:
 curl https://lab.cloud/install.sh | bash
 ```
 
-## Step 3 - Configure Team Edition
+## Step 3 - Run Transformer Lab and Log in
+
+Run Transformer Lab by running
+
+```bash
+cd ~/.transformerlab/src
+./run.sh
+```
+
+Now you can visit `http://localhost:8338` (or the address of the server you have put this code on) and log in to Transformer Lab.
+
+The first time you log in, you can use the default user:
+
+Login: `admin@example.com`
+
+Password: `admin123`
+
+Please change the password as a first step.
+
+## Step 4 - Configure Team Edition
 
 Now create a file in `~/.transformerlab` called `.env`
 
@@ -47,7 +66,7 @@ TRANSFORMERLAB_REFRESH_SECRET=e3e3e533e03cbc5f...
 TFL_API_STORAGE_URI=true 
 ```
 
-## Step 4 - Configuring a Compute Service
+## Step 5 - Configuring a Compute Service
 Go to Team Settings by clicking your user name in the sidebar.
 
 ![Team Settings in the sidebar](./img/screenshot-usersettings.png)
