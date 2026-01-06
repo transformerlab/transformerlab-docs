@@ -5,4 +5,4 @@ sidebar_position: 80
 
 # Task YAML
 
-Is a thing we support
+Detailed specs for our task yaml are coming soon. Contacts us on discord for immediate help.

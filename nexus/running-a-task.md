@@ -5,9 +5,9 @@ sidebar_position: 30
 
 ## What is a Task
 
-A task is a description of work you would like to execute on nodes. ML Researchers can write a task in any format that can run on a node (usually as a Python script) and then submit a Task in the form of YAML that tells Transformer Lab what resources are needed and how to run the task.
+A **task** is a description of work you want to execute on compute nodes. Researchers can write tasks in any format that runs on a node (typically Python scripts) and submit them as YAML to specify resource requirements and execution instructions.
 
-Below we will describe how to submit a simple task in the GUI.
+Below, we'll walk through submitting a simple task in the GUI.
 
 ## Starting a Simple Task
 

@@ -14,7 +14,7 @@ The following documents offer common install instructions that you can use if yo
 
 [Instructions for setting up SLURM from scratch -->](./install-gpu-orchestrator/install-slurm.md)
 
-[Instructions for setting up SkyPilot from Scratch -->](./install-gpu-orchestrator/install-skypilot.md)
+[Instructions for setting up SkyPilot from scratch -->](./install-gpu-orchestrator/install-skypilot.md)
 
 ## Step 2 - Install Transformer Lab
 
@@ -109,4 +109,4 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 - Ensure the API node can SSH to the SLURM login node with the provided user and key.
 - Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
 
- 
+## Congrats, you are up and running. [You can now run a Task](./running-a-task.md).
