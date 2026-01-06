@@ -17,22 +17,80 @@ You can enable sweeps directly within your Task definition. To convert a standar
 
 ### Task JSON Configuration
 
-When you define your Task JSON, use square brackets `[]` to provide multiple options for a specific key.
+#### Required fields:
+`run_sweeps`: Set to true to enable sweeps
+`sweep_config`: An object mapping parameter names to arrays of values to try
 
-**Example:**
-In the configuration below, we are sweeping over two parameters: `learning_rate` and `batch_size`.
+#### Optional fields:
+`sweep_metric`: The metric name to track for optimization (default: "eval/loss")
+`lower_is_better`: Whether lower metric values are better (default: true)
 
-```json
+#### Example:
+
+In the configuration below, we are sweeping over two parameters: learning_rate and batch_size.
+
+```json5
 {
-  "name": "Llama-Fine-Tune-Sweep",
-  "run": "python train.py",
-  "env": {
-    "NUM_EPOCHS": 3,
-    // This parameter has a single value (No Sweep)
-    "OPTIMIZER": "adamw",
-    // This parameter has 3 values -> Creates 3 variations
-    "LEARNING_RATE": [1e-4, 2e-5, 5e-5],
-    // This parameter has 2 values -> Creates 2 variations
-    "BATCH_SIZE": [8, 16]
-  }
+  "name": "my-sweep-task",
+  "command": "python train.py",
+  "cpus": 4,
+  "memory": 8,
+  "parameters": {
+    "epochs": 10,
+    "model_type": "gpt2"
+  },
+  "run_sweeps": true,
+  "sweep_config": {
+    "learning_rate": ["1e-5", "3e-5", "5e-5"],
+    "batch_size": ["4", "8"]
+  },
+  "sweep_metric": "eval/loss",
+  "lower_is_better": true
 }
+```
+
+## How It Works
+
+1. Parameter combinations: The system generates all combinations using a Cartesian product. In the example above:
+
+    - 3 learning rates × 2 batch sizes = 6 total jobs
+
+2. Each job will receive:
+
+    - The same `base parameters` (epochs: 10, model_type: "gpt2")
+    - One unique combination from `sweep_config` (e.g., learning_rate: "1e-5", batch_size: "4")
+
+3. For remote/provider-based tasks: Jobs run in parallel (each as a separate job)
+
+4. Optimization: The `sweep_metric` is tracked for each job to identify the best configuration:
+    - If `lower_is_better` is true, the job with the lowest metric value is considered best
+    - If false, the highest value is best
+
+
+## YAML Example
+
+Here's a complete task YAML that you can copy and paste directly into the GUI's YAML editor:
+
+```yaml
+name: my-sweep-task
+resources:
+  cpus: 4
+  memory: 8
+run: python train.py
+setup: pip install -r requirements.txt
+parameters:
+  epochs: 10
+  model_type: "gpt2"
+sweeps:
+  sweep_config:
+    learning_rate:
+      - 1e-5
+      - 3e-5
+      - 5e-5
+    batch_size:
+      - 4
+      - 8
+  sweep_metric: "eval/loss"
+  lower_is_better: true
+  ```
+
