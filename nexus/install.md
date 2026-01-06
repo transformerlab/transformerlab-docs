@@ -16,7 +16,7 @@ The following documents offer common install instructions that you can use if yo
 
 [Instructions for setting up SkyPilot from Scratch -->](./install-gpu-orchestrator/install-skypilot.md)
 
-## Step 2 -- Install Transformer Lab
+## Step 2 - Install Transformer Lab
 
 Transformer Lab needs a CPU node to run.
 
@@ -26,7 +26,7 @@ SSH into that node and run:
 curl https://lab.cloud/install.sh | bash
 ```
 
-## Step 3 -- Configure Team Edition
+## Step 3 - Configure Team Edition
 
 Now create a file in `~/.transformerlab` called `.env`
 
@@ -47,7 +47,7 @@ TRANSFORMERLAB_REFRESH_SECRET=e3e3e533e03cbc5f...
 TFL_API_STORAGE_URI=true 
 ```
 
-## Step 4 -- Configuring a Compute Service
+## Step 4 - Configuring a Compute Service
 Go to Team Settings by clicking your user name in the sidebar.
 
 ![Team Settings in the sidebar](./img/screenshot-usersettings.png)
