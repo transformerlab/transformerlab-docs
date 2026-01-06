@@ -66,6 +66,32 @@ TRANSFORMERLAB_REFRESH_SECRET=e3e3e533e03cbc5f...
 TFL_API_STORAGE_URI=true 
 ```
 
+### Setting up AWS Credentials for S3 Storage
+
+To use S3 as remote storage, you need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
+
+#### Using AWS CLI (Recommended)
+
+If you have the AWS CLI installed, run:
+
+```bash
+aws configure --profile transformerlab-s3
+```
+
+Enter your AWS Access Key ID, Secret Access Key, default region, and output format when prompted.
+
+#### Manual Configuration
+
+Create or edit the AWS credentials file at `~/.aws/credentials` and add:
+
+```ini
+[transformerlab-s3]
+aws_access_key_id = YOUR_ACCESS_KEY_ID
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+```
+
+Ensure the profile has the necessary permissions to create and manage S3 buckets.
+
 ## Step 5 - Configuring a Compute Service
 Go to Team Settings by clicking your user name in the sidebar.
 
