@@ -83,4 +83,6 @@ git_repo_directory: unsloth-grpo-train
 
 These commands are the core of the task. They tell the executing node to first fetch the git repo at the path given (and here we provide an optional subdirectory into the repo). Then the `setup` defines the command to set up the machine, and afterwards the actual task is defined in the `run` field.
 
+For [a full description of all the fields you can add to the Task YAML see this link.](./task-yaml.md)
+
 
