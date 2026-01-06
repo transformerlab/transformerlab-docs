@@ -40,5 +40,6 @@ Before running an SSH service, ensure you have a Compute Provider set up and act
    ![Service Card Interactive Setup](../img/ssh-service-card-interactive-setup.png)
 
 7. Follow the provided command to SSH into the remote server from any machine.
-   **Warning:** Do not share this SSH command or access details with untrusted individuals, as it provides direct access to the remote node.
    ![Access SSH](../img/ssh-access-service.png)
+
+   **Warning:** Do not share this SSH command or access details with untrusted individuals, as it provides direct access to the remote node.
