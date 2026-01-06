@@ -1,6 +1,6 @@
 ---
 title: Running a Sweep
-sidebar_position: 35
+sidebar_position: 40
 ---
 
 ## What is a Sweep

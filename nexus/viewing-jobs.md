@@ -1,6 +1,6 @@
 ---
 title: Viewing Jobs
-sidebar_position: 40
+sidebar_position: 35
 ---
 
 ## What is a Job
