@@ -48,4 +48,43 @@ TFL_API_STORAGE_URI=true
 ```
 
 ## Step 4 -- Configuring a Compute Service
+Go to Team Settings by clicking your user name in the sidebar.
 
+![Team Settings in the sidebar](./img/screenshot-usersettings.png)
+
+In Team Settings, open Compute Providers and click "Add Compute Provider." Name the provider, choose a type (either "skypilot" or "slurm"), and then add the configuration.
+
+![Add Compute Provider dialog and form](./img/screenshot-addprovider.png)
+
+### SkyPilot example config
+
+```jsonc
+{
+	"server_url": "http://localhost:46580", // Replace with the IP/host of your SkyPilot server reachable by the API server
+	"default_env_vars": {
+		"SKYPILOT_USER_ID": "<skypilot user id>", // Obtain from the SkyPilot server at `http://<skypilot-host>:46580/users`
+		"SKYPILOT_USER": "<skypilot username>" // Obtain from the SkyPilot server at `http://<skypilot-host>:46580/users`
+	},
+	"default_entrypoint_command": ""
+}
+```
+
+- Replace `localhost` with the IP/hostname where your SkyPilot server is running and reachable from the API machine.
+- Retrieve `SKYPILOT_USER_ID` and `SKYPILOT_USER` from the SkyPilot server at `http://<skypilot-host>:46580/users`.
+
+### SLURM example config
+
+```jsonc
+{
+"ssh_host": "<SLURM_LOGIN_NODE_IP>",
+ "ssh_user": "slurm", // Many clusters use the "slurm" user; use the appropriate user for your setup
+"ssh_key_path": "~/.ssh/id_rsa", // Path to your SSH private key
+"ssh_port": 22
+}
+
+```
+
+- Ensure the API node can SSH to the SLURM login node with the provided user and key.
+- Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
+
+ 
