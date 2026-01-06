@@ -26,6 +26,12 @@ SSH into that node and run:
 curl https://lab.cloud/install.sh | bash
 ```
 
+You need to also install packages necessary for running compute providers like Skypilot or SLURM:
+```bash
+cd ~/.transformerlab/src
+./install.sh install_providers
+```
+
 ## Step 3 - Run Transformer Lab and Log in
 
 Run Transformer Lab by running
