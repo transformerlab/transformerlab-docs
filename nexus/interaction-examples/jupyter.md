@@ -1,6 +1,6 @@
 ---
 title: Run a Jupyter Notebook
-sidebar_position: 10
+sidebar_position: 6
 ---
 
 ## Running a Jupyter Notebook Service

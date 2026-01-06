@@ -1,6 +1,6 @@
 ---
 title: Run an Ollama Server
-sidebar_position: 10
+sidebar_position: 9
 ---
 
 ## Running an Ollama Server Service

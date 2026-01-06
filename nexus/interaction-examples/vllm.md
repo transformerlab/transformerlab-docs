@@ -1,6 +1,6 @@
 ---
 title: Interact with a Model using vLLM
-sidebar_position: 10
+sidebar_position: 8
 ---
 
 ## Running a vLLM Server Service

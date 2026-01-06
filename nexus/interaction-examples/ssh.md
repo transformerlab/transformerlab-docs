@@ -1,6 +1,6 @@
 ---
 title: Get Direct SSH Access to a Node
-sidebar_position: 10
+sidebar_position: 7
 ---
 
 ## Running an SSH Service
