@@ -8,7 +8,7 @@ sidebar_position: 1
 
 :::note
 
-These documents for our team edition are currently hidden until our launch. Please bookmark them to return to them again.
+You are currently reading our unreleased documentation for Transformer Lab designed for Research Labs. Stay tuned for our official launch in the upcoming weeks...
 
 :::
 
@@ -17,6 +17,8 @@ These documents for our team edition are currently hidden until our launch. Plea
 Transformer Lab is an open source platform designed to support the needs of ML researchers working on a team.
 
 A team can use Transformer Lab to request GPUs and submit ML tasks, while tracking experiments and their artifacts in one place.
+
+![Image](./img/screenshot-homepage.png)
 
 ## Video
 

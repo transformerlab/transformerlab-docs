@@ -7,6 +7,8 @@ sidebar_position: 15
 
 Transformer Lab can be set up in one of two modes. You can use Transformer Lab in single-node mode if you are an individual hacker who wants to train, tune, or eval models locally on a single machine. If that is what you need, [follow the single-node docs here](/docs/).
 
+![Image](./img/screenshot-tasks.png)
+
 Our new **Super-Duper Team Edition** offers more complex capabilities <span style={{backgroundColor: "#93be34ff", fontWeight: 'bold'}}>designed for teams that work across clusters of GPUs</span>. This means you can:
 
 - **Scale Effortlessly:** Researchers can go from quick Jupyter notebooks to production ML runs across hundreds or thousands of GPUs using one interface.
@@ -22,4 +24,4 @@ Our new **Super-Duper Team Edition** offers more complex capabilities <span styl
     - Hyperparameter sweeps
     - storing artifacts in a global object store accessible even after ephemeral nodes terminate.
 
-Let's get started?
+Get started by reading the [install instructions...](./install.md)
