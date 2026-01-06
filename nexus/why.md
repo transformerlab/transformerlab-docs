@@ -7,6 +7,23 @@ sidebar_position: 15
 
 Transformer Lab can be set up in one of two modes. You can use Transformer Lab in single-node mode if you are an individual hacker who wants to train, tune, or eval models locally on a single machine. If that is what you need, [follow the single-node docs here](/docs/).
 
+## Choose Your Edition
+
+Transformer Lab can be configured to run in one of two flavours. Both modes are the same app and codebase, features are just turned on and off based on which mode you activate.
+
+| Feature | Single-Node Edition | Super-Duper Team Edition |
+| --- | --- | --- |
+| Local machine training & evals | ✓ |  |
+| Model Registry | ✓ | ✓ |
+| Dataset Registry | ✓ | ✓ |
+| GPU orchestration (works with SLURM, SkyPilot) | | ✓ |
+| Team collaboration | | ✓ |
+| Cloud provider integration | | ✓ |
+| CLI interface | | ✓ | 
+| Best for | Local ML on Mac/Windows/Linux | Teams scaling across GPU clusters |
+| License | 100% Opensource | 100% Opensource |
+
+
 ![Image](./img/screenshot-tasks.png)
 
 Our new **Super-Duper Team Edition** offers more complex capabilities <span style={{backgroundColor: "#93be34ff", fontWeight: 'bold'}}>designed for teams that work across clusters of GPUs</span>. This means you can:
