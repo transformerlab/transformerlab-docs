@@ -1,11 +1,36 @@
 ---
-title: What is Transformer Lab?
+title: What is Transformer Lab Team Mode?
 sidebar_position: 15
 ---
 
-# Why Transformer Lab Super-Duper Team Edition?
+# Why Transformer Lab Team Mode?
 
-Transformer Lab can be set up in one of two modes. You can use Transformer Lab in single-node mode if you are an individual hacker who wants to train, tune, or eval models locally on a single machine. If that is what you need, [follow the single-node docs here](/docs/).
+Transformer Lab can be configured to run in one of two modes:
+
+- **Single-Node Mode**: Perfect for individual researchers who want to train, tune, or evaluate models locally on a single machine. [Learn more in the single-node docs](/docs/).
+- **Team Mode**: Built for teams scaling across GPU clusters with advanced orchestration and collaboration features (see comparison below).
+
+
+## Choose Your Mode
+
+Transformer Lab can be configured to run in one of two flavours. Both modes are the same app and codebase, features are just turned on and off based on which mode you activate.
+
+| Feature | Single-Node Mode | Team Mode |
+| --- | --- | --- |
+| Local machine training & evals | ✓ |  |
+| Experiment Management | ✓ | ✓ |
+| Model Registry | ✓ | ✓ |
+| Dataset Registry | ✓ | ✓ |
+| Artifact Management | ✓ | ✓ |
+| GPU orchestration (works with SLURM, SkyPilot) | | ✓ |
+| Team collaboration | | ✓ |
+| Cloud provider integration | | ✓ |
+| CLI interface | | ✓ | 
+| Best for | Local ML on Mac/Windows/Linux | Teams (Academic and Research Labs) scaling across GPU clusters |
+| License | 100% Opensource | 100% Opensource |
+
+
+![Image](./img/screenshot-tasks.png)
 
 Our new **Super-Duper Team Edition** offers more complex capabilities <span style={{backgroundColor: "#93be34ff", fontWeight: 'bold'}}>designed for teams that work across clusters of GPUs</span>. This means you can:
 
@@ -22,4 +47,4 @@ Our new **Super-Duper Team Edition** offers more complex capabilities <span styl
     - Hyperparameter sweeps
     - storing artifacts in a global object store accessible even after ephemeral nodes terminate.
 
-Let's get started?
+Get started by reading the [install instructions...](./install.md)
