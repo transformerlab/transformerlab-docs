@@ -13,14 +13,69 @@ This is especially helpful when using spot instances which are more likely to be
 
 ## Creating Checkpoints
 
-To save a checkpoint, use the `lab.save_checkpoint()` function within the Transformer Lab Python SDK. You can call this function periodically within your training loop (e.g., every epoch or every 1000 steps).
+### Manual Checkpoint Saving
+
+To save a checkpoint manually, use the `lab.save_checkpoint()` function within the Transformer Lab Python SDK. This function takes the path to your checkpoint file or directory and optionally a name for the checkpoint.
 
 ```python
-import transformerlab_sdk as lab
+from lab import lab
 
-# Inside your training loop
-lab.save_checkpoint()
+# Initialize lab
+lab.init(experiment_id="my_experiment")
+
+# Inside your training loop - save a checkpoint file
+checkpoint_file = "/path/to/your/checkpoint.pt"
+saved_path = lab.save_checkpoint(checkpoint_file, name="epoch_5_checkpoint.pt")
+lab.log(f"Saved checkpoint: {saved_path}")
+
+# Or save an entire checkpoint directory (common with HuggingFace models)
+checkpoint_dir = "/path/to/checkpoint-1000"
+saved_path = lab.save_checkpoint(checkpoint_dir, name="checkpoint-1000")
+
 ```
+
+The function will copy your checkpoint to the job's checkpoints folder and track it in the job metadata.
+
+### Automatic Checkpoint Saving with LabCallback
+
+If you're using HuggingFace's `Trainer` or `SFTTrainer`, you can enable automatic checkpoint saving using the built-in `LabCallback`. This callback automatically saves checkpoints to TransformerLab whenever the Trainer saves a checkpoint.
+
+```python
+from lab import lab
+from transformers import Trainer, TrainingArguments
+
+# Initialize lab
+lab.init(experiment_id="my_experiment")
+
+# Get the automatic checkpoint callback
+callback = lab.get_hf_callback()
+
+# Configure training arguments with checkpoint saving
+training_args = TrainingArguments(
+    output_dir="./checkpoints",
+    save_steps=500,  # Save checkpoint every 500 steps
+    save_strategy="steps",
+    save_total_limit=3,  # Keep only the last 3 checkpoints
+)
+
+# Create trainer with the callback
+trainer = Trainer(
+    model=model,
+    args=training_args,
+    train_dataset=dataset,
+    callbacks=[callback],  # Add the callback here
+)
+# Start training - checkpoints will be saved automatically
+trainer.train()
+```
+
+
+The `LabCallback` automatically:
+
+- Saves checkpoints to Transformer Lab when the Trainer creates them
+- Updates training progress in the UI
+- Logs training metrics (loss, etc.)
+- Tracks epoch completion
 
 ## Managing Checkpoints
 
@@ -46,4 +101,4 @@ Transformer Lab is designed to handle interruptions gracefully. If your training
 
 To enable this, your script must check for existing checkpoints upon startup and load them if found.
 
-Sample Code: View a robust implementation of auto-recovery logic in [our GitHub Repository here]
+Sample Code: View a robust implementation of auto-recovery logic in [our GitHub Repository here](https://github.com/transformerlab/transformerlab-sdk/blob/main/scripts/examples/trl_train_script.py)
