@@ -32,16 +32,19 @@ Now create a file in `~/.transformerlab` called `.env`
 
 And copy and paste the following information:
 
-```text
-TL_API_URL="http://localhost:8338/"  # Auto-set this as the default API URL
+```bash
+TL_API_URL="http://localhost:8338/"  # Set this as the default API URL
 MULTIUSER="true" # Set to "true" to enable multi-user features
 
-# Frontend URL (used for generating invitation links and auth redirects)
-FRONTEND_URL="http://localhost:1212" # Set to your frontend URL. If running locally, use localhost:1212 (default port when performing npm start)
+# Set to your frontend URL. If running locally, use localhost:1212 (default port when performing npm start)
+FRONTEND_URL="http://localhost:1212" 
 
-TRANSFORMERLAB_JWT_SECRET=<random character string for auth. Generally created by install.sh but you can set your own here>
-TRANSFORMERLAB_REFRESH_SECRET=<random character string for auth. Generally created by install.sh but you can set your own here>
-TFL_API_STORAGE_URI=true # Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
+# Random character strings for auth. Generally created by install.sh but you can set your own here
+TRANSFORMERLAB_JWT_SECRET=953f0608ba2a27ae.... 
+TRANSFORMERLAB_REFRESH_SECRET=e3e3e533e03cbc5f...
+
+# Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
+TFL_API_STORAGE_URI=true 
 ```
 
 ## Step 4 -- Configuring a Compute Service
