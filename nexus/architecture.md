@@ -3,6 +3,8 @@ title: Architecture
 sidebar_position: 100
 ---
 
-# Architecture
+# Overall Architecture
 
-Here is how it all works
+Transformer Lab has the following architecture
+
+![Transformer Lab Architecture](./img/MLRP-architecture.png)

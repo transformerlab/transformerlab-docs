@@ -5,7 +5,7 @@ sidebar_position: 6
 
 ## Running a Jupyter Notebook Service
 
-Interactive services in Nexus allow you to launch environments like Jupyter Notebook directly from the interface. This guide walks you through running a Jupyter Notebook service.
+Interactive services in Transformer Lab allow you to launch environments like Jupyter Notebook directly from the interface. This guide walks you through running a Jupyter Notebook service.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before running a Jupyter Notebook service, ensure you have a Compute Provider se
 
 ## Steps to Run a Jupyter Notebook Service
 
-1. Go to the Interact page in Nexus.
+1. Go to the Interact page in Transformer Lab.
 
 2. Click on the "New" button to create a new interactive service.
    ![Interact Page New Button](../img/interact-page-new.png)

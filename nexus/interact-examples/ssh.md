@@ -5,7 +5,7 @@ sidebar_position: 7
 
 ## Running an SSH Service
 
-Interactive services in Nexus allow you to get direct SSH access to a remote node. This guide walks you through running an SSH service.
+Interactive services in Transformer Lab allow you to get direct SSH access to a remote node. This guide walks you through running an SSH service.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before running an SSH service, ensure you have a Compute Provider set up and act
 
 ## Steps to Run an SSH Service
 
-1. Go to the Interact page in Nexus.
+1. Go to the Interact page in Transformer Lab.
 
 2. Click on the "New" button to create a new interactive service.
    ![Interact Page New Button](../img/interact-page-new.png)
