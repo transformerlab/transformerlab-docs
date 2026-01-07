@@ -141,4 +141,4 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 - Ensure the API node can SSH to the SLURM login node with the provided user and key.
 - Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
 
-## Congrats, you are up and running. [You can now run a Task](./running-a-task.md).
+<p style={{ fontWeight: 'bold', fontSize: '1.5rem', lineHeight: '2rem', paddingTop: '1rem'}}>Congrats, you are up and running. [You can now run a Task -->](./running-a-task.md)</p>

@@ -96,7 +96,10 @@ function HomepageHeader() {
                 <FaArrowRight />
               </Link>
               <div style={{ marginTop: "1rem", marginLeft: "0.3rem" }}>
-                or <a href="/beta.html">Book a Demo</a>
+                or{" "}
+                <a href="/beta.html" style={{ fontWeight: 600 }}>
+                  Book a Demo
+                </a>
               </div>
             </div>
           </div>

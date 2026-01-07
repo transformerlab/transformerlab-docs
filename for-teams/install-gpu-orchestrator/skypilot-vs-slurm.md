@@ -21,3 +21,9 @@ SkyPilot is a more modern framework designed specifically for the fluid nature o
 * **The Upside:**
     * **Auto-Provisioning:** It handles the messy work of requesting the VM, setting up the environment, and mounting storage.
     * **Cost Savings:** It supports "Spot" instances with auto-recovery. If a cheap spot instance is taken away, SkyPilot can automatically move your job to a new one.
+
+## Summary
+
+In summary, both systems have their strengths. If you are setting up a new lab and don't have specific needs from SLURM, our personal recommendation would be to set up SkyPilot so you can use it to access local compute **and** cloud compute through a single interface.
+
+If you choose to setup SkyPilot and have your own local cluster, we suggest setting up local nodes as **SSH Nodes** in SkyPilot during initial testing, but in the long run it will be worth it to set up a local Kubernetes cluster (using the instructions in the SkyPilot documentation). This will allow you to leverage the full power of Kubernetes and SkyPilot.
