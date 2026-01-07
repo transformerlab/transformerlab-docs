@@ -44,12 +44,21 @@ The easiest way to set up your credentials is via the interactive prompt:
 lab login
 ```
 
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-login.cast"}
+      options={{ speed: 2, loop: true, rows: 6 }}
+    />
+  )}
+</BrowserOnly>
+
 ### Non-Interactive Login
 
 For scripts or single-command setup, you can pass your credentials as flags:
 
 ```bash
-lab login --email admin@example.com --apiKey <INSERT API KEY HERE> --serverURL https://app.lab.cloud
+lab login --apiKey <INSERT API KEY HERE> --serverURL https://app.lab.cloud:8338
 ```
 
 ### Verifying Configuration
