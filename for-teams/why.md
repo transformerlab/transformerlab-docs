@@ -15,9 +15,10 @@ Transformer Lab can be configured to run in one of two modes:
 
 Transformer Lab can be configured to run in one of two flavours. Both modes are the same app and codebase, features are just turned on and off based on which mode you activate.
 
-| Feature | Single-Node Mode | Team Mode |
+| Feature | Transformer Lab For Individuals | Transformer Lab For Teams |
 | --- | --- | --- |
 | Local machine training & evals | ✓ |  |
+| Run and Train Models that don't fit on a single machine | | ✓ |
 | Experiment Management | ✓ | ✓ |
 | Model Registry | ✓ | ✓ |
 | Dataset Registry | ✓ | ✓ |
