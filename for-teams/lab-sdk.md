@@ -9,7 +9,7 @@ The Lab SDK is a Python library that provides a simple, unified interface for in
 
 While the Lab SDK is optional, adding it to your scripts allows for enhanced interaction with Transformer Lab, allowing you to better track the lifecycle of jobs, manage logs, store artifacts, save models, etc.
 
-You can find the source code for the Lab SDK here: https://github.com/transformerlab/transformerlab-app/tree/main/lab-sdk
+You can find the source code for the Lab SDK [here](https://github.com/transformerlab/transformerlab-app/tree/main/lab-sdk).
 
 This guide covers available functionality with practical examples.
 
