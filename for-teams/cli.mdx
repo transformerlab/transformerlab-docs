@@ -8,7 +8,7 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 
 # Transformer Lab CLI
 
-Transformer Lab can be accessed via CLI:
+Transformer Lab can be accessed via CLI using the `lab` executable.
 
 <BrowserOnly>
   {() => <AsciinemaPlayer src={"/img/cli/start.cast"} options={{ speed: 2 }} />}
@@ -16,37 +16,45 @@ Transformer Lab can be accessed via CLI:
 
 ## Installing the Transformer Lab CLI
 
-Install the `lab` CLI tool using the following command in your terminal (requires `uv`)
+You can install the `lab` tool using `uv`.
+
+> **Prerequisite:** Ensure you have [uv](https://github.com/astral-sh/uv) installed before running the command below.
 
 ```bash
 uv tool install "git+https://github.com/transformerlab/transformerlab-app#subdirectory=cli"
 ```
 
-## Log In
+## Authentication
 
-In order to interact with your Transformer Lab instance, `lab` CLI needs to know:
+To interact with your Transformer Lab instance, the CLI requires the following credentials:
 
-- The URL of the Transformer Lab API you are accessing (e.g. `https://app.lab.cloud` (include the port if you are not running on port 80/443)
-- Your user email address
-- Your API Key (which you can obtain from the Transformer Lab GUI under User Settings)
+* Server URL: The URL of your API (e.g., https://app.lab.cloud). Include the port if not using 80/443.
+* Email: Your user email address.
+* API Key: Your access token.
 
-You can set all of these by typing
+:::tip Where to find your API Key
+ You can generate or view your API Key in the Transformer Lab GUI under User Settings. 
+:::
+
+### Interactive Login (Recommended)
+
+The easiest way to set up your credentials is via the interactive prompt:
 
 ```bash
 lab login
 ```
 
-To get an interactive prompt.
+### Non-Interactive Login
 
-You can also type
+For scripts or single-command setup, you can pass your credentials as flags:
 
 ```bash
 lab login --email admin@example.com --apiKey <INSERT API KEY HERE> --serverURL https://app.lab.cloud
 ```
 
-To set all of this information in one command.
+### Verifying Configuration
 
-If you would like to inspect the configuration options above, type:
+To inspect your current configuration and ensure your credentials are saved correctly, run:
 
 ```bash
 lab config
@@ -55,6 +63,8 @@ lab config
 ## Tasks
 
 ### Listing Tasks
+
+You can list tasks by typing `lab task list`
 
 <BrowserOnly>
   {() => (
@@ -67,9 +77,14 @@ lab config
 
 ### Creating a Task
 
+*Command documentation pending*
+
 ## Jobs
 
 ### Viewing the Status of a Job
+
+You can list jobs by typing `lab job status`
+
 
 <BrowserOnly>
   {() => (
@@ -80,7 +95,10 @@ lab config
   )}
 </BrowserOnly>
 
-## Monitoring Jobs
+### Monitoring Jobs
+
+For an interactive GUI to monitor jobs use `lab job monitor`
+
 
 <BrowserOnly>
   {() => (
