@@ -95,7 +95,9 @@ const config = {
           customCss: [
             require.resolve("./src/css/vars.css"),
             require.resolve("./src/css/custom.css"),
-            require.resolve("asciinema-player/dist/bundle/asciinema-player.css"),
+            require.resolve(
+              "asciinema-player/dist/bundle/asciinema-player.css"
+            ),
           ],
         },
         ...(process.env.GTAG_TRACKING_ID && {
@@ -123,9 +125,9 @@ const config = {
     [
       "@docusaurus/plugin-content-docs",
       {
-        id: "nexus",
-        path: "nexus",
-        routeBasePath: "nexus",
+        id: "for-teams",
+        path: "for-teams",
+        routeBasePath: "for-teams",
         sidebarPath: require.resolve("./sidebars.js"),
         editUrl:
           "https://github.com/transformerlab/transformerlab-docs/tree/main/",
@@ -152,7 +154,7 @@ const config = {
             activeBaseRegex: "^/$",
           },
           { to: "/docs", label: "For Individuals", position: "left" },
-          // { to: "/nexus", label: "For Teams", position: "left" },
+          // { to: "/for-teams", label: "For Teams", position: "left" },
           {
             to: "/blog",
             label: "Blog",
