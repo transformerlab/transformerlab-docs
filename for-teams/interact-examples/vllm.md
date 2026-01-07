@@ -5,7 +5,7 @@ sidebar_position: 8
 
 ## Running a vLLM Server Service
 
-Interactive services in Nexus allow you to launch environments like vLLM Server to interact with models directly from the interface. This guide walks you through running a vLLM Server service.
+Interactive services in Transformer Lab allow you to launch environments like vLLM Server to interact with models directly from the interface. This guide walks you through running a vLLM Server service.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before running a vLLM Server service, ensure you have a Compute Provider set up 
 
 ## Steps to Run a vLLM Server Service
 
-1. Go to the Interact page in Nexus.
+1. Go to the Interact page in Transformer Lab.
 
 2. Click on the "New" button to create a new interactive service.
    ![Interact Page New Button](../img/interact-page-new.png)

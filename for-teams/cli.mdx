@@ -1,0 +1,110 @@
+---
+title: CLI
+sidebar_position: 60
+---
+
+import AsciinemaPlayer from "@site/src/components/AsciinemaPlayer";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+# Transformer Lab CLI
+
+Transformer Lab can be accessed via CLI using the `lab` executable.
+
+<BrowserOnly>
+  {() => <AsciinemaPlayer src={"/img/cli/start.cast"} options={{ speed: 2 }} />}
+</BrowserOnly>
+
+## Installing the Transformer Lab CLI
+
+You can install the `lab` tool using `uv`.
+
+> **Prerequisite:** Ensure you have [uv](https://github.com/astral-sh/uv) installed before running the command below.
+
+```bash
+uv tool install "git+https://github.com/transformerlab/transformerlab-app#subdirectory=cli"
+```
+
+## Authentication
+
+To interact with your Transformer Lab instance, the CLI requires the following credentials:
+
+* Server URL: The URL of your API (e.g., https://app.lab.cloud). Include the port if not using 80/443.
+* Email: Your user email address.
+* API Key: Your access token.
+
+:::tip Where to find your API Key
+ You can generate or view your API Key in the Transformer Lab GUI under User Settings. 
+:::
+
+### Interactive Login (Recommended)
+
+The easiest way to set up your credentials is via the interactive prompt:
+
+```bash
+lab login
+```
+
+### Non-Interactive Login
+
+For scripts or single-command setup, you can pass your credentials as flags:
+
+```bash
+lab login --email admin@example.com --apiKey <INSERT API KEY HERE> --serverURL https://app.lab.cloud
+```
+
+### Verifying Configuration
+
+To inspect your current configuration and ensure your credentials are saved correctly, run:
+
+```bash
+lab config
+```
+
+## Tasks
+
+### Listing Tasks
+
+You can list tasks by typing `lab task list`
+
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-task-list.cast"}
+      options={{ speed: 1, loop: true, rows: 18 }}
+    />
+  )}
+</BrowserOnly>
+
+### Creating a Task
+
+*Command documentation pending*
+
+## Jobs
+
+### Viewing the Status of a Job
+
+You can list jobs by typing `lab job status`
+
+
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-job-list.cast"}
+      options={{ speed: 1, loop: true, rows: 18 }}
+    />
+  )}
+</BrowserOnly>
+
+### Monitoring Jobs
+
+For an interactive GUI to monitor jobs use `lab job monitor`
+
+
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-job-monitor.cast"}
+      options={{ speed: 1, loop: true }}
+    />
+  )}
+</BrowserOnly>
