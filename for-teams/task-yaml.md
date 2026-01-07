@@ -104,7 +104,7 @@ resources:
 ### resources.accelerators
 
 Accelerator specification (e.g., GPU type and count). Format depends on the provider. 
-To look at supported formats in Skypilot, refer to their [accelerator documentation](https://docs.skypilot.co/en/stable/examples/auto-failover.html#provisioning-gpus).
+To look at supported formats in Skypilot, refer to their [accelerator documentation](https://docs.skypilot.co/en/stable/examples/auto-failover.html#provisioning-gpus) and for SLURM, refer to their [GPU documentation](https://slurm.schedmd.com/gres.html).
 
 **Type:** String
 
