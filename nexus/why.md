@@ -3,7 +3,7 @@ title: What is Transformer Lab Team Mode?
 sidebar_position: 15
 ---
 
-# Why Transformer Lab Team Mode?
+# Why Transformer Lab for Teams
 
 Transformer Lab can be configured to run in one of two modes:
 
@@ -32,7 +32,7 @@ Transformer Lab can be configured to run in one of two flavours. Both modes are 
 
 ![Image](./img/screenshot-tasks.png)
 
-Our new **Super-Duper Team Edition** offers more complex capabilities <span style={{backgroundColor: "#93be34ff", fontWeight: 'bold'}}>designed for teams that work across clusters of GPUs</span>. This means you can:
+Our new **Transformer Lab for Teams** offers more complex capabilities <span style={{backgroundColor: "#93be34ff", fontWeight: 'bold'}}>designed for teams that work across clusters of GPUs</span>. This means you can:
 
 - **Scale Effortlessly:** Researchers can go from quick Jupyter notebooks to production ML runs across hundreds or thousands of GPUs using one interface.
 

@@ -1,10 +1,10 @@
 ---
-title: Super Duper Team Edition
+title: Transformer Lab for Teams
 slug: .
 sidebar_position: 1
 ---
 
-# Transformer Lab Super-Duper Team Edition
+# Transformer Lab for Teams and Research Labs
 
 :::note
 
@@ -14,7 +14,7 @@ You are currently reading our unreleased documentation for Transformer Lab desig
 
 ## Introduction
 
-Transformer Lab Super-Duper Team Edition is an open source platform designed to support the needs of ML researchers working collaboratively using clusters of local or cloud compute/GPU nodes.
+Transformer Lab for Teams is an open source platform designed to support the needs of ML researchers working collaboratively using clusters of local or cloud compute/GPU nodes.
 
 A team can use Transformer Lab to request nodes and submit ML tasks, while tracking experiments and their artifacts all in one place.
 
@@ -22,4 +22,4 @@ A team can use Transformer Lab to request nodes and submit ML tasks, while track
 
 ## Video
 
-The following video (coming soon) demonstrates what is possible with Transformer Lab Super-Duper Team Edition.
+The following video (coming soon) demonstrates what is possible with Transformer Lab for Teams.
