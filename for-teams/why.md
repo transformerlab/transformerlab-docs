@@ -7,8 +7,8 @@ sidebar_position: 15
 
 Transformer Lab can be configured to run in one of two modes:
 
-- **Single-Node Mode**: Perfect for individual researchers who want to train, tune, or evaluate models locally on a single machine. [Learn more in the single-node docs](/docs/).
-- **Team Mode**: Built for teams scaling across GPU clusters with advanced orchestration and collaboration features (see comparison below).
+- **Transformer Lab for Individuals**: Perfect for individual researchers who want to train, tune, or evaluate models locally on a single machine. [Learn more in the single-node docs](/docs/).
+- **Transformer Lab for Teams**: Built for teams scaling across GPU clusters with advanced orchestration and collaboration features (see comparison below).
 
 
 ## Choose Your Mode
