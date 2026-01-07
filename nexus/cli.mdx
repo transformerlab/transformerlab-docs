@@ -1,0 +1,92 @@
+---
+title: CLI
+sidebar_position: 60
+---
+
+import AsciinemaPlayer from "@site/src/components/AsciinemaPlayer";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
+# Transformer Lab CLI
+
+Transformer Lab can be accessed via CLI:
+
+<BrowserOnly>
+  {() => <AsciinemaPlayer src={"/img/cli/start.cast"} options={{ speed: 2 }} />}
+</BrowserOnly>
+
+## Installing the Transformer Lab CLI
+
+Install the `lab` CLI tool using the following command in your terminal (requires `uv`)
+
+```bash
+uv tool install "git+https://github.com/transformerlab/transformerlab-app#subdirectory=cli"
+```
+
+## Log In
+
+In order to interact with your Transformer Lab instance, `lab` CLI needs to know:
+
+- The URL of the Transformer Lab API you are accessing (e.g. `https://app.lab.cloud` (include the port if you are not running on port 80/443)
+- Your user email address
+- Your API Key (which you can obtain from the Transformer Lab GUI under User Settings)
+
+You can set all of these by typing
+
+```bash
+lab login
+```
+
+To get an interactive prompt.
+
+You can also type
+
+```bash
+lab login --email admin@example.com --apiKey <INSERT API KEY HERE> --serverURL https://app.lab.cloud
+```
+
+To set all of this information in one command.
+
+If you would like to inspect the configuration options above, type:
+
+```bash
+lab config
+```
+
+## Tasks
+
+### Listing Tasks
+
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-task-list.cast"}
+      options={{ speed: 1, loop: true, rows: 18 }}
+    />
+  )}
+</BrowserOnly>
+
+### Creating a Task
+
+## Jobs
+
+### Viewing the Status of a Job
+
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-job-list.cast"}
+      options={{ speed: 1, loop: true, rows: 18 }}
+    />
+  )}
+</BrowserOnly>
+
+## Monitoring Jobs
+
+<BrowserOnly>
+  {() => (
+    <AsciinemaPlayer
+      src={"/img/cli/lab-job-monitor.cast"}
+      options={{ speed: 1, loop: true }}
+    />
+  )}
+</BrowserOnly>
