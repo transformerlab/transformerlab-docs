@@ -706,23 +706,12 @@ def train_model():
     # 1. Initialize
     lab.init(experiment_id="my_training_experiment")
     
-    # 2. Set configuration
-    config = {
-        "model_name": "gpt2",
-        "dataset": "my_dataset",
-        "learning_rate": 2e-5,
-        "num_epochs": 3,
-        "batch_size": 8
-    }
-    lab.set_config(config)
-    lab.log("Configuration set")
-    
-    # 3. Load data
+    # 2. Load data
     lab.log("Loading dataset...")
     # ... load dataset ...
     lab.update_progress(10)
     
-    # 4. Training loop
+    # 3. Training loop
     lab.log("Starting training...")
     for epoch in range(config["num_epochs"]):
         # ... training code ...
@@ -737,7 +726,7 @@ def train_model():
         progress = int((epoch + 1) / config["num_epochs"] * 100)
         lab.update_progress(progress)
     
-    # 5. Save model
+    # 4. Save model
     model_dir = "./output/final_model"
     saved_model_path = lab.save_model(
         model_dir,
@@ -747,7 +736,7 @@ def train_model():
     )
     lab.log(f"Model saved: {saved_model_path}")
     
-    # 6. Run evaluation
+    # 5. Run evaluation
     lab.log("Running evaluation...")
     eval_results = pd.DataFrame({
         "input": ["test input 1", "test input 2"],
@@ -763,7 +752,7 @@ def train_model():
     )
     lab.log(f"Evaluation results saved: {eval_path}")
     
-    # 7. Save additional artifacts
+    # 6. Save additional artifacts
     summary = {"final_loss": 0.15, "accuracy": 0.92}
     import json
     with open("summary.json", "w") as f:
@@ -771,7 +760,7 @@ def train_model():
     
     lab.save_artifact("summary.json", "training_summary.json")
     
-    # 8. Complete job
+    # 7. Complete job
     lab.finish(
         message="Training completed successfully",
         score=summary
