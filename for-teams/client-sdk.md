@@ -5,7 +5,11 @@ toc_min_heading_level: 2
 toc_max_heading_level: 3
 ---
 
-The Lab SDK provides a simple, unified interface for integrating machine learning scripts with Transformer Lab. This guide covers all available functionality with practical examples.
+The Lab SDK is a Python SDK that provides a simple, unified interface for integrating machine learning scripts with Transformer Lab.
+
+While the Lab SDK is optional, adding it to your scripts allows for enhanced interaction with Transformer Lab, allowing you to better track the lifecycle of jobs, manage logs, store artifacts, save models, etc.
+
+This guide covers available functionality with practical examples.
 
 ## Getting Started
 
