@@ -5,22 +5,6 @@ sidebar_position: 70
 
 The Lab SDK provides a simple, unified interface for integrating machine learning scripts with Transformer Lab. This guide covers all available functionality with practical examples.
 
-## Table of Contents
-
-1. [Getting Started](#getting-started)
-2. [Initialization and Lifecycle](#initialization-and-lifecycle)
-3. [Configuration Management](#configuration-management)
-4. [Logging and Progress Tracking](#logging-and-progress-tracking)
-5. [Artifacts Management](#artifacts-management)
-6. [Checkpoint Management](#checkpoint-management)
-7. [Model Management](#model-management)
-8. [Dataset Management](#dataset-management)
-9. [Evaluation Results](#evaluation-results)
-10. [Job Completion](#job-completion)
-11. [HuggingFace Integration](#huggingface-integration)
-
----
-
 ## Getting Started
 
 ### Installation
@@ -50,11 +34,9 @@ lab.save_artifact("results.json", "my_results.json")
 lab.finish("Training completed successfully")
 ```
 
-
-
 ## Initialization and Lifecycle
 
-### `lab.init(experiment_id=None, config=None)`
+### lab.init()
 
 Initializes a job under the given experiment. This is the first method you should call.
 
@@ -75,10 +57,9 @@ lab.init()
 lab.init(experiment_id="my_training_experiment")
 ```
 
-
 ## Configuration Management
 
-### `lab.get_config() -> Dict[str, Any]`
+### lab.get_config()
 
 Retrieves configuration/parameters from job data. This is particularly useful when resuming jobs or accessing parameters that were set when the task was launched.
 
@@ -99,10 +80,9 @@ print(f"Model: {config.get('model_name')}")
 print(f"Learning rate: {config.get('learning_rate')}")
 ```
 
-
 ## Logging and Progress Tracking
 
-### `lab.log(message: str)`
+### lab.log()
 
 Logs a message to the job's output. Messages are visible in the Transformer Lab UI.
 
@@ -123,7 +103,7 @@ lab.log("Dataset loaded successfully")
 lab.log(f"Training epoch {epoch + 1}/{num_epochs}")
 ```
 
-### `lab.update_progress(progress: int)`
+### lab.update_progress()
 
 Updates the job's progress percentage (0-100).
 
@@ -148,7 +128,7 @@ for epoch in range(num_epochs):
 
 ## Artifacts Management
 
-### `lab.save_artifact(source_path, name=None, type=None, config=None) -> str`
+### lab.save_artifact()
 
 Saves a file or directory as an artifact for the current job. Artifacts are stored in the job's artifacts directory and are visible in the Transformer Lab UI.
 
@@ -187,10 +167,9 @@ lab.log(f"Saved config to: {artifact_path}")
 lab.save_artifact("./output_dir", "training_output")
 ```
 
-
 ## Checkpoint Management
 
-### `lab.save_checkpoint(source_path: str, name: Optional[str] = None) -> str`
+### lab.save_checkpoint()
 
 Saves a checkpoint file or directory into the job's checkpoints folder. Checkpoints are tracked separately from artifacts and can be used to resume training.
 
@@ -222,7 +201,7 @@ for epoch in range(num_epochs):
         lab.log(f"Saved checkpoint: {saved_path}")
 ```
 
-### `lab.get_checkpoint_to_resume() -> Optional[str]`
+### lab.get_checkpoint_to_resume()
 
 Gets the checkpoint path to resume training from. This checks for checkpoint resume information stored in the job data.
 
@@ -248,10 +227,9 @@ else:
 
 **Note**: This method is only available when resuming from a checkpoint using the GUI.
 
-
 ## Model Management
 
-### `lab.save_model(source_path, name=None, architecture=None, pipeline_tag=None, parent_model=None) -> str`
+### lab.save_model()
 
 Saves a model file or directory to the workspace models directory. The model will automatically appear under the Model Registry tab in the GUI.
 This works the same as `lab.save_artifact(..., type="model")`.
@@ -299,7 +277,7 @@ lab.log(f"Model saved to Model Zoo: {saved_path}")
 
 **Note:** This method is a convenience wrapper around `save_artifact()` with `type="model"`. For more control, use `save_artifact()` directly.
 
-### `lab.save_artifact(..., type="model", config={...})`
+### lab.save_artifact() with type="model"
 
 Advanced model saving with more configuration options.
 
@@ -325,7 +303,7 @@ saved_path = lab.save_artifact(
 )
 ```
 
-### `lab.list_models() -> list[Dict[str, Any]]`
+### lab.list_models()
 
 Lists all local models available in the workspace.
 
@@ -350,7 +328,7 @@ for model in models:
     lab.log(f"  - {model['model_id']}: {model.get('name', 'N/A')}")
 ```
 
-### `lab.get_model(model_id: str) -> ModelService`
+### lab.get_model()
 
 Gets a specific local model by ID.
 
@@ -379,7 +357,7 @@ model_dir = model.get_dir()
 lab.log(f"Model directory: {model_dir}")
 ```
 
-### `lab.get_model_path(model_id: str) -> str`
+### lab.get_model_path()
 
 Gets the filesystem path to a specific local model.
 
@@ -411,7 +389,7 @@ lab.log(f"Model path: {model_path}")
 
 ## Dataset Management
 
-### `lab.save_dataset(df, dataset_id: str, additional_metadata=None, suffix=None, is_image=False) -> str`
+### lab.save_dataset()
 
 Saves a dataset under the workspace datasets directory and marks it as generated. The dataset will appear in the Transformer Lab UI.
 
@@ -489,7 +467,7 @@ dataset_path = lab.save_artifact(
 
 ## Evaluation Results
 
-### `lab.save_artifact(..., type="eval", config={...})`
+### lab.save_artifact() with type="eval"
 
 Saves evaluation results as a CSV file. The results are stored in the job's eval_results directory and are visible in the Transformer Lab UI.
 
@@ -577,10 +555,9 @@ eval_path = lab.save_artifact(
 lab.log(f"Evaluation results saved to: {eval_path}")
 ```
 
-
 ## Job Completion
 
-### `lab.finish(message="Job completed successfully", score=None)`
+### lab.finish()
 
 Marks the job as successfully completed and sets completion metadata.
 
@@ -613,7 +590,7 @@ lab.finish(
 
 ```
 
-### `lab.error(message="")`
+### lab.error()
 
 Marks the job as failed and sets completion metadata.
 
@@ -637,10 +614,9 @@ except Exception as e:
     raise
 ```
 
-
 ## HuggingFace Integration
 
-### `lab.get_hf_callback() -> LabCallback`
+### lab.get_hf_callback()
 
 Gets a HuggingFace TrainerCallback instance for Transformer Lab integration. This callback automatically:
 
