@@ -28,7 +28,7 @@ Transformer Lab can be configured to run in one of two flavours. Both modes are 
 | Cloud provider integration | | ✓ |
 | CLI interface | | ✓ | 
 | Best for | Local ML on Mac/Windows/Linux | Teams (Academic and Research Labs) scaling across GPU clusters |
-| License | 100% Opensource | 100% Opensource |
+| License | 100% Open source | 100% Open source |
 
 
 ![Image](./img/screenshot-tasks.png)
