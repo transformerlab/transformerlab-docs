@@ -1,5 +1,5 @@
 ---
-title: What is Transformer Lab Team Mode?
+title: What is Transformer Lab for Teams?
 sidebar_position: 15
 ---
 
