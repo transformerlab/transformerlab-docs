@@ -1,0 +1,1 @@
+This folder contains icons used by the app and galleries. Do not delete without confirming they are not referenced.
