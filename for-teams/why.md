@@ -73,6 +73,9 @@ Long training runs on unstable nodes (or Spot instances in the cloud) are risky.
 ### CLI for Power Users
 Admins and power users don't have to leave the terminal. The `lab` CLI allows you to submit tasks, monitor jobs, and view logs without ever opening a browser, bridging the gap between CLI speed and Platform visibility.
 
+<img src={require('./img/screenshot-cli.png').default} width="400" />
+
+
 ---
 
 ## How it Fits
