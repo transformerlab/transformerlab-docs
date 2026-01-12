@@ -20,6 +20,14 @@ A team can use Transformer Lab for Teams to request nodes and submit ML tasks, w
 
 ![Image](./img/screenshot-tasks.png)
 
+<!-- <video
+src="https://gallery.transformerlab.net/transformerlab-for-teams-video01.webm"
+autoPlay
+muted
+loop
+style={{ width: "100%" }}
+/> -->
+
 ## Video
 
 The following video (coming soon) demonstrates what is possible with Transformer Lab for Teams.

@@ -3,7 +3,6 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import Screenshot from "./img/cloud-screenshot.png";
 import styles from "./index.module.css";
 import Content from "./homepage-components/homepage-content.mdx";
 import AllFeatures from "./homepage-components/AllFeatures";
@@ -90,6 +89,7 @@ function HomepageHeader() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  width: "fit-content",
                 }}
               >
                 Get Started Now &nbsp;
@@ -98,7 +98,7 @@ function HomepageHeader() {
               <div style={{ marginTop: "1rem", marginLeft: "0.3rem" }}>
                 or{" "}
                 <a href="/beta.html" style={{ fontWeight: 600 }}>
-                  Book a Demo
+                  Join our Beta to get access to our plaform for research labs
                 </a>
               </div>
             </div>
@@ -109,9 +109,13 @@ function HomepageHeader() {
         <div class="col col--12">
           <div className="spacer" />
 
-          <img
-            src={Screenshot}
+          <video
+            src="https://gallery.transformerlab.net/transformerlab-for-teams-video01.webm"
             className={clsx("video_container", styles.video_container)}
+            autoPlay
+            muted
+            loop
+            style={{ width: "100%" }}
           />
         </div>
       </div>
