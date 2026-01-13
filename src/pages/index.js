@@ -110,7 +110,7 @@ function HomepageHeader() {
           <div className="spacer" />
 
           <video
-            src="https://gallery.transformerlab.net/transformerlab-for-teams-video01.webm"
+            src="https://gallery.transformerlab.net/transformerlab-for-teams-video01.mp4"
             className={clsx("video_container", styles.video_container)}
             autoPlay
             muted
