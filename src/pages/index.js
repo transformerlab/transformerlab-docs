@@ -115,6 +115,7 @@ function HomepageHeader() {
             autoPlay
             muted
             loop
+            playsInline
             style={{ width: "100%" }}
           />
         </div>
