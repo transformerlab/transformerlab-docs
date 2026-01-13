@@ -29,7 +29,7 @@ curl https://lab.cloud/install.sh | bash
 You need to also install packages necessary for running compute providers like Skypilot or SLURM:
 ```bash
 cd ~/.transformerlab/src
-./install.sh install_providers
+./install.sh multiuser_setup
 ```
 
 ## Step 3 - Run Transformer Lab and Log in
