@@ -11,28 +11,28 @@ import appVersion from '../static/app-version.json';
 # Download ↓
 
 :::warning
-We are moving away from a downloadable app in our upcoming release. Please install Transformer Lab [on the commandline by following the instructions here](./install/install.md).
+We have deprecated the downloadable app and will no longer be releasing updates as of version 0.28. Please install Transformer Lab [on the commandline by following the instructions here](./install/install.md).
 :::
 
-Current Version: {appVersion.version}
+Latest downloadable version: 0.27.8
 
-## <FaApple /> macOS 
+## <FaApple /> macOS
 
-<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-${appVersion.version}-arm64.dmg`}>
-  <Button>Download for <FaApple /> Mac (Silicon)</Button>
-  </a>
+<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-0.27.8-arm64.dmg`}>
+<Button>Download for <FaApple /> Mac (Silicon)</Button>
+</a>
 
 <br/><br/>
 
-<!-- <a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-${appVersion.version}.dmg`}>
+<!-- <a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-0.27.8.dmg`}>
   <Button>Download for <FaApple /> Mac (Intel)</Button>
   </a> -->
 
 ## <FaWindows/> Windows
 
-<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-Setup-${appVersion.version}.exe`}>
-  <Button>Download for <FaWindows /> Windows</Button>
-  </a>
+<a href={`https://github.com/transformerlab/transformerlab-app/releases/download/v${appVersion.version}/Transformer-Lab-Setup-0.27.8.exe`}>
+<Button>Download for <FaWindows /> Windows</Button>
+</a>
 
 <br/>
 
