@@ -100,11 +100,9 @@ You can download it from the [AMD Drivers & Support page](https://www.amd.com/en
 ### Step 3 - Install ROCm for WSL
 
 Follow the official ROCm installation instructions for WSL at:  
-[ROCm for WSL Installation Guide](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/install/wsl/install-radeon.html)
+[ROCm for WSL Installation Guide](https://rocm.docs.amd.com/projects/radeon-ryzen/en/latest/docs/install/installrad/wsl/install-radeon.html)
 
 This guide will walk you through the steps to install ROCm and ensure your AMD GPU is available in your WSL environment.
-
-> **Note:** Due to current limitations, you will not be able to track GPU usage when using Transformer Lab on Windows with an AMD GPU. See [AMD's documentation on limitations](https://rocm.docs.amd.com/projects/radeon/en/latest/docs/limitations.html#windows-subsystem-for-linux-wsl) for more details.
 
 ### Step 4 - Download and Install Transformer Lab
 
