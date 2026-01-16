@@ -41,5 +41,3 @@ We understand that airgapped systems are inherently more difficult to set up bec
 **Please reach out to our team.** We would be happy to walk you through the architecture and guide you on how to make Transformer Lab a helpful, secure asset for your researchers.
 
 ---
-
-**Would you like me to draft a technical "Installation Requirements" document that your IT or SysAdmin team can use to vet the platform?**
