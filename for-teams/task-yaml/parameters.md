@@ -1,6 +1,6 @@
 ---
 title: Task Parameters
-sidebar_position: 1
+sidebar_position: 81
 ---
 
 This guide explains how to define and configure task parameters in Transformer Lab. Parameters are used to pass configuration values, hyperparameters, and other settings to your task scripts, which can be accessed via `lab.get_config()`.
