@@ -62,8 +62,7 @@ And copy and paste the following information (update `localhost` to your server 
 TL_API_URL="http://localhost:8338/"  # API runs by default on port 8338
 MULTIUSER="true" # Set to "true" to enable multi-user features
 
-# By default, the frontend is served from the root of the API and should be the same.
-# If you are running a dev build of the frontend using NPM, set the port to 1212 instead of 8338
+# In a default setup, the frontend URL will be the same as the API URL set above.
 FRONTEND_URL="http://localhost:8338"
 
 # Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
