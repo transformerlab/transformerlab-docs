@@ -1,9 +1,11 @@
 ---
-title: Task YAML
+title: Task YAML Structure
 sidebar_position: 80
 ---
 
 This guide explains how to format YAML files for creating tasks in Transformer Lab. Tasks define jobs that run on compute providers and can include training scripts, evaluation scripts, or any other computational workloads.
+
+**Note:** For detailed information about defining task parameters with validation and custom UI, see the [Task Parameters](/for-teams/task-yaml/parameters) guide.
 
 ## Basic Structure
 
@@ -310,6 +312,15 @@ config = lab.get_config()
 learning_rate = config.get("learning_rate")
 model_name = config.get("model_name")
 ```
+
+**📖 For comprehensive parameter documentation**, including:
+- Parameter types (int, float, bool, enum, string, json, model, dataset)
+- Schema validation (min, max, multipleOf)
+- UI customization (ui_widget options)
+- Special model and dataset selectors
+- Complete examples
+
+See the **[Task Parameters](/for-teams/task-yaml/parameters) guide**.
 
 ## Hyperparameter Sweeps
 
