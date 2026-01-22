@@ -27,6 +27,7 @@ curl https://lab.cloud/install.sh | bash
 ```
 
 You need to also install packages necessary for running compute providers like Skypilot or SLURM:
+
 ```bash
 cd ~/.transformerlab/src
 ./install.sh multiuser_setup
@@ -55,21 +56,18 @@ Please change the password as a first step.
 
 Now create a file in `~/.transformerlab` called `.env`
 
-And copy and paste the following information:
+And copy and paste the following information (update `localhost` to your server address):
 
 ```bash
-TL_API_URL="http://localhost:8338/"  # Set this as the default API URL
+TL_API_URL="http://localhost:8338/"  # API runs by default on port 8338
 MULTIUSER="true" # Set to "true" to enable multi-user features
 
-# Set to your frontend URL. If running locally, use localhost:1212 (default port when performing npm start)
-FRONTEND_URL="http://localhost:1212" 
-
-# Random character strings for auth. Generally created by install.sh but you can set your own here
-TRANSFORMERLAB_JWT_SECRET=953f0608ba2a27ae.... 
-TRANSFORMERLAB_REFRESH_SECRET=e3e3e533e03cbc5f...
+# By default, the frontend is served from the root of the API and should be the same.
+# If you are running a dev build of the frontend using NPM, set the port to 1212 instead of 8338
+FRONTEND_URL="http://localhost:8338"
 
 # Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
-TFL_API_STORAGE_URI=true 
+TFL_API_STORAGE_URI=true
 ```
 
 ### Setting up AWS Credentials for S3 Storage
@@ -99,6 +97,7 @@ aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
 Ensure the profile has the necessary permissions to create and manage S3 buckets.
 
 ## Step 5 - Configuring a Compute Service
+
 Go to Team Settings by clicking your user name in the sidebar.
 
 ![Team Settings in the sidebar](./img/screenshot-usersettings.png)
@@ -111,14 +110,14 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 
 ```json5 showLineNumbers
 {
-	// Replace with the IP/host of your SkyPilot server reachable by the API server
-	"server_url": "http://localhost:46580",
-	"default_env_vars": {
-		// Obtain from the SkyPilot server at http://<skypilot-host>:46580/users
-		"SKYPILOT_USER_ID": "<skypilot user id>",
-		"SKYPILOT_USER": "<skypilot username>"
-	},
-	"default_entrypoint_command": ""
+  // Replace with the IP/host of your SkyPilot server reachable by the API server
+  server_url: "http://localhost:46580",
+  default_env_vars: {
+    // Obtain from the SkyPilot server at http://<skypilot-host>:46580/users
+    SKYPILOT_USER_ID: "<skypilot user id>",
+    SKYPILOT_USER: "<skypilot username>",
+  },
+  default_entrypoint_command: "",
 }
 ```
 
@@ -129,12 +128,12 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 
 ```json5 showLineNumbers
 {
-	"ssh_host": "<SLURM_LOGIN_NODE_IP>",
-	// Many clusters use the "slurm" user; use the appropriate user for your setup
-	"ssh_user": "slurm",
-	// Path to your SSH private key
-	"ssh_key_path": "~/.ssh/id_rsa",
-	"ssh_port": 22
+  ssh_host: "<SLURM_LOGIN_NODE_IP>",
+  // Many clusters use the "slurm" user; use the appropriate user for your setup
+  ssh_user: "slurm",
+  // Path to your SSH private key
+  ssh_key_path: "~/.ssh/id_rsa",
+  ssh_port: 22,
 }
 ```
 
