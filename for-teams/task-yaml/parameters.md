@@ -24,8 +24,6 @@ The following parameter types are supported:
 | `'bool'`| Boolean values | Switch toggle | `true`, `false` |
 | `'enum'` | Enumerated choices | Select dropdown | `"option1"`, `"option2"` |
 | `'string'` | Text values | Text input | `"model-name"`, `"path/to/file"` |
-| `'model'` | Special: Model selector | Model dropdown | Auto-populated from Model Registry |
-| `'dataset'` | Special: Dataset selector | Dataset dropdown | Auto-populated from Dataset list |
 
 ## Simple Shorthand Format
 
@@ -70,7 +68,7 @@ parameters:
 
 The parameter type (required for schema format).
 
-**Options:** `'int'`, `'float'`, `'bool'`, `'enum'`, `'string'`, `'model'`, `'dataset'`
+**Options:** `'int'`, `'float'`, `'bool'`, `'enum'`, `'string'`
 
 ```yaml
 parameters:
@@ -114,15 +112,15 @@ parameters:
     default: 0.7
 ```
 
-#### multipleOf
+#### step
 
-For numeric types, the value must be a multiple of this number (for validation and slider steps).
+For numeric types, the increment step for sliders and the step attribute for number inputs. Also used for validation and slider increments.
 
 ```yaml
 parameters:
   batch_size:
     type: "int"
-    multipleOf: 8
+    step: 8
     default: 32
 ```
 
@@ -142,7 +140,7 @@ parameters:
 
 Customize how the parameter appears in the UI. This is **optional** - sensible defaults exist for each type.
 
-**Options:** `'slider'`, `'range'`, `'switch'`, `'radio'`, `'password'`, `'select'`
+**Options:** `'slider'`, `'range'`, `'switch'`, `'radio'`, `'password'`, `'select'`, `'lab_model_select'`, `'lab_dataset_select'`
 
 ```yaml
 parameters:
@@ -167,6 +165,8 @@ The `ui_widget` field is **optional**. Each parameter type has sensible defaults
 - `'radio'` - Radio buttons for enum types
 - `'password'` - Password field for string types
 - `'select'` - Select dropdown (default for enums)
+- `'lab_model_select'` - Dropdown to select from available models, with option to enter custom model name
+- `'lab_dataset_select'` - Dropdown to select from available datasets, with option to enter custom dataset name
 
 **Example:**
 
@@ -194,18 +194,35 @@ parameters:
     ui_widget: "password"
 ```
 
-## Special Parameters: Model and Dataset
+## Special Parameters: Model and Dataset Selection
 
-Two parameter types have special handling - they automatically populate with your available models and datasets:
+To allow users to select models or datasets from their available libraries, use the `'lab_model_select'` or `'lab_dataset_select'` ui_widget with a string type parameter. These widgets provide a dropdown populated with your available models or datasets, plus an option to enter a custom value.
 
-### model / model_name
+### Model Selection
 
-When you name a parameter `"model"` or `"model_name"`, it automatically becomes a dropdown selector populated with all locally available models from your Model Registry.
+Use the `'lab_model_select'` ui_widget to let users choose from available models:
 
+```yaml
+parameters:
+  model:
+    type: "string"
+    default: "gpt2"
+    title: "Model"
+    ui_widget: "lab_model_select"
+```
 
-### dataset / dataset_name
+### Dataset Selection
 
-Similarly, `"dataset"` or `"dataset_name"` becomes a dropdown selector populated with all available datasets.
+Similarly, use `'lab_dataset_select'` for dataset selection:
+
+```yaml
+parameters:
+  dataset:
+    type: "string"
+    default: "my-dataset"
+    title: "Dataset"
+    ui_widget: "lab_dataset_select"
+```
 
 
 ## Complete Examples
@@ -234,7 +251,7 @@ parameters:
     default: 32
     min: 1
     max: 512
-    multipleOf: 8
+    step: 8
     title: "Batch Size (must be multiple of 8)"
   
   num_epochs:
