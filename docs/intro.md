@@ -16,9 +16,9 @@ Transformer Lab is a free, open-source machine learning research platform that y
 
 ## Which Edition is Right For Me?
 
-Transformer Lab can be run in one of two modes: Single Node or (our soon to be announced) Team Mode.
+Transformer Lab can be run in one of two modes: **For Individuals** or **For Teams**.
 
-If you want to run Transformer Lab just for yourself, follow the [standard, single node install instructions here](./install/install.md).
+If you want to run Transformer Lab just for yourself, follow the [For Individuals install instructions here](./install/install.md).
 
 If you are on a team, and want to run Transformer Lab, with access to cluster of GPUs (using SLURM or Skypilot, for example) [follow these steps to enable Transformer Lab for Teams](/for-teams/install).
 
