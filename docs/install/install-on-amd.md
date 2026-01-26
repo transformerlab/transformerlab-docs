@@ -78,7 +78,7 @@ To use Transformer Lab with AMD GPUs on Windows, you will need to set up WSL (Wi
 
 ### Step 1 - Install WSL
 
-First, install WSL (Windows Subsystem for Linux) if you haven't already. Open Windows PowerShell as Administrator and run:
+First, install WSL (Windows Subsystem for Linux) if you haven't already. Open Windows Powershell as Administrator and run:
 
 ```bash
 wsl --install

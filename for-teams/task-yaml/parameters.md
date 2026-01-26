@@ -19,11 +19,11 @@ The following parameter types are supported:
 
 | Type | Description | Default UI | Example |
 |------|-------------|-----------|---------|
-| `'int'` | Integer numbers | Number input | `42`, `100` |
-| `'float'`| Decimal numbers | Number input | `0.001`, `3.14` |
-| `'bool'`| Boolean values | Switch toggle | `true`, `false` |
-| `'enum'` | Enumerated choices | Select dropdown | `"option1"`, `"option2"` |
-| `'string'` | Text values | Text input | `"model-name"`, `"path/to/file"` |
+| `int` | Integer numbers | Number input | `42`, `100` |
+| `float`| Decimal numbers | Number input | `0.001`, `3.14` |
+| `bool`| Boolean values | Switch toggle | `true`, `false` |
+| `enum` | Enumerated choices | Select dropdown | `"option1"`, `"option2"` |
+| `string` | Text values | Text input | `"model-name"`, `"path/to/file"` |
 
 ## Simple Shorthand Format
 
@@ -34,7 +34,7 @@ parameters:
   learning_rate: 0.0001        # Inferred as float
   batch_size: 8                # Inferred as int
   num_epochs: 10               # Inferred as int
-  model_name: "gpt2"           # Inferred as string
+  model_name: "gpt"            # Inferred as string
   use_cache: true              # Inferred as bool
 ```
 
@@ -68,7 +68,7 @@ parameters:
 
 The parameter type (required for schema format).
 
-**Options:** `'int'`, `'float'`, `'bool'`, `'enum'`, `'string'`
+**Options:** `int`, `float`, `bool`, `enum`, `string`
 
 ```yaml
 parameters:
@@ -140,7 +140,7 @@ parameters:
 
 Customize how the parameter appears in the UI. This is **optional** - sensible defaults exist for each type.
 
-**Options:** `'slider'`, `'range'`, `'switch'`, `'radio'`, `'password'`, `'select'`, `'lab_model_select'`, `'lab_dataset_select'`
+**Options:** `slider`, `range`, `switch`, `radio`, `password`, `select`, `lab_model_select`, `lab_dataset_select`
 
 ```yaml
 parameters:
@@ -159,14 +159,14 @@ parameters:
 The `ui_widget` field is **optional**. Each parameter type has sensible defaults. When you do want to customize the UI, you can use the following widget options:
 
 **Available ui_widget Options:**
-- `'slider'` - Slider control for numeric types
-- `'range'` - Range slider for numeric types
-- `'switch'` - Toggle switch for boolean types
-- `'radio'` - Radio buttons for enum types
-- `'password'` - Password field for string types
-- `'select'` - Select dropdown (default for enums)
-- `'lab_model_select'` - Dropdown to select from available models, with option to enter custom model name
-- `'lab_dataset_select'` - Dropdown to select from available datasets, with option to enter custom dataset name
+- `slider` - Slider control for numeric types
+- `range` - Range slider for numeric types
+- `switch` - Toggle switch for boolean types
+- `radio` - Radio buttons for enum types
+- `password` - Password field for string types
+- `select` - Select dropdown (default for enums)
+- `lab_model_select` - Dropdown to select from available models, with option to enter custom model name
+- `lab_dataset_select` - Dropdown to select from available datasets, with option to enter custom dataset name
 
 **Example:**
 
@@ -196,24 +196,24 @@ parameters:
 
 ## Special Parameters: Model and Dataset Selection
 
-To allow users to select models or datasets from their available libraries, use the `'lab_model_select'` or `'lab_dataset_select'` ui_widget with a string type parameter. These widgets provide a dropdown populated with your available models or datasets, plus an option to enter a custom value.
+To allow users to select models or datasets from their available libraries, use the `lab_model_select` or `lab_dataset_select` ui_widget with a string type parameter. These widgets provide a dropdown populated with your available models or datasets, plus an option to enter a custom value.
 
 ### Model Selection
 
-Use the `'lab_model_select'` ui_widget to let users choose from available models:
+Use the `lab_model_select` ui_widget to let users choose from available models:
 
 ```yaml
 parameters:
   model:
     type: "string"
-    default: "gpt2"
+    default: "meta-llama/Llama-2-7b"
     title: "Model"
     ui_widget: "lab_model_select"
 ```
 
 ### Dataset Selection
 
-Similarly, use `'lab_dataset_select'` for dataset selection:
+Similarly, use `lab_dataset_select` for dataset selection:
 
 ```yaml
 parameters:
@@ -225,19 +225,17 @@ parameters:
 ```
 
 
-## Complete Examples
-
-### Example: Schema with Validation
+## Complete Example of a Task YAML with Parameters
 
 ```yaml
 name: advanced-training
 setup: "pip install torch transformers"
 run: "python train.py"
 parameters:
-  model_name:
+  agent_name:
     type: "string"
-    default: "bert-base-uncased"
-    title: "Model Name"
+    default: "computer"
+    title: "Agent Name"
   
   learning_rate:
     type: "float"
@@ -264,4 +262,10 @@ parameters:
     type: "bool"
     default: true
     title: "Cache Training Data"
+
+  model:
+    type: "string"
+    default: "meta-llama/Llama-2-7b"
+    title: "Model"
+    ui_widget: "lab_model_select"
 ```

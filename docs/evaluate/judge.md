@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # LLM-as-Judge Evaluations
 
-Transformer Lab provides an easier way to intergrate the LLM-as-judge suite of metrics by DeepEval to evaluate model outputs across multiple dimensions. Here's an overview of the available metrics:
+Transformer Lab provides an easier way to integrate the LLM-as-judge suite of metrics by DeepEval to evaluate model outputs across multiple dimensions. Here's an overview of the available metrics:
 
 - **Bias**: Measures the presence of unfair prejudices or discriminatory content in model outputs
 - **Toxicity**: Evaluates the presence of harmful, offensive, or inappropriate content

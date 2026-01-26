@@ -271,6 +271,8 @@ run: "python train.py"
 
 Task parameters (hyperparameters, configuration, etc.) that will be accessible via `lab.get_config()` in your scripts. These are passed to the job and can be used to configure the training or evaluation process.
 
+[Detailed documentation on this field is on its own page](/for-teams/task-yaml/parameters)
+
 **Type:** Dictionary (any JSON-serializable values)
 
 **Example:**

@@ -75,7 +75,7 @@ This plugin allows you to perform common evaluation checks, such as string match
 
 - **Step:** In the next tab, select the dataset for your task.
 - **Instruction:** Set the input and output column names within your dataset. The `input` column represents the prompts that you originally sent to the model. The `output` column contains the model’s responses.
-- **Outcome:** The plugin will evaluate the output column based on the metrics you have defined. While the current version only supports evaluating model outputs, future versions will allow you to evaluate the input column as well on some specific evaluation metrics.
+- **Outcome:** The plugin will evaluate the output column based on the metrics you have defined. While the current version only supports evaluating model outputs, future versions will allow you to evaluate the input column on specific evaluation metrics as well.
 <img src={require('./gifs/common-evals/5_SelectingDataset.gif').default} alt="GIF Animation" width="500" />
 
 

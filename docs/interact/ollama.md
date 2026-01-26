@@ -22,7 +22,7 @@ In order to use the Ollama Server plugin you will need to first
 
 ### Step 2: Get GGUF Models
 
-To use the Ollama Server plugin you will need to first downlaod a GGUF model.
+To use the Ollama Server plugin you will need to first download a GGUF model.
 There are two ways to do this:
 
 **Download GGUF models from the Model Zoo:**

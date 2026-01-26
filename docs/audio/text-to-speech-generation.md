@@ -48,7 +48,7 @@ When generating speech, you’ll see the following parameters:
 - **Text** → The input string to convert into speech  
 - **Sample Rate** → Number of audio samples per second (higher = clearer audio)  
 - **Temperature** → Controls randomness; lower = consistent, higher = expressive  
-- **Speech Speed** → Adjusts pacing of speech (slower = clarity, faster = natural flow)  
+- **Speech Speed** → Adjusts pacing of speech (slower = more clarity, faster = natural flow)  
 
 Some models expose extra controls for more flexibility:
 

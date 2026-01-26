@@ -4,7 +4,7 @@ sidebar_position: 60
 
 # Analytics and Telemetry
 
-Transformer Lab is composed of two parts. The API (the server that does the Machine Learning work), and the App (the graphical user interface that access the API).
+Transformer Lab is composed of two parts. The API (the server that does the Machine Learning work), and the App (the graphical user interface that accesses the API).
 
 Our API does not have any embedded analytics or telemetry.
 
