@@ -1,5 +1,5 @@
 ---
-title: Teams vs Invididuals
+title: Teams vs Individuals
 sidebar_position: 16
 ---
 

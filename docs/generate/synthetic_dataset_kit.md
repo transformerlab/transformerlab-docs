@@ -36,7 +36,7 @@ When launching a generation job with `synthetic-dataset-kit`, configure the foll
 
 [^vllm-models]: To check if your model is vLLM-compatible, see the [vLLM Supported Models](https://docs.vllm.ai/en/latest/models/supported_models.html) list. vLLM currently supports many popular architectures like LLaMA, Mistral, Falcon, Baichuan, and more. Ensure your model is in a supported architecture and format (e.g., Hugging Face Transformers or Safetensors, not GGUF).
 
-In order to get best results out of the plugin try using models with at least 8B parameters and above.
+In order to get the best results out of the plugin try using models with at least 8B parameters and above.
 
 Note that the output structure for generating a summary of a chain of thought (`cot`) from a reference document **must** be selected as `chatml`.
 

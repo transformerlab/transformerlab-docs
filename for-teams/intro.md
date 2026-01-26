@@ -8,7 +8,7 @@ sidebar_position: 1
 
 :::note
 
-You are currently reading our unreleased documentation for Transformer Lab designed for Research Labs. Stay tuned for our official launch in the upcoming weeks...
+We're about to launch Transformer Lab for Teams in just a few days. You're reading this before everyone else.
 
 :::
 
