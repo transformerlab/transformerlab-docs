@@ -109,11 +109,3 @@ If you are looking to train models and get higher performance, you need a server
 | Mac (M2+)                 | ✅ Yes    | ✅ Yes          |
 
 You will see the best performance on high VRAM GPUs (such as the RTX3090 or RTX4090) or Mac M2/M3/M4 with 24GB or more of RAM.
-
-## Security Notes
-
-:::danger Security Warning
-Read carefully. Do not run the Transformer Lab API on a machine exposed to the public Internet.
-:::
-
-Today, Transformer Lab exposes a public API on your server that accepts unauthenticated network requests. If you were to run Transformer Lab on the public internet, this would create a significant security issue. We recommend only running the API server on internal networks. If you need to access the API server from outside your internal network, use a VPN or a tool like Tailscale to avoid exposing the server to the public internet.
