@@ -16,7 +16,7 @@ const userValidations = [
         avatar: Elena,
     },
     {
-        quote: "SLURM is outdated, and Transformer Lab is the future.",
+        quote: "For too long, researchers have been stuck using outdated tools. Transformer Lab is the future.",
         author: "Jash Mehta, Applied Research Scientist at ServiceNow Research",
         avatar: Jash,
     },
