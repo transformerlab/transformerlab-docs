@@ -11,7 +11,7 @@ import { FaLinux } from "react-icons/fa";
 
 # Install Transformer Lab for Individuals
 
-For install instructions for Transformer Lab **for Teams**, [go here](/for-teams/install.md).
+For install instructions for Transformer Lab **for Teams**, [go here](/for-teams/install).
 
 ## Pre-Requisites
 
