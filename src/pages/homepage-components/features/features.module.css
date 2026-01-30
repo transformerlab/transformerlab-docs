@@ -8,8 +8,9 @@
 }
 
 
-.featureCardVideo img {
-    border-radius: 1rem;
+.featureCardVideo img,
+.featureCardVideo mux-player {
+    border-radius: 0.5rem;
     overflow: hidden;
 }
 
