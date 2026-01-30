@@ -80,8 +80,12 @@ function HomepageHeader() {
             frontier AI/ML workflows. Local, on-prem, or in the cloud. Open
             source.
           </h2>
-          <div className={styles.buttons}>
+          <div
+            className={styles.buttons}
+            style={{ gap: "1.5rem", display: "flex", flexWrap: "wrap" }}
+          >
             <div className="block">
+              <div style={{ marginBottom: "0.5rem" }}>For Individuals:</div>
               <Link
                 to="/docs/install/"
                 className="button button--primary button--lg"
@@ -92,15 +96,28 @@ function HomepageHeader() {
                   width: "fit-content",
                 }}
               >
-                Get Started Now &nbsp;
+                Get Started &nbsp;
                 <FaArrowRight />
               </Link>
-              <div style={{ marginTop: "1rem", marginLeft: "0.3rem" }}>
-                or{" "}
-                <a href="/beta.html" style={{ fontWeight: 600 }}>
-                  Join our Beta to get access to our plaform for research labs
-                </a>
+            </div>
+            <div className="block">
+              <div style={{ marginBottom: "0.5rem" }}>
+                For Teams / Research Labs:
               </div>
+              <Link
+                to="/for-teams/install/"
+                className="button button--secondary button--lg"
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  width: "fit-content",
+                  border: "2px solid var(--ifm-color-primary)",
+                }}
+              >
+                Join the Beta &nbsp;
+                <FaArrowRight />
+              </Link>
             </div>
           </div>
         </div>
