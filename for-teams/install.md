@@ -9,6 +9,7 @@ sidebar_position: 20
 Before starting the installation, ensure you have the following:
 
 ### Required
+
 - A server or virtual machine (CPU node) with internet access to host Transformer Lab.
 - SSH access to the server.
 - Bash shell.
@@ -16,12 +17,14 @@ Before starting the installation, ensure you have the following:
 - Administrative (sudo) privileges.
 
 ### Recommended
+
 - Access to a package manager (e.g., apt, yum).
 - Open firewall ports (e.g., 8338 for API/frontend).
 - Basic knowledge of GPU orchestrators like SLURM or SkyPilot.
 
 ### Optional (Feature-Specific)
-- AWS account and credentials (for S3 storage).
+
+- AWS account and credentials (for S3 storage) with permissions to create and manage S3 buckets.
 - SkyPilot server running and accessible from the CPU node (e.g., via IP).
 - SLURM cluster access from the CPU node (e.g., via SSH).
 
