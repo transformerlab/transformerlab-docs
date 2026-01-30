@@ -4,6 +4,27 @@ slug: install
 sidebar_position: 20
 ---
 
+## Prerequisites
+
+Before starting the installation, ensure you have the following:
+
+### Required
+- A server or virtual machine (CPU node) with internet access to host Transformer Lab.
+- SSH access to the server.
+- Bash shell.
+- curl command.
+- Administrative (sudo) privileges.
+
+### Recommended
+- Access to a package manager (e.g., apt, yum).
+- Open firewall ports (e.g., 8338 for API/frontend).
+- Basic knowledge of GPU orchestrators like SLURM or SkyPilot.
+
+### Optional (Feature-Specific)
+- AWS account and credentials (for S3 storage).
+- SkyPilot server running and accessible from the CPU node (e.g., via IP).
+- SLURM cluster access from the CPU node (e.g., via SSH).
+
 ## Step 1 - Set up a Cloud Provider
 
 Transformer Lab executes tasks by sending them to a GPU orchestrator like **SLURM** or **SkyPilot**. So your first step in setting up Transformer Lab is making sure you have a properly configured SLURM or SkyPilot instance.
