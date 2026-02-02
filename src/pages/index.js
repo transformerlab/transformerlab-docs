@@ -105,7 +105,7 @@ function HomepageHeader() {
                 For Teams / Research Labs:
               </div>
               <Link
-                to="/beta.html"
+                href="/beta.html"
                 className="button button--secondary button--lg"
                 style={{
                   display: "flex",
