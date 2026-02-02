@@ -1,6 +1,6 @@
 ---
 slug: announcing-for-teams
-title: Announcing Transformer Lab for Teams: The Operating System for AI Research Labs"
+title: "Announcing Transformer Lab for Teams: The Operating System for AI Research Labs"
 authors: [tony]
 tags: [slurm, skypilot, distributed, training, evaluation]
 ---
