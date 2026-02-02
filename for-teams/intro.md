@@ -6,9 +6,9 @@ sidebar_position: 1
 
 # Transformer Lab for Teams and Research Labs
 
-:::note
+:::tip
 
-We're about to launch Transformer Lab for Teams in just a few days. You're reading this before everyone else.
+We just launched Transformer Lab for Teams today! Please connect with us on Discord if you can use any help!
 
 :::
 
