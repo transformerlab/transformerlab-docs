@@ -27,4 +27,4 @@ Built by researchers for researchers to do their best work on the tools they’v
 Ultimately, all results are automatically tracked, visualized, and sharable, so you don’t have to wrestle with the logistics of your data.
 Our long-term goal is to advance and democratize the essential tools used by every AI research lab in the world.
 
-If you’re an AI/ML researcher looking to improve how you work, join the beta [here](https://lab.cloud).
+If you’re an AI/ML researcher looking to improve how you work, join the beta [here](http://www.lab.cloud).
