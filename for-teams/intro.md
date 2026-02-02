@@ -6,12 +6,6 @@ sidebar_position: 1
 
 # Transformer Lab for Teams and Research Labs
 
-:::note
-
-We're about to launch Transformer Lab for Teams in just a few days. You're reading this before everyone else.
-
-:::
-
 ## Introduction
 
 Transformer Lab for Teams is an open source platform designed to support the needs of ML researchers working collaboratively using clusters of local or cloud compute nodes.
