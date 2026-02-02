@@ -20,11 +20,11 @@ Built by researchers for researchers to do their best work on the tools they’v
 - **Open Extensibility:** A flexible plugin system allows researchers to add custom training loops, evaluation metrics, and model architectures without leaving the platform.
 - **Privacy-First Design:** The platform processes data within the user's infrastructure, whether on-premise or in a private cloud, ensuring sensitive research data never leaves the lab's control.
 - **Complexity Made Simple:** Capabilities that used to require complex engineering are now built-in.
-- Capturing checkpoints (with auto-restart)
-- One-line to add hyperparameter sweeps
-- Storing artifacts in a global object store accessible even after ephemeral nodes terminate.
+  - Capturing checkpoints (with auto-restart)
+  - One-line to add hyperparameter sweeps
+  - Storing artifacts in a global object store accessible even after ephemeral nodes terminate.
 
 Ultimately, all results are automatically tracked, visualized, and sharable, so you don’t have to wrestle with the logistics of your data.
 Our long-term goal is to advance and democratize the essential tools used by every AI research lab in the world.
 
-If you’re an AI/ML researcher looking to improve how you work, join the beta [here](http://www.lab.cloud).
+If you’re an AI/ML researcher looking to improve how you work, join the beta [here](https://lab.cloud).
