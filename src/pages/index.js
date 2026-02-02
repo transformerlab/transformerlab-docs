@@ -104,7 +104,7 @@ function HomepageHeader() {
               <div style={{ marginBottom: "0.5rem" }}>
                 For Teams / Research Labs:
               </div>
-              <Link
+              <a
                 href="/beta.html"
                 className="button button--secondary button--lg"
                 style={{
@@ -117,7 +117,7 @@ function HomepageHeader() {
               >
                 Join the Beta &nbsp;
                 <FaArrowRight />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
