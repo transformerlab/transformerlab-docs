@@ -50,9 +50,10 @@ uv pip install --upgrade  -r requirements-uv.txt
 ```
 
 ### For machines with an AMD GPU:
+
 Make sure you have ROCm installed on your system. You can find the instructions [here](https://rocm.docs.amd.com/projects/install-on-linux/en/latest/).
 
-```bash 
+```bash
 conda activate ~/.transformerlab/envs/transformerlab
 pip install uv
 uv pip install --upgrade -r requirements-rocm-uv.txt --index=https://download.pytorch.org/whl/rocm6.4 --index-strategy unsafe-best-match # assuming you have rocm installed on your system
@@ -76,8 +77,6 @@ uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 **Step 5:** GUI Setup
 You can access the Transformer Lab GUI by going to the browser and navigating to `http://<your-server-ip>:8338/`.
 Your server IP will be `localhost` or `127.0.0.1` if you are running it locally, or the public IP if you are running it on a cloud server.
-
-In case you'd like to run it within the GUI Electron app, you can download the app for your OS from [the website](https://lab.cloud/docs/download)
 
 **To Connect:**
 
