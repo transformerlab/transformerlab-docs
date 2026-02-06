@@ -8,7 +8,7 @@ sidebar_position: 1
 
 :::tip
 
-We just launched Transformer Lab for Teams today! Please connect with us on Discord if you can use any help!
+We just recently launched Transformer Lab for Teams! Please connect with us on Discord if you can use any help!
 
 :::
 
