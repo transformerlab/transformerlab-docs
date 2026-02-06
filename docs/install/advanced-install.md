@@ -75,9 +75,6 @@ pip install uv
 uv pip install --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match .[cpu]
 ```
 
-
-
-
 **Step 4:** Run the Transformer Lab Server
 
 ```bash
