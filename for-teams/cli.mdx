@@ -14,98 +14,227 @@ Transformer Lab can be accessed via CLI using the `lab` executable.
   {() => <AsciinemaPlayer src={"/img/cli/start.cast"} options={{ speed: 2 }} />}
 </BrowserOnly>
 
-## Installing the Transformer Lab CLI
+## Global Options
 
-You can install the `lab` tool using `uv`.
-
-> **Prerequisite:** Ensure you have [uv](https://github.com/astral-sh/uv) installed before running the command below.
-
-```bash
-uv tool install "git+https://github.com/transformerlab/transformerlab-app#subdirectory=cli"
+```
+lab [OPTIONS] COMMAND [ARGS]...
 ```
 
-## Authentication
+| Option     | Description                       | Default  |
+| ---------- | --------------------------------- | -------- |
+| `--format` | Output format: `pretty` or `json` | `pretty` |
+| `--help`   | Show help message and exit        |          |
 
-To interact with your Transformer Lab instance, the CLI requires the following credentials:
+---
 
-- Server URL: The URL of your API (e.g., https://app.lab.cloud). Include the port if not using 80/443.
-- Email: Your user email address.
-- API Key: Your access token.
+## Commands
 
-:::tip Where to find your API Key
-You can generate or view your API Key in the Transformer Lab GUI under User Settings.
-:::
+### `version`
 
-### Interactive Login
-
-The easiest way to set up your credentials is via the interactive prompt:
+Display the CLI version.
 
 ```bash
+lab version
+```
+
+---
+
+### `status`
+
+Check the status of the server and configuration.
+
+```bash
+lab status
+```
+
+---
+
+### `login`
+
+Log in to Transformer Lab. Prompts for server URL and API key if not provided.
+
+```bash
+# Interactive login (prompts for server and API key)
 lab login
+
+# Login with options
+lab login --server https://my-server:8338 --api-key YOUR_API_KEY
 ```
 
-<BrowserOnly>
-  {() => (
-    <AsciinemaPlayer
-      src={"/img/cli/lab-login.cast"}
-      options={{ speed: 2, loop: true, rows: 6 }}
-    />
-  )}
-</BrowserOnly>
+| Option      | Description  |
+| ----------- | ------------ |
+| `--api-key` | Your API key |
+| `--server`  | Server URL   |
 
-### Non-Interactive Login
+---
 
-For scripts or single-command setup, you can pass your credentials as flags:
+### `logout`
+
+Log out from Transformer Lab by deleting the stored API key.
 
 ```bash
-lab login --apiKey <INSERT API KEY HERE> --serverURL https://app.lab.cloud:8338
+lab logout
 ```
 
-### Verifying Configuration
+---
 
-To inspect your current configuration and ensure your credentials are saved correctly, run:
+### `whoami`
+
+Show the current logged-in user, team information, and server.
 
 ```bash
+lab whoami
+
+# JSON output
+lab --format json whoami
+```
+
+---
+
+### `config`
+
+View or set configuration values.
+
+```bash
+# View all configuration values
 lab config
+
+# Set a configuration value
+lab config <key> <value>
+
+# Examples
+lab config server http://localhost:8000
+lab config current_experiment my_experiment
 ```
 
-## Tasks
+| Argument | Description         |
+| -------- | ------------------- |
+| `key`    | Config key to set   |
+| `value`  | Config value to set |
 
-### Listing Tasks
+---
 
-You can list tasks by typing `lab task list`
+### `task`
 
-<BrowserOnly>
-  {() => (
-    <AsciinemaPlayer
-      src={"/img/cli/lab-task-list.cast"}
-      options={{ speed: 1, loop: true, rows: 18 }}
-    />
-  )}
-</BrowserOnly>
+Task management commands. Requires `current_experiment` to be set in config.
 
-### Creating a Task
+#### `task list`
 
-_Command documentation pending_
+List all remote tasks in the current experiment.
 
-## Jobs
+```bash
+lab task list
+```
 
-### Viewing the Status of a Job
+#### `task add`
 
-You can list jobs by typing `lab job status`
+Add a new task from a local directory or a Git repository.
 
-<BrowserOnly>
-  {() => (
-    <AsciinemaPlayer
-      src={"/img/cli/lab-job-list.cast"}
-      options={{ speed: 1, loop: true, rows: 18 }}
-    />
-  )}
-</BrowserOnly>
+```bash
+# Add from a local directory containing task.yaml
+lab task add ./my-task-directory
 
-### Monitoring Jobs
+# Preview without creating (dry run)
+lab task add ./my-task-directory --dry-run
 
-For an interactive GUI to monitor jobs use `lab job monitor`
+# Add from a Git repository
+lab task add --from-git https://github.com/user/repo
+```
+
+| Argument         | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| `task_directory` | Path to the task directory containing `task.yaml` |
+
+| Option       | Description                          |
+| ------------ | ------------------------------------ |
+| `--from-git` | Git URL to fetch the task from       |
+| `--dry-run`  | Preview the task without creating it |
+
+#### `task info`
+
+Get detailed information for a specific task.
+
+```bash
+lab task info <task_id>
+```
+
+#### `task delete`
+
+Delete a task by ID.
+
+```bash
+lab task delete <task_id>
+```
+
+#### `task queue`
+
+Queue a task on a compute provider. Interactively prompts for provider selection and parameter values.
+
+```bash
+# Interactive mode (prompts for provider and parameters)
+lab task queue <task_id>
+
+# Non-interactive mode (uses defaults)
+lab task queue <task_id> --no-interactive
+```
+
+| Option             | Description                               |
+| ------------------ | ----------------------------------------- |
+| `--no-interactive` | Skip interactive prompts and use defaults |
+
+---
+
+### `job`
+
+Job management commands. Most subcommands require `current_experiment` to be set in config.
+
+#### `job list`
+
+List all jobs for the current experiment.
+
+```bash
+lab job list
+```
+
+#### `job info`
+
+Get detailed information for a specific job.
+
+```bash
+lab job info <job_id>
+```
+
+#### `job artifacts`
+
+List artifacts for a specific job.
+
+```bash
+lab job artifacts <job_id>
+```
+
+#### `job download`
+
+Download all artifacts for a job as a zip file.
+
+```bash
+# Download to current directory
+lab job download <job_id>
+
+# Download to a specific directory
+lab job download <job_id> --output ./downloads
+```
+
+| Option           | Description                                                    |
+| ---------------- | -------------------------------------------------------------- |
+| `-o`, `--output` | Output directory for the zip file (default: current directory) |
+
+#### `job monitor`
+
+Launch the interactive job monitor TUI.
+
+```bash
+lab job monitor
+```
 
 <BrowserOnly>
   {() => (
