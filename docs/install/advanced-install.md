@@ -89,15 +89,6 @@ uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 You can access the Transformer Lab GUI by going to the browser and navigating to `http://<your-server-ip>:8338/`.
 Your server IP will be `localhost` or `127.0.0.1` if you are running it locally, or the public IP if you are running it on a cloud server.
 
-**To Connect:**
-
-Now when you run the app at startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
-
-<img
-src={require('../img/loginModal.png').default}
-alt="Login Modal"
-width="400"
-/>
 
 ## System Requirements
 
