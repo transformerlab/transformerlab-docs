@@ -37,12 +37,6 @@ You can now go to any modern browser and visit the URL of the server that was ru
 
 `http://localhost:8338`
 
-If you are asked to provide a Server URL, use:
-
-`localhost` for the server and `8338` for the port. Then press **Submit**
-
-![Web UI](./img/connect.png)
-
 Here is a screenshot of what you should see:
 
 ![Web UI](./img/webui.png)
