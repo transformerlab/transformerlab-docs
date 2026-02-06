@@ -82,7 +82,7 @@ uv pip install .[cpu]
 
 ```bash
 conda activate ~/.transformerlab/envs/transformerlab
-uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
+uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 ```
 
 **Step 5:** GUI Setup
