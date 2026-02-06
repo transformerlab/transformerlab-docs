@@ -58,6 +58,7 @@ conda activate ~/.transformerlab/envs/transformerlab
 pip install uv
 uv pip install --index=https://download.pytorch.org/whl/rocm6.4 --index-strategy unsafe-best-match .[rocm]  # assuming you have rocm installed on your system
 ```
+
 #### For Mac with Apple Silicon:
 
 ```bash
@@ -65,7 +66,6 @@ conda activate ~/.transformerlab/envs/transformerlab
 pip install uv
 uv pip install .[cpu]
 ```
-
 
 #### For machines without a GPU:
 
