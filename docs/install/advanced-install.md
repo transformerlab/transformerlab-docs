@@ -46,7 +46,7 @@ git checkout v0.26.1 # where "v0.26.1" is the latest release version
 conda activate ~/.transformerlab/envs/transformerlab
 conda install -y cuda==12.8.1 --force-reinstall -c nvidia/label/cuda-12.8.1 # only if you have an NVIDIA GPU
 pip install uv
-uv pip install --upgrade  -r requirements-uv.txt
+uv pip install .[nvidia]
 ```
 
 ### For machines with an AMD GPU:
@@ -56,37 +56,36 @@ Make sure you have ROCm installed on your system. You can find the instructions 
 ```bash
 conda activate ~/.transformerlab/envs/transformerlab
 pip install uv
-uv pip install --upgrade -r requirements-rocm-uv.txt --index=https://download.pytorch.org/whl/rocm6.4 --index-strategy unsafe-best-match # assuming you have rocm installed on your system
+uv pip install --index=https://download.pytorch.org/whl/rocm6.4 --index-strategy unsafe-best-match .[rocm]  # assuming you have rocm installed on your system
 ```
 
-#### Or For machines without a GPU (e.g. a Mac):
+#### For Mac with Apple Silicon:
 
 ```bash
 conda activate ~/.transformerlab/envs/transformerlab
 pip install uv
-uv pip install --upgrade -r requirements-no-gpu-uv.txt
+uv pip install .[cpu]
+```
+
+#### For machines without a GPU:
+
+```bash
+conda activate ~/.transformerlab/envs/transformerlab
+pip install uv
+uv pip install --index https://download.pytorch.org/whl/cpu --index-strategy unsafe-best-match .[cpu]
 ```
 
 **Step 4:** Run the Transformer Lab Server
 
 ```bash
 conda activate ~/.transformerlab/envs/transformerlab
-uv run -v uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
+uvicorn api:app --port 8338 --host 0.0.0.0 --no-access-log
 ```
 
 **Step 5:** GUI Setup
 You can access the Transformer Lab GUI by going to the browser and navigating to `http://<your-server-ip>:8338/`.
 Your server IP will be `localhost` or `127.0.0.1` if you are running it locally, or the public IP if you are running it on a cloud server.
 
-**To Connect:**
-
-Now when you run the app at startup, go to the "Remote Connection" tab and then enter the IP address and port of your Transformer Lab API Server, then click Submit. If you are connecting to your local machine you can type `localhost` for your Server URL.
-
-<img
-src={require('../img/loginModal.png').default}
-alt="Login Modal"
-width="400"
-/>
 
 ## System Requirements
 
