@@ -23,7 +23,7 @@ Transformer Lab can be configured to run in one of two flavours. Both modes are 
 | Model Registry | ✓ | ✓ |
 | Dataset Registry | ✓ | ✓ |
 | Artifact Management | ✓ | ✓ |
-| GPU orchestration (works with SLURM, SkyPilot) | | ✓ |
+| GPU orchestration (works with Slurm, SkyPilot) | | ✓ |
 | Team collaboration | | ✓ |
 | Cloud provider integration | | ✓ |
 | CLI interface | | ✓ | 
@@ -37,7 +37,7 @@ Our new **Transformer Lab for Teams** offers more complex capabilities <span sty
 
 - **Scale Effortlessly:** Researchers can go from quick Jupyter notebooks to production ML runs across hundreds or thousands of GPUs using one interface.
 
-- **Simple Orchestration:** Simply request resources and supply a script. Transformer Lab works with your GPU orchestration tool (e.g. SLURM or SkyPilot) to orchestrate the task and manage your queue.
+- **Simple Orchestration:** Simply request resources and supply a script. Transformer Lab works with your GPU orchestration tool (e.g. Slurm or SkyPilot) to orchestrate the task and manage your queue.
 
 - **Use Your Own Stack:** Write code using the tools you are familiar with. Transformer Lab runs tasks directly as-is, without imposing restrictions or requiring you to re-write your code.
 

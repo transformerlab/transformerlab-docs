@@ -20,17 +20,17 @@ Before starting the installation, ensure you have the following:
 ### Feature-Specific
 
 - SkyPilot server running and accessible from the CPU node (e.g., via IP).
-- SLURM cluster access from the CPU node (e.g., via SSH).
+- Slurm cluster access from the CPU node (e.g., via SSH).
 
 ## Step 1 - Set up a Cloud Provider
 
-Transformer Lab executes tasks by sending them to a GPU orchestrator like **SLURM** or **SkyPilot**. So your first step in setting up Transformer Lab is making sure you have a properly configured SLURM or SkyPilot instance.
+Transformer Lab executes tasks by sending them to a GPU orchestrator like **Slurm** or **SkyPilot**. So your first step in setting up Transformer Lab is making sure you have a properly configured Slurm or SkyPilot instance.
 
 The following documents offer common install instructions that you can use if you are starting from scratch
 
-[Choosing Between SLURM and SkyPilot -->](./install-gpu-orchestrator/skypilot-vs-slurm.md)
+[Choosing Between Slurm and SkyPilot -->](./install-gpu-orchestrator/skypilot-vs-slurm.md)
 
-[Instructions for setting up SLURM from scratch -->](./install-gpu-orchestrator/install-slurm.md)
+[Instructions for setting up Slurm from scratch -->](./install-gpu-orchestrator/install-slurm.md)
 
 [Instructions for setting up SkyPilot from scratch -->](./install-gpu-orchestrator/install-skypilot.md)
 
@@ -44,7 +44,7 @@ SSH into that node and run:
 curl https://lab.cloud/install.sh | bash
 ```
 
-You need to also install packages necessary for running compute providers like Skypilot or SLURM:
+You need to also install packages necessary for running compute providers like Skypilot or Slurm:
 
 ```bash
 cd ~/.transformerlab/src
@@ -141,7 +141,7 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 - Replace `localhost` with the IP/hostname where your SkyPilot server is running and reachable from the API machine.
 - Retrieve `SKYPILOT_USER_ID` and `SKYPILOT_USER` from the SkyPilot server at `http://<skypilot-host>:46580/users`.
 
-### SLURM example config
+### Slurm example config
 
 ```jsonc showLineNumbers
 {
@@ -154,7 +154,7 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 }
 ```
 
-- Ensure the API node can SSH to the SLURM login node with the provided user and key.
+- Ensure the API node can SSH to the Slurm login node with the provided user and key.
 - Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
 
 <p style={{ fontWeight: 'bold', fontSize: '1.5rem', lineHeight: '2rem', paddingTop: '1rem'}}>Congrats, you are up and running. [You can now run a Task -->](./running-a-task.md)</p>

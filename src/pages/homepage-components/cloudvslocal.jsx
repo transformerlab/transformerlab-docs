@@ -62,7 +62,7 @@ export default function CloudVSLocal() {
         </h2>
         <p>
           Run workloads on multiple nodes with multi-cloud job
-          scheduling, experiment management, and monitoring. Works with SLURM, Skypilot, or Kubernetes.
+          scheduling, experiment management, and monitoring. Works with Slurm, Skypilot, or Kubernetes.
         </p>
         <span style={{ textDecoration: "none", marginTop: "2rem" }}>
           <a href="/beta.html" className="button button--primary button--lg">Join the Beta</a>

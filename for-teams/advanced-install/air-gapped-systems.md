@@ -16,9 +16,9 @@ Research environments with strict security requirements—including "airgapped" 
 * **Zero External Dependencies:** The platform is designed to function entirely within your perimeter.
 
 ### How does the orchestrator interact with our existing compute cluster?
-Our orchestrator is designed to be lightweight and transparent. It interacts with your hardware by **running SLURM commands directly.**
+Our orchestrator is designed to be lightweight and transparent. It interacts with your hardware by **running Slurm commands directly.**
 
-* **The Rule of Thumb:** If a user on your system can manually submit a SLURM command from the terminal, Transformer Lab will work. 
+* **The Rule of Thumb:** If a user on your system can manually submit a Slurm command from the terminal, Transformer Lab will work. 
 * **Native Integration:** Because we use your native scheduler, your existing job accounting, resource limits, and auditing logs remain the "source of truth."
 
 ### Is the software auditable and can it run on our own hardware?

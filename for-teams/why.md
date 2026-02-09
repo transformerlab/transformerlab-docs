@@ -7,7 +7,7 @@ sidebar_position: 15
 
 **Upgrade your Research Workflow without Replacing your Infrastructure.**
 
-Your lab likely relies on **SLURM** to manage your compute cluster. Or your lab may be using cloud compute like services from **Azure, AWS, or GCP**. Or perhaps you are using a cluster that runs **Kubernetes**.
+Your lab likely relies on **Slurm** to manage your compute cluster. Or your lab may be using cloud compute like services from **Azure, AWS, or GCP**. Or perhaps you are using a cluster that runs **Kubernetes**.
 
 Regardless of which of these you use, the raw experience—managing batch scripts, configuring SSH tunnels for notebooks, and manually tracking artifacts across file systems—creates friction that slows down research.
 
@@ -22,9 +22,9 @@ Regardless of which of these you use, the raw experience—managing batch script
 
 The biggest concern for any Admin is infrastructure migration. Transformer Lab requires **no changes** to your existing node setup. We integrate with the tools you already use:
 
-* **For On-Premise Clusters (SLURM):** Transformer Lab acts as a submission client. When a user launches a task in our UI, we translate that into a job submission that SLURM understands.
+* **For On-Premise Clusters (Slurm):** Transformer Lab acts as a submission client. When a user launches a task in our UI, we translate that into a job submission that Slurm understands.
 * **For Cloud & Kubernetes (SkyPilot):** If you use AWS, GCP, Azure, or Kubernetes, we utilize **SkyPilot** to abstract the complexity of provisioning VMs and pods.
-* **Hybrid Capable:** You can configure multiple Compute Providers in a single workspace. This allows your lab to burst from an on-prem SLURM cluster to AWS cloud instances using the exact same interface.
+* **Hybrid Capable:** You can configure multiple Compute Providers in a single workspace. This allows your lab to burst from an on-prem Slurm cluster to AWS cloud instances using the exact same interface.
 
 <img src={require('../src/pages/homepage-components/features/img/workswith.png').default} width="400" />
 
@@ -84,9 +84,9 @@ Transformer Lab acts as the **Control Plane**.
 1.  **User** submits a Task (via GUI or CLI).
 2.  **Transformer Lab API** processes the request and requirements.
 3.  **Compute Provider** translates the request:
-    * If **SLURM**: It sends `sbatch` commands to your login node.
+    * If **Slurm**: It sends `sbatch` commands to your login node.
     * If **SkyPilot**: It provisions VMs on AWS/GCP/Azure or Pods on Kubernetes.
 4.  **Transformer Lab** monitors the job execution, streams logs back to the user, and manages artifact retrieval.
 
 ## Next Steps
-You can install the Transformer Lab controller on a single CPU node that has access to your compute provider (e.g., SSH access to your SLURM login node, or Cloud credentials for SkyPilot). We're happy to work with you directly to help install Transformer Lab in your environment. If you want to get started on your own, see our [install instructions -->](./install.md)
+You can install the Transformer Lab controller on a single CPU node that has access to your compute provider (e.g., SSH access to your Slurm login node, or Cloud credentials for SkyPilot). We're happy to work with you directly to help install Transformer Lab in your environment. If you want to get started on your own, see our [install instructions -->](./install.md)

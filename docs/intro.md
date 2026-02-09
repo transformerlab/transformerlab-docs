@@ -20,6 +20,6 @@ Transformer Lab can be run in one of two modes: **For Individuals** or **For Tea
 
 If you want to run Transformer Lab just for yourself, follow the [For Individuals install instructions here](./install/install.md).
 
-If you are on a team, and want to run Transformer Lab, with access to cluster of GPUs (using SLURM or Skypilot, for example) [follow these steps to enable Transformer Lab for Teams](/for-teams/install).
+If you are on a team, and want to run Transformer Lab, with access to cluster of GPUs (using Slurm or Skypilot, for example) [follow these steps to enable Transformer Lab for Teams](/for-teams/install).
 
 <img src={require('/img/screenshot.png').default} alt="Login Modal" width="500" />
