@@ -157,4 +157,16 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 - Ensure the API node can SSH to the Slurm login node with the provided user and key.
 - Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
 
+## Setting up SLURM Provider User Credentials
+
+After configuring the SLURM compute provider, each user needs to set up their individual credentials:
+
+1. Navigate to **User Settings → Provider Settings** and configure your SLURM user ID for the SLURM provider. This user account will be used to submit jobs to the SLURM cluster from Transformer Lab.
+2. If you don't already have an SSH key pair, generate one on your local machine:  
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   ```
+3. Add your public key (located at `~/.ssh/id_rsa.pub`) to the `~/.ssh/authorized_keys` file on the SLURM login node for your user account.
+4. In the Provider Settings dialog, paste the contents of your private key (`~/.ssh/id_rsa`) into the private key field. Transformer Lab will use this key to authenticate and connect to your SLURM account.
+
 <p style={{ fontWeight: 'bold', fontSize: '1.5rem', lineHeight: '2rem', paddingTop: '1rem'}}>Congrats, you are up and running. [You can now run a Task -->](./running-a-task.md)</p>
