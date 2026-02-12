@@ -65,7 +65,7 @@ MULTIUSER="true" # Set to "true" to enable multi-user features
 FRONTEND_URL="http://localhost:8338"
 
 # Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
-TFL_API_STORAGE_URI=true
+TFL_REMOTE_STORAGE_ENABLED=true
 ```
 
 ### Setting up AWS Credentials for S3 Storage
@@ -132,9 +132,9 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
   "default_env_vars": {
     // Obtain from the SkyPilot server at http://<skypilot-host>:46580/users
     "SKYPILOT_USER_ID": "<skypilot user id>",
-    "SKYPILOT_USER": "<skypilot username>"
+    "SKYPILOT_USER": "<skypilot username>",
   },
-  "default_entrypoint_command": ""
+  "default_entrypoint_command": "",
 }
 ```
 
@@ -150,7 +150,7 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
   "ssh_user": "slurm",
   // Path to your SSH private key
   "ssh_key_path": "~/.ssh/id_rsa",
-  "ssh_port": 22
+  "ssh_port": 22,
 }
 ```
 
@@ -162,7 +162,7 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 After configuring the SLURM compute provider, each user needs to set up their individual credentials:
 
 1. Navigate to **User Settings → Provider Settings** and configure your SLURM user ID for the SLURM provider. This user account will be used to submit jobs to the SLURM cluster from Transformer Lab.
-2. If you don't already have an SSH key pair, generate one on your local machine:  
+2. If you don't already have an SSH key pair, generate one on your local machine:
    ```bash
    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    ```

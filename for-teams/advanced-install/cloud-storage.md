@@ -13,7 +13,7 @@ Transformer Lab can store files locally or in the cloud. By default, files are s
 
 To use AWS S3 as remote storage:
 
-1. Set `TFL_API_STORAGE_URI=true` in your `.env` file.
+1. Set `TFL_REMOTE_STORAGE_ENABLED=true` in your `.env` file.
 
 2. Configure AWS credentials for the `transformerlab-s3` profile. See the [main install instructions](../install.md#setting-up-aws-credentials-for-s3-storage) for details.
 
@@ -21,7 +21,7 @@ To use AWS S3 as remote storage:
 
 To use Google Cloud Storage instead of AWS S3:
 
-1. Set `TFL_API_STORAGE_URI=true` in your `.env` file.
+1. Set `TFL_REMOTE_STORAGE_ENABLED=true` in your `.env` file.
 
 2. Set `REMOTE_WORKSPACE_HOST=gcp` in the same `.env` file.
 
@@ -57,6 +57,5 @@ When cloud storage is enabled:
 - Workspaces and models are stored in the cloud bucket
 - Local storage is still used for temporary files and caching
 - Multiple users can share the same cloud storage for collaboration
-
 
 If you have any issues setting up cloud storage, please don't hesitate to reach out to the Transformer Lab support team for assistance.
