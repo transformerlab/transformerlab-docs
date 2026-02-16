@@ -10,16 +10,13 @@ Before starting the installation, ensure you have the following:
 
 ### Required
 
-- A server or virtual machine (CPU node) with internet access to host Transformer Lab.
-- AWS account and credentials (for S3 storage) with permissions to create and manage S3 buckets.
-- SSH access to the server.
-- Bash shell.
-- curl command.
-- Administrative (sudo) privileges.
+- SSH access and administrative (sudo) privileges on the server hosting Transformer Lab
+- If using cloud object storage: GCP or AWS account and credentials (for cloud object storage) with permissions to create and manage buckets.
+- Bash shell with `curl` installed.
 
 ### Feature-Specific
 
-- SkyPilot server running and accessible from the CPU node (e.g., via IP).
+- SkyPilot server running and accessible from the CPU node (e.g., via HTTP).
 - Slurm cluster access from the CPU node (e.g., via SSH).
 
 ## Step 1 - Set up a Cloud Provider
@@ -70,7 +67,7 @@ TFL_REMOTE_STORAGE_ENABLED=true
 
 ### Setting up AWS Credentials for S3 Storage
 
-To use S3 as remote storage, you need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
+If using S3 as remote storage, you need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
 
 #### Using AWS CLI (Recommended)
 
