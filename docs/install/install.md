@@ -15,7 +15,7 @@ For install instructions for Transformer Lab **for Teams**, [go here](/for-teams
 
 ## Pre-Requisites
 
-* MacOS <FaApple/>, Linu x <FaLinux/>, or Windows (inside WSL2) <FaWindows/>
+* MacOS <FaApple/>, Linux <FaLinux/>, or Windows (inside WSL2) <FaWindows/>
 * Git and curl installed
 
 ## Step 1. Install Transformer Lab
