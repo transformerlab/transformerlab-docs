@@ -67,6 +67,12 @@ TFL_REMOTE_STORAGE_ENABLED=true
 
 ### Setting up AWS Credentials for S3 Storage
 
+:::tip Different storage engines
+
+Don't want to use S3 as your storage option? [Click here](./advanced-install/cloud-storage.md) to see other supported storage engines.
+
+:::
+
 If using S3 as remote storage, you need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
 
 #### Using AWS CLI (Recommended)
