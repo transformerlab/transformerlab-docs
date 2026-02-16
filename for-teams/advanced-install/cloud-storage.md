@@ -1,15 +1,13 @@
 ---
 title: Cloud Storage
-sidebar_position: 37
+sidebar_position: 10
 ---
 
 ## Where Does Transformer Lab Store Files
 
-Transformer Lab can store files locally or in the cloud. By default, files are stored locally, but you can configure cloud storage for better scalability and collaboration.
+Transformer Lab runs as a central "coordinator" node, but dispatches workloads to different "worker" nodes. All of these nodes (workers *and* the coordinator) need to have common view of a shared storage directory. This can be stored in the cloud (usually recommended) but could also be on shared storage that is mounted to all nodes in common path (e.g. using NFS)
 
-## Configuring Cloud Storage
-
-### AWS S3 Storage
+## AWS S3 Storage
 
 To use AWS S3 as remote storage:
 
@@ -17,7 +15,7 @@ To use AWS S3 as remote storage:
 
 2. Configure AWS credentials for the `transformerlab-s3` profile. See the [main install instructions](../install.md#setting-up-aws-credentials-for-s3-storage) for details.
 
-### Google Cloud Storage (GCS)
+## Google Cloud Storage (GCS)
 
 To use Google Cloud Storage instead of AWS S3:
 
@@ -50,12 +48,6 @@ To use Google Cloud Storage instead of AWS S3:
 
    Ensure the service account has the necessary permissions for Cloud Storage operations (Storage Admin or equivalent).
 
-## Storage Behavior
+## Local Storage
 
-When cloud storage is enabled:
-
-- Workspaces and models are stored in the cloud bucket
-- Local storage is still used for temporary files and caching
-- Multiple users can share the same cloud storage for collaboration
-
-If you have any issues setting up cloud storage, please don't hesitate to reach out to the Transformer Lab support team for assistance.
+Instructions coming soon
