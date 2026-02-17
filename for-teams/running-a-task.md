@@ -122,6 +122,6 @@ parameters:
 
 Defines a set of parameters that can be passed to your task. These are typically hyperparameters or configuration values that your training script or application can use. You can reference these parameters in your training script by using `lab.get_config()` to access the values.
 
-For [a full description of all the fields you can add to the Task YAML see this link.](/for-teams/task-yaml/task-structure.md)
+For a full description of all the fields you can add to the Task YAML, [see this link.](/for-teams/task-yaml/task-structure.md)
 
 
