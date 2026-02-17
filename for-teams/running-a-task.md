@@ -7,7 +7,21 @@ sidebar_position: 30
 
 A **task** is a description of work you want to execute on compute nodes. Researchers can write tasks in any format that runs on a node (typically Python scripts) and submit them as YAML to specify resource requirements and execution instructions.
 
-Below, we'll walk through submitting a simple task in the GUI.
+## Creating a Task
+
+When you create a new task, you have two options:
+
+<figure>
+![Add New Task Modal](./img/add-new-task-modal.png)
+<figcaption>Add New Task Options</figcaption>
+</figure>
+
+1. **From GitHub Repository** - Specify a GitHub repository URL, branch, and subdirectory. The system will fetch your code from the specified repository.
+2. **From Local Directory** - Upload a local directory containing your task definition.
+
+Both options require your repository subdirectory or local directory to contain a `task.yaml` file that defines the task configuration. 
+
+**If your directory doesn't contain a task.yaml file**, you'll be given the option to define your own task from scratch. This allows you to manually create the task configuration in the GUI.
 
 ## Starting a Simple Task
 
