@@ -3,15 +3,15 @@ title: Connecting to Email SMTP
 sidebar_position: 10
 ---
 
-You can configure Transformer Lab to have access to email so that it can send invites and signup confirmation emails as part of the team invite workflow.
+You can configure Transformer Lab to send invite and signup confirmation emails as part of the team invite workflow.
 
 ## Enabling Email
 
-In order to use Transformer Lab with email as way to authorize users (versus using Gmail or another provider), Transformer Lab needs the ability to send emails.
+To use email-based user authorization (instead an external auth provider), Transformer Lab needs the ability to send emails.
 
-Most computers that you run Transformer Lab are not good for sending emails because internet providers will treat messages sent from a random computer as spam.
+Note that most computers running Transformer Lab are not suitable for sending emails directly, because internet providers will treat messages sent from an unknown server as spam.
 
-So to enable proper email sending set the following .env variables in the api env:
+To enable email sending, set the following environment variables in the API `.env` file:
 
 ```bash
 SMTP_SERVER="smtp.example.com"
