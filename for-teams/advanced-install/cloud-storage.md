@@ -5,11 +5,9 @@ sidebar_position: 10
 
 ## Where Does Transformer Lab Store Files
 
-Transformer Lab runs as a central "coordinator" node, but dispatches workloads to different "worker" nodes. All of these nodes (workers *and* the coordinator) need to have common view of a shared storage directory. This can be stored in the cloud (usually recommended) but could also be on shared storage that is mounted to all nodes in common path (e.g. using NFS)
+Transformer Lab runs as a central "coordinator" node, but dispatches workloads to different "worker" nodes. All of these nodes (workers _and_ the coordinator) need to have common view of a shared storage directory. This can be stored in the cloud (usually recommended) but could also be on shared storage that is mounted to all nodes in common path (e.g. using NFS)
 
 If you use our s3 or gcs storage option, Transformer Lab will mount the bucket automatically, you don't have to mount any drives yourself. But if you use our `localfs` storage engine, you map it to a directory that appears like a local path, but is mounted at the operating system level to a shared NFS or other storage engine.
-
-
 
 ```mermaid
 flowchart LR
@@ -102,4 +100,8 @@ To use Google Cloud Storage instead of AWS S3:
 
 ## Local Storage
 
-Instructions coming soon
+To use a shared filesystem (e.g. NFS) that is accessible via a local path:
+
+1. Set `TFL_STORAGE_PROVIDER=localfs` in your `.env` file.
+
+2. Set `TFL_STORAGE_URI=/path/to/your/shared/folder` in the same `.env` file.
