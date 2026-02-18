@@ -21,7 +21,7 @@ For install instructions for Transformer Lab **for Teams**, [go here](/for-teams
 ## Step 1. Install Transformer Lab
 
 ```bash
-curl https://lab.cloud/install.sh | bash
+curl -LsSf https://lab.cloud/install.sh | bash
 ```
 
 ## Step 2. Run Transformer Lab

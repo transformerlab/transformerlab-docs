@@ -38,7 +38,7 @@ Transformer Lab needs a CPU node to run.
 SSH into that node and run:
 
 ```bash
-curl https://lab.cloud/install.sh | bash
+curl -LsSf https://lab.cloud/install.sh | bash
 ```
 
 You need to also install packages necessary for running compute providers like Skypilot or Slurm:
