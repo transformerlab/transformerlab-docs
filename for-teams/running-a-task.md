@@ -11,12 +11,17 @@ A **task** is a description of work you want to execute on compute nodes. Resear
 
 When you create a new task, you have two options:
 
+1. **From GitHub Repository** - Specify a GitHub repository URL, branch, and subdirectory. The system will fetch your code from the specified repository.
+
 <figure>
-![Add New Task Modal](./img/add-new-task-modal.png)
+![Create Task from GitHub](./img/new_task_from_github.gif)
 </figure>
 
-1. **From GitHub Repository** - Specify a GitHub repository URL, branch, and subdirectory. The system will fetch your code from the specified repository.
 2. **From Local Directory** - Upload a local directory containing your task definition.
+
+<figure>
+![Create Task from Local Directory](./img/new_task_from_directory.gif)
+</figure>
 
 Both options require your repository subdirectory or local directory to contain a `task.yaml` file that defines the task configuration. 
 
