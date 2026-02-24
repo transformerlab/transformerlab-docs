@@ -105,3 +105,5 @@ To use a shared filesystem (e.g. NFS) that is accessible via a local path:
 1. Set `TFL_STORAGE_PROVIDER=localfs` in your `.env` file.
 
 2. Set `TFL_STORAGE_URI=/path/to/your/shared/folder` in the same `.env` file.
+
+3. Set `TFL_REMOTE_STORAGE_ENABLED=false` or remove it from your `.env` file.
