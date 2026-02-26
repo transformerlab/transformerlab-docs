@@ -25,7 +25,7 @@ To obtain a client ID and secret, create an OAuth 2.0 Client ID in the [Google C
 
 - Set `Application type` to "Web Application".
 - `Authorized JavaScript origins` should be the exact host name you would use in your browser (including protocol and port, if required). e.g. `http://lab.mydomain.com:8338`
-- `Authorized redirect URIs` should be the exact server name with `/auth/google/callback` appended. e.g. `http://lab.mydomain.com:8338/auth/google/callback`.
+- `Authorized redirect URIs` should be the exact server name with `/auth/google/callback` appended. e.g. `http://lab.mydomain.com:8338/auth/google/callback`
 - Make sure to record your client secret, as you will not be able to access this later.
 
 Then set this in your `.env` file:
