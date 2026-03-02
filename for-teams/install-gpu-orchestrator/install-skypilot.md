@@ -12,9 +12,14 @@ SkyPilot is a Python client that typically runs on your local machine (laptop) o
 
 https://docs.skypilot.co/en/latest/getting-started/installation.html
 
-You can install it via pip. We recommend installing the "all" bundle to support all major clouds:
+You can install it via pip or uv.
 ```bash
-pip install "skypilot[all]"
+# Install as a globally available tool with pip included
+# SkyPilot requires 3.9 <= python <= 3.13.
+uv tool install --with pip skypilot
+
+# install dependencies for the clouds you want to use
+uv tool install --with pip "skypilot[kubernetes,aws,gcp]"
 ```
 
 ## Cloud Setup
@@ -24,4 +29,12 @@ Run this command to automatically detect your credentials and enable cloud acces
 
 ```bash
 sky check
+```
+
+## Run Skypilot
+
+Now you can run Skypilot (this will not install it as a service that stays running after reboots) but we have [instructions for that here](https://github.com/transformerlab/build-a-machine-learning-research-cluster/blob/main/chapters/04-02-skypilot-k3s-install.md#4-making-skypilot-persistent-with-systemd)
+
+```
+sky api start --deploy
 ```
