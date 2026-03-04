@@ -11,7 +11,7 @@ Before starting the installation, ensure you have the following:
 ### Required
 
 - SSH access and administrative (sudo) privileges on the server hosting Transformer Lab
-- If using cloud object storage: GCP or AWS account and credentials (for cloud object storage) with permissions to create and manage buckets.
+- If using cloud object storage: GCP, AWS, or Azure account and credentials (for cloud object storage) with permissions to create and manage buckets/containers.
 - Bash shell with `curl` installed.
 
 ### Feature-Specific
