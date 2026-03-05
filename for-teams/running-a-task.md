@@ -25,7 +25,7 @@ When you create a new task, you have two options:
 
 Both options require your repository subdirectory or local directory to contain a `task.yaml` file that defines the task configuration. 
 
-> **Note:** If you upload a task directory from local files, it will be available at `~/src/<file or folder>` on the remote machine. If you do it through GitHub, it will be available at `~/<github repo name or subdirectory name>`.
+> **Note:** If you create a task from a Github repo, the cloned repository/subdirectory will be available at `~/<github repo name or subdirectory name>`.
 
 **If your directory doesn't contain a task.yaml file**, you'll be given the option to define your own task from scratch. This allows you to manually create the task configuration in the GUI.
 

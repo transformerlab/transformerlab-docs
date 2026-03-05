@@ -98,6 +98,50 @@ To use Google Cloud Storage instead of AWS S3:
 
    Ensure the service account has the necessary permissions for Cloud Storage operations (Storage Admin or equivalent).
 
+## Azure Blob Storage
+
+:::note
+Azure Blob Storage support has been merged to main and will be available in the next release.
+:::
+
+To use Azure Blob Storage instead of AWS S3 or GCS:
+
+1. Set `TFL_REMOTE_STORAGE_ENABLED=true` in your `.env` file.
+
+2. Set `TFL_STORAGE_PROVIDER=azure` in the same `.env` file.
+
+3. Configure Azure credentials using **one** of the following approaches:
+
+   #### Option A: Connection String (Simplest)
+
+   Set the `AZURE_STORAGE_CONNECTION_STRING` environment variable in your `.env` file:
+
+   ```bash
+   AZURE_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=your_account;AccountKey=your_key;EndpointSuffix=core.windows.net"
+   ```
+
+   You can find your connection string in the Azure Portal under **Storage account → Access keys**.
+
+   #### Option B: Account Name + Key
+
+   Set the storage account name and access key separately:
+
+   ```bash
+   AZURE_STORAGE_ACCOUNT="your_account_name"
+   AZURE_STORAGE_KEY="your_account_key"
+   ```
+
+   #### Option C: Account Name + SAS Token
+
+   If you prefer to use a Shared Access Signature (SAS) token instead of the full account key:
+
+   ```bash
+   AZURE_STORAGE_ACCOUNT="your_account_name"
+   AZURE_STORAGE_SAS_TOKEN="your_sas_token"
+   ```
+
+   Ensure the SAS token has sufficient permissions for read, write, list, and delete operations on containers and blobs.
+
 ## Local Storage
 
 To use a shared filesystem (e.g. NFS) that is accessible via a local path:
