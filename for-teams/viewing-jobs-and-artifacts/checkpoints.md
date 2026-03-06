@@ -1,6 +1,6 @@
 ---
 title: Working with Checkpoints
-sidebar_position: 36
+sidebar_position: 2
 ---
 
 ## What is a Checkpoint?
