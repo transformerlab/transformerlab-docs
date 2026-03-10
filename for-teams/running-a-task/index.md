@@ -1,6 +1,6 @@
 ---
 title: Running a Task
-sidebar_position: 30
+sidebar_position: 1
 ---
 
 ## What is a Task

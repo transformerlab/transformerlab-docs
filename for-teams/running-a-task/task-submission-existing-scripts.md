@@ -165,6 +165,6 @@ Because your script now calls `lab.init()`:
 
 ## Where to go next
 
-- For the exact GUI behavior around parameters, sweeps, and provider selection, see **`task-submission-gui.md`**.
-- For CLI commands (`lab task add`, `lab task queue`, and job inspection), see **`task-submission-cli.md`**.
-- For full details on how to configure `parameters` and `sweeps` in `task.yaml` so that sweeps are correctly expanded on the backend, see **`task-submission-advanced.md`**.
+- For the exact GUI behavior around parameters, sweeps, and provider selection, see [this link](task-submission-gui.md).
+- For CLI commands (`lab task add`, `lab task queue`, and job inspection), click [here](task-submission-cli.md).
+- For full details on how to configure `parameters` and `sweeps` in `task.yaml` so that sweeps are correctly expanded on the backend, check [this out](task-submission-advanced.md).

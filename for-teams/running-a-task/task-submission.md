@@ -110,7 +110,7 @@ If the task’s `run` command launches your own training or evaluation script, y
 - Use `lab.set_config(...)` and `lab.log_metric(...)` as needed.
 - Call `lab.finish(...)` when done.
 
-When a job is launched via a compute provider, the lab SDK automatically attaches to that job so your script logs into the right place without extra wiring in `task.yaml`. See **`task-submission-existing-scripts.md`** for details.
+When a job is launched via a compute provider, the lab SDK automatically attaches to that job so your script logs into the right place without extra wiring in `task.yaml`. See [this link](task-submission-existing-scripts.md) for details.
 
 
 ## Advanced: sweeps and metrics
@@ -123,5 +123,5 @@ For advanced hyperparameter sweeps:
   - Whether lower or higher metric values are better (`lower_is_better`).
 - In the GUI, turn on **Run Hyperparameter Sweeps** in the Queue Task dialog and pick which parameters to sweep and which metric to use.
 
-See **`task-submission-advanced.md`** for concrete sweep examples that match this behavior.
+See [this link](task-submission-advanced.md) for concrete sweep examples that match this behavior.
 

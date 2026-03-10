@@ -142,7 +142,7 @@ Back in the experiment:
 
 ## Where to go next
 
-- For the CLI view of the same concepts (defining `task.yaml`, registering tasks, and queuing jobs interactively or non‑interactively), see **`task-submission-cli.md`**.
-- For details on adding minimal lab SDK calls inside your own training scripts so they log into the jobs created by these tasks, see **`task-submission-existing-scripts.md`**.
-- For concrete sweep examples, see **`task-submission-advanced.md`**.
+- For the CLI view of the same concepts (defining `task.yaml`, registering tasks, and queuing jobs interactively or non‑interactively), see [this link](task-submission-cli.md).
+- For details on adding minimal lab SDK calls inside your own training scripts so they log into the jobs created by these tasks, check [this link](task-submission-existing-scripts.md).
+- For concrete sweep examples, check [this](task-submission-advanced.md).
 

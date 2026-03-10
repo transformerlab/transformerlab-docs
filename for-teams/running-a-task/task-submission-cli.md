@@ -172,11 +172,11 @@ Once a task exists:
   lab task delete <task-id>
   ```
 
-Tasks defined via the CLI can be launched and monitored from the GUI as well. For more on running tasks visually, see **`task-submission-gui.md`**.
+Tasks defined via the CLI can be launched and monitored from the GUI as well. For more on running tasks visually, see [this link](task-submission-gui.md).
 
 
 ## Where to go next
 
-- To adapt an existing training script to integrate with Transformer Lab’s logging and job tracking, see **`task-submission-existing-scripts.md`**.
-- To learn about parameterization and sweeps (running many configurations and comparing results), see **`task-submission-advanced.md`**.
+- To adapt an existing training script to integrate with Transformer Lab’s logging and job tracking, see [this link](task-submission-existing-scripts.md).
+- To learn about parameterization and sweeps (running many configurations and comparing results), check [this out](task-submission-advanced.md).
 

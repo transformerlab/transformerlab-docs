@@ -182,7 +182,7 @@ Once the sweep completes, you can:
 
 For background on basic task submission:
 
-- See **`task-submission.md`** for the overall concept and starting from example tasks.
-- See **`task-submission-gui.md`** and **`task-submission-cli.md`** for running individual tasks from the GUI or CLI.
-- See **`task-submission-existing-scripts.md`** to integrate your own scripts with the lab SDK facade.
+- Check [this link](task-submission.md) for the overall concept and starting from example tasks.
+- Click [here](task-submission-gui.md) for running individual tasks from the GUI and [here](task-submission-cli.md) for the CLI.
+- See [this link](task-submission-existing-scripts.md) to integrate your own scripts with the lab SDK facade.
 
