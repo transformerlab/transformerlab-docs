@@ -11,13 +11,10 @@ You only need to add a few small lab SDK calls so that:
 - Metrics, logs, and artifacts are visible on the job detail page.
 - The same script can be reused both locally and under Lab‑launched jobs.
 
-> **Image placeholder:** diagram showing: Task → Provider Launch → Job → Existing script with lab facade attached.
-
----
 
 ## High‑level idea
 
-The lab SDK exposes a `Lab` facade (imported as `lab`) that:
+The lab SDK exposes a `Lab` sdk (imported as `lab`) that:
 
 - Detects whether it is running under a Lab‑launched job
 - Creates a new job locally if no job environment is present (e.g., when you run the script directly).
@@ -52,7 +49,6 @@ if __name__ == "__main__":
 
 The core lifecycle is `lab.init() → lab.get_config() → lab.log() → lab.finish()`.
 
----
 
 ## 1. Import the lab package
 
@@ -68,7 +64,6 @@ This gives you an object that wraps the underlying `Experiment` and `Job` types 
 - Create or attach to a job.
 - Update job status and job data.
 
----
 
 ## 2. Initialize the job
 
@@ -80,7 +75,7 @@ lab.init()
 
 `lab.init()` behaves as follows:
 
-- **When your script is launched from a task via a provider**, Transformer Lab sets environment variables so the script attaches to the already‑created job. `lab.init()` detects this and connects to that job.
+- **When your script is launched from a task via a provider**, Transformer Lab sends some information which is used by `lab.init()` to detect this and connect to the job which launched the provider.
 - **When you run the same script manually** (no job environment), you can:
   - Let it fall back to the default experiment, or
   - Pass an explicit `experiment_id`:
@@ -98,7 +93,7 @@ Use `lab.get_config()` to get the parameters from the task configuration:
 config = lab.get_config()
 ```
 
-This returns a dictionary of parameters.
+This returns a dictionary of parameters defined in your task configuration during launch.
 
 
 ## 4. Log progress and metrics during training or evaluation
@@ -173,4 +168,3 @@ Because your script now calls `lab.init()`:
 - For the exact GUI behavior around parameters, sweeps, and provider selection, see **`task-submission-gui.md`**.
 - For CLI commands (`lab task add`, `lab task queue`, and job inspection), see **`task-submission-cli.md`**.
 - For full details on how to configure `parameters` and `sweeps` in `task.yaml` so that sweeps are correctly expanded on the backend, see **`task-submission-advanced.md`**.
-
