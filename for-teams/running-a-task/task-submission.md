@@ -65,6 +65,8 @@ Transformer Lab reads this YAML and turns it into task metadata that:
 - Powers the parameter editors in the GUI and interactive CLI.
 - Controls hyperparameter sweeps when `sweeps` is present.
 
+For complete YAML field documentation, see [Task YAML Structure](task-yaml-structure.md) and [Task Parameters](task-parameters.md).
+
 
 ## High‑level ways to submit tasks
 

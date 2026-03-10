@@ -1,9 +1,7 @@
 ---
-title: Advanced Task Submission
-sidebar_position: 4
+title: Sweeps
+sidebar_position: 5
 ---
-
-## Parameterization and Sweeps
 
 Once you are comfortable running single tasks, you can take advantage of **parameterization** and **sweeps** to explore many configurations automatically.
 
@@ -19,7 +17,7 @@ This guide explains:
 ![Sweep Runs](../img/tasks-sweep-runs.png)
 
 
-### Parameterization: turn constants into knobs
+## Parameterization: turn constants into knobs
 
 Most tasks contain values that could reasonably change between runs, such as:
 
@@ -42,7 +40,9 @@ In practice, this means:
 - The CLI allows you to pass them via config files or flags.
 - You can access all parameters in your run script using `lab.get_config()`.
 
-### Sweeps: explore many configurations (grid search)
+You can read about how to define parameters in [this guide](task-parameters.md). Parameters are the building blocks that make sweeps possible, so it’s worth understanding how to use them effectively before diving into sweeps.
+
+## Sweeps: explore many configurations (grid search)
 
 Once parameters are defined, a **sweep** lets you:
 
@@ -62,7 +62,7 @@ Conceptually:
 ![Sweep Config](../img/tasks-queuetaskmodal-sweepconfig.png)
 
 
-### Example 1: Learning-rate sweep
+## Example 1: Learning-rate sweep
 
 **Goal:** Find a good learning rate for a given model and dataset.
 
@@ -94,7 +94,7 @@ Then launch the task (for example, via the GUI’s Queue Task dialog with sweeps
 ![Sweep Results](../img/tasks-sweep-results.png)
 
 
-### Example 2: Model/dataset grid
+## Example 2: Model/dataset grid
 
 **Goal:** Compare performance of different model/dataset combinations.
 
@@ -130,7 +130,7 @@ This will:
 In the UI you can identify which combination performs best.
 
 
-### Example 3: Multi-parameter sweep
+## Example 3: Multi-parameter sweep
 
 **Goal:** Explore a richer space of hyperparameters (for example, learning rate, batch size, and dropout).
 
@@ -174,7 +174,7 @@ Once the sweep completes, you can:
 - Inspect the top performers to see which combination might be best.
 - Use that configuration as the basis for a more focused search if needed.
 
-### Tips and next steps
+## Tips and next steps
 
 - Avoid sweeping **too many** parameters at once—start small and expand.
 - Use sweeps to validate intuition from single runs rather than guessing from scratch.
