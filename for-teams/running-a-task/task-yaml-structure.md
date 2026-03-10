@@ -1,6 +1,6 @@
 ---
 title: Task YAML Structure
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 This guide explains how to format YAML files for creating tasks in Transformer Lab. Tasks define jobs that run on compute providers and can include training scripts, evaluation scripts, or any other computational workloads.

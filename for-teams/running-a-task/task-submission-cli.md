@@ -1,6 +1,6 @@
 ---
 title: Task Submission Using the CLI
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Transformer Lab provides a CLI called `lab` for managing tasks and jobs from the terminal.

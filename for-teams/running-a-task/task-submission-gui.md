@@ -1,6 +1,6 @@
 ---
 title: Task Submission Using the GUI
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 This guide shows how to submit tasks from the Transformer Lab user interface, using the same building blocks you see in the app:

@@ -1,9 +1,11 @@
 ---
 title: Task Submission Overview
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 This page explains how **tasks** work in Transformer Lab and how the different pieces fit together. It links out to focused guides for the GUI, CLI, and advanced task configurations.
+
+If you want the fastest path from setup to first run, start with [Quick Start](quick-start.md).
 
 
 ## Experiments, tasks, and jobs
