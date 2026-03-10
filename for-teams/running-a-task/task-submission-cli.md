@@ -11,7 +11,7 @@ This guide covers:
 - Creating a new task from a local directory with `task.yaml`.
 - (Optionally) creating a task directly from a Git repository.
 
-> **Image placeholder:** screenshot of a terminal session running `lab` commands.
+![CLI Overview](../img/tasks-cli-intro.png)
 
 ---
 
@@ -32,7 +32,6 @@ lab version
 
 If these commands work, you’re ready to proceed.
 
----
 
 ## 1. Set your current experiment
 
@@ -52,7 +51,6 @@ lab config
 
 If no experiment is set, some commands (like `lab task list`) will warn you and ask you to configure it first.
 
----
 
 ## 2. List existing tasks
 
@@ -110,7 +108,6 @@ On success, you should see a message similar to:
 
 You can then run `lab task list` again to see it in the table.
 
----
 
 ## 4. Create a task from a Git repository
 
@@ -128,8 +125,6 @@ The CLI will:
 - Register it under your current experiment.
 
 > This is handy for sharing reusable tasks across teams or maintaining them in a separate repo.
-
----
 
 ## 5. Queue a task on a compute provider
 
@@ -179,7 +174,6 @@ Once a task exists:
 
 Tasks defined via the CLI can be launched and monitored from the GUI as well. For more on running tasks visually, see **`task-submission-gui.md`**.
 
----
 
 ## Where to go next
 
