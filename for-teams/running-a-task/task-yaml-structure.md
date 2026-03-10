@@ -1,11 +1,11 @@
 ---
 title: Task YAML Structure
-sidebar_position: 80
+sidebar_position: 8
 ---
 
 This guide explains how to format YAML files for creating tasks in Transformer Lab. Tasks define jobs that run on compute providers and can include training scripts, evaluation scripts, or any other computational workloads.
 
-**Note:** For detailed information about defining task parameters with validation and custom UI, see the [Task Parameters](/for-teams/task-yaml/parameters) guide.
+**Note:** For detailed information about defining task parameters with validation and custom UI, see the [Task Parameters](task-parameters.md) guide.
 
 ## Basic Structure
 
@@ -105,7 +105,7 @@ resources:
 
 ### resources.accelerators
 
-Accelerator specification (e.g., GPU type and count). Format depends on the provider. 
+Accelerator specification (e.g., GPU type and count). Format depends on the provider.
 To look at supported formats in Skypilot, refer to their [accelerator documentation](https://docs.skypilot.co/en/stable/examples/auto-failover.html#provisioning-gpus) and for Slurm, refer to their [GPU documentation](https://slurm.schedmd.com/gres.html).
 
 **Type:** String
@@ -271,7 +271,7 @@ run: "python train.py"
 
 Task parameters (hyperparameters, configuration, etc.) that will be accessible via `lab.get_config()` in your scripts. These are passed to the job and can be used to configure the training or evaluation process.
 
-[Detailed documentation on this field is on its own page](/for-teams/task-yaml/parameters)
+[Detailed documentation on this field is on its own page](task-parameters.md)
 
 **Type:** Dictionary (any JSON-serializable values)
 
@@ -316,13 +316,14 @@ model_name = config.get("model_name")
 ```
 
 **📖 For comprehensive parameter documentation**, including:
+
 - Parameter types (int, float, bool, enum, string, json, model, dataset)
 - Schema validation (min, max, multipleOf)
 - UI customization (ui_widget options)
 - Special model and dataset selectors
 - Complete examples
 
-See the **[Task Parameters](/for-teams/task-yaml/parameters) guide**.
+See the **[Task Parameters](task-parameters.md) guide**.
 
 ## Hyperparameter Sweeps
 
@@ -532,7 +533,7 @@ sweeps:
    resources:
      cpus: 4
      memory: 8
-   
+
    # For large models
    resources:
      cpus: 16
@@ -553,7 +554,7 @@ sweeps:
    # Good - use environment variables
    envs:
      WANDB_API_KEY: "${WANDB_API_KEY}"
-   
+
    # Bad - hardcoded
    envs:
      WANDB_API_KEY: "abc123xyz"

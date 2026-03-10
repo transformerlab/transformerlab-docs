@@ -1,6 +1,6 @@
 ---
 title: Task Parameters
-sidebar_position: 81
+sidebar_position: 5
 ---
 
 This guide explains how to define and configure task parameters in Transformer Lab. Parameters are used to pass configuration values, hyperparameters, and other settings to your task scripts, which can be accessed via `lab.get_config()`.
@@ -18,10 +18,10 @@ Task parameters allow you to make your tasks flexible and reusable. Instead of h
 The following parameter types are supported:
 
 | Type | Description | Default UI | Example |
-|------|-------------|-----------|---------|
+| ---- | ----------- | ---------- | ------- |
 | `int` | Integer numbers | Number input | `42`, `100` |
-| `float`| Decimal numbers | Number input | `0.001`, `3.14` |
-| `bool`| Boolean values | Switch toggle | `true`, `false` |
+| `float` | Decimal numbers | Number input | `0.001`, `3.14` |
+| `bool` | Boolean values | Switch toggle | `true`, `false` |
 | `enum` | Enumerated choices | Select dropdown | `"option1"`, `"option2"` |
 | `string` | Text values | Text input | `"model-name"`, `"path/to/file"` |
 
@@ -39,6 +39,7 @@ parameters:
 ```
 
 **Accessing in Python:**
+
 ```python
 from lab import lab
 
@@ -159,6 +160,7 @@ parameters:
 The `ui_widget` field is **optional**. Each parameter type has sensible defaults. When you do want to customize the UI, you can use the following widget options:
 
 **Available ui_widget Options:**
+
 - `slider` - Slider control for numeric types
 - `range` - Range slider for numeric types
 - `switch` - Toggle switch for boolean types
@@ -179,14 +181,14 @@ parameters:
     max: 2.0
     default: 0.7
     ui_widget: "slider"
-  
+
   # Enum with radio buttons
   strategy:
     type: "enum"
     options: ["fast", "accurate", "balanced"]
     default: "balanced"
     ui_widget: "radio"
-  
+
   # String with password masking
   api_key:
     type: "string"
@@ -224,7 +226,6 @@ parameters:
     ui_widget: "lab_dataset_select"
 ```
 
-
 ## Complete Example of a Task YAML with Parameters
 
 ```yaml
@@ -236,14 +237,14 @@ parameters:
     type: "string"
     default: "computer"
     title: "Agent Name"
-  
+
   learning_rate:
     type: "float"
     default: 0.0001
     min: 0.00001
     max: 0.1
     title: "Learning Rate"
-  
+
   batch_size:
     type: "int"
     default: 32
@@ -251,13 +252,13 @@ parameters:
     max: 512
     step: 8
     title: "Batch Size (must be multiple of 8)"
-  
+
   num_epochs:
     type: "int"
     default: 3
     min: 1
     max: 100
-  
+
   use_cache:
     type: "bool"
     default: true
