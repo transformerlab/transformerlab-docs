@@ -16,7 +16,7 @@ This guide explains:
   - **Example 2**: model/dataset grid.
   - **Example 3**: multi-parameter sweep.
 
-> **Image placeholder:** screenshot or diagram showing several jobs launched as part of a sweep, converging into a best-run highlight.
+![Sweep Runs](../img/tasks-sweep-runs.png)
 
 
 ### Parameterization: turn constants into knobs
@@ -40,9 +40,7 @@ In practice, this means:
 - Your task configuration (such as `task.yaml` or UI schema) exposes fields for those values.
 - The GUI shows appropriate controls (sliders, switches, selects).
 - The CLI allows you to pass them via config files or flags.
-
-> The exact schema and UI widget mapping depend on your Transformer Lab version; use existing tasks as references for how different parameter types are surfaced.
-
+- You can access all parameters in your run script using `lab.get_config()`.
 
 ### Sweeps: explore many configurations (grid search)
 
@@ -61,7 +59,7 @@ Conceptually:
    - `lower_is_better`: whether lower metric values are better.
 3. Launch the task (from GUI or CLI) with sweeps enabled; Transformer Lab expands `sweep_config` into all combinations internally.
 
-> **Image placeholder:** screenshot of a sweep configuration view showing parameters and ranges.
+![Sweep Config](../img/tasks-queuetaskmodal-sweepconfig.png)
 
 
 ### Example 1: Learning-rate sweep
@@ -74,12 +72,12 @@ Think of a task that already works with a single `learning_rate` value defined u
 parameters:
   learning_rate:
     type: float
-    default: 0.0003
+    default: 3e-5
     title: Learning rate
 
 sweeps:
   sweep_config:
-    learning_rate: [0.0001, 0.0003, 0.001, 0.003]
+    learning_rate: [1e-5, 3e-5]
   sweep_metric: eval/loss
   lower_is_better: true
 ```
@@ -93,7 +91,7 @@ Then launch the task (for example, via the GUI’s Queue Task dialog with sweeps
    - Use the UI to compare `eval/loss` across runs.
    - Choose the configuration with the lowest loss as a starting point for future experiments.
 
-> **Image placeholder:** chart of `learning_rate` vs. final `eval/loss`.
+![Sweep Results](../img/tasks-sweep-results.png)
 
 
 ### Example 2: Model/dataset grid
@@ -175,10 +173,6 @@ Once the sweep completes, you can:
 - Sort runs by `eval/accuracy`.
 - Inspect the top performers to see which combination might be best.
 - Use that configuration as the basis for a more focused search if needed.
-
-> **Image placeholder:** scatter or parallel-coordinates plot showing how metrics vary with multiple parameters.
-
----
 
 ### Tips and next steps
 
