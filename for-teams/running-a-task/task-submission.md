@@ -76,11 +76,18 @@ There are two main ways to submit tasks; they share the same underlying task met
     - **From GitHub**: point at a repo (and optional subdirectory/branch) that contains a `task.yaml`.
     - **Upload from your Computer**: drag‑and‑drop or pick a folder that contains a `task.yaml`.
     - **Start with a blank task template**: create a new, minimal task and edit its YAML later.
+
+    ![Create Task from GitHub](../img/new_task_from_github.gif)
+
+    ![Create Task from Local Directory](../img/new_task_from_directory.gif)
+
+  - If you create a task from GitHub, the cloned repository/subdirectory is available at `~/<github repo name or subdirectory name>` on the executing node.
+  - If your selected directory does not contain `task.yaml`, you can still create a blank task and define it in the GUI.
   - After the task exists in your experiment, use the **Queue** action in the Tasks table to open the **Queue Task** dialog, which:
     - Reads `parameters` from the task and shows the corresponding form controls.
     - Lets you choose a compute provider from your team’s providers.
     - Optionally enables sweeps via the **Hyperparameter Sweeps** section.
-  - See **`task-submission-gui.md`** for a step‑by‑step walkthrough of this flow.
+  - See [this link](task-submission-gui.md) for a step‑by‑step walkthrough of this flow.
 
 - **CLI (`lab` command, for terminal and automation use)**  
   - Define a task in a directory with `task.yaml`.
@@ -99,7 +106,7 @@ There are two main ways to submit tasks; they share the same underlying task met
   - The CLI will:
     - Use the task’s defined parameters to prompt for values (or apply defaults with `--no-interactive`).
     - Send a launch request to the selected compute provider to create a job.
-  - See **`task-submission-cli.md`** for concrete examples.
+  - See [this link](task-submission-cli.md) for concrete examples.
 
 
 ## Using your own training scripts inside tasks
