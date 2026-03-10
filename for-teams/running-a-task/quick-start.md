@@ -14,7 +14,7 @@ This quick start helps a new Teams user go from login to running their first tas
 
 ![Team Settings](../img/tasks-quickstart-teamsettings.png)
 
-::note:: You can only add new compute providers if you're an admin. If you don't have permissions, ask your admin to add a provider for you.
+> _You can only add new compute providers if you're an admin. If you don't have permissions, ask your admin to add a provider for you._
 
 ## 2. Add a Compute Provider
 
