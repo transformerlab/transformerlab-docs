@@ -1,4 +1,7 @@
-## Using Existing Training Scripts Inside Tasks (Minimal lab SDK Adjustments)
+---
+title: Using Existing Training Scripts Inside Tasks
+sidebar_position: 5
+---
 
 If your tasks already launch your own training or evaluation scripts (via the `run:` command in `task.yaml`), you do **not** need to rewrite those scripts for Transformer Lab.
 
@@ -12,7 +15,7 @@ You only need to add a few small lab SDK calls so that:
 
 ---
 
-### High‑level idea
+## High‑level idea
 
 The lab SDK exposes a `Lab` facade (imported as `lab`) that:
 
@@ -51,7 +54,7 @@ The core lifecycle is `lab.init() → lab.get_config() → lab.log() → lab.fin
 
 ---
 
-### 1. Import the lab package
+## 1. Import the lab package
 
 At the top of your script, import `lab` from the lab SDK:
 
@@ -67,7 +70,7 @@ This gives you an object that wraps the underlying `Experiment` and `Job` types 
 
 ---
 
-### 2. Initialize the job
+## 2. Initialize the job
 
 Call `lab.init()` at the start of your main entrypoint (before you start training or evaluation):
 
@@ -86,9 +89,8 @@ lab.init()
     lab.init(experiment_id="my-local-experiment")
     ```
 
----
 
-### 3. Get the configuration (optional)
+## 3. Get the configuration (optional)
 
 Use `lab.get_config()` to get the parameters from the task configuration:
 
@@ -98,9 +100,8 @@ config = lab.get_config()
 
 This returns a dictionary of parameters.
 
----
 
-### 4. Log progress and metrics during training or evaluation
+## 4. Log progress and metrics during training or evaluation
 
 As your script runs, use `lab.log()` to record progress and key values:
 
@@ -118,9 +119,8 @@ You can log:
 
 These logs are stored with the job and visible in the Transformer Lab UI. For sweeps, pass final metrics via `lab.finish(..., score={"eval/loss": value, ...})` so the sweep can compare runs.
 
----
 
-### 5. Finish the job
+## 5. Finish the job
 
 When your script is done (whether it succeeded or failed), call:
 
@@ -137,9 +137,8 @@ You can pass any completion message that makes sense for your workflow (e.g., `"
 
 Even if you forget to call `finish`, the job may still be marked as completed by the underlying provider logic, but calling it explicitly makes the lifecycle clearer and more consistent in the UI.
 
----
 
-### 6. Connect your script to tasks
+## 6. Connect your script to tasks
 
 With the lab facade in place, you can wire your script into tasks as follows:
 
@@ -168,9 +167,8 @@ Because your script now calls `lab.init()`:
 
 - When the provider launches your script, Transformer Lab ensures the script attaches to the correct job automatically.
 
----
 
-### Where to go next
+## Where to go next
 
 - For the exact GUI behavior around parameters, sweeps, and provider selection, see **`task-submission-gui.md`**.
 - For CLI commands (`lab task add`, `lab task queue`, and job inspection), see **`task-submission-cli.md`**.

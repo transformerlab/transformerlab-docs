@@ -1,10 +1,12 @@
-## Task Submission Overview
-
-This page explains how **tasks** work in Transformer Lab and how the different pieces fit together. It links out to focused guides for the GUI, CLI, and existing scripts.
-
+---
+title: Task Submission Overview
+sidebar_position: 1
 ---
 
-### Experiments, tasks, and jobs
+This page explains how **tasks** work in Transformer Lab and how the different pieces fit together. It links out to focused guides for the GUI, CLI, and advanced task configurations.
+
+
+## Experiments, tasks, and jobs
 
 - An **experiment** is a logical workspace (for example, a project or study).
 - A **task** is a reusable template that knows:
@@ -21,9 +23,8 @@ You typically:
 2. Attach one or more tasks to that experiment (from the Tasks Gallery, task.yaml uploads, or CLI).
 3. Queue those tasks on a provider to create jobs.
 
----
 
-### Task definitions (`task.yaml`)
+## Task definitions (`task.yaml`)
 
 Most reusable tasks are defined with a `task.yaml` file. Conceptually it looks like:
 
@@ -64,9 +65,8 @@ Transformer Lab reads this YAML and turns it into task metadata that:
 - Powers the parameter editors in the GUI and interactive CLI.
 - Controls hyperparameter sweeps when `sweeps` is present.
 
----
 
-### High‑level ways to submit tasks
+## High‑level ways to submit tasks
 
 There are two main ways to submit tasks; they share the same underlying task metadata and providers:
 
@@ -101,9 +101,8 @@ There are two main ways to submit tasks; they share the same underlying task met
     - Send a launch request to the selected compute provider to create a job.
   - See **`task-submission-cli.md`** for concrete examples.
 
----
 
-### Using your own training scripts inside tasks
+## Using your own training scripts inside tasks
 
 If the task’s `run` command launches your own training or evaluation script, you can make small additions so that the script reports into the job that the task has already created:
 
@@ -113,9 +112,8 @@ If the task’s `run` command launches your own training or evaluation script, y
 
 When a job is launched via a compute provider, the lab SDK automatically attaches to that job so your script logs into the right place without extra wiring in `task.yaml`. See **`task-submission-existing-scripts.md`** for details.
 
----
 
-### Advanced: sweeps and metrics
+## Advanced: sweeps and metrics
 
 For advanced hyperparameter sweeps:
 

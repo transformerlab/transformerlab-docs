@@ -1,4 +1,7 @@
-## Task Submission Using the GUI
+---
+title: Task Submission Using the GUI
+sidebar_position: 2
+---
 
 This guide shows how to submit tasks from the Transformer Lab user interface, using the same building blocks you see in the app:
 
@@ -7,11 +10,9 @@ This guide shows how to submit tasks from the Transformer Lab user interface, us
 - Use the **Queue** action to configure parameters, sweeps, and provider.
 - Submit the task and monitor the resulting jobs.
 
-> **Image placeholder:** experiment page with the **Tasks** tab visible.
+![Tasks Tab View](../img/tasks-gui-tasks-tab.png)
 
----
-
-### 1. Import a task from the Tasks Gallery
+## 1. Import a task from the Tasks Gallery
 
 Tasks in experiments are usually derived from reusable templates stored in the **Tasks Gallery**.
 
@@ -21,16 +22,15 @@ Tasks in experiments are usually derived from reusable templates stored in the *
    - **Interactive Gallery**,
    - **Team Tasks**, or
    - **Team Interactive**.
-3. Browse these tabs to find a task that matches what you want (for example, a training or evaluation template).
+3. Browse these tabs to find a task that matches what you want (for example, a training or evaluation template set by your own team).
 4. Use the import/clone action in the gallery to attach that task to your experiment.
-5. Return to your experiment and open the **Tasks** tab:
+5. Open the **Tasks** tab:
    - You should now see the imported task in the list for that experiment.
 
-> **Image placeholder:** Tasks Gallery with an import/clone action highlighted, and an experiment Tasks list showing the imported task.
+![Tasks Gallery View](../img/tasks-gallery-import-button.png)
 
----
 
-### 2. Open the Queue Task dialog
+## 2. Open the Queue Task dialog
 
 From the experiment’s **Tasks** tab:
 
@@ -40,9 +40,7 @@ From the experiment’s **Tasks** tab:
    - Loads the task’s saved configuration, including any parameters and sweep settings.
    - Fetches available models, datasets, and providers for your team.
 
----
-
-### 3. How parameters map from `task.yaml` to the UI
+## 3. How parameters map from `task.yaml` to the UI
 
 The **Parameters** section is driven by its **Parameters** section from the `parameters:` block in the task’s metadata:
 
@@ -81,11 +79,9 @@ If **no parameters** are defined, the dialog shows a clear message and lets you 
 
 - It checks `parameter count` and renders a “This task has no parameters defined. Click Submit to queue…” text path.
 
-> **Image placeholder:** Queue Task dialog with a model dropdown, dataset dropdown, numeric slider, and boolean switch shown.
+![Queue Task dialog](../img/tasks-queuetaskmodal-grpo.png)
 
----
-
-### 4. Configure sweeps in the GUI
+## 4. Configure sweeps in the GUI
 
 The Queue Task dialog lets you define hyperparameter sweeps interactively. When you enable sweeps:
 
@@ -101,31 +97,30 @@ When you submit with sweeps enabled, the dialog sends your sweep configuration (
 - Expand `sweep_config` into a full grid of parameter combinations.
 - Track `sweep_total`, `sweep_current`, and best metric as jobs complete.
 
-> **Image placeholder:** Hyperparameter Sweeps section showing one parameter with multiple values and the metric/“lower is better” controls.
+![Queue Task Sweep dialog](../img/tasks-queuetaskmodal-sweepconfig.png)
 
----
 
-### 5. Choose a compute provider
+## 5. Choose a compute provider
 
 The Queue Task dialog fetches your team's compute providers.
+
 - When the dialog opens:
   - It tries to use the task’s stored `provider_id` (if present and in the current list).
-  - Otherwise, it defaults to the first provider (`the first provider`).
+  - Otherwise, it defaults to the first provider in the list.
 
 The UI:
 
-- Exposes a provider selection control (e.g., a dropdown or radio group, depending on your current UI version).
+- Exposes a provider selection drop-down
 - For local providers:
   - It fetches cluster snapshots and validates resources (task requirements against available resources).
-  - Shows warnings/errors when requested GPUs, CPUs, or memory exceed what’s available.
+  - Shows warnings/errors when requested GPUs exceed what’s available.
 - For SLURM providers:
   - It optionally pulls per‑user `SBATCH flags` and lets you override them per job.
 
-> **Image placeholder:** provider selection and (optionally) a resource warning banner.
+![Queue Task Sweep dialog](../img/tasks-queuetaskmodal-localwarn.png)
 
----
 
-### 6. Submit and monitor the job
+## 6. Submit and monitor the job
 
 When you click **Submit**:
 
@@ -136,17 +131,16 @@ Back in the experiment:
 
 - The job list refreshes automatically.
 - The new job(s) appear with statuses such as:
-  - `WAITING`, `LAUNCHING`, `RUNNING`, `COMPLETED`, `FAILED`.
+  - `LAUNCHING`, `RUNNING`, `COMPLETED`, `FAILED`.
 - Clicking a job opens its details, where you can:
-  - Inspect logs (`stdout`/`stderr` or structured logging).
+  - Inspect logs.
   - Inspect metrics (including the sweep metric, if configured).
   - Inspect artifacts.
 
-> **Image placeholder:** job list with a newly queued job and a separate placeholder for a job detail view.
+![Tasks Job Launching](../img/tasks-jobs-launching.png)
 
----
 
-### Where to go next
+## Where to go next
 
 - For the CLI view of the same concepts (defining `task.yaml`, registering tasks, and queuing jobs interactively or non‑interactively), see **`task-submission-cli.md`**.
 - For details on adding minimal lab SDK calls inside your own training scripts so they log into the jobs created by these tasks, see **`task-submission-existing-scripts.md`**.

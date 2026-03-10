@@ -14,13 +14,13 @@ When you create a new task, you have two options:
 1. **From GitHub Repository** - Specify a GitHub repository URL, branch, and subdirectory. The system will fetch your code from the specified repository.
 
 <figure>
-![Create Task from GitHub](./img/new_task_from_github.gif)
+![Create Task from GitHub](../img/new_task_from_github.gif)
 </figure>
 
 2. **From Local Directory** - Upload a local directory containing your task definition.
 
 <figure>
-![Create Task from Local Directory](./img/new_task_from_directory.gif)
+![Create Task from Local Directory](../img/new_task_from_directory.gif)
 </figure>
 
 Both options require your repository subdirectory or local directory to contain a `task.yaml` file that defines the task configuration. 
@@ -34,7 +34,7 @@ Both options require your repository subdirectory or local directory to contain 
 Here is an example of a very simple task:
 
 <figure>
-![Task YAML](./img/tasks-yaml.png)
+![Task YAML](../img/tasks-yaml.png)
 </figure>
 
 In this dummy example, the Task is defined in a YAML file that states the following things:
@@ -50,7 +50,7 @@ In this dummy example, the Task is defined in a YAML file that states the follow
 
 Once you create a new Task, you will see it on your list of Tasks:
 
-![Task YAML](./img/tasks-list.png)
+![Task YAML](../img/tasks-list.png)
 
 You can now press the "Queue" Button to submit it as a Job.
 

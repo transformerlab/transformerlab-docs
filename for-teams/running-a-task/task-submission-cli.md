@@ -1,4 +1,7 @@
-## Task Submission Using the CLI
+---
+title: Task Submission Using the CLI
+sidebar_position: 3
+---
 
 Transformer Lab provides a CLI called `lab` for managing tasks and jobs from the terminal.
 
@@ -12,7 +15,7 @@ This guide covers:
 
 ---
 
-### Prerequisites
+## Prerequisites
 
 Before using the CLI:
 
@@ -31,7 +34,7 @@ If these commands work, you’re ready to proceed.
 
 ---
 
-### 1. Set your current experiment
+## 1. Set your current experiment
 
 Most CLI commands operate on a “current experiment” value stored in the CLI config.
 
@@ -51,7 +54,7 @@ If no experiment is set, some commands (like `lab task list`) will warn you and 
 
 ---
 
-### 2. List existing tasks
+## 2. List existing tasks
 
 To see tasks associated with your current experiment:
 
@@ -70,11 +73,11 @@ This is a good way to confirm that your CLI is correctly talking to the Transfor
 
 ---
 
-### 3. Create a task from a local directory
+## 3. Create a task from a local directory
 
 The recommended way to define a task for the CLI is to create a directory containing a `task.yaml` file and any associated code or configuration.
 
-#### 3.1. Prepare `task.yaml`
+### 3.1. Prepare `task.yaml`
 
 In a local directory (for example, `my-task/`), create a file called `task.yaml` with at least the required fields:
 
@@ -86,7 +89,7 @@ type: REMOTE
 
 > The exact schema for `task.yaml` depends on your version of Transformer Lab and the kind of task you are creating. Use existing tasks or templates as references when possible.
 
-#### 3.2. Add the task with `lab task add`
+### 3.2. Add the task with `lab task add`
 
 From the directory **above** `my-task/`, run:
 
@@ -109,7 +112,7 @@ You can then run `lab task list` again to see it in the table.
 
 ---
 
-### 4. Create a task from a Git repository
+## 4. Create a task from a Git repository
 
 Instead of a local directory, you can create a task directly from a Git repository.
 
@@ -128,7 +131,7 @@ The CLI will:
 
 ---
 
-### 5. Queue a task on a compute provider
+## 5. Queue a task on a compute provider
 
 Defining a task only registers it with your experiment. To actually run it on a compute provider from the CLI, use:
 
@@ -158,7 +161,7 @@ You can then use `lab job list`, `lab job info`, and other job commands, or the 
 
 ---
 
-### 6. Inspecting and managing tasks
+## 6. Inspecting and managing tasks
 
 Once a task exists:
 
@@ -178,7 +181,7 @@ Tasks defined via the CLI can be launched and monitored from the GUI as well. Fo
 
 ---
 
-### Where to go next
+## Where to go next
 
 - To adapt an existing training script to integrate with Transformer Lab’s logging and job tracking, see **`task-submission-existing-scripts.md`**.
 - To learn about parameterization and sweeps (running many configurations and comparing results), see **`task-submission-advanced.md`**.

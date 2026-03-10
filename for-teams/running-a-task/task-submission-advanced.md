@@ -1,4 +1,9 @@
-## Advanced Task Submission: Parameterization and Sweeps
+---
+title: Advanced Task Submission
+sidebar_position: 4
+---
+
+## Parameterization and Sweeps
 
 Once you are comfortable running single tasks, you can take advantage of **parameterization** and **sweeps** to explore many configurations automatically.
 
@@ -13,7 +18,6 @@ This guide explains:
 
 > **Image placeholder:** screenshot or diagram showing several jobs launched as part of a sweep, converging into a best-run highlight.
 
----
 
 ### Parameterization: turn constants into knobs
 
@@ -39,7 +43,6 @@ In practice, this means:
 
 > The exact schema and UI widget mapping depend on your Transformer Lab version; use existing tasks as references for how different parameter types are surfaced.
 
----
 
 ### Sweeps: explore many configurations (grid search)
 
@@ -60,7 +63,6 @@ Conceptually:
 
 > **Image placeholder:** screenshot of a sweep configuration view showing parameters and ranges.
 
----
 
 ### Example 1: Learning-rate sweep
 
@@ -93,7 +95,6 @@ Then launch the task (for example, via the GUI’s Queue Task dialog with sweeps
 
 > **Image placeholder:** chart of `learning_rate` vs. final `eval/loss`.
 
----
 
 ### Example 2: Model/dataset grid
 
@@ -128,14 +129,8 @@ This will:
 - Launch four jobs (2 models × 2 datasets).
 - Let you compare `eval/accuracy` across all combinations.
 
-In the UI you can:
+In the UI you can identify which combination performs best.
 
-- Filter by model or dataset.
-- Identify which combination performs best.
-
-> **Image placeholder:** table or heatmap-style visualization for model vs. dataset accuracy.
-
----
 
 ### Example 3: Multi-parameter sweep
 
