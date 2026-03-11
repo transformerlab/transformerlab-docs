@@ -22,6 +22,14 @@ uv tool install --with pip skypilot
 uv tool install --with pip "skypilot[kubernetes,aws,gcp]"
 ```
 
+## Run Skypilot
+
+Now you can run Skypilot (this will not install it as a service that stays running after reboots) but we have [instructions for that here](https://github.com/transformerlab/build-a-machine-learning-research-cluster/blob/main/chapters/04-02-skypilot-k3s-install.md#4-making-skypilot-persistent-with-systemd)
+
+```
+sky api start --deploy
+```
+
 ## Cloud Setup
 You can now ensure your machine has credentials for the clouds you want to use (AWS, GCP, Azure, etc.).
 
@@ -29,12 +37,4 @@ Run this command to automatically detect your credentials and enable cloud acces
 
 ```bash
 sky check
-```
-
-## Run Skypilot
-
-Now you can run Skypilot (this will not install it as a service that stays running after reboots) but we have [instructions for that here](https://github.com/transformerlab/build-a-machine-learning-research-cluster/blob/main/chapters/04-02-skypilot-k3s-install.md#4-making-skypilot-persistent-with-systemd)
-
-```
-sky api start --deploy
 ```
