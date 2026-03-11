@@ -100,10 +100,6 @@ To use Google Cloud Storage instead of AWS S3:
 
 ## Azure Blob Storage
 
-:::note
-Azure Blob Storage support has been merged to main and will be available in the next release.
-:::
-
 To use Azure Blob Storage instead of AWS S3 or GCS:
 
 1. Set `TFL_REMOTE_STORAGE_ENABLED=true` in your `.env` file.
