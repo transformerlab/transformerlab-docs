@@ -11,7 +11,7 @@ We want to build the very best tool for ML teams to build, train, and evaluate a
 
 # Who are the people behind Transformer Lab?
 
-Transformer Lab is being actively developed by a small team of engineers from Canada led by Tony, Ali, Deep and Mina.
+Transformer Lab is being actively developed by a small team of engineers from Canada led by Tony, Ali, Deep, and Mina.
 
 <img src={require('./img/tony.jpg').default} width={100} />
 <img src={require('./img/ali.jpg').default} width={100} />
