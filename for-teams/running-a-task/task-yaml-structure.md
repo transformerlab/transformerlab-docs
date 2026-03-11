@@ -22,8 +22,8 @@ envs:
   KEY: value
 setup: "command"
 run: "command"
-git_repo: "url"
-git_repo_directory: "dir"
+github_repo_url: "url"
+github_repo_dir: "dir"
 parameters: {...}
 sweeps:
   sweep_config: {...}
@@ -229,7 +229,7 @@ minutes_requested: 60
 
 ## GitHub Integration
 
-### git_repo
+### github_repo_url
 
 GitHub repository URL to clone before running the task. The repository will be cloned to the working directory.
 
@@ -238,10 +238,10 @@ GitHub repository URL to clone before running the task. The repository will be c
 **Example:**
 
 ```yaml
-git_repo: "https://github.com/username/repo.git"
+github_repo_url: "https://github.com/username/repo.git"
 ```
 
-### git_repo_directory
+### github_repo_dir
 
 Subdirectory within the GitHub repository to use as the working directory. Useful when the repository contains multiple projects.
 
@@ -250,17 +250,29 @@ Subdirectory within the GitHub repository to use as the working directory. Usefu
 **Example:**
 
 ```yaml
-git_repo: "https://github.com/username/multi-project-repo.git"
-git_repo_directory: "project1"
+github_repo_url: "https://github.com/username/multi-project-repo.git"
+github_repo_dir: "project1"
 ```
 
-**Note**: The final path where the cloned folder would be available is either: `~/git_repo_directory` or `~/git_repo_name` (if no directory is specified).
+### github_repo_branch
+
+Branch of the GitHub repository to clone. Defaults to the default branch if not specified.
+**Type:** String
+**Example:**
+
+```yaml
+github_repo_url: "https://github.com/username/multi-project-repo.git"
+github_repo_dir: "project1"
+github_repo_branch: "main"
+```
+
+**Note**: The final path where the cloned folder would be available is either: `~/github_repo_dir` or `~/github_repo_name` (if no directory is specified).
 
 **Complete GitHub Example:**
 
 ```yaml
-git_repo: "https://github.com/transformerlab/examples.git"
-git_repo_directory: "training/llm-finetuning"
+github_repo_url: "https://github.com/transformerlab/examples.git"
+github_repo_dir: "training/llm-finetuning"
 setup: "pip install -r requirements.txt"
 run: "python train.py"
 ```
@@ -448,8 +460,8 @@ resources:
   memory: 32
   accelerators: "H100:1"
 minutes_requested: 120
-git_repo: "https://github.com/username/llm-training.git"
-git_repo_directory: "finetuning"
+github_repo_url: "https://github.com/username/llm-training.git"
+github_repo_dir: "finetuning"
 setup: |
   pip install -r requirements.txt
   pip install wandb
@@ -496,7 +508,7 @@ resources:
   memory: 16
   accelerators: "H100:1"
 minutes_requested: 180
-git_repo: "https://github.com/username/llm-training.git"
+github_repo_url: "https://github.com/username/llm-training.git"
 setup: |
   pip install -r requirements.txt
   pip install wandb
@@ -580,11 +592,12 @@ sweeps:
      lower_is_better: true
    ```
 
-7. **Use GitHub for Code**: Store your code in a GitHub repository and reference it with `git_repo` rather than uploading files manually.
+7. **Use GitHub for Code**: Store your code in a GitHub repository and reference it with `github_repo_url`, `github_repo_dir`, and `github_repo_branch` rather than uploading files manually.
 
    ```yaml
-   git_repo: "https://github.com/username/my-project.git"
-   git_repo_directory: "training"
+   github_repo_url: "https://github.com/username/my-project.git"
+   github_repo_dir: "training"
+   github_repo_branch: "main"
    ```
 
 8. **Test Locally First**: Test your task configuration locally before running on expensive cloud resources.
