@@ -38,14 +38,7 @@ Transformer Lab needs a CPU node to run.
 SSH into that node and run:
 
 ```bash
-curl -LsSf https://lab.cloud/install.sh | bash
-```
-
-You need to also install packages necessary for running compute providers like Skypilot or Slurm:
-
-```bash
-cd ~/.transformerlab/src
-./install.sh multiuser_setup
+curl -fsSL https://lab.cloud/install.sh | bash -s -- multiuser_setup
 ```
 
 ## Step 3 - Configure Team Edition
