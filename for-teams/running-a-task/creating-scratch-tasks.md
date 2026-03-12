@@ -14,7 +14,7 @@ It covers:
 
 ## Creating a Task From a GitHub Repository
 
-When you create a task from a GitHub repo, TransformerLab clones your code into the job environment and runs whatever command you configure (for example, `python train.py`).
+When you create a task from a GitHub repo, Transformer Lab clones your code into the job environment and runs whatever command you configure (for example, `python train.py`).
 
 - **Source**: public or private GitHub repo (optionally via galleries or direct URL).
 - **Typical workflow**:
@@ -63,9 +63,9 @@ Adjust paths in your scripts accordingly:
 - For GitHub-based tasks: reference files under `~/github_repo_dir/...`
 - For local uploads: reference files directly under `~/...` (no additional subfolder unless you included one yourself).
 
-## Modifying Training Scripts for TransformerLab
+## Modifying Training Scripts for Transformer Lab
 
-Any standard Python training script can run as a task. To make it integrate cleanly with TransformerLab and surface useful outputs back to the UI, the main steps to include from the lab-sdk are:
+Any standard Python training script can run as a task. To make it integrate cleanly with Transformer Lab and surface useful outputs back to the UI, the main steps to include from the lab-sdk are:
 
 - **Initialize the job with `lab.init()`**
 - **Run your training/eval logic**
@@ -141,11 +141,10 @@ lab.finish("Done")
 
 As long as you call `lab.save_artifact(...)` on a real path during the run, that artifact will be attached to the job and available in the GUI afterwards.
 
----
 
 ## Artifact Modes (`type` Parameter)
 
-The `type` argument to `lab.save_artifact` controls how TransformerLab treats an artifact and where it shows up in the UI.
+The `type` argument to `lab.save_artifact` controls how Transformer Lab treats an artifact and where it shows up in the UI.
 
 ### Generic artifacts (default)
 
@@ -274,8 +273,6 @@ Example:
 ```python
 lab.save_artifact("eval_results_raw.csv", name="eval_results_raw.csv", type="evals")
 ```
-
----
 
 ## Summary
 
