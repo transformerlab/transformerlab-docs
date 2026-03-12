@@ -147,3 +147,5 @@ To use a shared filesystem (e.g. NFS) that is accessible via a local path:
 2. Set `TFL_STORAGE_URI=/path/to/your/shared/folder` in the same `.env` file.
 
 3. Remove the line `TFL_REMOTE_STORAGE_ENABLED=true` from your `.env` file if it exists.
+
+4. If you run tasks with SkyPilot, configure hostPath volume mounts so your `TFL_STORAGE_URI` is available inside SkyPilot task pods. See [SkyPilot Volume Mounts for localfs](./skypilot-volume-mounts.md).
