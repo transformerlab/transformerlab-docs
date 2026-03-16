@@ -3,7 +3,7 @@ title: Installing Runpod Provider
 sidebar_position: 20
 ---
 
-If you already have a Runpod account, adding it in Transformer Lab only takes a minute.
+Runpod is a cloud provider that offers on-demand GPU infrastructure. Transformer Lab can connect to Runpod using an API key that you can generate from your Runpod account.
 
 ## 1. Add the provider in Team Settings
 
