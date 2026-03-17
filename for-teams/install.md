@@ -31,6 +31,8 @@ The following documents offer common install instructions that you can use if yo
 
 [Instructions for setting up SkyPilot from scratch -->](./install-gpu-orchestrator/install-skypilot.md)
 
+[Instructions for setting up Runpod provider -->](./install-gpu-orchestrator/install-runpod.md)
+
 ## Step 2 - Install Transformer Lab
 
 Transformer Lab needs a CPU node to run.
@@ -115,7 +117,7 @@ Go to Team Settings by clicking your user name in the sidebar.
 
 ![Team Settings in the sidebar](./img/screenshot-usersettings.png)
 
-In Team Settings, open Compute Providers and click "Add Compute Provider." Name the provider, choose a type (either "skypilot" or "slurm"), and then add the configuration.
+In Team Settings, open Compute Providers and click "Add Compute Provider." Name the provider, choose a type ("skypilot", "slurm", or "runpod"), and then add the configuration.
 
 ![Add Compute Provider dialog and form](./img/screenshot-addprovider.png)
 
@@ -152,6 +154,18 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 
 - Ensure the API node can SSH to the Slurm login node with the provided user and key.
 - Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
+
+### Runpod example config
+
+```jsonc showLineNumbers
+{
+  "api_key": "<RUNPOD_API_KEY>",
+  "api_base_url": "https://rest.runpod.io/v1",
+}
+```
+
+- Create an API key in your Runpod account settings and paste it here.
+- After saving, run the provider health check in Team Settings to confirm connectivity.
 
 ## Setting up SLURM Provider User Credentials
 
