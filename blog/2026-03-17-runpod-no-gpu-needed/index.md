@@ -33,13 +33,13 @@ deposit of $10 will go a long way.
 
 Transformer Lab connects to RunPod through their REST API, so you need an API key.
 
-![RunPod API key settings](./images/runpodkey.png)
-
 1. On the sidebar in the RunPod console, go to **Account -> Settings** and scroll down to **API Keys**.
 2. Here you can create a new API Key, give it a name (something like `transformerlab`), and hit **Create**.
 3. **Copy the key immediately!** You won't be able to see it again after you navigate away.
 
 Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
+
+![RunPod API key settings](./images/runpodkey.png)
 
 ---
 
