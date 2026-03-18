@@ -31,7 +31,7 @@ The following documents offer common install instructions that you can use if yo
 
 [Instructions for setting up SkyPilot from scratch -->](./install-gpu-orchestrator/install-skypilot.md)
 
-[Instructions for setting up Runpod provider -->](./install-gpu-orchestrator/install-runpod.md)
+[Instructions for setting up Runpod provider -->](./install-gpu-orchestrator/install-runpod.md#create-a-runpod-account-and-api-key)
 
 ## Step 2 - Install Transformer Lab
 
@@ -165,7 +165,7 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 ```
 
 - Create an API key in your Runpod account settings and paste it here.
-- After saving, run the provider health check in Team Settings to confirm connectivity.
+- For full provider setup and health check steps, see [Add Runpod in Team Settings -->](./install-gpu-orchestrator/install-runpod.md#add-runpod-in-team-settings).
 
 ## Setting up SLURM Provider User Credentials
 
