@@ -5,20 +5,19 @@ authors: [tony]
 tags: [runpod, cloud, gpu, training, tasks, getting-started]
 ---
 
-Getting access to to the right hardware is one of the biggest barriers to machine learning experimentation.
-GPUs are expensive, hard to find, and even harder to share across a team. Big cloud hosting providers have complex interfaces, pricing models, and want to lock you into their tooling.
+For many looking to experiment with machine learning,
+the biggest barrier to entry is access to hardware.
+GPUs are expensive, hard to find, and even harder to share across a team. Big cloud hosting providers have complex interfaces, pricing models, and try to lock you into their ecosystem and tooling.
 
-Using RunPod with Transformer Lab changes that. You can spin up GPU-backed experiments quickly from the comfort of your own system.
+Using RunPod with Transformer Lab changes that. Now you can spin up GPU-backed experiments quickly from the comfort of your own system.
 
 <!--truncate-->
 
-## Why RunPod?
+## About RunPod
 
-RunPod is a GPU cloud that's become popular in the ML community because it's cost-effective, and fast and easy to get started. You pay for what you use, and there are GPUs available on-demand ranging from RTX 4090s all the way up to H100s. For experimentation and one-off fine-tuning runs, it hits a sweet spot.
+RunPod is a GPU cloud provider that has become popular in the ML community because it's cost-effective, fast and easy to get started. You pay for what you use, and there are GPUs available on-demand ranging from RTX 4090s all the way up to H100s. For experimentation and one-off fine-tuning runs, it hits a sweet spot.
 
-When you connect RunPod to Transformer Lab, you unlock the ability to iteratively work
-
-the platform treats those cloud GPUs the same way it would treat a local machine — you can run training tasks, evaluations, and inference jobs through the same UI, and all the results and artifacts land in your workspace automatically.
+By connecting RunPod to Transformer Lab you unlock infrastructure managmeent, environment configuration and experiment tracking through a simple, organized UI, so that you can focus on what matters to you.
 
 ---
 
@@ -35,11 +34,9 @@ deposit of $10 will go a long way.
 Transformer Lab connects to RunPod through their REST API, so you need an API key.
 
 1. In the RunPod console, click your **profile icon** in the top-right corner.
-2. Go to **Settings → API Keys**.
-3. Click **+ API Key**, give it a name (something like `transformerlab`), and hit **Create**.
-4. **Copy the key immediately** — you won't be able to see it again after you navigate away.
-
-> **📸 Screenshot opportunity:** The RunPod API Keys settings page with the "Create" button highlighted, and then the copy-your-key dialog.
+2. On the sidebar, go to **Settings** and scroll down to **API Keys**.
+3. Here you can create a new API Key, give it a name (something like `transformerlab`), and hit **Create**.
+4. **Copy the key immediately!** You won't be able to see it again after you navigate away.
 
 Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
 
@@ -57,33 +54,30 @@ Now that you've got cloud GPUs connected and a workspace ready, you're ready to 
 
 Transformer Lab has a **Task Gallery** full of pre-built experiments you can run with a click. It's a great way to get your bearings without having to configure everything from scratch.
 
-In the left sidebar, click **Tasks Gallery**. You'll see a grid of tasks including things like fine-tuning runs, evaluation benchmarks, and dataset generation jobs. For a first run, you can try a smaller job like a **LoRA fine-tuning** task on a small model.
-
-> **📸 Screenshot opportunity:** The Task Gallery grid showing a variety of available tasks, with one highlighted.
+Open the **Tasks Gallery** from the left sidebar. You'll see a grid of tasks including things like fine-tuning runs, evaluation benchmarks, and dataset generation jobs. For a first run, you can try a smaller job like a fine-tuning task on a small model. A good start is the **Unsloth LLM Fine-tuning** task.
 
 ---
 
 ## Step 5: Run your first Task
 
-1. Navigate to \*_Tasks_ on the sidebar.
-2. Your new task should be at the top of the Tasks list. Click on **Queue** to prepare your task to run.
-3. In the task configuration dialog, set the **Compute Provider** to the Runpod provider you setup. You can change Accelerator, but for a small fine-tune, an RTX 3090/4090 pod is more than enough.
-4. Review the hyperparameters to see if there is anything you want to tweak.
-5. When you are ready, hit **Submit**.
+1. Navigate to **Tasks** on the sidebar.
+2. Your new task should be at the top of the Tasks list. You can view and edit the details of your Task by clicking on **Edit**. Here you can update the task to include your HuggingFace and Weights and Biases keys. Save and close the task.
+3. Click on **Queue** to prepare your task to run.
+4. In the task configuration dialog, set the **Compute Provider** to the Runpod provider you setup. You can change Accelerator, but for a small fine-tune, an RTX 4090 pod is more than enough.
+5. You can also review the hyperparameters to see if there is anything you want to tweak.
+6. When you are ready, hit **Submit**.
 
-> **📸 Screenshot opportunity:** The task configuration/run dialog, with RunPod selected as the provider and the workspace set.
+> ** Task Config Screenshot **
 
 ---
 
 ## Step 6: Watch It Go
 
-After submitting, you'll be taken to the **Task Queue** view where you can watch your job progress in real-time. Transformer Lab spins up a RunPod pod in the background, runs the task, and streams the logs back to you.
+After submitting, your task will appear at the top of the **Runs** list where you can watch your job progress in real-time. Transformer Lab spins up a RunPod pod in the background, runs the task, and streams the logs back to you.
 
-When the task finishes, the output artifacts — model checkpoints, eval results, whatever the task produces — will appear in your local workspace automatically.
+When the task finishes, the output artifacts (model checkpoints, machine logs, whatever the task produces) will be accessible in your run history.
 
-> **📸 Screenshot opportunity:** The Task Queue showing the job running with live log output.
-
-Total time from submitting to seeing results: usually 10–20 minutes for a small fine-tuning run, depending on the dataset and model size you picked.
+> ** Task Running Screenshot **
 
 ---
 
@@ -91,7 +85,7 @@ Total time from submitting to seeing results: usually 10–20 minutes for a smal
 
 To recap: you created a RunPod account, generated an API key, installed Transformer Lab, set up a local workspace, connected RunPod as a compute provider, and ran a real ML experiment from the Task Gallery — all without touching a single line of infrastructure code.
 
-That's kind of the point. The goal of Transformer Lab is to make the logistics of ML research invisible so you can focus on the actual research.
+The goal of Transformer Lab is to make the logistics of ML research invisible when you want them to be, and accessible when needed, so you can focus on the actual research.
 
 ---
 
@@ -99,10 +93,6 @@ That's kind of the point. The goal of Transformer Lab is to make the logistics o
 
 A few things worth exploring from here:
 
-- **Build a custom task** — if you have your own training script, you can wrap it in a Transformer Lab task and run it on RunPod with the same workflow.
-- **Set up experiment tracking** — Transformer Lab integrates with Weights & Biases and other trackers, so your runs are automatically logged.
-- **Try a hyperparameter sweep** — once you've got one task running, you can add a sweep on top of it with a single config change.
-
-If you have questions or run into anything, drop by the [GitHub repo](https://github.com/transformerlab/transformerlab-app) or join the community.
-
-Happy training. ☁️
+- **Build a custom task** — Yu can create a new Transformer Lab task from a github repo or a local folder, and run it on RunPod with the same workflow.
+- **Set up experiment tracking** — Transformer Lab integrates with trackers like Weights & Biases and trackio, so your runs are automatically logged.
+- **Try a hyperparameter sweep** — once you've got one task running, you can run a sweep to find the optimal hyperparameters to use.
