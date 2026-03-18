@@ -27,8 +27,6 @@ Head to [runpod.io](https://www.runpod.io) and sign up.
 Once you're in, add a payment method and deposit some credits. RunPod works on a prepaid credit system. But since we will only be paying for GPUs while they are being used, even an initial
 deposit of $10 will go a long way.
 
----
-
 ## Step 2: Generate a RunPod API Key
 
 Transformer Lab connects to RunPod through their REST API, so you need an API key.
@@ -41,15 +39,13 @@ Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
 
 ![RunPod API key settings](./images/runpodkey.png)
 
----
-
 ## Step 3: Install Transformer Lab for Teams
 
 Install [Transformer Lab For Teams](https://lab.cloud/for-teams/install) on your local system. If you have your Runpod API key you can skip Step 1, and use it when adding a compute provider in Step 5.
 
-![Team Setting after adding Runpod Provider](./images/runpodprovider.png)
+After you are done, you should see Runpod listed as a Cloud Provider:
 
----
+![Team Setting after adding Runpod Provider](./images/runpodprovider.png)
 
 ## Step 4: Pick a Task from the Task Gallery
 
@@ -58,8 +54,6 @@ Now that you've got cloud GPUs connected and a workspace ready, you're ready to 
 Transformer Lab has a **Task Gallery** full of pre-built experiments you can run with a click. It's a great way to get your bearings without having to configure everything from scratch.
 
 Open the **Tasks Gallery** from the left sidebar. You'll see a grid of tasks including things like fine-tuning runs, evaluation benchmarks, and dataset generation jobs. For a first run, you can try a smaller job like a fine-tuning task on a small model. A good start is the **Unsloth LLM Fine-tuning** task.
-
----
 
 ## Step 5: Run your first Task
 
@@ -72,8 +66,6 @@ Open the **Tasks Gallery** from the left sidebar. You'll see a grid of tasks inc
 
 ![Task configuration dialog](./images/taskconfig.png)
 
----
-
 ## Step 6: Watch It Go
 
 After submitting, your task will appear at the top of the **Runs** list where you can watch your job progress in real-time. Transformer Lab spins up a RunPod pod in the background, runs the task, and streams the logs back to you.
@@ -81,8 +73,6 @@ After submitting, your task will appear at the top of the **Runs** list where yo
 When the task finishes, the output artifacts (model checkpoints, machine logs, whatever the task produces) will be accessible in your run history.
 
 ![Launching your new task](./images/runpodjoblaunched.png)
-
----
 
 ## What Just Happened?
 
