@@ -47,6 +47,8 @@ Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
 
 Install [Transformer Lab For Teams](https://lab.cloud/for-teams/install) on your local system. If you have your Runpod API key you can skip Step 1, and use it when adding a compute provider in Step 5.
 
+![Team Setting after adding Runpod Provider](./images/runpodprovider.png)
+
 ---
 
 ## Step 4: Pick a Task from the Task Gallery
