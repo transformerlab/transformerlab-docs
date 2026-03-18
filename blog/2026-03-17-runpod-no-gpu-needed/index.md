@@ -1,6 +1,6 @@
 ---
 slug: runpod-no-gpu-needed
-title: "No GPU? No Problem. Running ML Experiments with RunPod and Transformer Lab"
+title: "No GPU? No Problem. Running ML Experiments with Runpod and Transformer Lab"
 authors: [tony]
 tags: [runpod, cloud, gpu, training, tasks, getting-started]
 ---
@@ -9,35 +9,35 @@ For many looking to experiment with machine learning,
 the biggest barrier to entry is access to hardware.
 GPUs are expensive, hard to find, and even harder to share across a team. Big cloud hosting providers have complex interfaces, pricing models, and try to lock you into their ecosystem and tooling.
 
-Using RunPod with Transformer Lab changes that. Now you can spin up GPU-backed experiments quickly from the comfort of your own system.
+Using Runpod with Transformer Lab changes that. Now you can spin up GPU-backed experiments quickly from the comfort of your own system.
 
 <!--truncate-->
 
-## About RunPod
+## About Runpod
 
-RunPod is a GPU cloud provider that has become popular in the ML community because it's cost-effective, fast and easy to get started. You pay for what you use, and there are GPUs available on-demand ranging from RTX 4090s all the way up to H100s. For experimentation and one-off fine-tuning runs, it hits a sweet spot.
+Runpod is a GPU cloud provider that has become popular in the ML community because it's cost-effective, fast and easy to get started. You pay for what you use, and there are GPUs available on-demand ranging from RTX 4090s all the way up to H100s. For experimentation and one-off fine-tuning runs, it hits a sweet spot.
 
-By connecting RunPod to Transformer Lab you unlock infrastructure managmeent, environment configuration and experiment tracking through a simple, organized UI, so that you can focus on what matters to you.
+By connecting Runpod to Transformer Lab you unlock infrastructure managmeent, environment configuration and experiment tracking through a simple, organized UI, so that you can focus on what matters to you.
 
 ---
 
-## Step 1: Create a RunPod Account
+## Step 1: Create a Runpod Account
 
 Head to [runpod.io](https://www.runpod.io) and sign up.
-Once you're in, add a payment method and deposit some credits. RunPod works on a prepaid credit system. But since we will only be paying for GPUs while they are being used, even an initial
+Once you're in, add a payment method and deposit some credits. Runpod works on a prepaid credit system. But since we will only be paying for GPUs while they are being used, even an initial
 deposit of $10 will go a long way.
 
-## Step 2: Generate a RunPod API Key
+## Step 2: Generate a Runpod API Key
 
-Transformer Lab connects to RunPod through their REST API, so you need an API key.
+Transformer Lab connects to Runpod through their REST API, so you need an API key.
 
-1. On the sidebar in the RunPod console, go to **Account -> Settings** and scroll down to **API Keys**.
+1. On the sidebar in the Runpod console, go to **Account -> Settings** and scroll down to **API Keys**.
 2. Here you can create a new API Key, give it a name (something like `transformerlab`), and hit **Create**.
 3. **Copy the key immediately!** You won't be able to see it again after you navigate away.
 
 Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
 
-![RunPod API key settings](./images/runpodkey.png)
+![Runpod API key settings](./images/runpodkey.png)
 
 ## Step 3: Install Transformer Lab for Teams
 
@@ -68,7 +68,7 @@ Open the **Tasks Gallery** from the left sidebar. You'll see a grid of tasks inc
 
 ## Step 6: Watch It Go
 
-After submitting, your task will appear at the top of the **Runs** list where you can watch your job progress in real-time. Transformer Lab spins up a RunPod pod in the background, runs the task, and streams the logs back to you.
+After submitting, your task will appear at the top of the **Runs** list where you can watch your job progress in real-time. Transformer Lab spins up a Runpod pod in the background, runs the task, and streams the logs back to you.
 
 When the task finishes, the output artifacts (model checkpoints, machine logs, whatever the task produces) will be accessible in your run history.
 
@@ -76,7 +76,7 @@ When the task finishes, the output artifacts (model checkpoints, machine logs, w
 
 ## What Just Happened?
 
-To recap: you created a RunPod account, generated an API key, installed Transformer Lab, set up a local workspace, connected RunPod as a compute provider, and ran a real ML experiment from the Task Gallery — all without touching a single line of infrastructure code.
+To recap: you created a Runpod account, generated an API key, installed Transformer Lab, set up a local workspace, connected Runpod as a compute provider, and ran a real ML experiment from the Task Gallery — all without touching a single line of infrastructure code.
 
 The goal of Transformer Lab is to make the logistics of ML research invisible when you want them to be, and accessible when needed, so you can focus on the actual research.
 
@@ -86,6 +86,6 @@ The goal of Transformer Lab is to make the logistics of ML research invisible wh
 
 A few things worth exploring from here:
 
-- **Build a custom task** — Yu can create a new Transformer Lab task from a github repo or a local folder, and run it on RunPod with the same workflow.
+- **Build a custom task** — Yu can create a new Transformer Lab task from a github repo or a local folder, and run it on Runpod with the same workflow.
 - **Set up experiment tracking** — Transformer Lab integrates with trackers like Weights & Biases and trackio, so your runs are automatically logged.
 - **Try a hyperparameter sweep** — once you've got one task running, you can run a sweep to find the optimal hyperparameters to use.
