@@ -80,7 +80,7 @@ After submitting, your task will appear at the top of the **Runs** list where yo
 
 When the task finishes, the output artifacts (model checkpoints, machine logs, whatever the task produces) will be accessible in your run history.
 
-![Launching your new task](./images/runpodlaunchedjob.png)
+![Launching your new task](./images/runpodjoblaunched.png)
 
 ---
 
