@@ -15,6 +15,8 @@ Before adding Runpod as a compute provider in Transformer Lab:
 
 ## Add Runpod in Team Settings
 
+After Transformer Lab is set up and you've logged in, follow these steps to add your Runpod provider:
+
 1. Open **Team Settings**.
 2. Go to **Compute Providers**.
 3. Click **Add Compute Provider**.
