@@ -62,7 +62,7 @@ Open the **Tasks Gallery** from the left sidebar. You'll see a grid of tasks inc
 3. Click on **Queue** to prepare your task to run.
 4. In the task configuration dialog, set the **Compute Provider** to the Runpod provider you setup. You can change Accelerator to the type of GPU required, such as "A40:1" for an affordable NVIDIA A40 card, or "H100:4" for a powerful machine with 4 H100 GPUs.
 5. You can also review the hyperparameters to see if there is anything you want to tweak.
-6. When you are ready, hit **Submit**. It may take a minute for the dialog to clear while it provisions and sets up the machine
+6. When you are ready, hit **Submit**. It may take a minute for the dialog to clear while it provisions and sets up the machine.
 
 ![Task configuration dialog](./images/taskconfig.png)
 
