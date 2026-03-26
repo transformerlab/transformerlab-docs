@@ -151,8 +151,7 @@ const config = {
             position: "left",
             activeBaseRegex: "^/$",
           },
-          { to: "/docs", label: "For Individuals", position: "left" },
-          { to: "/for-teams", label: "For Teams", position: "left" },
+          { to: "/for-teams", label: "Documentation", position: "left" },
           {
             to: "/blog",
             label: "Blog",
