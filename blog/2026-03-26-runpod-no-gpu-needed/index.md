@@ -1,13 +1,16 @@
 ---
 slug: runpod-no-gpu-needed
-title: "No GPU? No Problem. Running ML Experiments with Runpod and Transformer Lab"
+title: "Running ML Experiments with Runpod and Transformer Lab"
 authors: [tony]
 tags: [runpod, cloud, gpu, training, tasks, getting-started]
+date: 2026-03-26
 ---
 
 For many looking to experiment with machine learning,
 the biggest barrier to entry is access to hardware.
 GPUs are expensive, hard to find, and even harder to share across a team. Big cloud hosting providers have complex interfaces, pricing models, and try to lock you into their ecosystem and tooling.
+
+![Runpod Logo](./images/runpodlogo.svg)
 
 Using Runpod with Transformer Lab changes that. Now you can spin up GPU-backed experiments quickly from the comfort of your own system.
 

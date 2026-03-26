@@ -1,17 +1,15 @@
 ---
-title: Why Transformer Lab for Teams?
+title: Why Use Transformer Lab at My Lab?
 sidebar_position: 15
 ---
 
-# Why Transformer Lab for Teams
-
-**Upgrade your Research Workflow without Replacing your Infrastructure.**
+# Why Should I use Transformer Lab at My Research Lab?
 
 Your lab likely relies on **Slurm** to manage your compute cluster. Or your lab may be using cloud compute like services from **Azure, AWS, or GCP**. Or perhaps you are using a cluster that runs **Kubernetes**.
 
 Regardless of which of these you use, the raw experience—managing batch scripts, configuring SSH tunnels for notebooks, and manually tracking artifacts across file systems—creates friction that slows down research.
 
-**Transformer Lab for Teams** is an open-source research platform that sits *on top* of your existing compute infrastructure. It provides a modern interface, experiment tracking, and interactive development environments while letting your underlying schedulers and clouds do what they do best.
+**Transformer Lab** is an open-source research platform that sits *on top* of your existing compute infrastructure. It provides a modern interface, experiment tracking, and interactive development environments while letting your underlying schedulers and clouds do what they do best.
 
 <img src={require('./img/screenshot-tasks.png').default} width="400" />
 

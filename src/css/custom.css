@@ -288,6 +288,18 @@ article hr {
 
 /* End Vitepress CSS */
 
+div[class*="announcementBar"] {
+  font-size: 18px;
+  padding: 20px 0px;
+  background-color: var(--ifm-color-primary-darker);
+  color: #ffffff;
+}
+
+div[class*="announcementBar"] a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 [data-theme="dark"] .hero__title {
   stroke: white;
 }

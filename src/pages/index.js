@@ -85,28 +85,9 @@ function HomepageHeader() {
             style={{ gap: "1.5rem", display: "flex", flexWrap: "wrap" }}
           >
             <div className="block">
-              <div style={{ marginBottom: "0.5rem" }}>For Individuals:</div>
-              <Link
-                to="/docs/install/"
-                className="button button--primary button--lg"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  width: "fit-content",
-                }}
-              >
-                Get Started &nbsp;
-                <FaArrowRight />
-              </Link>
-            </div>
-            <div className="block">
-              <div style={{ marginBottom: "0.5rem" }}>
-                For Teams / Research Labs:
-              </div>
               <a
-                href="/beta.html"
-                className="button button--secondary button--lg"
+                href="/for-teams/install"
+                className="button button--primary button--lg"
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -115,7 +96,7 @@ function HomepageHeader() {
                   border: "2px solid var(--ifm-color-primary)",
                 }}
               >
-                Join the Beta &nbsp;
+                Get Started &nbsp;
                 <FaArrowRight />
               </a>
             </div>

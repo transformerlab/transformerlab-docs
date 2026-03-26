@@ -138,6 +138,14 @@ const config = {
     ({
       // Replace with your project's social card
       image: "img/screenshot.png",
+      announcementBar: {
+        id: "runpod_support",
+        content:
+          'Runpod is now supported in Transformer Lab. <a href="/blog/runpod-no-gpu-needed">More details here</a>.',
+        backgroundColor: "rgb(60, 62, 160)",
+        textColor: "#ffffff",
+        isCloseable: false,
+      },
       navbar: {
         title: "Transformer Lab",
         logo: {
@@ -151,8 +159,7 @@ const config = {
             position: "left",
             activeBaseRegex: "^/$",
           },
-          { to: "/docs", label: "For Individuals", position: "left" },
-          { to: "/for-teams", label: "For Teams", position: "left" },
+          { to: "/for-teams", label: "Documentation", position: "left" },
           {
             to: "/blog",
             label: "Blog",
