@@ -1,11 +1,9 @@
 ---
-title: Why Transformer Lab for Labs?
+title: Why Use Transformer Lab at My Lab?
 sidebar_position: 15
 ---
 
 # Why Should I use Transformer Lab at My Research Lab?
-
-**Upgrade your Research Workflow without Replacing your Infrastructure.**
 
 Your lab likely relies on **Slurm** to manage your compute cluster. Or your lab may be using cloud compute like services from **Azure, AWS, or GCP**. Or perhaps you are using a cluster that runs **Kubernetes**.
 
