@@ -1,5 +1,5 @@
 ---
-title: Transformer Lab for Teams
+title: Transformer Lab
 slug: .
 sidebar_position: 1
 ---
@@ -14,15 +14,15 @@ Please contact us on Discord if you need any help :)
 
 ## Introduction
 
-Transformer Lab for Teams is an open source platform designed to support the needs of ML researchers working collaboratively using clusters of local or cloud compute nodes.
+Transformer Lab is an open source platform designed to support the needs of ML researchers working individually or collaboratively using clusters of local or cloud compute nodes.
 
-A team can use Transformer Lab for Teams to request nodes and submit ML tasks, while tracking experiments and job artifacts all in one place.
+Researchers can use Transformer Lab to request nodes and submit ML tasks, while tracking experiments and job artifacts all in one place.
 
 ![Image](./img/screenshot-tasks.png)
 
 ## Video
 
-The following video is a quick video that shows what is possible with Transformer Lab for Teams.
+The following video is a quick video that shows what is possible with Transformer Lab.
 
 <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
   <iframe
