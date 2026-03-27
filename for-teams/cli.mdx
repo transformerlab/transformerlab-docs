@@ -10,6 +10,30 @@ import BrowserOnly from "@docusaurus/BrowserOnly";
 
 Transformer Lab can be accessed via CLI using the `lab` executable.
 
+## Install
+
+The CLI is distributed as a Python package and can be installed using [uv](https://docs.astral.sh/uv/):
+
+```bash
+uv tool install transformerlab-cli
+```
+
+This adds a `lab` command to your terminal. To upgrade to the latest version:
+
+```bash
+uv tool install transformerlab-cli --force --reinstall
+```
+
+:::note
+Requires Python 3.10 or higher. If you don't have `uv` installed, you can install it with:
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+See the [uv installation guide](https://docs.astral.sh/uv/getting-started/installation/) for more options.
+:::
+
 <BrowserOnly>
   {() => <AsciinemaPlayer src={"/img/cli/start.cast"} options={{ speed: 2 }} />}
 </BrowserOnly>
