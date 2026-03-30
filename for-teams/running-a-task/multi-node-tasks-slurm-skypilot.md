@@ -1,6 +1,6 @@
 ---
 title: Multi-Node Tasks
-sidebar_position: 99
+sidebar_position: 7
 ---
 
 This guide explains how multi-node tasks behave when `resources.num_nodes > 1`, and how to write `task.yaml` for SLURM and SkyPilot providers.

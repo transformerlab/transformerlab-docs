@@ -1,6 +1,6 @@
 ---
 title: Using Existing Training Scripts Inside Tasks
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 If your tasks already launch your own training or evaluation scripts (via the `run:` command in `task.yaml`), you do **not** need to rewrite those scripts for Transformer Lab.
