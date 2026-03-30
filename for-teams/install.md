@@ -12,18 +12,18 @@ Before starting the installation, ensure you have the following:
 
 - SSH access and administrative (sudo) privileges on the server hosting Transformer Lab
 - If using cloud object storage: GCP, AWS, or Azure account and credentials (for cloud object storage) with permissions to create and manage buckets/containers.
-- Bash shell with `curl` installed.
 
 ### Feature-Specific
 
 - SkyPilot server running and accessible from the CPU node (e.g., via HTTP).
 - Slurm cluster access from the CPU node (e.g., via SSH).
+- If using AWS S3 as your storage backend, you need to configure AWS credentials for the `transformerlab-s3` profile. See [Setting up AWS Credentials for S3 Storage](#setting-up-aws-credentials-for-s3-storage) below.
 
-## Step 1 - Set up a Cloud Provider
+## Step 1 - Set up a GPU Orchestrator
 
 Transformer Lab executes tasks by sending them to a GPU orchestrator like **Slurm** or **SkyPilot**. So your first step in setting up Transformer Lab is making sure you have a properly configured Slurm or SkyPilot instance.
 
-The following documents offer common install instructions that you can use if you are starting from scratch
+The following documents offer common install instructions that you can use if you are starting from scratch.
 
 [Choosing Between Slurm and SkyPilot -->](./install-gpu-orchestrator/skypilot-vs-slurm.md)
 
@@ -33,46 +33,44 @@ The following documents offer common install instructions that you can use if yo
 
 [Instructions for setting up Runpod provider -->](./install-gpu-orchestrator/install-runpod.md#create-a-runpod-account-and-api-key)
 
-## Step 2 - Install Transformer Lab
+## Step 2 - Install Transformer Lab Using the CLI
 
-Transformer Lab needs a CPU node to run.
+### 2a. Install uv
 
-SSH into that node and run:
+Transformer Lab's CLI is installed via [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
-```bash
-curl -fsSL https://lab.cloud/install.sh | bash -s -- multiuser_setup
-```
-
-## Step 3 - Configure Team Edition
-
-Now create a file in `~/.transformerlab` called `.env`
-
-And copy and paste the following information (update `localhost` to your server address):
+### 2b. Install the Transformer Lab CLI
 
 ```bash
-TL_API_URL="http://localhost:8338/"  # API runs by default on port 8338
-MULTIUSER="true" # Set to "true" to enable multi-user features
-
-# In a default setup, the frontend URL will be the same as the API URL set above.
-FRONTEND_URL="http://localhost:8338"
-
-# Setting this to true uses the transformerlab-s3 profile in your AWS credentials to create and use a S3 bucket as your remote workspace
-TFL_REMOTE_STORAGE_ENABLED=true
+uv tool install transformerlab-cli
 ```
 
-### Setting up AWS Credentials for S3 Storage
+### 2c. Install the Server
 
-:::tip Different storage engines
+Run the interactive installer:
 
-Don't want to use S3 as your storage option? [Click here](./advanced-install/cloud-storage.md) to see other supported storage engines.
+```bash
+lab server install
+```
 
-:::
+This will walk you through configuring:
 
-If using S3 as remote storage, you need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
+1. **Frontend URL** — where users will access the web interface.
+2. **Storage Backend** — choose between AWS S3, GCP, Azure, or local filesystem. See [Cloud Storage Options](./advanced-install/cloud-storage.md) for details on each provider.
+3. **Admin Account** — a default admin account (`admin@example.com` / `admin123`) is created on first startup. **Change the default password immediately after first login.**
+4. **Compute Provider** — optionally configure a default GPU compute provider (you can also add providers later with `lab provider add`).
+5. **Email (SMTP)** — optionally configure SMTP for sending user invitations and signup confirmations.
+6. **Authentication** — optionally configure additional auth providers (OAuth/OIDC). Email/password is enabled by default.
 
-#### Using AWS CLI (Recommended)
+If you selected an existing configuration, your current values will be shown as defaults — press Enter to keep them.
 
-If you have the AWS CLI installed, run:
+### 2d. Set up AWS Credentials for S3 Storage {#setting-up-aws-credentials-for-s3-storage}
+
+If you chose **AWS S3** as your storage backend during the installer, complete this step before proceeding. Otherwise, skip to [Step 3](#step-3---run-transformer-lab-and-log-in).
+
+You need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
+
+**Using AWS CLI (Recommended)**
 
 ```bash
 aws configure --profile transformerlab-s3
@@ -80,9 +78,9 @@ aws configure --profile transformerlab-s3
 
 Enter your AWS Access Key ID, Secret Access Key, default region, and output format when prompted.
 
-#### Manual Configuration
+**Manual Configuration**
 
-Create or edit the AWS credentials file at `~/.aws/credentials` and add:
+Create or edit `~/.aws/credentials` and add:
 
 ```ini
 [transformerlab-s3]
@@ -92,26 +90,24 @@ aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
 
 Ensure the profile has the necessary permissions to create and manage S3 buckets.
 
-## Step 4 - Run Transformer Lab and Log in
+## Step 3 - Run Transformer Lab and Log in
 
-Run Transformer Lab by running
+Start the server:
 
 ```bash
-cd ~/.transformerlab/src
-./run.sh
+cd ~/.transformerlab/src && ./run.sh
 ```
 
-Now you can visit `http://localhost:8338` (or the address of the server you have put this code on) and log in to Transformer Lab.
+Now visit `http://localhost:8338` (or the address of your server) and log in with the default admin account:
 
-The first time you log in, you can use the default user:
+- **Login:** `admin@example.com`
+- **Password:** `admin123`
 
-Login: `admin@example.com`
+**Change the default password immediately.**
 
-Password: `admin123`
+## Step 4 - Configuring a Compute Service
 
-Please change the password as a first step.
-
-## Step 5 - Configuring a Compute Service
+If you already configured a compute provider during the installer, you can skip this step. Otherwise, you can add one through the web UI.
 
 Go to Team Settings by clicking your user name in the sidebar.
 
