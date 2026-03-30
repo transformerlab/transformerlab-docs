@@ -19,11 +19,11 @@ Before starting the installation, ensure you have the following:
 - Slurm cluster access from the CPU node (e.g., via SSH).
 - If using AWS S3 as your storage backend, you need to configure AWS credentials for the `transformerlab-s3` profile. See [Setting up AWS Credentials for S3 Storage](#setting-up-aws-credentials-for-s3-storage) below.
 
-## Step 1 - Set up a Cloud Provider
+## Step 1 - Set up a GPU Orchestrator
 
 Transformer Lab executes tasks by sending them to a GPU orchestrator like **Slurm** or **SkyPilot**. So your first step in setting up Transformer Lab is making sure you have a properly configured Slurm or SkyPilot instance.
 
-The following documents offer common install instructions that you can use if you are starting from scratch
+The following documents offer common install instructions that you can use if you are starting from scratch.
 
 [Choosing Between Slurm and SkyPilot -->](./install-gpu-orchestrator/skypilot-vs-slurm.md)
 
@@ -60,7 +60,7 @@ lab server install
 This will walk you through configuring:
 
 1. **Frontend URL** — where users will access the web interface.
-2. **Storage Backend** — choose between AWS S3, GCP, Azure, or local filesystem. See [Cloud Storage Options](./advanced-install/cloud-storage.md) for details on configuring each provider.
+2. **Storage Backend** — choose between AWS S3, GCP, Azure, or local filesystem. See [Cloud Storage Options](./advanced-install/cloud-storage.md) for details on each provider.
 3. **Admin Account** — a default admin account (`admin@example.com` / `admin123`) is created on first startup. **Change the default password immediately after first login.**
 4. **Compute Provider** — optionally configure a default GPU compute provider (you can also add providers later with `lab provider add`).
 5. **Email (SMTP)** — optionally configure SMTP for sending user invitations and signup confirmations.
@@ -68,17 +68,13 @@ This will walk you through configuring:
 
 If you selected an existing configuration, your current values will be shown as defaults — press Enter to keep them.
 
-## Setting up AWS Credentials for S3 Storage
+### 2d. Set up AWS Credentials for S3 Storage {#setting-up-aws-credentials-for-s3-storage}
 
-If you chose **AWS S3** as your storage backend during the installer, you need to configure AWS credentials for the `transformerlab-s3` profile before starting the server. You can do this in two ways:
+If you chose **AWS S3** as your storage backend during the installer, complete this step before proceeding. Otherwise, skip to [Step 3](#step-3---run-transformer-lab-and-log-in).
 
-:::tip Different storage engines
+You need to configure AWS credentials for the `transformerlab-s3` profile. You can do this in two ways:
 
-Don't want to use S3 as your storage option? [Click here](./advanced-install/cloud-storage.md) to see other supported storage engines.
-
-:::
-
-### Using AWS CLI (Recommended)
+**Using AWS CLI (Recommended)**
 
 ```bash
 aws configure --profile transformerlab-s3
@@ -86,7 +82,7 @@ aws configure --profile transformerlab-s3
 
 Enter your AWS Access Key ID, Secret Access Key, default region, and output format when prompted.
 
-### Manual Configuration
+**Manual Configuration**
 
 Create or edit `~/.aws/credentials` and add:
 
@@ -114,6 +110,8 @@ Now visit `http://localhost:8338` (or the address of your server) and log in wit
 **Change the default password immediately.**
 
 ## Step 4 - Configuring a Compute Service
+
+If you already configured a compute provider during the installer, you can skip this step. Otherwise, you can add one through the web UI.
 
 Go to Team Settings by clicking your user name in the sidebar.
 
