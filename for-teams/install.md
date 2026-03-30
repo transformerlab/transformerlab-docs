@@ -37,11 +37,7 @@ The following documents offer common install instructions that you can use if yo
 
 ### 2a. Install uv
 
-Transformer Lab's CLI is installed via [uv](https://docs.astral.sh/uv/getting-started/installation/). Install it by running:
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
+Transformer Lab's CLI is installed via [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ### 2b. Install the Transformer Lab CLI
 
