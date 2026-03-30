@@ -140,12 +140,19 @@ To use Azure Blob Storage instead of AWS S3 or GCS:
 
 ## Local Storage
 
-To use a shared filesystem (e.g. NFS) that is accessible via a local path:
+Instead of using a cloud provider like AWS or GCS, you can configure Transformer Lab to store all artifacts and job data locally. How you set this up depends on your architecture:
 
-1. Set `TFL_STORAGE_PROVIDER=localfs` in your `.env` file.
+**Single-Node Setup**
+If your controller and workers run on the exact same machine, configuration is straightforward. You simply define a local file path, and both components will read and write to that exact same location.
 
-2. Set `TFL_STORAGE_URI=/path/to/your/shared/folder` in the same `.env` file.
+**Multi-Node Setup (Shared Filesystem)**
+If your controller and workers run on separate machines, you must use a shared network filesystem (such as NFS). You must mount this shared folder to the **exact same file path** on every single machine. The system expects the `TFL_STORAGE_URI` to be identical across the controller and all workers so they can seamlessly share files.
 
-3. Remove the line `TFL_REMOTE_STORAGE_ENABLED=true` from your `.env` file if it exists.
+### Configuration Steps
 
-4. If you run tasks with SkyPilot, configure hostPath volume mounts so your `TFL_STORAGE_URI` is available inside SkyPilot task pods. See [SkyPilot Volume Mounts for localfs](./skypilot-volume-mounts.md).
+To enable a local or shared filesystem, update your `.env` file with the following changes:
+
+1.  **Set the storage provider:** Add `TFL_STORAGE_PROVIDER=localfs`
+2.  **Define the storage path:** Add `TFL_STORAGE_URI=/path/to/your/shared/folder`
+3.  **Disable remote storage:** Delete the line `TFL_REMOTE_STORAGE_ENABLED=true` (if it is present).
+4.  **Configure SkyPilot (if applicable):** If you are running tasks with SkyPilot, you must configure `hostPath` volume mounts so your `TFL_STORAGE_URI` is accessible inside the task pods. See [SkyPilot Volume Mounts for localfs](./skypilot-volume-mounts.md) for detailed instructions.
