@@ -20,7 +20,7 @@ Using Runpod with Transformer Lab changes that. Now you can spin up GPU-backed e
 
 Runpod is a GPU cloud provider that has become popular in the ML community because it's cost-effective, fast and easy to get started. You pay for what you use, and there are GPUs available on-demand ranging from RTX 4090s all the way up to H100s. For experimentation and one-off fine-tuning runs, it hits a sweet spot.
 
-By connecting Runpod to Transformer Lab you unlock infrastructure managmeent, environment configuration and experiment tracking through a simple, organized UI, so that you can focus on what matters to you.
+By connecting Runpod to Transformer Lab you unlock infrastructure management, environment configuration and experiment tracking through a simple, organized UI, so that you can focus on what matters to you.
 
 ---
 
@@ -29,6 +29,8 @@ By connecting Runpod to Transformer Lab you unlock infrastructure managmeent, en
 Head to [runpod.io](https://www.runpod.io) and sign up.
 Once you're in, add a payment method and deposit some credits. Runpod works on a prepaid credit system. But since we will only be paying for GPUs while they are being used, even an initial
 deposit of $10 will go a long way.
+
+If you already have a Runpod account **and** an API key, skip ahead to [Step 3](#step-3-install-transformer-lab-for-teams).
 
 ## Step 2: Generate a Runpod API Key
 
@@ -44,7 +46,12 @@ Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
 
 ## Step 3: Install Transformer Lab for Teams
 
-Install [Transformer Lab For Teams](https://lab.cloud/for-teams/install) on your local system. If you have your Runpod API key you can skip Step 1, and use it when adding a compute provider in Step 5.
+Install [Transformer Lab For Teams](https://lab.cloud/for-teams/install) on your local system. 
+
+Couple of things to note:
+
+1. step 1 in that guide is **Set up a GPU orchestrator** (Runpod, Slurm, or SkyPilot). If you already have a Runpod account and an API key, you can skip that step. 
+2. In step 2 (or step 4), choose "Runpod" as the compute provider. 
 
 After you are done, you should see Runpod listed as a Cloud Provider:
 
@@ -63,7 +70,7 @@ Open the **Tasks Gallery** from the left sidebar. You'll see a grid of tasks inc
 1. Navigate to **Tasks** on the sidebar.
 2. Your new task should be at the top of the Tasks list. The metadata that describes your task is stored in a YAML file you can view by clicking on **Edit**.
 3. Click on **Queue** to prepare your task to run.
-4. In the task configuration dialog, set the **Compute Provider** to the Runpod provider you setup. You can change Accelerator to the type of GPU required, such as "A40:1" for an affordable NVIDIA A40 card, or "H100:4" for a powerful machine with 4 H100 GPUs.
+4. In the task configuration dialog, set the **Compute Provider** to the Runpod provider you set up. You can change Accelerator to the type of GPU required, such as "A40:1" for an affordable NVIDIA A40 card, or "H100:4" for a powerful machine with 4 H100 GPUs.
 5. You can also review the hyperparameters to see if there is anything you want to tweak.
 6. When you are ready, hit **Submit**. It may take a minute for the dialog to clear while it provisions and sets up the machine.
 
@@ -89,6 +96,6 @@ The goal of Transformer Lab is to make the logistics of ML research invisible wh
 
 A few things worth exploring from here:
 
-- **Build a custom task** — Yu can create a new Transformer Lab task from a github repo or a local folder, and run it on Runpod with the same workflow.
+- **Build a custom task** — You can create a new Transformer Lab task from a github repo or a local folder, and run it on Runpod with the same workflow.
 - **Set up experiment tracking** — Transformer Lab integrates with trackers like Weights & Biases and trackio, so your runs are automatically logged.
 - **Try a hyperparameter sweep** — once you've got one task running, you can run a sweep to find the optimal hyperparameters to use.
