@@ -48,9 +48,9 @@ Keep that key somewhere handy. You'll paste it into Transformer Lab in a minute.
 
 Install [Transformer Lab For Teams](https://lab.cloud/for-teams/install) on your local system. 
 
-Couple of things to note:
+A couple of things to note:
 
-1. step 1 in that guide is **Set up a GPU orchestrator** (Runpod, Slurm, or SkyPilot). If you already have a Runpod account and an API key, you can skip that step. 
+1. Step 1 in that guide is **Set up a GPU orchestrator** (Runpod, Slurm, or SkyPilot). If you already have a Runpod account and an API key, you can skip that step. 
 2. In step 2 (or step 4), choose "Runpod" as the compute provider. 
 
 After you are done, you should see Runpod listed as a Cloud Provider:
