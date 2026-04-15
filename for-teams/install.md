@@ -113,7 +113,7 @@ Go to Team Settings by clicking your user name in the sidebar.
 
 ![Team Settings in the sidebar](./img/screenshot-usersettings.png)
 
-In Team Settings, open Compute Providers and click "Add Compute Provider." Name the provider, choose a type ("skypilot", "slurm", or "runpod"), and then add the configuration.
+In Team Settings, open Compute Providers and click "Add Compute Provider." Name the provider, choose a type ("skypilot", "slurm", "runpod", or "dstack"), and then add the configuration.
 
 ![Add Compute Provider dialog and form](./img/screenshot-addprovider.png)
 
@@ -162,6 +162,20 @@ In Team Settings, open Compute Providers and click "Add Compute Provider." Name 
 
 - Create an API key in your Runpod account settings and paste it here.
 - For full provider setup and health check steps, see [Add Runpod in Team Settings -->](./install-gpu-orchestrator/install-runpod.md#add-runpod-in-team-settings).
+
+### dstack example config
+
+```jsonc showLineNumbers
+{
+  "server_url": "http://<dstack-host>:3000",
+  "api_token": "<dstack-api-token>",
+  "dstack_project": "main",
+  "supported_accelerators": ["NVIDIA"]
+}
+```
+
+- Install and run dstack in your environment, then gather the server URL and API token.
+- For full provider setup and health check steps, see [dstack Provider Setup -->](./advanced-install/dstack-provider.md).
 
 ## Setting up SLURM Provider User Credentials
 

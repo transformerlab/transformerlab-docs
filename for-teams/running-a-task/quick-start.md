@@ -23,6 +23,7 @@ When adding a provider, choose one of:
 - **SkyPilot**
 - **SLURM**
 - **Runpod**
+- **dstack (beta)**
 - **Local** (only for running locally)
 
 Fill in the provider configuration and save.
