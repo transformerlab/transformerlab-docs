@@ -75,7 +75,9 @@ To use Google Cloud Storage instead of AWS S3:
 
 3. Optionally, set `GCP_PROJECT` to specify the Google Cloud project. If not set, it defaults to `transformerlab-workspace`.
 
-4. Configure Google Cloud credentials:
+4. Configure Google Cloud credentials for the 
+
+   **local API server**:
 
    #### Using gcloud CLI (Recommended)
 
@@ -86,15 +88,25 @@ To use Google Cloud Storage instead of AWS S3:
    gcloud config set project transformerlab-workspace  # or your project name
    ```
 
-   #### Manual Configuration
+   This writes credentials to `~/.config/gcloud/application_default_credentials.json`, which the local API server picks up automatically.
 
-   Set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to the path of your service account key JSON file:
+5. Configure a **service account key for remote job launches**:
 
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your/service-account-key.json"
-   ```
+   When Transformer Lab dispatches jobs to remote workers (RunPod, SkyPilot on non-GCP clouds, etc.), those machines run non-interactively and cannot complete a browser-based OAuth flow. Instead, Transformer Lab injects a service account key into the worker at launch time.
 
-   You can obtain a service account key from the Google Cloud Console under IAM & Admin > Service Accounts.
+   #### Create a Service Account Key
+
+   1. Go to **Google Cloud Console → IAM & Admin → Service Accounts**.
+   2. Create or select a service account with **Storage Object Admin** (or equivalent) permissions on your GCS bucket.
+   3. Generate a JSON key and download it to your server.
+
+   #### Configure Transformer Lab
+
+   During `lab server init`, you will be prompted for `TFL_GCP_SERVICE_ACCOUNT_JSON_PATH` — the path to the service account key file. Transformer Lab will store it and automatically inject the credentials into remote workers at job launch time.
+
+   :::warning
+   Without a service account key, remote job launches on non-GCP infrastructure will fail to access GCS storage.
+   :::
 
    Ensure the service account has the necessary permissions for Cloud Storage operations (Storage Admin or equivalent).
 
