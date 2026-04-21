@@ -5,6 +5,8 @@ sidebar_position: 40
 
 After [installing dstack](../install-gpu-orchestrator/install-dstack.md) and starting Transformer Lab, follow these steps to add it as a compute provider.
 
+![Add dstack provider](../img/gifs/dstack.gif)
+
 ## Add dstack in Team Settings
 
 1. Open **Team Settings** by clicking your username in the sidebar.
@@ -13,28 +15,17 @@ After [installing dstack](../install-gpu-orchestrator/install-dstack.md) and sta
 4. In the modal:
    - Set **Type** to **dstack (beta)**.
    - Give the provider a name (e.g. `dstack-provider`).
-   - Paste in your config (see example below).
+   - Fill in the **Server URL**, **API Token**, and **Project Name** fields.
 5. Click **Add Compute Provider**.
 
 > You can also add the provider via the CLI with `lab provider add`.
-
-### Example config
-
-```jsonc
-{
-  "server_url": "http://<dstack-host>:3000",
-  "api_token": "<dstack-api-token>",
-  "dstack_project": "main",
-  "supported_accelerators": ["NVIDIA"]
-}
-```
 
 ## Run health check
 
 After the provider is listed in Team Settings:
 
 1. Find your dstack provider in **Compute Providers**.
-2. Click **Health**.
+2. Click the "Check provider status" icon (heartbeat) next to your dstack provider in the status column.
 3. Confirm the provider reports as active.
 
 ## dstack-specific behavior

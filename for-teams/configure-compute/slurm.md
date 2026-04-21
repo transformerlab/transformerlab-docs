@@ -5,6 +5,8 @@ sidebar_position: 20
 
 After [installing Slurm](../install-gpu-orchestrator/install-slurm.md) and starting Transformer Lab, follow these steps to add it as a compute provider.
 
+![Add Slurm provider](../img/gifs/slurm.gif)
+
 ## Add Slurm in Team Settings
 
 1. Open **Team Settings** by clicking your username in the sidebar.
@@ -13,26 +15,18 @@ After [installing Slurm](../install-gpu-orchestrator/install-slurm.md) and start
 4. In the modal:
    - Set **Type** to **slurm**.
    - Give the provider a name (e.g. `slurm-prov`).
-   - Paste in your config (see example below).
+   - Fill in the **Connection mode**, **SSH Host**, **Slurm User ID**, **SSH Port**, and **SSH Key Path** (optional) fields.
 5. Click **Add Compute Provider**.
 
 > You can also add the provider via the CLI with `lab provider add`.
 
-### Example config
+## Run health check
 
-```jsonc
-{
-  "ssh_host": "<SLURM_LOGIN_NODE_IP>",
-  // Many clusters use the "slurm" user; use the appropriate user for your setup
-  "ssh_user": "slurm",
-  // Path to your SSH private key
-  "ssh_key_path": "~/.ssh/id_rsa",
-  "ssh_port": 22,
-}
-```
+After the provider is listed in Team Settings:
 
-- Ensure the API node can SSH to the Slurm login node with the provided user and key.
-- Adjust `ssh_user`, `ssh_key_path`, and `ssh_port` to match your cluster configuration.
+1. Find your Slurm provider in **Compute Providers**.
+2. Click the "Check provider status" icon (heartbeat) next to your Slurm provider in the status column.
+3. Confirm the provider reports healthy/connected.
 
 ## Set up per-user credentials
 
