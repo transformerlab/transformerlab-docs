@@ -46,9 +46,7 @@ This will walk you through configuring:
 
 The values you enter are saved to `~/.transformerlab/.env` and used to configure the server on startup. If you had installed the server before and previously configured the setup, your existing values will be shown as defaults — press Enter to keep them.
 
-### 1c. Set up Cloud Storage Credentials {#setting-up-aws-credentials-for-s3-storage}
-
-If you want to use cloud storage, configure credentials for your chosen option before starting the server:
+If you want to run jobs on remote compute providers, you'll need a shared cloud storage. Configure credentials for your chosen cloud storage option before starting the server:
 
 - [AWS S3 Setup](./advanced-install/cloud-storage.md#aws-s3-storage)
 - [GCS Setup](./advanced-install/cloud-storage.md#google-cloud-storage-gcs)
