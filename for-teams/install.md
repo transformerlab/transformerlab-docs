@@ -10,13 +10,14 @@ Before starting the installation, ensure you have the following:
 
 - SSH access and administrative (sudo) privileges on the server hosting Transformer Lab
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) for installation
-- If you don't wish to run tasks locally, you'll need atleast one compute provider (or GPU orchestrator) set up before proceeding:
+- You can run tasks locally, or on a remote machine using a compute provider:
   - [Install Slurm](./install-gpu-orchestrator/install-slurm.md)
   - [Install SkyPilot](./install-gpu-orchestrator/install-skypilot.md)
   - [Install Runpod](./install-gpu-orchestrator/install-runpod.md)
   - [Install dstack](./install-gpu-orchestrator/install-dstack.md)
   - [Choosing Between Slurm and SkyPilot](./install-gpu-orchestrator/skypilot-vs-slurm.md)
-- If using cloud object storage: GCP, AWS, or Azure account and credentials (for cloud object storage) with permissions to create and manage buckets/containers
+- You can store data locally, or use cloud storage (GCP, AWS, or Azure). You'll need an account
+  with permissions to create and manage buckets/containers
 
 ## Step 1 - Install Transformer Lab Using the CLI
 
