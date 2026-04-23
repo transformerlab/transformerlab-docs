@@ -6,7 +6,7 @@ tags: [dstack, cloud, gpu, training, orchestration, multi-cloud]
 date: 2026-04-23
 ---
 
-Transformer Lab now has built-in support for [dstack](https://dstack.ai). If your lab has GPUs scattered across clouds, on-prem boxes, or a mix of both, this changes how you run jobs.
+Transformer Lab now has built-in support for [dstack](https://dstack.ai). If your lab has GPUs scattered across clouds, on-prem boxes, or a mix of both, this improves how you run jobs.
 
 <!--truncate-->
 
