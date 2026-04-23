@@ -40,7 +40,7 @@ Most CLI commands operate on a “current experiment” value stored in the CLI 
 To set it:
 
 ```bash
-lab config current_experiment my-experiment-name
+lab config set current_experiment my-experiment-name
 ```
 
 To confirm:
