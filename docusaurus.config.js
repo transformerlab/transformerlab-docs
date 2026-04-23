@@ -141,7 +141,7 @@ const config = {
       announcementBar: {
         id: "runpod_support",
         content:
-          'Runpod is now supported in Transformer Lab. <a href="/blog/runpod-no-gpu-needed">More details here</a>.',
+          'dstack is now supported in Transformer Lab. <a href="/blog/dstack-launch">More details here</a>.',
         backgroundColor: "rgb(60, 62, 160)",
         textColor: "#ffffff",
         isCloseable: false,
