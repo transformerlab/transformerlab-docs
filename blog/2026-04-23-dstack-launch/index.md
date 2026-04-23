@@ -102,7 +102,7 @@ This removes the most annoying part of the job.
 
 Transformer Lab is open source and free. dstack is open source. Both run locally, on your own servers, or in the cloud.
 
-- Transformer Lab docs: [lab.cloud/for-teams/why](https://lab.cloud/for-teams/why)
+- Transformer Lab docs: [lab.cloud/for-teams/](https://lab.cloud/for-teams/)
 - Transformer Lab repo: [github.com/transformerlab](https://github.com/transformerlab)
 - dstack repo: [github.com/dstackai/dstack](https://github.com/dstackai/dstack)
 
