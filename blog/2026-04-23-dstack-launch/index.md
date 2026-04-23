@@ -6,7 +6,7 @@ tags: [dstack, cloud, gpu, training, orchestration, multi-cloud]
 date: 2026-04-23
 ---
 
-We just shipped a [dstack](https://dstack.ai) integration in Transformer Lab. If you're a researcher who's tired of troubleshooting every time you want to run a job on a different GPU, this one's for you.
+Transformer Lab now has built-in support for [dstack](https://dstack.ai). If your lab has GPUs scattered across clouds, on-prem boxes, or a mix of both, this changes how you run jobs.
 
 <!--truncate-->
 
