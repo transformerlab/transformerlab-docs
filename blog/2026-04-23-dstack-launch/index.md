@@ -10,8 +10,6 @@ We just shipped a [dstack](https://dstack.ai) integration in Transformer Lab. If
 
 <!--truncate-->
 
----
-
 ## What is dstack?
 
 [dstack](https://dstack.ai) is an open source control plane for AI infrastructure. You point it at the GPUs you have access to, wherever they live, and dstack handles the provisioning, scheduling, and cluster management for you.
@@ -28,7 +26,6 @@ It supports NVIDIA, AMD, TPU, and Tenstorrent. The interface is a clean CLI and 
 
 Teams at EA, Mobius Labs, and ETRI use dstack today. It's trusted, mature and actively developed.
 
----
 
 ## Why we integrated with dstack
 
@@ -38,7 +35,6 @@ Transformer Lab already handles the research workflow. We partnered with dstack 
 
 We believe integrating dstack increases the surface area for researchers to find their required compute.
 
----
 
 ## What this unlocks for research labs
 
@@ -84,7 +80,6 @@ Transformer Lab queues the Cartesian product. dstack provisions the GPUs. Each r
 
 Bump `num_nodes` to 4. dstack handles the cluster provisioning, networking, and NCCL setup. Your script runs across nodes. If capacity gets yanked mid-run (spot instances, preemption, whatever), the checkpoint is safe in object storage and you can resume.
 
----
 
 ## Why a researcher should care
 
@@ -102,7 +97,6 @@ This removes the most annoying part of the job.
 
 **Reproducible, portable research.** Because the infrastructure is declared as code alongside your experiment config, sharing a run setup is as simple as sharing a file. Your collaborator can reproduce your environment exactly: same GPU type, same Docker image, same setup steps without a long README of manual steps.
 
----
 
 ## How to try it
 
