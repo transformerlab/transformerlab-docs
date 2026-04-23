@@ -72,7 +72,7 @@ For complete YAML field documentation, see [Task YAML Structure](task-yaml-struc
 
 ## High‑level ways to submit tasks
 
-There are two main ways to submit tasks; they share the same underlying task metadata and providers:
+There are three main ways to submit tasks; they share the same underlying task metadata and providers:
 
 - **GUI (recommended if you prefer a visual workflow)**  
   - In an experiment’s **Tasks** tab, click **New** to open the **Add New Task** dialog.
@@ -111,6 +111,16 @@ There are two main ways to submit tasks; they share the same underlying task met
     - Use the task’s defined parameters to prompt for values (or apply defaults with `--no-interactive`).
     - Send a launch request to the selected compute provider to create a job.
   - See [this link](task-submission-cli.md) for concrete examples.
+
+- **AI Agent (let Claude Code or another coding agent drive the CLI)**
+  - Install the Transformer Lab agent skill so your coding agent knows how to use `lab`:
+
+    ```bash
+    npx skills add transformerlab/transformerlab-app --skill transformerlab-cli
+    ```
+
+  - Then describe what you want in natural language — e.g. _"create a task that finetunes SmolLM2 on a fake dataset using the HuggingFace library"_ followed by _"now queue this on our skypilot provider"_ — and the agent will scaffold the task, register it, and queue it for you.
+  - See [this link](task-submission-agent-skill.md) for the full walkthrough.
 
 
 ## Using your own training scripts inside tasks

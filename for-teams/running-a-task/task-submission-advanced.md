@@ -1,6 +1,6 @@
 ---
 title: Sweeps
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 Once you are comfortable running single tasks, you can take advantage of **parameterization** and **sweeps** to explore many configurations automatically.

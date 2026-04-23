@@ -123,12 +123,15 @@ View or set configuration values.
 # View all configuration values
 lab config
 
+# Get a single configuration value
+lab config get <key>
+
 # Set a configuration value
-lab config <key> <value>
+lab config set <key> <value>
 
 # Examples
-lab config server http://localhost:8000
-lab config current_experiment my_experiment
+lab config set server http://localhost:8000
+lab config set current_experiment my_experiment
 ```
 
 | Argument | Description         |
